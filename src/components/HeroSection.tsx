@@ -5,7 +5,7 @@ import heroImage from "@/assets/hero-camping.jpg";
 
 const HeroSection = () => {
   const stats = [
-    { icon: Users, value: "35K+", label: "Membri Totali" },
+    { icon: Users, value: "40K+", label: "Membri Totali" },
     { icon: MapPin, value: "500+", label: "Campeggi Mappati" },
     { icon: BookOpen, value: "100+", label: "Guide Pubblicate" },
     { icon: Star, value: "4.8", label: "Rating Community" },

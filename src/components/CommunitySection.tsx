@@ -5,10 +5,10 @@ import { Users, MessageCircle, Heart, TrendingUp, Facebook, Instagram } from "lu
 
 const CommunitySection = () => {
   const communityStats = [
-    { icon: Users, value: "35.200", label: "Membri Totali", trend: "Gruppo Facebook" },
+    { icon: Users, value: "40.000", label: "Membri Totali", trend: "Gruppo Facebook" },
     { icon: MessageCircle, value: "150", label: "Post Mensili", trend: "Ultimi 30 giorni" },
     { icon: Heart, value: "1.000", label: "Commenti Mensili", trend: "Ultimi 30 giorni" },
-    { icon: TrendingUp, value: "25.000", label: "Membri Attivi", trend: "71% del totale" },
+    { icon: TrendingUp, value: "28.000", label: "Membri Attivi", trend: "70% del totale" },
   ];
 
   const communityHighlights = [
@@ -43,7 +43,7 @@ const CommunitySection = () => {
               </h2>
             </div>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Fondata nel 2021, siamo diventati rapidamente il principale punto di riferimento italiano per gli appassionati di tende da tetto, campeggio e vanlife con oltre 35.000 membri attivi
+              Fondata nel 2021, siamo diventati rapidamente il principale punto di riferimento italiano per gli appassionati di tende da tetto, campeggio e vanlife con oltre 40.000 membri attivi
             </p>
           </div>
 
@@ -93,7 +93,7 @@ const CommunitySection = () => {
               <div className="space-y-4">
                 <Button className="w-full bg-gradient-to-r from-[#1877F2] to-[#42A5F5] hover:shadow-elegant transition-all duration-300">
                   <Facebook className="h-5 w-5 mr-2" />
-                  Gruppo Facebook (35K+ membri)
+                  Gruppo Facebook (40K+ membri)
                 </Button>
                 <Button variant="outline" className="w-full border-[#E4405F] text-[#E4405F] hover:bg-[#E4405F] hover:text-white">
                   <Instagram className="h-5 w-5 mr-2" />

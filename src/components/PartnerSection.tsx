@@ -2,6 +2,8 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Handshake, ExternalLink, Star, Percent } from "lucide-react";
+import tentproLogo from "@/assets/tentpro-logo.jpg";
+import outdoorgearLogo from "@/assets/outdoorgear-logo.jpg";
 
 const PartnerSection = () => {
   const partners = [
@@ -11,7 +13,7 @@ const PartnerSection = () => {
       discount: "15%",
       description: "Le migliori tende da tetto sul mercato italiano. Qualità premium per ogni avventura.",
       rating: 4.9,
-      logo: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?auto=format&fit=crop&w=200&h=200",
+      logo: tentproLogo,
       specialOffer: "Spedizione gratuita per la community"
     },
     {
@@ -20,7 +22,7 @@ const PartnerSection = () => {
       discount: "20%",
       description: "Tutto l'equipaggiamento per il camping: dai fornelli ai sacchi a pelo di alta qualità.",
       rating: 4.7,
-      logo: "https://images.unsplash.com/photo-1544966503-7cc5ac882d5b?auto=format&fit=crop&w=200&h=200",
+      logo: outdoorgearLogo,
       specialOffer: "Sconto extra su ordini sopra €200"
     },
     {

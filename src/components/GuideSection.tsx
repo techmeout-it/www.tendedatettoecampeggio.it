@@ -2,6 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Clock, User, ArrowRight, BookOpen } from "lucide-react";
+import campeggiFoto from "@/assets/campeggi-italia.jpg";
 
 const GuideSection = () => {
   const guides = [
@@ -19,7 +20,7 @@ const GuideSection = () => {
       author: "Sara Bianchi",
       readTime: "12 min",
       category: "Destinazioni",
-      image: "https://images.unsplash.com/photo-1510312305653-8ed496efadc2?auto=format&fit=crop&w=800&q=80"
+      image: campeggiFoto
     },
     {
       title: "Check-list per il Campeggio Perfetto",

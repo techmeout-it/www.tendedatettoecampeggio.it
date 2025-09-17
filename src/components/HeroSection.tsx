@@ -5,7 +5,7 @@ import heroImage from "@/assets/hero-camping.jpg";
 
 const HeroSection = () => {
   const stats = [
-    { icon: Users, value: "40K+", label: "Membri Attivi" },
+    { icon: Users, value: "35K+", label: "Membri Totali" },
     { icon: MapPin, value: "500+", label: "Campeggi Mappati" },
     { icon: BookOpen, value: "100+", label: "Guide Pubblicate" },
     { icon: Star, value: "4.8", label: "Rating Community" },
@@ -29,7 +29,7 @@ const HeroSection = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-4xl md:text-6xl font-bold text-foreground leading-tight">
-                La <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">Community Italiana</span> per le Tende da Tetto
+                La <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">Community Italiana</span> N°1 per le Tende da Tetto
               </h1>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
                 Scopri i migliori campeggi, condividi le tue avventure e trova tutto quello che ti serve per viaggiare con la tua tenda da tetto.

@@ -5,10 +5,10 @@ import { Users, MessageCircle, Heart, TrendingUp, Facebook, Instagram } from "lu
 
 const CommunitySection = () => {
   const communityStats = [
-    { icon: Users, value: "40.662", label: "Membri Totali", trend: "+7% (60 giorni)" },
-    { icon: MessageCircle, value: "1.052", label: "Post in 60 giorni", trend: "25-30 al giorno" },
-    { icon: Heart, value: "21.000+", label: "Reazioni", trend: "+66% interazioni" },
-    { icon: TrendingUp, value: "70%", label: "Membri Attivi", trend: "29.000 utenti" },
+    { icon: Users, value: "35.200", label: "Membri Totali", trend: "Gruppo Facebook" },
+    { icon: MessageCircle, value: "150", label: "Post Mensili", trend: "Ultimi 30 giorni" },
+    { icon: Heart, value: "1.000", label: "Commenti Mensili", trend: "Ultimi 30 giorni" },
+    { icon: TrendingUp, value: "25.000", label: "Membri Attivi", trend: "71% del totale" },
   ];
 
   const communityHighlights = [
@@ -43,7 +43,7 @@ const CommunitySection = () => {
               </h2>
             </div>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Una famiglia di oltre 40.000 appassionati che condividono la passione per l'avventura e il campeggio
+              Fondata nel 2021, siamo diventati rapidamente il principale punto di riferimento italiano per gli appassionati di tende da tetto, campeggio e vanlife con oltre 35.000 membri attivi
             </p>
           </div>
 
@@ -93,7 +93,7 @@ const CommunitySection = () => {
               <div className="space-y-4">
                 <Button className="w-full bg-gradient-to-r from-[#1877F2] to-[#42A5F5] hover:shadow-elegant transition-all duration-300">
                   <Facebook className="h-5 w-5 mr-2" />
-                  Gruppo Facebook (40K+ membri)
+                  Gruppo Facebook (35K+ membri)
                 </Button>
                 <Button variant="outline" className="w-full border-[#E4405F] text-[#E4405F] hover:bg-[#E4405F] hover:text-white">
                   <Instagram className="h-5 w-5 mr-2" />

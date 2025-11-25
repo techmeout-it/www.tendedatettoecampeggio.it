@@ -91,14 +91,18 @@ const CommunitySection = () => {
               </p>
               
               <div className="space-y-4">
-                <Button className="w-full bg-gradient-to-r from-[#1877F2] to-[#42A5F5] hover:shadow-elegant transition-all duration-300">
-                  <Facebook className="h-5 w-5 mr-2" />
-                  Gruppo Facebook (40K+ membri)
-                </Button>
-                <Button variant="outline" className="w-full border-[#E4405F] text-[#E4405F] hover:bg-[#E4405F] hover:text-white">
-                  <Instagram className="h-5 w-5 mr-2" />
-                  Seguici su Instagram
-                </Button>
+                <a href="https://www.facebook.com/groups/375926353544064" target="_blank" rel="noopener noreferrer" className="block">
+                  <Button className="w-full bg-gradient-to-r from-[#1877F2] to-[#42A5F5] hover:shadow-elegant transition-all duration-300">
+                    <Facebook className="h-5 w-5 mr-2" />
+                    Gruppo Facebook (40K+ membri)
+                  </Button>
+                </a>
+                <a href="https://www.instagram.com/tende_da_tetto_e_campeggio/" target="_blank" rel="noopener noreferrer" className="block">
+                  <Button variant="outline" className="w-full border-[#E4405F] text-[#E4405F] hover:bg-[#E4405F] hover:text-white">
+                    <Instagram className="h-5 w-5 mr-2" />
+                    Seguici su Instagram
+                  </Button>
+                </a>
               </div>
 
               <div className="mt-6 p-4 bg-background/50 rounded-lg">

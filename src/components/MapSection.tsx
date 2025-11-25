@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -6,6 +7,7 @@ import { MapPin, Star, Wifi, Droplets, Car, Tent } from "lucide-react";
 const MapSection = () => {
   const featuredCampsites = [
     {
+      slug: "camping-lake-garda",
       name: "Camping Lake Garda",
       location: "Lago di Garda, Veneto",
       rating: 4.8,
@@ -14,6 +16,7 @@ const MapSection = () => {
       image: "https://images.unsplash.com/photo-1571863533956-01c88e79957e?auto=format&fit=crop&w=800&q=80"
     },
     {
+      slug: "camping-dolomiti",
       name: "Camping Dolomiti",
       location: "Val di Fassa, Trentino",
       rating: 4.9,
@@ -22,6 +25,7 @@ const MapSection = () => {
       image: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80"
     },
     {
+      slug: "camping-costa-smeralda",
       name: "Camping Costa Smeralda",
       location: "Sardegna",
       rating: 4.7,
@@ -79,8 +83,8 @@ const MapSection = () => {
                 ⭐ Recensiti 4+
               </Badge>
             </div>
-            <Button className="bg-gradient-to-r from-primary to-primary-glow">
-              Apri Mappa Completa
+            <Button className="bg-gradient-to-r from-primary to-primary-glow" asChild>
+              <Link to="/campeggi">Vedi Lista Completa</Link>
             </Button>
           </div>
 
@@ -91,48 +95,50 @@ const MapSection = () => {
             </h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {featuredCampsites.map((campsite, index) => (
-                <Card key={index} className="group hover:shadow-elegant transition-all duration-300 border-0 bg-card/60 backdrop-blur">
-                  <div className="aspect-video overflow-hidden rounded-t-lg">
-                    <img 
-                      src={campsite.image} 
-                      alt={campsite.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                  <CardHeader className="pb-3">
-                    <div className="flex items-center justify-between mb-2">
-                      <div className="flex items-center">
-                        <Star className="h-4 w-4 text-accent fill-accent mr-1" />
-                        <span className="text-sm font-medium">{campsite.rating}</span>
+                <Link key={index} to={`/campeggi/${campsite.slug}`}>
+                  <Card className="group hover:shadow-elegant transition-all duration-300 border-0 bg-card/60 backdrop-blur h-full">
+                    <div className="aspect-video overflow-hidden rounded-t-lg">
+                      <img 
+                        src={campsite.image} 
+                        alt={campsite.name}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    <CardHeader className="pb-3">
+                      <div className="flex items-center justify-between mb-2">
+                        <div className="flex items-center">
+                          <Star className="h-4 w-4 text-accent fill-accent mr-1" />
+                          <span className="text-sm font-medium">{campsite.rating}</span>
+                        </div>
+                        <Badge variant="secondary" className="bg-accent/10 text-accent border-accent/20">
+                          {campsite.price}
+                        </Badge>
                       </div>
-                      <Badge variant="secondary" className="bg-accent/10 text-accent border-accent/20">
-                        {campsite.price}
-                      </Badge>
-                    </div>
-                    <CardTitle className="text-xl group-hover:text-primary transition-colors">
-                      {campsite.name}
-                    </CardTitle>
-                    <p className="text-muted-foreground text-sm">
-                      📍 {campsite.location}
-                    </p>
-                  </CardHeader>
-                  <CardContent className="pt-0">
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {campsite.features.map((feature, idx) => {
-                        const Icon = getFeatureIcon(feature);
-                        return (
-                          <div key={idx} className="flex items-center text-xs text-muted-foreground bg-secondary/50 rounded-full px-3 py-1">
-                            <Icon className="h-3 w-3 mr-1" />
-                            {feature}
-                          </div>
-                        );
-                      })}
-                    </div>
-                    <Button variant="outline" size="sm" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                      Vedi Dettagli
-                    </Button>
-                  </CardContent>
-                </Card>
+                      <CardTitle className="text-xl group-hover:text-primary transition-colors">
+                        {campsite.name}
+                      </CardTitle>
+                      <p className="text-muted-foreground text-sm">
+                        📍 {campsite.location}
+                      </p>
+                    </CardHeader>
+                    <CardContent className="pt-0">
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {campsite.features.map((feature, idx) => {
+                          const Icon = getFeatureIcon(feature);
+                          return (
+                            <div key={idx} className="flex items-center text-xs text-muted-foreground bg-secondary/50 rounded-full px-3 py-1">
+                              <Icon className="h-3 w-3 mr-1" />
+                              {feature}
+                            </div>
+                          );
+                        })}
+                      </div>
+                      <Button variant="outline" size="sm" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                        Vedi Dettagli
+                      </Button>
+                    </CardContent>
+                  </Card>
+                </Link>
               ))}
             </div>
           </div>

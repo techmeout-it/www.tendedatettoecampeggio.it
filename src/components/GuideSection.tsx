@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -7,6 +8,7 @@ import campeggiFoto from "@/assets/campeggi-italia.jpg";
 const GuideSection = () => {
   const guides = [
     {
+      slug: "guida-completa-tende-da-tetto",
       title: "Guida Completa alle Tende da Tetto",
       excerpt: "Tutto quello che devi sapere per scegliere la tenda da tetto perfetta per le tue avventure",
       author: "Marco Rossi",
@@ -15,6 +17,7 @@ const GuideSection = () => {
       image: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=800&q=80"
     },
     {
+      slug: "10-campeggi-piu-belli-italia",
       title: "I 10 Campeggi Più Belli d'Italia",
       excerpt: "Scopri i campeggi più spettacolari del nostro paese, perfetti per chi viaggia con tenda da tetto",
       author: "Sara Bianchi",
@@ -23,6 +26,7 @@ const GuideSection = () => {
       image: campeggiFoto
     },
     {
+      slug: "checklist-campeggio-perfetto",
       title: "Check-list per il Campeggio Perfetto",
       excerpt: "Non dimenticare mai più nulla: la lista completa per organizzare la tua avventura",
       author: "Luca Verdi",
@@ -52,53 +56,57 @@ const GuideSection = () => {
           {/* Guide Cards */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {guides.map((guide, index) => (
-              <Card key={index} className="group hover:shadow-elegant transition-all duration-300 border-0 bg-card/60 backdrop-blur">
-                <div className="aspect-video overflow-hidden rounded-t-lg">
-                  <img 
-                    src={guide.image} 
-                    alt={guide.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <CardHeader className="pb-3">
-                  <div className="flex items-center justify-between mb-2">
-                    <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">
-                      {guide.category}
-                    </Badge>
-                    <div className="flex items-center text-sm text-muted-foreground">
-                      <Clock className="h-4 w-4 mr-1" />
-                      {guide.readTime}
-                    </div>
+              <Link key={index} to={`/guide/${guide.slug}`}>
+                <Card className="group hover:shadow-elegant transition-all duration-300 border-0 bg-card/60 backdrop-blur h-full">
+                  <div className="aspect-video overflow-hidden rounded-t-lg">
+                    <img 
+                      src={guide.image} 
+                      alt={guide.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
                   </div>
-                  <CardTitle className="text-xl group-hover:text-primary transition-colors">
-                    {guide.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="pt-0">
-                  <p className="text-muted-foreground mb-4 line-clamp-3">
-                    {guide.excerpt}
-                  </p>
-                  <div className="flex items-center justify-between">
-                    <div className="flex items-center text-sm text-muted-foreground">
-                      <User className="h-4 w-4 mr-1" />
-                      {guide.author}
+                  <CardHeader className="pb-3">
+                    <div className="flex items-center justify-between mb-2">
+                      <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">
+                        {guide.category}
+                      </Badge>
+                      <div className="flex items-center text-sm text-muted-foreground">
+                        <Clock className="h-4 w-4 mr-1" />
+                        {guide.readTime}
+                      </div>
                     </div>
-                    <Button variant="ghost" size="sm" className="group/btn text-primary hover:text-primary-foreground hover:bg-primary">
-                      Leggi
-                      <ArrowRight className="h-4 w-4 ml-1 group-hover/btn:translate-x-1 transition-transform" />
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
+                    <CardTitle className="text-xl group-hover:text-primary transition-colors">
+                      {guide.title}
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="pt-0">
+                    <p className="text-muted-foreground mb-4 line-clamp-3">
+                      {guide.excerpt}
+                    </p>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center text-sm text-muted-foreground">
+                        <User className="h-4 w-4 mr-1" />
+                        {guide.author}
+                      </div>
+                      <span className="group/btn text-primary flex items-center text-sm font-medium">
+                        Leggi
+                        <ArrowRight className="h-4 w-4 ml-1 group-hover/btn:translate-x-1 transition-transform" />
+                      </span>
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
 
           {/* CTA */}
           <div className="text-center">
-            <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-              Vedi Tutte le Guide
-              <ArrowRight className="h-5 w-5 ml-2" />
-            </Button>
+            <Link to="/guide">
+              <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                Vedi Tutte le Guide
+                <ArrowRight className="h-5 w-5 ml-2" />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

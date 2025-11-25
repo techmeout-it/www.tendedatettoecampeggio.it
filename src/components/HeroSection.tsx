@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { MapPin, Users, BookOpen, Star } from "lucide-react";
@@ -38,14 +39,18 @@ const HeroSection = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="bg-gradient-to-r from-primary to-primary-glow hover:shadow-elegant transition-all duration-300">
-                <Users className="mr-2 h-5 w-5" />
-                Unisciti su Facebook
-              </Button>
-              <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                <MapPin className="mr-2 h-5 w-5" />
-                Esplora la Mappa
-              </Button>
+              <a href="https://www.facebook.com/groups/375926353544064" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="bg-[#1877F2] hover:bg-[#1877F2]/90 transition-all duration-300">
+                  <Users className="mr-2 h-5 w-5" />
+                  Unisciti su Facebook
+                </Button>
+              </a>
+              <Link to="/campeggi">
+                <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                  <MapPin className="mr-2 h-5 w-5" />
+                  Esplora i Campeggi
+                </Button>
+              </Link>
             </div>
           </div>
 

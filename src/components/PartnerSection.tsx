@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -132,9 +133,11 @@ const PartnerSection = () => {
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
               Unisciti ai nostri partner e raggiungi oltre 40.000 appassionati di campeggio e outdoor in tutta Italia
             </p>
-            <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-              Contattaci per Partnership
-            </Button>
+            <Link to="/contatti">
+              <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                Contattaci per Partnership
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

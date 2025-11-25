@@ -1,22 +1,25 @@
-import { Mountain, Facebook, Instagram, Mail, MapPin, Users, BookOpen, Handshake } from "lucide-react";
+import { Facebook, Instagram, Mail, MapPin, Users, BookOpen, Handshake, Info } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import logoTende from "@/assets/logo_tende.jpg";
 
 const Footer = () => {
   const navigation = {
     community: [
-      { name: "Unisciti su Facebook", href: "#", icon: Facebook },
-      { name: "Seguici su Instagram", href: "#", icon: Instagram },
-      { name: "Newsletter", href: "#newsletter", icon: Mail },
+      { name: "Unisciti su Facebook", href: "https://www.facebook.com/groups/375926353544064", icon: Facebook, external: true },
+      { name: "Seguici su Instagram", href: "https://www.instagram.com/tende_da_tetto_e_campeggio/", icon: Instagram, external: true },
+      { name: "Newsletter", href: "/coming-soon", icon: Mail, external: false },
+      { name: "Chi Siamo", href: "/chi-siamo", icon: Info, external: false },
     ],
     risorse: [
-      { name: "Guide & Tutorial", href: "#guide", icon: BookOpen },
-      { name: "Mappa Campeggi", href: "#mappa", icon: MapPin },
-      { name: "Community Forum", href: "#community", icon: Users },
+      { name: "Guide & Tutorial", href: "/guide", icon: BookOpen, external: false },
+      { name: "Lista Campeggi", href: "/campeggi", icon: MapPin, external: false },
+      { name: "Community Forum", href: "/coming-soon", icon: Users, external: false },
     ],
     partner: [
-      { name: "Diventa Partner", href: "#partner", icon: Handshake },
-      { name: "Offerte Esclusive", href: "#partner", icon: Handshake },
-      { name: "Brand Sponsorizzati", href: "#partner", icon: Handshake },
+      { name: "Diventa Partner", href: "/coming-soon", icon: Handshake, external: false },
+      { name: "Offerte Esclusive", href: "/coming-soon", icon: Handshake, external: false },
+      { name: "Brand Sponsorizzati", href: "/coming-soon", icon: Handshake, external: false },
     ],
   };
 
@@ -28,27 +31,33 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             {/* Brand */}
             <div className="lg:col-span-1">
-              <div className="flex items-center space-x-2 mb-4">
-                <Mountain className="h-8 w-8 text-primary" />
+              <Link to="/" className="flex items-center space-x-3 mb-4">
+                <img src={logoTende} alt="Tende da Tetto Community" className="h-16 w-16 rounded-full object-cover" />
                 <div>
-                  <h3 className="text-xl font-bold text-primary">TendaTetto</h3>
+                  <h3 className="text-2xl font-bold text-foreground">Tende da Tetto</h3>
                   <p className="text-sm text-muted-foreground">Community Italia</p>
                 </div>
-              </div>
+              </Link>
               <p className="text-muted-foreground mb-6 leading-relaxed">
                 La community italiana più grande per gli amanti delle tende da tetto e del campeggio. 
                 Condividiamo passione, esperienze e avventure.
               </p>
               <div className="flex space-x-3">
-                <Button size="sm" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                  <Facebook className="h-4 w-4" />
-                </Button>
-                <Button size="sm" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                  <Instagram className="h-4 w-4" />
-                </Button>
-                <Button size="sm" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                  <Mail className="h-4 w-4" />
-                </Button>
+                <a href="https://www.facebook.com/groups/375926353544064" target="_blank" rel="noopener noreferrer">
+                  <Button size="sm" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                    <Facebook className="h-4 w-4" />
+                  </Button>
+                </a>
+                <a href="https://www.instagram.com/tende_da_tetto_e_campeggio/" target="_blank" rel="noopener noreferrer">
+                  <Button size="sm" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                    <Instagram className="h-4 w-4" />
+                  </Button>
+                </a>
+                <Link to="/contatti">
+                  <Button size="sm" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                    <Mail className="h-4 w-4" />
+                  </Button>
+                </Link>
               </div>
             </div>
 
@@ -61,13 +70,33 @@ const Footer = () => {
                 <ul className="space-y-3">
                   {links.map((link) => (
                     <li key={link.name}>
-                      <a
-                        href={link.href}
-                        className="flex items-center text-muted-foreground hover:text-primary transition-colors"
-                      >
-                        <link.icon className="h-4 w-4 mr-2" />
-                        {link.name}
-                      </a>
+                      {link.external ? (
+                        <a
+                          href={link.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center text-muted-foreground hover:text-primary transition-colors"
+                        >
+                          <link.icon className="h-4 w-4 mr-2" />
+                          {link.name}
+                        </a>
+                      ) : link.href.startsWith('#') ? (
+                        <a
+                          href={link.href}
+                          className="flex items-center text-muted-foreground hover:text-primary transition-colors"
+                        >
+                          <link.icon className="h-4 w-4 mr-2" />
+                          {link.name}
+                        </a>
+                      ) : (
+                        <Link
+                          to={link.href}
+                          className="flex items-center text-muted-foreground hover:text-primary transition-colors"
+                        >
+                          <link.icon className="h-4 w-4 mr-2" />
+                          {link.name}
+                        </Link>
+                      )}
                     </li>
                   ))}
                 </ul>
@@ -79,11 +108,11 @@ const Footer = () => {
           <div className="pt-8 border-t border-border">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-sm text-muted-foreground">
-                <p>&copy; 2024 TendaTetto Community. Tutti i diritti riservati.</p>
+                <p>&copy; 2025 TendaTetto Community. Tutti i diritti riservati.</p>
                 <div className="flex space-x-6">
-                  <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
-                  <a href="#" className="hover:text-primary transition-colors">Termini di Servizio</a>
-                  <a href="#" className="hover:text-primary transition-colors">Cookie Policy</a>
+                  <Link to="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
+                  <Link to="/termini" className="hover:text-primary transition-colors">Termini di Servizio</Link>
+                  <Link to="/cookie" className="hover:text-primary transition-colors">Cookie Policy</Link>
                 </div>
               </div>
               <div className="flex items-center space-x-2 text-sm text-muted-foreground mt-4 md:mt-0">

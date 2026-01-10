@@ -8,31 +8,31 @@ import campeggiFoto from "@/assets/campeggi-italia.jpg";
 const GuideSection = () => {
   const guides = [
     {
-      slug: "guida-completa-tende-da-tetto",
-      title: "Guida Completa alle Tende da Tetto",
-      excerpt: "Tutto quello che devi sapere per scegliere la tenda da tetto perfetta per le tue avventure",
-      author: "Marco Rossi",
-      readTime: "8 min",
-      category: "Attrezzatura",
-      image: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=800&q=80"
-    },
-    {
-      slug: "10-campeggi-piu-belli-italia",
-      title: "I 10 Campeggi Più Belli d'Italia",
-      excerpt: "Scopri i campeggi più spettacolari del nostro paese, perfetti per chi viaggia con tenda da tetto",
-      author: "Sara Bianchi",
-      readTime: "12 min",
+      slug: "spagna-del-nord-on-the-road",
+      title: "Spagna del Nord on the road: 19 giorni di libertà e natura!",
+      excerpt: "Un viaggio indimenticabile attraverso Paesi Baschi, Cantabria, Asturie e Galizia con la tenda da tetto. 19 giorni di strade, oceano e montagne.",
+      author: "Sara Sarti",
+      readTime: "4 min",
       category: "Destinazioni",
-      image: campeggiFoto
+      image: "https://images.unsplash.com/photo-1543783207-ec64e4d95325?auto=format&fit=crop&w=800&q=80"
     },
     {
-      slug: "checklist-campeggio-perfetto",
-      title: "Check-list per il Campeggio Perfetto",
-      excerpt: "Non dimenticare mai più nulla: la lista completa per organizzare la tua avventura",
-      author: "Luca Verdi",
-      readTime: "5 min",
+      slug: "tende-da-tetto-super-ciurma-tempo-lento",
+      title: "Tende da Tetto, La Super Ciurma e L'Arte del Tempo Lento",
+      excerpt: "Viaggiare con bambini e cani, camperizzazione fai-da-te e l'arte di recuperare il tempo lento: la storia di una famiglia nomade accessibile.",
+      author: "Giulia e Brenno",
+      readTime: "15 min",
       category: "Tips",
       image: "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      slug: "viaggiare-famiglia-minivan-camperboxes",
+      title: "Viaggiare in famiglia con il nostro minivan: esperienze di libertà e scoperta",
+      excerpt: "La nostra vita in viaggio con un Ford Tourneo allestito fai-da-te: famiglia, cane e avventure tra Val Trebbia, Liguria, Elba e Abruzzo.",
+      author: "Arianna e David di Camperboxes",
+      readTime: "12 min",
+      category: "Destinazioni",
+      image: "/www/img_articles/i_nostri_viaggi_in_camper/7-van-camper-boxes.jpg"
     }
   ];
 

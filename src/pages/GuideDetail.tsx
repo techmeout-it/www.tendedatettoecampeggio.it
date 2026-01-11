@@ -36,34 +36,47 @@ const guidesData: Record<string, {
     content: [
       "## La nostra esperienza alle 52 Gallerie del Pasubio",
       "Quando si parla di tenda da tetto, molti la associano all'estate, ai tramonti infiniti e alle notti tiepide sotto le stelle. Ma la verità è che, con la giusta attrezzatura, si può dormire in tenda anche quando le temperature scendono. Noi l'abbiamo sperimentato a inizio ottobre, durante un weekend alle 52 Gallerie del Pasubio, e ne siamo tornati con il sorriso (e senza un briciolo di freddo).",
+      "![](/www/img_articles/dormire_freddo/WhatsApp%20Image%202026-01-10%20at%2017.06.13.jpeg)",
       "Siamo partiti il venerdì sera dalla provincia di Verona, direzione Bocchetta Campiglia, punto di partenza del celebre sentiero delle 52 Gallerie. Arrivati al parcheggio principale (6€ per 24h), la temperatura era già piuttosto bassa: un anticipo d'inverno che ci ha fatto capire che sarebbe servito tutto il calore possibile.",
+      "![](/www/img_articles/dormire_freddo/WhatsApp%20Image%202026-01-10%20at%2017.06.39.jpeg)",
       "Abbiamo aperto la nostra tenda da tetto Columbus dell'Autohome, una compagna di viaggio ormai inseparabile. Prima di metterci comodi, abbiamo applicato anche il telo invernale (sempre Autohome), studiato proprio per migliorare l'isolamento termico e proteggere dal vento. Dentro, i sacchi a pelo Ferrino con comfort fino a –15 °C e, per non farci mancare nulla, abbiamo acceso il riscaldamento ausiliario.",
+      "![](/www/img_articles/dormire_freddo/WhatsApp%20Image%202026-01-10%20at%2017.06.40.jpeg)",
       "**Risultato?** Una notte al caldo, confortevole e silenziosa, cullati solo dai suoni del bosco. Addormentarsi sapendo che fuori fa freddo, ma dentro la tenda si sta benissimo, è una sensazione impagabile.",
+      "![](/www/img_articles/dormire_freddo/WhatsApp%20Image%202026-01-10%20at%2017.06.40%20(1).jpeg)",
       "## Le 52 Gallerie del Pasubio: un capolavoro di ingegneria e storia",
       "Le 52 Gallerie del Pasubio, conosciute anche come Strada delle 52 Gallerie, sono un itinerario escursionistico unico nel suo genere, situato tra le province di Vicenza e Trento.",
+      "![](/www/img_articles/dormire_freddo/WhatsApp%20Image%202026-01-10%20at%2017.06.41.jpeg)",
       "Realizzate durante la Prima Guerra Mondiale dal Genio Militare Italiano, queste gallerie furono scavate nella roccia tra il 1917 e il 1918 per collegare Bocchetta Campiglia alle Porte del Pasubio, consentendo il trasporto sicuro di uomini e rifornimenti lontano dal tiro nemico.",
+      "![](/www/img_articles/dormire_freddo/WhatsApp%20Image%202026-01-10%20at%2017.06.41%20(1).jpeg)",
       "Il percorso, lungo circa 6,5 km solo in salita, si snoda tra pareti rocciose e panorami mozzafiato sul massiccio del Pasubio. Ogni galleria ha una sua particolarità: alcune sono dritte e brevi, altre tortuose, scavate a spirale nella montagna o aperte su vertiginosi scorci.",
+      "![](/www/img_articles/dormire_freddo/WhatsApp%20Image%202026-01-10%20at%2017.06.42.jpeg)",
       "Con un dislivello di circa 900 metri, è un'escursione che unisce storia, avventura e natura — un'esperienza che lascia davvero il segno.",
+      "![](/www/img_articles/dormire_freddo/WhatsApp%20Image%202026-01-10%20at%2017.06.43.jpeg)",
       "## L'escursione",
       "L'indomani ci siamo svegliati con un cielo non proprio limpido e aria frizzante. Mettiamo gli zaini in spalla e indossiamo le pile da testa: è così che ha inizio la salita lungo il percorso delle 52 Gallerie.",
+      "![](/www/img_articles/dormire_freddo/WhatsApp%20Image%202026-01-10%20at%2017.06.43%20(1).jpeg)",
       "La vista lungo il tragitto è spettacolare, e ogni galleria racconta un pezzo di storia e di fatica umana.",
+      "![](/www/img_articles/dormire_freddo/WhatsApp%20Image%202026-01-10%20at%2017.06.43%20(2).jpeg)",
       "Dopo circa 7,5 km di salita e 894 m di dislivello positivo, siamo arrivati al Rifugio Achille Papa, dove ci siamo concessi un panino e una birretta con vista sulle cime del Pasubio. Il rientro è avvenuto lungo la Strada degli Scarubbi, un percorso più dolce ma altrettanto panoramico, per un totale di circa 15 km.",
+      "![](/www/img_articles/dormire_freddo/WhatsApp%20Image%202026-01-10%20at%2017.06.43%20(3).jpeg)",
       "## Consigli per dormire in tenda da tetto in autunno e inverno",
       "Se vuoi provare anche tu l'esperienza di dormire in tenda da tetto quando fa freddo, ecco qualche consiglio utile basato sulla nostra esperienza:",
+      "![](/www/img_articles/dormire_freddo/WhatsApp%20Image%202026-01-10%20at%2017.06.44.jpeg)",
       "**Isolamento termico** – Se la tua tenda lo permette, applica un telo invernale o un sovra telo aggiuntivo. Fa davvero la differenza.",
       "**Riscaldamento ausiliario** – Un piccolo riscaldatore a gasolio o a benzina (come il nostro) garantisce comfort e sicurezza, ma assicurati sempre di avere una buona ventilazione.",
       "**Sacchi a pelo adeguati** – Investi in sacchi a pelo con comfort termico adatto alle temperature previste. I nostri Ferrino fino a –15 °C sono stati perfetti.",
       "**Prepara un piano B** – In caso di neve o ghiaccio intenso, meglio avere un rifugio o una sistemazione alternativa nelle vicinanze.",
       "## Conclusioni",
-      "Dormire in tenda da tetto nei mesi freddi non solo è possibile, ma può essere anche incredibilmente appagante. La chiave è prepararsi bene, conoscere i propri limiti e avere l'attrezzatura giusta. Quell'esperienza al Pasubio ci ha ricordato che la libertà di viaggiare non ha stagione: basta la voglia di partire, un buon sacco a pelo e il rumore del vento fuori dalla tenda."
+      "Dormire in tenda da tetto nei mesi freddi non solo è possibile, ma può essere anche incredibilmente appagante. La chiave è prepararsi bene, conoscere i propri limiti e avere l'attrezzatura giusta. Quell'esperienza al Pasubio ci ha ricordato che la libertà di viaggiare non ha stagione: basta la voglia di partire, un buon sacco a pelo e il rumore del vento fuori dalla tenda.",
+      "![Sara e Guido Freddo](/www/img_articles/dormire_freddo/Sara%20e%20Guido%20Freddo.jpeg)"
     ],
     author: "Sara Sarti",
-    authorAvatar: "",
+    authorAvatar: "/www/img_articles/autori/sara%20sarti/sara%20e%20guido%20avatar%20autori.png",
     readTime: "6 min",
     location: "52 Gallerie del Pasubio",
     category: "Tips",
     date: "8 Gennaio 2026",
-    image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80",
+    image: "/www/img_articles/dormire_freddo/WhatsApp%20Image%202026-01-10%20at%2017.06.43%20(2).jpeg",
     likes: 0,
     comments: 0
   },
@@ -187,30 +200,40 @@ const guidesData: Record<string, {
       "## Un'estate all'insegna della libertà",
       "Agosto, due settimane centrali, 19 giorni pieni di strade, profumi, paesaggi e libertà.",
       "Viaggiare on the road con la tenda da tetto è per noi ormai uno stile di vita: semplice, essenziale, ma soprattutto libero. Nessuna prenotazione, solo la voglia di scoprire giorno per giorno dove la strada ci porterà. Quest'estate abbiamo deciso di esplorare la Spagna del Nord, una terra selvaggia e autentica, dove oceano e montagne si incontrano e ogni curva regala panorami mozzafiato.",
+      "![](/www/img_articles/spagna_del_nord_sara_guido/IMG_20250810_110344.jpg)",
       "## Dal Veneto ai Pirenei: il viaggio inizia",
       "Siamo partiti dalla provincia di Verona, direzione Spagna, ma prima di varcare il confine ci siamo concessi una tappa in Val di Susa dove ci siamo fermati in un'area sosta camper comunale per trascorrere la notte. Il mattino seguente siamo entrati in Francia attraverso il Monginevro.",
       "La prima sosta è stata a **Carcassonne**, la città fortificata dal fascino medioevale, perfetta per calarsi subito nell'atmosfera del viaggio.",
       "Da lì abbiamo puntato verso i Pirenei Atlantici francesi fino a **Espelette**, un piccolo villaggio basco famoso per i peperoncini rossi appesi alle facciate delle case. Dopo quasi 1.400 km, la nostra avventura spagnola aveva finalmente inizio. Abbiamo sostato presso l'area camper privata \"ERREKA\" a 4km dal villaggio, facilmente raggiungibile con le bici, che dispone anche di un ristorante che propone piatti tipici baschi.",
+      "![](/www/img_articles/spagna_del_nord_sara_guido/IMG_20250810_144054.jpg)",
       "## I Paesi Baschi: tra oceano, storia e natura",
       "Il nostro ingresso in Spagna è stato a **San Sebastián**, dove la splendida Baia della Concha ci ha accolti con la sua eleganza e le sue onde perfette per i surfisti. Le biciclette che abbiamo portato con noi ci hanno permesso di muoverci liberamente lasciando il nostro Doblò camperizzato presso il Camping Oliden (leggermente decentrato ma provvisto di ciclabile), consentendoci di spostarci lungo la costa, tra lungomare e scorci panoramici. Abbiamo preso la funicolare e siamo saliti sul Monte Igueldo dove, oltre a poter ammirare il belvedere è possibile godere delle giostre e degli intrattenimenti proposti, per grandi e piccini.",
+      "![](/www/img_articles/spagna_del_nord_sara_guido/IMG_20250811_153250.jpg)",
       "Abbiamo poi proseguito verso **Guernika**, città simbolo della memoria storica, e non potevamo perderci l'escursione a **San Juan de Gaztelugatxe**, l'eremo arroccato sull'oceano reso celebre da Il Trono di Spade. Per potervi accedere in alta stagione è necessario prenotare online l'ingresso, in quanto contingentato. Si tratta di un percorso a piedi di circa 2,6 km che parte dal parcheggio e porta, attraverso 231 scalini, all'eremo.",
+      "![](/www/img_articles/spagna_del_nord_sara_guido/IMG_20250812_190521.jpg)",
       "Abbiamo scelto di sostare presso il Camping Portuondo in quanto comodo per poter fare l'escursione a San Juan de Gaztelugatxe. Abbiamo lasciato il nostro \"carrozzone\" in campeggio e con le bici abbiamo raggiunto il paese di Bermeo (4,5km) da dove parte il bus n.3517 che porta all'eremo.",
       "La quarta tappa ci ha fatti raggiungere **Bilbao**, moderna e vibrante, con il suo iconico Museo Guggenheim e i suggestivi ponti che attraversano il fiume Nervión.",
+      "![](/www/img_articles/spagna_del_nord_sara_guido/IMG_20250814_133935.jpg)",
       "## Cantabria e Asturie: tra coste, montagne e tradizioni",
       "Lasciati i Paesi Baschi, siamo entrati in Cantabria, dove ci hanno accompagnati i paesaggi verdi e la brezza dell'oceano. Abbiamo visitato **Santander** e **Llanes**, incastonate tra spiagge e scogliere, e poi via verso le Asturie, cuore naturale del Nord.",
+      "![](/www/img_articles/spagna_del_nord_sara_guido/IMG_20250814_204119.jpg)",
       "Ci siamo fermati presso il Camping Picos de Europa, comodo per poter fare l'indomani l'escursione ai **Laghi di Covadonga**, all'interno del Parco Nazionale dei Picos de Europa. È stata un'esperienza indimenticabile! Nonostante ci trovassimo ad un'altitudine di circa 1200m slm, il paesaggio lasciava intendere tutt'altro. Anche per questa escursione gli ingressi sono contingentati ed è necessario prenotare per tempo il bus che in alta stagione accompagna i turisti fino al parcheggio principale dei laghi. Da lì poi è possibile proseguire a piedi lungo i numerosi sentieri presenti.",
+      "![](/www/img_articles/spagna_del_nord_sara_guido/IMG_20250815_074014.jpg)",
       "Da lì siamo saliti fino al **Cabo de Peñas**, dove abbiamo dormito in libera con una vista mozzafiato sull'oceano Atlantico — una di quelle notti che restano nel cuore.",
       "A Ferragosto ci siamo trovati tra Avilés e Luarca, immersi in una festa popolare asturiana fatta di musica, tradizione e bicchieri di sidro che non smettevano mai di riempirsi.",
       "## Galizia: dove finisce la terra e inizia l'oceano",
       "Lasciate le Asturie, siamo entrati in Galizia, terra di fari e vento.",
       "La prima tappa è il **faro di Cabo Ortegal**, spettacolare punto panoramico dove l'oceano mostra tutta la sua forza. Decidiamo così di fermarci un paio di notti presso il Camping Fontesin per goderci le calde giornate di sole, le lunghe spiagge e le onde agitate dell'oceano.",
+      "![](/www/img_articles/spagna_del_nord_sara_guido/IMG_20250817_152218.jpg)",
       "Riprendiamo il nostro viaggio on the road e raggiungiamo **La Coruña**, città elegante e vivace. Percorriamo con il nostro \"carrozzone\" la **Costa da Morte**, una zona costiera della Galizia conosciuta per le sue condizioni marine pericolose che nel corso della storia, hanno causato numerosi naufragi e da cui prende il suo nome. Raggiungiamo **Muxía**, uno dei luoghi più autentici e suggestivi della regione: visitiamo il santuario \"Nosa señora da barca\" che si affaccia sull'oceano ed è di grandissimo effetto!",
+      "![](/www/img_articles/spagna_del_nord_sara_guido/IMG_20250821_154053.jpg)",
       "La decima tappa è **Santiago de Compostela**, meta spirituale e simbolica anche per chi, come noi, non ci è arrivato a piedi ma su quattro ruote. Abbiamo sostato all'area camper privata Lavacolla dove per la prima volta abbiamo conosciuto un gestore che parla perfettamente italiano. Questa area sosta risulta strategica per visitare Santiago grazie al servizio bus (n.6) con fermata a 400m dall'area camper e che passa ogni venti minuti.",
       "## Verso l'interno: Castiglia, Navarra e ritorno",
       "Dalla costa ci siamo spostati verso l'interno, entrando in Castiglia.",
       "In quei giorni la regione era colpita da numerosi incendi, quindi abbiamo dovuto deviare il percorso, ma siamo comunque riusciti a visitare **León** e **Burgos**, due città ricche di storia e fascino.",
       "Da lì abbiamo raggiunto **Vitoria-Gasteiz**, città verde e ordinata, e poi **Pamplona**, famosa per la corsa dei tori ma tranquilla in quel periodo estivo. Trascorriamo la notte presso il Camping Ezcaba, leggermente decentrato rispetto al centro di Pamplona, ma facilmente raggiungibile tramite pista ciclabile.",
       "Una delle tappe più sorprendenti del viaggio è stata il **Parco Naturale delle Bardenas Reales**, un paesaggio quasi lunare, fatto di canyon e deserti d'argilla. Si tratta di un sito naturale semidesertico, visitabile gratuitamente in auto/camper/bici/moto. È necessario stare lungo il percorso sterrato tracciato e seguire le indicazioni riportate nella cartina che viene consegnata all'ingresso del parco.",
+      "![](/www/img_articles/spagna_del_nord_sara_guido/IMG_20250822_100521.jpg)",
       "Il percorso circolare è di circa 34km e occorrono almeno 3 ore per completarlo: le strade sono sterrate ma in buone condizioni; tuttavia, la velocità massima consentita è di 40km/h. È possibile fermarsi per fare foto nei punti panoramici ed è severamente proibito oltrepassare, anche a piedi, le zone interdette dai cartelli che indicano la zona militare.",
       "L'ultima sosta spagnola è stata **Saragozza**, con la sua splendida Basilica del Pilar, prima di rientrare in Francia per un'ultima notte a La Grande Motte, vicino a Montpellier.",
       "## Viaggiare con la tenda da tetto: il nostro modo di essere liberi",
@@ -221,15 +244,16 @@ const guidesData: Record<string, {
       "## La strada come casa",
       "La Spagna del Nord ci ha regalato 19 giorni di emozioni, incontri, paesaggi e libertà assoluta.",
       "Ogni tappa è stata diversa, ogni alba un nuovo inizio.",
-      "**Viaggiare con la tenda da tetto non è solo un modo di spostarsi — è uno stile di vita, una scelta di semplicità e autenticità che ci fa sentire davvero a casa, ovunque decidiamo di fermarci.**"
+      "**Viaggiare con la tenda da tetto non è solo un modo di spostarsi — è uno stile di vita, una scelta di semplicità e autenticità che ci fa sentire davvero a casa, ovunque decidiamo di fermarci.**",
+      "![Sara e Guido](/www/img_articles/spagna_del_nord_sara_guido/Sara%20e%20Guido.jpg)"
     ],
     author: "Sara Sarti",
-    authorAvatar: "",
+    authorAvatar: "/www/img_articles/autori/sara%20sarti/sara%20e%20guido%20avatar%20autori.png",
     readTime: "4 min",
     location: "Spagna del Nord",
     category: "Destinazioni",
     date: "10 Gennaio 2026",
-    image: "https://images.unsplash.com/photo-1543783207-ec64e4d95325?auto=format&fit=crop&w=1200&q=80",
+    image: "/www/img_articles/spagna_del_nord_sara_guido/IMG_20250817_152218.jpg",
     likes: 0,
     comments: 0
   },
@@ -459,39 +483,56 @@ const GuideDetail = () => {
                     <img 
                       src={guide.authorAvatar} 
                       alt={guide.author}
-                      className="w-12 h-12 rounded-full object-cover"
+                      className="w-24 h-24 rounded-full object-cover"
                     />
                   ) : (
-                    <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
-                      <User className="h-6 w-6 text-primary" />
+                    <div className="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center">
+                      <User className="h-12 w-12 text-primary" />
                     </div>
                   )}
                   <div>
-                    <p className="font-medium text-foreground">{guide.author}</p>
-                    <div className="flex items-center text-sm text-muted-foreground">
-                      <Calendar className="h-4 w-4 mr-1" />
-                      {guide.date}
+                    <p className="font-medium text-foreground mb-2">{guide.author}</p>
+                    <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                      <div className="flex items-center">
+                        <Calendar className="h-4 w-4 mr-1" />
+                        {guide.date}
+                      </div>
+                      <div className="flex items-center">
+                        <Clock className="h-4 w-4 mr-1" />
+                        {guide.readTime}
+                      </div>
+                      {guide.location && (
+                        <div className="flex items-center">
+                          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                          </svg>
+                          {guide.location}
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>
               )}
               {!guide.author && (
-                <div className="flex items-center text-sm text-muted-foreground">
-                  <Calendar className="h-4 w-4 mr-2" />
-                  {guide.date}
-                </div>
-              )}
-              <div className="flex items-center text-muted-foreground">
-                <Clock className="h-4 w-4 mr-2" />
-                {guide.readTime} di lettura
-              </div>
-              {guide.location && (
-                <div className="flex items-center text-muted-foreground">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                  {guide.location}
+                <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                  <div className="flex items-center">
+                    <Calendar className="h-4 w-4 mr-1" />
+                    {guide.date}
+                  </div>
+                  <div className="flex items-center">
+                    <Clock className="h-4 w-4 mr-1" />
+                    {guide.readTime}
+                  </div>
+                  {guide.location && (
+                    <div className="flex items-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
+                      {guide.location}
+                    </div>
+                  )}
                 </div>
               )}
               <div className="flex items-center gap-4 ml-auto">
@@ -531,11 +572,13 @@ const GuideDetail = () => {
                         <img 
                           src={match[2]} 
                           alt={match[1]}
-                          className="w-full md:w-3/4 lg:w-2/3 h-auto max-h-[300px] md:max-h-[350px] object-cover rounded-lg shadow-lg"
+                          className="w-full md:w-3/5 lg:w-1/2 h-auto rounded-lg shadow-md"
                         />
-                        <figcaption className="text-center text-sm text-muted-foreground mt-2 italic">
-                          {match[1]}
-                        </figcaption>
+                        {match[1] && (
+                          <figcaption className="text-center text-sm text-muted-foreground mt-3 italic">
+                            {match[1]}
+                          </figcaption>
+                        )}
                       </figure>
                     );
                   }

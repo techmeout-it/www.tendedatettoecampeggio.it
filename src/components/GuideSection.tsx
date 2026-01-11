@@ -45,7 +45,7 @@ const GuideSection = () => {
             <div className="flex items-center justify-center mb-4">
               <BookOpen className="h-8 w-8 text-primary mr-3" />
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                Guide & Consigli
+                Articoli & Guide
               </h2>
             </div>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -103,7 +103,7 @@ const GuideSection = () => {
           <div className="text-center">
             <Link to="/guide">
               <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                Vedi Tutte le Guide
+                Vedi Tutti gli Articoli
                 <ArrowRight className="h-5 w-5 ml-2" />
               </Button>
             </Link>

@@ -36,7 +36,7 @@ const allGuides = [
     category: "Destinazioni",
     date: "2026-01-10",
     dateDisplay: "10 Gen 2026",
-    image: "https://images.unsplash.com/photo-1543783207-ec64e4d95325?auto=format&fit=crop&w=800&q=80"
+    image: "/www/img_articles/spagna_del_nord_sara_guido/IMG_20250817_152218.jpg"
   },
   {
     slug: "tende-da-tetto-super-ciurma-tempo-lento",
@@ -60,7 +60,7 @@ const allGuides = [
     category: "Tips",
     date: "2026-01-08",
     dateDisplay: "8 Gen 2026",
-    image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80"
+    image: "/www/img_articles/dormire_freddo/WhatsApp%20Image%202026-01-10%20at%2017.06.43%20(2).jpeg"
   },  {
     slug: "viaggiare-famiglia-minivan-camperboxes",
     title: "Viaggiare in famiglia con il nostro minivan: esperienze di libertà e scoperta",
@@ -215,7 +215,7 @@ const GuideList = () => {
               <div className="flex items-center justify-center mb-6">
                 <BookOpen className="h-12 w-12 text-primary mr-4" />
                 <h1 className="text-4xl md:text-5xl font-bold text-foreground">
-                  Guide & Tutorial
+                  Articoli & Guide
                 </h1>
               </div>
               <p className="text-xl text-muted-foreground mb-8">

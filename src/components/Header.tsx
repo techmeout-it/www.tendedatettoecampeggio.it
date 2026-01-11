@@ -12,7 +12,7 @@ const Header = () => {
 
   const navigation = [
     { name: "Home", href: isHomePage ? "#" : "/", icon: Mountain, isRoute: !isHomePage },
-    { name: "Guide", href: "/guide", icon: BookOpen, isRoute: true },
+    { name: "Blog", href: "/guide", icon: BookOpen, isRoute: true },
     { name: "Campeggi", href: "/campeggi", icon: MapPin, isRoute: true },
     { name: "Community", href: isHomePage ? "#community" : "/#community", icon: Users, isRoute: false },
     { name: "Partner", href: isHomePage ? "#partner" : "/#partner", icon: Handshake, isRoute: false },

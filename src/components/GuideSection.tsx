@@ -62,6 +62,7 @@ const GuideSection = () => {
                     <img 
                       src={guide.image} 
                       alt={guide.title}
+                      loading="lazy"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>

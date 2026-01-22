@@ -415,6 +415,126 @@ const guidesData: Record<string, {
     image: "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=1200&q=80",
     likes: 256,
     comments: 32
+  },
+  "manutenzione-tenda-da-tetto": {
+    title: "Manutenzione della Tenda da Tetto",
+    excerpt: "Come prenderti cura della tua tenda per farla durare nel tempo: pulizia, impermeabilizzazione e stoccaggio",
+    content: [
+      "Una tenda da tetto ben mantenuta può durare molti anni. Ecco come prendertene cura al meglio.",
+      "## 🧼 Pulizia Regolare",
+      "Dopo ogni utilizzo, è importante pulire la tenda per rimuovere sporco, polvere e residui. Usa acqua tiepida e un sapone neutro, evitando detergenti aggressivi che potrebbero danneggiare il tessuto impermeabile.",
+      "## 💧 Impermeabilizzazione",
+      "Con il tempo, il trattamento impermeabile può perdere efficacia. Controlla regolarmente la tenuta all'acqua e riapplica un prodotto impermeabilizzante specifico quando necessario.",
+      "## 📦 Stoccaggio Corretto",
+      "Quando non usi la tenda per lunghi periodi, conservala in un luogo asciutto e ventilato. Evita luoghi umidi o troppo caldi. Se possibile, conservala semi-aperta per permettere la circolazione dell'aria.",
+      "## 🔧 Controlli Periodici",
+      "Verifica regolarmente le cerniere, le cuciture e i meccanismi di apertura. Lubrifica le parti mobili e sostituisci eventuali componenti danneggiati.",
+      "## ⚠️ Cosa Evitare",
+      "- Mai riporre la tenda bagnata\n- Non usare candeggina o solventi\n- Evitare l'esposizione prolungata al sole quando chiusa\n- Non sovraccaricare la tenda con peso eccessivo"
+    ],
+    author: "Marco Rossi",
+    authorAvatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200",
+    readTime: "6 min",
+    location: "",
+    category: "Attrezzatura",
+    date: "1 Novembre 2024",
+    image: "https://images.unsplash.com/photo-1504851149312-7a075b496cc7?auto=format&fit=crop&w=1200&q=80",
+    likes: 189,
+    comments: 23
+  },
+  "viaggiare-con-bambini-tenda-tetto": {
+    title: "Viaggiare con Bambini in Tenda da Tetto",
+    excerpt: "Consigli pratici per organizzare avventure family-friendly: sicurezza, comfort e divertimento",
+    content: [
+      "Viaggiare con i bambini in tenda da tetto è un'esperienza meravigliosa che crea ricordi indelebili. Ecco i nostri consigli per rendere tutto più semplice e sicuro.",
+      "## 👶 Sicurezza Prima di Tutto",
+      "La sicurezza è fondamentale quando si viaggia con i bambini. Assicurati che la tenda sia stabile, che la scala sia sicura e che ci siano barriere adeguate per evitare cadute durante la notte.",
+      "## 🛏️ Comfort e Sonno",
+      "I bambini hanno bisogno di dormire bene. Porta sacchi a pelo adatti alla loro età, cuscini familiari e magari il loro peluche preferito. Una routine della buonanotte aiuta anche in campeggio.",
+      "## 🎒 Cosa Portare",
+      "- Pannolini e salviette (più del previsto)\n- Cambio vestiti abbondante\n- Snack e biberon\n- Giochi compatti e silenziosi\n- Kit di pronto soccorso pediatrico\n- Protezione solare e cappellino",
+      "## 🎮 Intrattenimento",
+      "Pianifica attività adatte all'età: passeggiate nella natura, giochi all'aperto, osservazione stelle. Coinvolgi i bambini nella preparazione del campo base.",
+      "## 📍 Scelta del Campeggio",
+      "Preferisci campeggi family-friendly con servizi dedicati: aree giochi, bagni puliti, docce calde. Verifica che ci siano attività per bambini nelle vicinanze.",
+      "## 💡 Tips dai Genitori",
+      "1. Parti per viaggi brevi inizialmente\n2. Sii flessibile con i programmi\n3. Porta sempre più acqua del necessario\n4. Prevedi tempo di riposo\n5. Coinvolgi i bambini nelle decisioni"
+    ],
+    author: "Laura Gialli",
+    authorAvatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200",
+    readTime: "9 min",
+    location: "",
+    category: "Tips",
+    date: "15 Ottobre 2024",
+    image: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1200&q=80",
+    likes: 342,
+    comments: 56
+  },
+  "sardegna-tenda-tetto-itinerario": {
+    title: "Sardegna in Tenda da Tetto: Itinerario 7 Giorni",
+    excerpt: "Un viaggio completo alla scoperta delle spiagge più belle, con tappe e campeggi consigliati",
+    content: [
+      "La Sardegna è il paradiso per chi viaggia con la tenda da tetto: spiagge mozzafiato, campeggi attrezzati e libertà assoluta.",
+      "## 📅 Itinerario Consigliato",
+      "### Giorno 1-2: Costa Smeralda",
+      "Parti da Olbia e dirigiti verso la Costa Smeralda. Campeggia a Porto Cervo e visita le spiagge di Liscia Ruja e Capriccioli. Acque cristalline e panorami indimenticabili.",
+      "### Giorno 3: Arcipelago della Maddalena",
+      "Prendi il traghetto da Palau per visitare l'arcipelago. La Spiaggia Rosa è un must (anche se balneazione vietata, vale la vista). Campeggio consigliato: Camping Isuledda.",
+      "### Giorno 4-5: Alghero e Capo Caccia",
+      "Costeggia verso ovest fino ad Alghero. Visita le Grotte di Nettuno e goditi il tramonto dal promontorio. Campeggio Laguna Blu è perfetto.",
+      "### Giorno 6: Spiagge del Sud",
+      "Scendi verso Chia e Tuerredda, tra le spiagge più belle dell'isola. Sabbia bianca finissima e mare turchese.",
+      "### Giorno 7: Cagliari e Rientro",
+      "Visita Cagliari, esplora il Poetto e la città vecchia prima del rientro.",
+      "## 🏕️ Campeggi Consigliati",
+      "- Camping Village Isuledda (La Maddalena)\n- Camping Laguna Blu (Alghero)\n- Camping Torre Chia (Chia)\n- Camping Capo Ferrato (Costa Rei)",
+      "## 💡 Consigli Pratici",
+      "- Prenota i campeggi in alta stagione\n- Porta scorta d'acqua (nell'interno può scarseggiare)\n- Usa creme solari ecologiche\n- Rispetta il divieto di balneazione dove segnalato\n- Assaggia la cucina locale: porceddu, malloreddus, seadas!"
+    ],
+    author: "Luca Verdi",
+    authorAvatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200",
+    readTime: "15 min",
+    location: "Sardegna",
+    category: "Destinazioni",
+    date: "10 Ottobre 2024",
+    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+    likes: 478,
+    comments: 67
+  },
+  "dolomiti-tenda-tetto-itinerario": {
+    title: "Dolomiti in Tenda da Tetto: Itinerario 5 Giorni",
+    excerpt: "Tra passi alpini e laghi cristallini: l'itinerario perfetto per gli amanti della montagna",
+    content: [
+      "Le Dolomiti offrono scenari mozzafiato per chi viaggia in tenda da tetto. Un paradiso per escursionisti e amanti della natura.",
+      "## 🏔️ Itinerario 5 Giorni",
+      "### Giorno 1: Val Gardena",
+      "Parti da Bolzano e sali in Val Gardena. Prima tappa: Ortisei. Campeggia al Camping Sassolungo con vista sulle cime dolomitiche. Escursione al Rifugio Alpe di Siusi.",
+      "### Giorno 2: Passo Sella e Val di Fassa",
+      "Attraversa il Passo Sella (2.240m) e scendi in Val di Fassa. Sosta a Canazei, escursione al Lago di Carezza, uno dei più fotografati delle Dolomiti. Campeggio Marmolada.",
+      "### Giorno 3: Cortina d'Ampezzo",
+      "Raggiungi Cortina attraverso il Passo Falzarego. Visita le Tre Cime di Lavaredo (imperdibile!). Campeggio Rocchetta con vista sulle montagne.",
+      "### Giorno 4: Lago di Misurina e Tre Cime",
+      "Escursione mattutina alle Tre Cime di Lavaredo (circa 3 ore andata-ritorno). Pomeriggio al Lago di Misurina, chiamato 'la perla delle Dolomiti'.",
+      "### Giorno 5: Val Pusteria e Rientro",
+      "Scendi in Val Pusteria, visita Brunico e le sue fortificazioni. Ultima tappa al Lago di Braies prima del rientro.",
+      "## 🏕️ Campeggi Montani",
+      "- Camping Sassolungo (Ortisei)\n- Camping Marmolada (Canazei)\n- Camping Rocchetta (Cortina)\n- Camping Olympia (Dobbiaco)",
+      "## ⛰️ Escursioni Consigliate",
+      "- Tre Cime di Lavaredo (difficoltà media)\n- Alpe di Siusi (facile)\n- Seceda (panoramica)\n- Lago di Braies (facile)",
+      "## 💡 Consigli Essenziali",
+      "- Porta abbigliamento a strati (le temperature cambiano velocemente)\n- Verifica condizioni meteo quotidianamente\n- Prenota campeggi in anticipo\n- Porta kit pronto soccorso montagna\n- In alta stagione, parti presto per le escursioni popolari",
+      "## 🍽️ Specialità da Provare",
+      "Non perdere i canederli, lo speck, lo strudel e i formaggi locali. Fermati nei rifugi per piatti tipici con vista!"
+    ],
+    author: "Marco Rossi",
+    authorAvatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200",
+    readTime: "12 min",
+    location: "Dolomiti",
+    category: "Destinazioni",
+    date: "5 Ottobre 2024",
+    image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80",
+    likes: 623,
+    comments: 94
   }
 };
 
@@ -476,10 +596,11 @@ const GuideDetail = () => {
       <Header />
       <main>
         {/* Hero Image */}
-        <div className="relative h-[400px] overflow-hidden">
+        <div className="relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden">
           <img 
             src={guide.image} 
             alt={guide.title}
+            loading="eager"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
@@ -511,7 +632,8 @@ const GuideDetail = () => {
                     <img 
                       src={guide.authorAvatar} 
                       alt={guide.author}
-                      className="w-24 h-24 rounded-full object-cover"
+                      loading="lazy"
+                      className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover"
                     />
                   ) : (
                     <div className="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center">
@@ -596,11 +718,12 @@ const GuideDetail = () => {
                   const match = paragraph.match(/!\[(.*?)\]\((.*?)\)/);
                   if (match) {
                     return (
-                      <figure key={index} className="my-6 flex flex-col items-center">
+                      <figure key={index} className="my-6 sm:my-8 flex flex-col items-center">
                         <img 
                           src={match[2]} 
                           alt={match[1]}
-                          className="w-full md:w-3/5 lg:w-1/2 h-auto rounded-lg shadow-md"
+                          loading="lazy"
+                          className="w-full sm:w-4/5 md:w-3/4 lg:w-2/3 xl:w-3/5 h-auto rounded-lg shadow-md"
                         />
                         {match[1] && (
                           <figcaption className="text-center text-sm text-muted-foreground mt-3 italic">
@@ -665,7 +788,8 @@ const GuideDetail = () => {
                           <img 
                             src={g.image} 
                             alt={g.title}
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform"
+                            loading="lazy"
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                           />
                         </div>
                         <CardContent className="p-6">

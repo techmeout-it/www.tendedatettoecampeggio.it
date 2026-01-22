@@ -159,10 +159,11 @@ const About = () => {
               <div className="grid md:grid-cols-3 gap-8">
                 {team.map((member, index) => (
                   <Card key={index} className="p-6 text-center bg-card/60 backdrop-blur border-0 hover:shadow-elegant transition-all">
-                    <div className="w-24 h-24 rounded-full overflow-hidden mx-auto mb-4">
+                    <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden mx-auto mb-4">
                       <img 
                         src={member.avatar} 
                         alt={member.name}
+                        loading="lazy"
                         className="w-full h-full object-cover"
                       />
                     </div>

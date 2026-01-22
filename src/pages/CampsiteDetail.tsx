@@ -269,11 +269,12 @@ const CampsiteDetail = () => {
       <main>
         {/* Image Gallery */}
         <div className="relative">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-2 h-[400px]">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-2 h-[300px] sm:h-[350px] md:h-[400px] lg:h-[500px]">
             <div className="md:col-span-2 overflow-hidden">
               <img 
                 src={campsite.images[0]} 
                 alt={campsite.name}
+                loading="eager"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -283,6 +284,7 @@ const CampsiteDetail = () => {
                   <img 
                     src={img} 
                     alt={`${campsite.name} ${index + 2}`}
+                    loading="lazy"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -403,7 +405,8 @@ const CampsiteDetail = () => {
                           <img 
                             src={review.avatar} 
                             alt={review.author}
-                            className="w-12 h-12 rounded-full object-cover"
+                            loading="lazy"
+                            className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover"
                           />
                           <div className="flex-1">
                             <div className="flex items-center justify-between mb-2">

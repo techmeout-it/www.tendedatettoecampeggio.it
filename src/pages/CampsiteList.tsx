@@ -368,6 +368,7 @@ const CampsiteList = () => {
                             <img 
                               src={campsite.image} 
                               alt={campsite.name}
+                              loading="lazy"
                               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                             />
                             <Badge className="absolute top-3 left-3 bg-background/90 text-foreground">

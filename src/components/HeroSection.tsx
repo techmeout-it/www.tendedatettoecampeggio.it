@@ -13,7 +13,7 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-background to-secondary/30">
+    <section className="relative overflow-hidden bg-gradient-to-b from-background to-secondary/30" aria-label="Sezione hero">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img 
@@ -60,7 +60,7 @@ const HeroSection = () => {
             {stats.map((stat, index) => (
               <Card key={index} className="p-6 bg-card/80 backdrop-blur shadow-card hover:shadow-elegant transition-all duration-300">
                 <div className="flex flex-col items-center space-y-2">
-                  <stat.icon className="h-8 w-8 text-primary" />
+                  <stat.icon className="h-8 w-8 text-primary" aria-hidden="true" />
                   <div className="text-2xl font-bold text-primary">{stat.value}</div>
                   <div className="text-sm text-muted-foreground text-center">{stat.label}</div>
                 </div>

@@ -38,20 +38,24 @@ const Newsletter = () => {
                 <h3 className="text-3xl font-bold text-foreground mb-4">
                   Resta Aggiornato
                 </h3>
-                <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                <p id="newsletter-description" className="text-xl text-muted-foreground max-w-2xl mx-auto">
                   Ricevi le migliori guide, le nuove destinazioni e le offerte esclusive dei nostri partner direttamente nella tua email
                 </p>
               </div>
 
               {!isSubscribed ? (
-                <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto" aria-label="Iscrizione newsletter">
+                  <label htmlFor="newsletter-email" className="sr-only">Indirizzo email</label>
                   <Input
+                    id="newsletter-email"
                     type="email"
                     placeholder="La tua email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     className="flex-1 bg-background/50 border-primary/20 focus:border-primary"
                     required
+                    aria-required="true"
+                    aria-describedby="newsletter-description"
                   />
                   <Button 
                     type="submit" 

@@ -31,13 +31,13 @@ const CommunitySection = () => {
   ];
 
   return (
-    <section id="community" className="py-20 bg-gradient-to-b from-background to-secondary/30">
+    <section id="community" className="py-20 bg-gradient-to-b from-background to-secondary/30" aria-label="Sezione community">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
             <div className="flex items-center justify-center mb-4">
-              <Users className="h-8 w-8 text-primary mr-3" />
+              <Users className="h-8 w-8 text-primary mr-3" aria-hidden="true" />
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">
                 La Nostra Community
               </h2>
@@ -51,7 +51,7 @@ const CommunitySection = () => {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {communityStats.map((stat, index) => (
               <Card key={index} className="text-center p-6 bg-card/60 backdrop-blur border-0 hover:shadow-elegant transition-all duration-300">
-                <stat.icon className="h-8 w-8 text-primary mx-auto mb-3" />
+                <stat.icon className="h-8 w-8 text-primary mx-auto mb-3" aria-hidden="true" />
                 <div className="text-2xl font-bold text-primary mb-1">{stat.value}</div>
                 <div className="text-sm font-medium text-foreground mb-2">{stat.label}</div>
                 <Badge variant="secondary" className="text-xs bg-secondary/70">
@@ -91,9 +91,9 @@ const CommunitySection = () => {
               </p>
               
               <div className="space-y-4">
-                <a href="https://www.facebook.com/groups/375926353544064" target="_blank" rel="noopener noreferrer" className="block">
+                <a href="https://www.facebook.com/groups/375926353544064" target="_blank" rel="noopener noreferrer" className="block" aria-label="Unisciti al gruppo Facebook con oltre 40.000 membri">
                   <Button className="w-full bg-gradient-to-r from-[#1877F2] to-[#42A5F5] hover:shadow-elegant transition-all duration-300">
-                    <Facebook className="h-5 w-5 mr-2" />
+                    <Facebook className="h-5 w-5 mr-2" aria-hidden="true" />
                     Gruppo Facebook (40K+ membri)
                   </Button>
                 </a>

@@ -37,7 +37,7 @@ const GuideSection = () => {
   ];
 
   return (
-    <section id="guide" className="py-20 bg-gradient-to-b from-secondary/30 to-background">
+    <section id="guide" className="py-20 bg-gradient-to-b from-secondary/30 to-background" aria-label="Articoli e guide sul campeggio">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
@@ -56,7 +56,7 @@ const GuideSection = () => {
           {/* Guide Cards */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {guides.map((guide, index) => (
-              <Link key={index} to={`/guide/${guide.slug}`}>
+              <Link key={index} to={`/guide/${guide.slug}`} aria-label={`Leggi l'articolo: ${guide.title}`}>
                 <Card className="group hover:shadow-elegant transition-all duration-300 border-0 bg-card/60 backdrop-blur h-full">
                   <div className="aspect-video overflow-hidden rounded-t-lg">
                     <img 

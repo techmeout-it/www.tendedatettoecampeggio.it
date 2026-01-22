@@ -22,7 +22,7 @@ const Index = () => {
       />
       <OrganizationSchema />
       <Header />
-      <main>
+      <main id="main-content">
         <HeroSection />
         <GuideSection />
         <MapSection />

@@ -43,19 +43,19 @@ const Footer = () => {
                 Condividiamo passione, esperienze e avventure.
               </p>
               <div className="flex space-x-3">
-                <a href="https://www.facebook.com/groups/375926353544064" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.facebook.com/groups/375926353544064" target="_blank" rel="noopener noreferrer" aria-label="Seguici su Facebook">
                   <Button size="sm" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                    <Facebook className="h-4 w-4" />
+                    <Facebook className="h-4 w-4" aria-hidden="true" />
                   </Button>
                 </a>
-                <a href="https://www.instagram.com/tende_da_tetto_e_campeggio/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.instagram.com/tende_da_tetto_e_campeggio/" target="_blank" rel="noopener noreferrer" aria-label="Seguici su Instagram">
                   <Button size="sm" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                    <Instagram className="h-4 w-4" />
+                    <Instagram className="h-4 w-4" aria-hidden="true" />
                   </Button>
                 </a>
-                <Link to="/contatti">
+                <Link to="/contatti" aria-label="Contattaci via email">
                   <Button size="sm" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                    <Mail className="h-4 w-4" />
+                    <Mail className="h-4 w-4" aria-hidden="true" />
                   </Button>
                 </Link>
               </div>

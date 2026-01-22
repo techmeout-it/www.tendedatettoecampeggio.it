@@ -24,7 +24,7 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex h-24 items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3">
+          <Link to="/" className="flex items-center space-x-3" aria-label="Torna alla homepage">
             <img src={logoTende} alt="Tende da Tetto Community" loading="eager" className="h-14 w-14 sm:h-16 sm:w-16 md:h-20 md:w-20 rounded-full object-cover" />
             <div>
               <h1 className="text-2xl font-bold text-foreground">Tende da Tetto</h1>
@@ -33,7 +33,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
+          <nav className="hidden md:flex items-center space-x-6" aria-label="Navigazione principale">
             {navigation.map((item) => (
               item.isRoute ? (
                 <Link
@@ -69,8 +69,8 @@ const Header = () => {
           {/* Mobile Menu */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild className="md:hidden">
-              <Button variant="ghost" size="icon">
-                <Menu className="h-6 w-6" />
+              <Button variant="ghost" size="icon" aria-label="Apri menu di navigazione" aria-expanded={isOpen}>
+                <Menu className="h-6 w-6" aria-hidden="true" />
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-80">

@@ -47,13 +47,13 @@ const PartnerSection = () => {
   ];
 
   return (
-    <section id="partner" className="py-20 bg-gradient-to-b from-secondary/30 to-background">
+    <section id="partner" className="py-20 bg-gradient-to-b from-secondary/30 to-background" aria-label="Sezione partner e offerte">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
             <div className="flex items-center justify-center mb-4">
-              <Handshake className="h-8 w-8 text-primary mr-3" />
+              <Handshake className="h-8 w-8 text-primary mr-3" aria-hidden="true" />
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">
                 Partner & Offerte
               </h2>
@@ -73,7 +73,7 @@ const PartnerSection = () => {
                       <div className="w-16 h-16 rounded-lg overflow-hidden bg-secondary/50">
                         <img 
                           src={partner.logo} 
-                          alt={partner.name}
+                          alt={`Logo ${partner.name}`}
                           loading="lazy"
                           className="w-full h-full object-cover"
                         />

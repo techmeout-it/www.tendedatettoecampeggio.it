@@ -46,13 +46,13 @@ const MapSection = () => {
   };
 
   return (
-    <section id="mappa" className="py-20 bg-background">
+    <section id="mappa" className="py-20 bg-background" aria-label="Sezione mappa campeggi">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
             <div className="flex items-center justify-center mb-4">
-              <MapPin className="h-8 w-8 text-primary mr-3" />
+              <MapPin className="h-8 w-8 text-primary mr-3" aria-hidden="true" />
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">
                 Mappa Campeggi
               </h2>
@@ -95,7 +95,7 @@ const MapSection = () => {
             </h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {featuredCampsites.map((campsite, index) => (
-                <Link key={index} to={`/campeggi/${campsite.slug}`}>
+                <Link key={index} to={`/campeggi/${campsite.slug}`} aria-label={`Visualizza dettagli ${campsite.name}`}>
                   <Card className="group hover:shadow-elegant transition-all duration-300 border-0 bg-card/60 backdrop-blur h-full">
                     <div className="aspect-video overflow-hidden rounded-t-lg">
                       <img 

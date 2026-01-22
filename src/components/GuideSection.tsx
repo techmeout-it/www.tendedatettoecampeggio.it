@@ -32,7 +32,7 @@ const GuideSection = () => {
       author: "Arianna e David di Camperboxes",
       readTime: "12 min",
       category: "Destinazioni",
-      image: "/www/img_articles/i_nostri_viaggi_in_camper/7-van-camper-boxes.jpg"
+      image: "/img_articles/i_nostri_viaggi_in_camper/7-van-camper-boxes.jpg"
     }
   ];
 

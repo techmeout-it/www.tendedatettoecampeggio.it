@@ -36,7 +36,7 @@ const allGuides = [
     category: "Destinazioni",
     date: "2026-01-10",
     dateDisplay: "10 Gen 2026",
-    image: "/www/img_articles/spagna_del_nord_sara_guido/IMG_20250817_152218.jpg"
+    image: "/img_articles/spagna_del_nord_sara_guido/IMG_20250817_152218.jpg"
   },
   {
     slug: "tende-da-tetto-super-ciurma-tempo-lento",
@@ -60,7 +60,7 @@ const allGuides = [
     category: "Tips",
     date: "2026-01-08",
     dateDisplay: "8 Gen 2026",
-    image: "/www/img_articles/dormire_freddo/WhatsApp%20Image%202026-01-10%20at%2017.06.43%20(2).jpeg"
+    image: "/img_articles/dormire_freddo/WhatsApp%20Image%202026-01-10%20at%2017.06.43%20(2).jpeg"
   },  {
     slug: "viaggiare-famiglia-minivan-camperboxes",
     title: "Viaggiare in famiglia con il nostro minivan: esperienze di libertà e scoperta",
@@ -71,7 +71,7 @@ const allGuides = [
     category: "Destinazioni",
     date: "2026-01-07",
     dateDisplay: "7 Gen 2026",
-    image: "/www/img_articles/i_nostri_viaggi_in_camper/7-van-camper-boxes.jpg"
+    image: "/img_articles/i_nostri_viaggi_in_camper/7-van-camper-boxes.jpg"
   },  {
     slug: "guida-completa-tende-da-tetto",
     title: "Guida Completa alle Tende da Tetto",

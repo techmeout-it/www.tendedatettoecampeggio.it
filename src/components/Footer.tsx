@@ -108,7 +108,7 @@ const Footer = () => {
           <div className="pt-8 border-t border-border">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 text-sm text-muted-foreground">
-                <p>&copy; 2025 TendaTetto Community. Tutti i diritti riservati.</p>
+                <p>&copy; 2026 TendaTetto Community. Tutti i diritti riservati.</p>
                 <div className="flex space-x-6">
                   <Link to="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
                   <Link to="/termini" className="hover:text-primary transition-colors">Termini di Servizio</Link>

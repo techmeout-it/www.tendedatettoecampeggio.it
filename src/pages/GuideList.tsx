@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
+import { BreadcrumbSchema } from "@/components/StructuredData";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -206,6 +208,18 @@ const GuideList = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Guide e Articoli sul Campeggio con Tende da Tetto"
+        description="Scopri guide pratiche, itinerari e consigli per le tue avventure con la tenda da tetto. Destinazioni, attrezzatura e tips dalla community italiana."
+        canonicalUrl="https://devtendedatettoecampeggioit.vercel.app/guide"
+        keywords="guide tende da tetto, itinerari campeggio, consigli outdoor, destinazioni campeggio Italia"
+      />
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', url: 'https://devtendedatettoecampeggioit.vercel.app' },
+          { name: 'Guide', url: 'https://devtendedatettoecampeggioit.vercel.app/guide' }
+        ]}
+      />
       <Header />
       <main>
         {/* Hero Section */}

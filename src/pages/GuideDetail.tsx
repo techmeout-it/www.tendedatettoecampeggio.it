@@ -1,6 +1,8 @@
 import { useParams, Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
+import { ArticleSchema, BreadcrumbSchema } from "@/components/StructuredData";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -418,8 +420,8 @@ const guidesData: Record<string, {
 
 const GuideDetail = () => {
   const { slug } = useParams<{ slug: string }>();
-  const guide = slug ? guidesData[slug] : null;
-
+  const guide = slug ? guidesData[slug] : null;  const siteUrl = 'https://devtendedatettoecampeggioit.vercel.app';
+  const canonicalUrl = `${siteUrl}/guide/${slug}`;
   if (!guide) {
     return (
       <div className="min-h-screen bg-background">
@@ -445,6 +447,32 @@ const GuideDetail = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title={guide.title}
+        description={guide.excerpt}
+        canonicalUrl={canonicalUrl}
+        ogType="article"
+        ogImage={guide.image}
+        keywords={`${guide.category}, ${guide.location}, tende da tetto, campeggio, ${guide.title}`}
+        author={guide.author}
+        publishedTime={new Date(guide.date).toISOString()}
+        articleSection={guide.category}
+      />
+      <ArticleSchema 
+        headline={guide.title}
+        description={guide.excerpt}
+        image={guide.image}
+        datePublished={new Date(guide.date).toISOString()}
+        author={guide.author}
+        url={canonicalUrl}
+      />
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', url: siteUrl },
+          { name: 'Guide', url: `${siteUrl}/guide` },
+          { name: guide.title, url: canonicalUrl }
+        ]}
+      />
       <Header />
       <main>
         {/* Hero Image */}

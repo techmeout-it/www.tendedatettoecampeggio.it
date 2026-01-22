@@ -1,12 +1,21 @@
 import { Resend } from 'resend';
 import { VercelRequest, VercelResponse } from '@vercel/node';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export default async (req: VercelRequest, res: VercelResponse) => {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
+
+  // Check if API key is set
+  if (!process.env.RESEND_API_KEY) {
+    console.error('RESEND_API_KEY environment variable is not set');
+    return res.status(500).json({
+      error: 'Email service not configured',
+      details: 'RESEND_API_KEY is missing. Please set it in Vercel environment variables.',
+    });
+  }
+
+  const resend = new Resend(process.env.RESEND_API_KEY);
 
   const { name, email, subject, message } = req.body;
 

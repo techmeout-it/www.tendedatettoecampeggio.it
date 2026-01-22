@@ -540,8 +540,28 @@ const guidesData: Record<string, {
 
 const GuideDetail = () => {
   const { slug } = useParams<{ slug: string }>();
-  const guide = slug ? guidesData[slug] : null;  const siteUrl = 'https://devtendedatettoecampeggioit.vercel.app';
+  const guide = slug ? guidesData[slug] : undefined;
+  const siteUrl = typeof window !== 'undefined' ? window.location.origin : '';
   const canonicalUrl = `${siteUrl}/guide/${slug}`;
+
+  // Helper function to convert Italian date to ISO string
+  const getISODate = (italianDate: string): string => {
+    const months: Record<string, string> = {
+      'Gennaio': '01', 'Febbraio': '02', 'Marzo': '03', 'Aprile': '04',
+      'Maggio': '05', 'Giugno': '06', 'Luglio': '07', 'Agosto': '08',
+      'Settembre': '09', 'Ottobre': '10', 'Novembre': '11', 'Dicembre': '12'
+    };
+    
+    const parts = italianDate.split(' ');
+    if (parts.length === 3) {
+      const day = parts[0].padStart(2, '0');
+      const month = months[parts[1]] || '01';
+      const year = parts[2];
+      return `${year}-${month}-${day}`;
+    }
+    return new Date().toISOString();
+  };
+
   if (!guide) {
     return (
       <div className="min-h-screen bg-background">
@@ -575,14 +595,14 @@ const GuideDetail = () => {
         ogImage={guide.image}
         keywords={`${guide.category}, ${guide.location}, tende da tetto, campeggio, ${guide.title}`}
         author={guide.author}
-        publishedTime={new Date(guide.date).toISOString()}
+        publishedTime={getISODate(guide.date)}
         articleSection={guide.category}
       />
       <ArticleSchema 
         headline={guide.title}
         description={guide.excerpt}
         image={guide.image}
-        datePublished={new Date(guide.date).toISOString()}
+        datePublished={getISODate(guide.date)}
         author={guide.author}
         url={canonicalUrl}
       />

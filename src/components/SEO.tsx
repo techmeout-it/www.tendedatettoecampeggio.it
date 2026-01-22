@@ -19,7 +19,7 @@ const SEO = ({
   description,
   canonicalUrl,
   ogType = 'website',
-  ogImage = 'https://devtendedatettoecampeggioit.vercel.app/og-image.jpg',
+  ogImage,
   keywords = 'tende da tetto, campeggio, outdoor, avventura, Italia, community, guide campeggio',
   author = 'Tende da Tetto e Campeggio',
   publishedTime,
@@ -27,7 +27,9 @@ const SEO = ({
   articleSection,
   noindex = false
 }: SEOProps) => {
-  const siteUrl = 'https://devtendedatettoecampeggioit.vercel.app';
+  const siteUrl = typeof window !== 'undefined' ? window.location.origin : '';
+  const defaultOgImage = `${siteUrl}/og-image.jpg`;
+  const finalOgImage = ogImage || defaultOgImage;
   const fullCanonicalUrl = canonicalUrl || siteUrl;
   const fullTitle = title.includes('Tende da Tetto') ? title : `${title} | Tende da Tetto e Campeggio`;
 
@@ -50,7 +52,7 @@ const SEO = ({
       <meta property="og:description" content={description} />
       <meta property="og:url" content={fullCanonicalUrl} />
       <meta property="og:site_name" content="Tende da Tetto e Campeggio" />
-      <meta property="og:image" content={ogImage} />
+      <meta property="og:image" content={finalOgImage} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
       <meta property="og:locale" content="it_IT" />
@@ -73,7 +75,7 @@ const SEO = ({
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter:image" content={finalOgImage} />
       
       {/* Additional SEO */}
       <meta httpEquiv="x-ua-compatible" content="ie=edge" />

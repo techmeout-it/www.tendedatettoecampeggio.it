@@ -36,7 +36,7 @@ export const ArticleSchema = ({
       "name": "Tende da Tetto e Campeggio",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://devtendedatettoecampeggioit.vercel.app/logo.png"
+        "url": `${typeof window !== 'undefined' ? window.location.origin : ''}/logo.png`
       }
     },
     "mainEntityOfPage": {
@@ -64,17 +64,21 @@ interface OrganizationSchemaProps {
 
 export const OrganizationSchema = ({
   name = "Tende da Tetto e Campeggio",
-  url = "https://devtendedatettoecampeggioit.vercel.app",
-  logo = "https://devtendedatettoecampeggioit.vercel.app/logo.png",
+  url,
+  logo,
   description = "La community italiana per gli amanti delle tende da tetto e del campeggio",
   contactEmail = "info@tendedatettoecampeggio.it"
 }: OrganizationSchemaProps = {}) => {
+  const siteUrl = typeof window !== 'undefined' ? window.location.origin : '';
+  const finalUrl = url || siteUrl;
+  const finalLogo = logo || `${siteUrl}/logo.png`;
+  
   const schema = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": name,
-    "url": url,
-    "logo": logo,
+    "url": finalUrl,
+    "logo": finalLogo,
     "description": description,
     "contactPoint": {
       "@type": "ContactPoint",

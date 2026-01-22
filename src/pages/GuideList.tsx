@@ -189,6 +189,7 @@ const categories = ["Tutte", "Attrezzatura", "Destinazioni", "Tips"];
 type SortOrder = "newest" | "oldest";
 
 const GuideList = () => {
+  const siteUrl = typeof window !== 'undefined' ? window.location.origin : '';
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("Tutte");
   const [sortOrder, setSortOrder] = useState<SortOrder>("newest");
@@ -211,13 +212,13 @@ const GuideList = () => {
       <SEO 
         title="Guide e Articoli sul Campeggio con Tende da Tetto"
         description="Scopri guide pratiche, itinerari e consigli per le tue avventure con la tenda da tetto. Destinazioni, attrezzatura e tips dalla community italiana."
-        canonicalUrl="https://devtendedatettoecampeggioit.vercel.app/guide"
+        canonicalUrl={`${siteUrl}/guide`}
         keywords="guide tende da tetto, itinerari campeggio, consigli outdoor, destinazioni campeggio Italia"
       />
       <BreadcrumbSchema 
         items={[
-          { name: 'Home', url: 'https://devtendedatettoecampeggioit.vercel.app' },
-          { name: 'Guide', url: 'https://devtendedatettoecampeggioit.vercel.app/guide' }
+          { name: 'Home', url: siteUrl },
+          { name: 'Guide', url: `${siteUrl}/guide` }
         ]}
       />
       <Header />

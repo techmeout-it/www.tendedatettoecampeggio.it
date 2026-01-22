@@ -1,7 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 
-const DOMAIN = 'https://devtendedatettoecampeggioit.vercel.app';
+// Use environment variable or default for local development
+const DOMAIN = process.env.VITE_SITE_URL || 'http://localhost:5173';
 const CURRENT_DATE = new Date().toISOString().split('T')[0];
 
 const routes = [

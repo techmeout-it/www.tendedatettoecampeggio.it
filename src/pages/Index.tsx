@@ -10,12 +10,14 @@ import SEO from "@/components/SEO";
 import { OrganizationSchema } from "@/components/StructuredData";
 
 const Index = () => {
+  const siteUrl = typeof window !== 'undefined' ? window.location.origin : '';
+  
   return (
     <div className="min-h-screen bg-background">
       <SEO 
         title="Tende da Tetto e Campeggio - Community Italiana"
         description="La community italiana per gli amanti delle tende da tetto e del campeggio. Guide, mappe, configuratore e tutto per le tue avventure outdoor."
-        canonicalUrl="https://devtendedatettoecampeggioit.vercel.app"
+        canonicalUrl={siteUrl}
         ogType="website"
       />
       <OrganizationSchema />

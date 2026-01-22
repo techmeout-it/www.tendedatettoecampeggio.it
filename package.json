@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "npm run generate:sitemap && vite build",
+    "build": "VITE_SITE_URL=${VITE_SITE_URL:-https://devtendedatettoecampeggioit.vercel.app} npm run generate:sitemap && vite build",
     "build:dev": "vite build --mode development",
     "generate:sitemap": "node scripts/generate-sitemap.mjs",
     "lint": "eslint .",

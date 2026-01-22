@@ -9,7 +9,7 @@ Disallow: /api/
 Disallow: /*.json$
 
 # Sitemaps
-Sitemap: https://devtendedatettoecampeggioit.vercel.app/sitemap.xml
+Sitemap: http://localhost:5173/sitemap.xml
 
 # Crawl-delay for polite crawling
 Crawl-delay: 0

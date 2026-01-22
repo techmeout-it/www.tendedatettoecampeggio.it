@@ -127,3 +127,155 @@ export const BreadcrumbSchema = ({ items }: BreadcrumbSchemaProps) => {
     </Helmet>
   );
 };
+
+interface EventSchemaProps {
+  name: string;
+  description: string;
+  startDate: string;
+  endDate: string;
+  location: string;
+  image?: string;
+  url?: string;
+  organizer?: string;
+}
+
+export const EventSchema = ({
+  name,
+  description,
+  startDate,
+  endDate,
+  location,
+  image,
+  url,
+  organizer = "Tende da Tetto e Campeggio"
+}: EventSchemaProps) => {
+  const siteUrl = typeof window !== 'undefined' ? window.location.origin : '';
+  const eventUrl = url || siteUrl;
+  const eventImage = image || `${siteUrl}/hero-camping.jpg`;
+
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": name,
+    "description": description,
+    "startDate": startDate,
+    "endDate": endDate,
+    "location": {
+      "@type": "Place",
+      "name": location
+    },
+    "image": eventImage,
+    "url": eventUrl,
+    "organizer": {
+      "@type": "Organization",
+      "name": organizer
+    }
+  };
+
+  return (
+    <Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify(schema)}
+      </script>
+    </Helmet>
+  );
+};
+
+interface ProductSchemaProps {
+  name: string;
+  description: string;
+  image: string;
+  brand: string;
+  price?: string;
+  availability?: string;
+  url?: string;
+  rating?: number;
+  reviewCount?: number;
+}
+
+export const ProductSchema = ({
+  name,
+  description,
+  image,
+  brand,
+  price,
+  availability = "https://schema.org/InStock",
+  url,
+  rating,
+  reviewCount
+}: ProductSchemaProps) => {
+  const siteUrl = typeof window !== 'undefined' ? window.location.origin : '';
+  const productUrl = url || siteUrl;
+
+  const schema = {
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": name,
+    "description": description,
+    "image": image,
+    "brand": {
+      "@type": "Brand",
+      "name": brand
+    },
+    ...(price && { 
+      "offers": {
+        "@type": "Offer",
+        "price": price,
+        "priceCurrency": "EUR",
+        "availability": availability,
+        "url": productUrl
+      }
+    }),
+    ...(rating && {
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": rating,
+        "reviewCount": reviewCount || 0
+      }
+    })
+  };
+
+  return (
+    <Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify(schema)}
+      </script>
+    </Helmet>
+  );
+};
+
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+interface FAQPageSchemaProps {
+  items: FAQItem[];
+  url?: string;
+}
+
+export const FAQPageSchema = ({ items, url }: FAQPageSchemaProps) => {
+  const siteUrl = typeof window !== 'undefined' ? window.location.origin : '';
+  const pageUrl = url || siteUrl;
+
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": items.map((item) => ({
+      "@type": "Question",
+      "name": item.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": item.answer
+      }
+    }))
+  };
+
+  return (
+    <Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify(schema)}
+      </script>
+    </Helmet>
+  );
+};

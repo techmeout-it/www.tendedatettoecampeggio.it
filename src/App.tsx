@@ -11,6 +11,8 @@ import GuideDetail from "./pages/GuideDetail";
 import CampsiteList from "./pages/CampsiteList";
 import CampsiteDetail from "./pages/CampsiteDetail";
 import Contact from "./pages/Contact";
+import Events from "./pages/Events";
+import FAQ from "./pages/FAQ";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import Cookies from "./pages/Cookies";
@@ -34,6 +36,8 @@ const App = () => (
           <Route path="/campeggi" element={<CampsiteList />} />
           <Route path="/campeggi/:slug" element={<CampsiteDetail />} />
           <Route path="/contatti" element={<Contact />} />
+          <Route path="/eventi" element={<Events />} />
+          <Route path="/faq" element={<FAQ />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/termini" element={<Terms />} />
           <Route path="/cookie" element={<Cookies />} />

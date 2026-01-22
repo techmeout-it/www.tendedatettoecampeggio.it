@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Mail, MapPin, Users, BookOpen, Handshake, Info } from "lucide-react";
+import { Facebook, Instagram, Mail, MapPin, Users, BookOpen, Handshake, Info, Rss, Calendar, HelpCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import logoTende from "@/assets/logo_tende.jpg";
@@ -9,11 +9,14 @@ const Footer = () => {
       { name: "Unisciti su Facebook", href: "https://www.facebook.com/groups/375926353544064", icon: Facebook, external: true },
       { name: "Seguici su Instagram", href: "https://www.instagram.com/tende_da_tetto_e_campeggio/", icon: Instagram, external: true },
       { name: "Newsletter", href: "/coming-soon", icon: Mail, external: false },
+      { name: "RSS Feed", href: "/api/rss.xml", icon: Rss, external: true },
+      { name: "Eventi e Raduni", href: "/eventi", icon: Calendar, external: false },
       { name: "Chi Siamo", href: "/chi-siamo", icon: Info, external: false },
     ],
     risorse: [
       { name: "Guide & Tutorial", href: "/guide", icon: BookOpen, external: false },
       { name: "Lista Campeggi", href: "/campeggi", icon: MapPin, external: false },
+      { name: "Domande Frequenti", href: "/faq", icon: HelpCircle, external: false },
       { name: "Community Forum", href: "/coming-soon", icon: Users, external: false },
     ],
     partner: [
@@ -77,7 +80,7 @@ const Footer = () => {
                           rel="noopener noreferrer"
                           className="flex items-center text-muted-foreground hover:text-primary transition-colors"
                         >
-                          <link.icon className="h-4 w-4 mr-2" />
+                          <link.icon className="h-4 w-4 mr-2" aria-hidden="true" />
                           {link.name}
                         </a>
                       ) : link.href.startsWith('#') ? (
@@ -85,7 +88,7 @@ const Footer = () => {
                           href={link.href}
                           className="flex items-center text-muted-foreground hover:text-primary transition-colors"
                         >
-                          <link.icon className="h-4 w-4 mr-2" />
+                          <link.icon className="h-4 w-4 mr-2" aria-hidden="true" />
                           {link.name}
                         </a>
                       ) : (
@@ -93,7 +96,7 @@ const Footer = () => {
                           to={link.href}
                           className="flex items-center text-muted-foreground hover:text-primary transition-colors"
                         >
-                          <link.icon className="h-4 w-4 mr-2" />
+                          <link.icon className="h-4 w-4 mr-2" aria-hidden="true" />
                           {link.name}
                         </Link>
                       )}

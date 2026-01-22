@@ -52,19 +52,54 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Validation
+    if (!formData.name || !formData.email || !formData.subject || !formData.message) {
+      toast({
+        title: "Errore",
+        description: "Per favore compila tutti i campi obbligatori.",
+        variant: "destructive",
+      });
+      return;
+    }
+
     setIsSubmitting(true);
     
-    // Simulazione invio - in futuro collegare a un backend
-    setTimeout(() => {
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        }),
+      });
+
+      if (!response.ok) {
+        const error = await response.json();
+        throw new Error(error.error || 'Failed to send email');
+      }
+
       setIsSubmitting(false);
       setIsSubmitted(true);
       toast({
         title: "Messaggio inviato!",
-        description: "Ti risponderemo il prima possibile.",
+        description: "Ti risponderemo il prima possibile. Controlla la tua email.",
       });
-    }, 1500);
+    } catch (error) {
+      setIsSubmitting(false);
+      toast({
+        title: "Errore",
+        description: error instanceof Error ? error.message : "Non è stato possibile inviare il messaggio. Riprova più tardi.",
+        variant: "destructive",
+      });
+    }
   };
 
   const contactOptions = [
@@ -95,14 +130,20 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Contatti - Tende da Tetto e Campeggio"
+        description="Contattaci per domande, suggerimenti o proposte di partnership. Rispondiamo rapidamente a tutti i messaggi."
+        canonicalUrl={typeof window !== 'undefined' ? `${window.location.origin}/contatti` : ''}
+        keywords="contatti, email, partnership, assistenza"
+      />
       <Header />
-      <main>
+      <main id="main-content">
         {/* Hero Section */}
-        <section className="py-16 bg-gradient-to-b from-primary/10 to-background">
+        <section className="py-16 bg-gradient-to-b from-primary/10 to-background" aria-label="Sezione contatti">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <div className="flex items-center justify-center mb-6">
-                <Mail className="h-12 w-12 text-primary mr-4" />
+                <Mail className="h-12 w-12 text-primary mr-4" aria-hidden="true" />
                 <h1 className="text-4xl md:text-5xl font-bold text-foreground">
                   Contattaci
                 </h1>
@@ -124,7 +165,7 @@ const Contact = () => {
                   <Card key={index} className="p-6 bg-card/60 backdrop-blur border-0 hover:shadow-elegant transition-all">
                     <div className="flex items-start gap-4">
                       <div className={`p-3 rounded-lg bg-gradient-to-r ${option.color}`}>
-                        <option.icon className="h-6 w-6 text-white" />
+                        <option.icon className="h-6 w-6 text-white" aria-hidden="true" />
                       </div>
                       <div className="flex-1">
                         <h3 className="text-lg font-semibold text-foreground mb-1">
@@ -147,7 +188,7 @@ const Contact = () => {
               {/* Contact Form */}
               <Card className="p-8 bg-card/60 backdrop-blur border-0">
                 <div className="text-center mb-8">
-                  <MessageSquare className="h-10 w-10 text-primary mx-auto mb-4" />
+                  <MessageSquare className="h-10 w-10 text-primary mx-auto mb-4" aria-hidden="true" />
                   <h2 className="text-2xl font-bold text-foreground mb-2">
                     Inviaci un messaggio
                   </h2>
@@ -157,7 +198,7 @@ const Contact = () => {
                 </div>
 
                 {!isSubmitted ? (
-                  <form onSubmit={handleSubmit} className="space-y-6 max-w-xl mx-auto">
+                  <form onSubmit={handleSubmit} className="space-y-6 max-w-xl mx-auto" aria-label="Modulo di contatto">
                     <div className="grid md:grid-cols-2 gap-4">
                       <div className="space-y-2">
                         <Label htmlFor="name">Nome *</Label>
@@ -168,6 +209,7 @@ const Contact = () => {
                           value={formData.name}
                           onChange={handleChange}
                           required
+                          aria-required="true"
                           className="bg-background/50 border-primary/20 focus:border-primary"
                         />
                       </div>
@@ -181,6 +223,7 @@ const Contact = () => {
                           value={formData.email}
                           onChange={handleChange}
                           required
+                          aria-required="true"
                           className="bg-background/50 border-primary/20 focus:border-primary"
                         />
                       </div>
@@ -189,7 +232,7 @@ const Contact = () => {
                     <div className="space-y-2">
                       <Label htmlFor="subject">Argomento *</Label>
                       <Select value={formData.subject} onValueChange={handleSubjectChange} required>
-                        <SelectTrigger className="bg-background/50 border-primary/20 focus:border-primary">
+                        <SelectTrigger id="subject" className="bg-background/50 border-primary/20 focus:border-primary" aria-required="true">
                           <SelectValue placeholder="Seleziona un argomento" />
                         </SelectTrigger>
                         <SelectContent>
@@ -214,6 +257,7 @@ const Contact = () => {
                         value={formData.message}
                         onChange={handleChange}
                         required
+                        aria-required="true"
                         rows={5}
                         className="bg-background/50 border-primary/20 focus:border-primary resize-none"
                       />

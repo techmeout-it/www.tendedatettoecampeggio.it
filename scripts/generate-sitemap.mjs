@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 
 const DOMAIN = 'https://devtendedatettoecampeggioit.vercel.app';
+const CURRENT_DATE = new Date().toISOString().split('T')[0];
 
 const routes = [
   { path: '/', priority: '1.0', changefreq: 'daily' },
@@ -40,9 +41,15 @@ guideSlugs.forEach(slug => {
 
 function generateSitemap() {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 ${routes.map(route => `  <url>
     <loc>${DOMAIN}${route.path}</loc>
+    <lastmod>${CURRENT_DATE}</lastmod>
     <changefreq>${route.changefreq}</changefreq>
     <priority>${route.priority}</priority>
   </url>`).join('\n')}
@@ -54,7 +61,46 @@ ${routes.map(route => `  <url>
   }
 
   fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemap);
-  console.log('✅ Sitemap generated successfully!');
+  console.log('✅ Sitemap.xml generated successfully!');
 }
 
+function generateRobotsTxt() {
+  const robotsTxt = `# Tende da Tetto e Campeggio - Robots.txt
+# Generated: ${CURRENT_DATE}
+
+User-agent: *
+Allow: /
+
+# Disallow admin/internal paths (if any)
+Disallow: /api/
+Disallow: /*.json$
+
+# Sitemaps
+Sitemap: ${DOMAIN}/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 0
+
+# Specific bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+`;
+
+  const publicDir = path.join(process.cwd(), 'public');
+  if (!fs.existsSync(publicDir)) {
+    fs.mkdirSync(publicDir, { recursive: true });
+  }
+
+  fs.writeFileSync(path.join(publicDir, 'robots.txt'), robotsTxt);
+  console.log('✅ Robots.txt generated successfully!');
+}
+
+// Run both generators
 generateSitemap();
+generateRobotsTxt();

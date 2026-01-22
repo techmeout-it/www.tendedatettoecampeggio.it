@@ -1,4 +1,25 @@
+# Tende da Tetto e Campeggio - Robots.txt
+# Generated: 2026-01-22
+
 User-agent: *
 Allow: /
 
+# Disallow admin/internal paths (if any)
+Disallow: /api/
+Disallow: /*.json$
+
+# Sitemaps
 Sitemap: https://devtendedatettoecampeggioit.vercel.app/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 0
+
+# Specific bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /

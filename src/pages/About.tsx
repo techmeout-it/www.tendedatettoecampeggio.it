@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import { OrganizationSchema } from "@/components/StructuredData";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -55,14 +56,22 @@ const About = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Chi Siamo - Community Italiana Tende da Tetto e Campeggio"
+        description="Scopri la community più grande in Italia dedicata alle tende da tetto e al campeggio. Dal 2021 uniamo appassionati di tutta Italia per condividere esperienze, consigli e avventure indimenticabili."
+        canonicalUrl={typeof window !== 'undefined' ? `${window.location.origin}/chi-siamo` : ''}
+        keywords="community tende da tetto, community campeggio, campeggio italia, roof tent community, chi siamo"
+        ogType="website"
+      />
+      <OrganizationSchema />
       <Header />
-      <main>
+      <main id="main-content">
         {/* Hero Section */}
-        <section className="relative py-20 bg-gradient-to-b from-primary/10 to-background">
+        <section className="relative py-20 bg-gradient-to-b from-primary/10 to-background" aria-label="Chi siamo - Introduzione">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <div className="flex items-center justify-center mb-6">
-                <Mountain className="h-12 w-12 text-primary mr-4" />
+                <Mountain className="h-12 w-12 text-primary mr-4" aria-hidden="true" />
                 <h1 className="text-4xl md:text-5xl font-bold text-foreground">
                   Chi Siamo
                 </h1>
@@ -83,7 +92,7 @@ const About = () => {
         </section>
 
         {/* Mission Section */}
-        <section className="py-16 bg-background">
+        <section className="py-16 bg-background" aria-label="Missione della community">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -107,7 +116,7 @@ const About = () => {
                 <div className="grid grid-cols-2 gap-4">
                   {values.map((value, index) => (
                     <Card key={index} className="p-6 text-center bg-card/60 backdrop-blur border-0 hover:shadow-elegant transition-all">
-                      <value.icon className="h-10 w-10 text-primary mx-auto mb-3" />
+                      <value.icon className="h-10 w-10 text-primary mx-auto mb-3" aria-hidden="true" />
                       <h3 className="font-semibold text-foreground mb-2">{value.title}</h3>
                       <p className="text-sm text-muted-foreground">{value.description}</p>
                     </Card>
@@ -119,11 +128,11 @@ const About = () => {
         </section>
 
         {/* Timeline Section */}
-        <section className="py-16 bg-gradient-to-b from-secondary/30 to-background">
+        <section className="py-16 bg-gradient-to-b from-secondary/30 to-background" aria-label="Timeline - La nostra storia">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
-                <Calendar className="h-8 w-8 text-primary mx-auto mb-4" />
+                <Calendar className="h-8 w-8 text-primary mx-auto mb-4" aria-hidden="true" />
                 <h2 className="text-3xl font-bold text-foreground">La Nostra Storia</h2>
               </div>
               <div className="space-y-8">
@@ -148,11 +157,11 @@ const About = () => {
         </section>
 
         {/* Team Section */}
-        <section className="py-16 bg-background">
+        <section className="py-16 bg-background" aria-label="Team - Il nostro team">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
-                <Users className="h-8 w-8 text-primary mx-auto mb-4" />
+                <Users className="h-8 w-8 text-primary mx-auto mb-4" aria-hidden="true" />
                 <h2 className="text-3xl font-bold text-foreground">Il Nostro Team</h2>
                 <p className="text-muted-foreground mt-2">Le persone dietro TendaTetto Community</p>
               </div>

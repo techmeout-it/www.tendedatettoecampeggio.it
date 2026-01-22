@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import { BreadcrumbSchema } from "@/components/StructuredData";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -271,31 +272,47 @@ const CampsiteList = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Campeggi in Italia - Mappa e Lista Selezionata"
+        description="Scopri i migliori campeggi d'Italia testati e recensiti dalla community. Trova il campeggio perfetto per le tue avventure con tenda da tetto. Filtra per regione, tipo e valutazione."
+        canonicalUrl={typeof window !== 'undefined' ? `${window.location.origin}/campeggi` : ''}
+        keywords="campeggi italia, campeggi tenda da tetto, campeggi montagna, campeggi mare, campeggi lago, campeggi recensioni"
+        ogType="website"
+      />
+      <BreadcrumbSchema 
+        items={[
+          { name: 'Home', url: typeof window !== 'undefined' ? window.location.origin : '' },
+          { name: 'Campeggi', url: typeof window !== 'undefined' ? `${window.location.origin}/campeggi` : '' }
+        ]}
+      />
       <Header />
-      <main>
+      <main id="main-content">
         {/* Hero Section */}
-        <section className="py-16 bg-gradient-to-b from-primary/10 to-background">
+        <section className="py-16 bg-gradient-to-b from-primary/10 to-background" aria-label="Sezione campeggi">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <div className="flex items-center justify-center mb-6">
-                <MapPin className="h-12 w-12 text-primary mr-4" />
+                <MapPin className="h-12 w-12 text-primary mr-4" aria-hidden="true" />
                 <h1 className="text-4xl md:text-5xl font-bold text-foreground">
                   Campeggi in Italia
                 </h1>
               </div>
-              <p className="text-xl text-muted-foreground mb-8">
+              <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
                 Scopri i migliori campeggi d'Italia selezionati dalla nostra community. 
-                Tutti testati e recensiti da chi viaggia con tenda da tetto.
+                Tutti testati e recensiti da chi viaggia con tenda da tetto. 
+                Trova le destinazioni perfette per le tue avventure all'aperto, 
+                dalla montagna al mare, dai laghi alpini alla costa sarda.
               </p>
               
               {/* Search Bar */}
               <div className="max-w-xl mx-auto relative">
-                <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+                <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" aria-hidden="true" />
                 <Input
                   type="text"
                   placeholder="Cerca per nome, regione o località..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
+                  aria-label="Cerca campeggi"
                   className="pl-12 py-6 text-lg bg-background/80 border-primary/20 focus:border-primary"
                 />
               </div>
@@ -304,16 +321,16 @@ const CampsiteList = () => {
         </section>
 
         {/* Filters & Content */}
-        <section className="py-12">
+        <section className="py-12" aria-label="Filtri e risultati campeggi">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               {/* Filters Row */}
               <div className="flex flex-wrap items-center gap-4 mb-8 p-4 bg-secondary/30 rounded-lg">
-                <Filter className="h-5 w-5 text-muted-foreground" />
+                <Filter className="h-5 w-5 text-muted-foreground" aria-hidden="true" />
                 
                 {/* Region Filter */}
                 <Select value={selectedRegion} onValueChange={setSelectedRegion}>
-                  <SelectTrigger className="w-[160px] border-primary/30">
+                  <SelectTrigger className="w-[160px] border-primary/30" aria-label="Filtra per regione">
                     <SelectValue placeholder="Regione" />
                   </SelectTrigger>
                   <SelectContent>
@@ -325,7 +342,7 @@ const CampsiteList = () => {
 
                 {/* Type Filter */}
                 <Select value={selectedType} onValueChange={setSelectedType}>
-                  <SelectTrigger className="w-[140px] border-primary/30">
+                  <SelectTrigger className="w-[140px] border-primary/30" aria-label="Filtra per tipo di campeggio">
                     <SelectValue placeholder="Tipo" />
                   </SelectTrigger>
                   <SelectContent>
@@ -337,9 +354,9 @@ const CampsiteList = () => {
 
                 {/* Sort */}
                 <div className="flex items-center gap-2 ml-auto">
-                  <ArrowUpDown className="h-4 w-4 text-muted-foreground" />
+                  <ArrowUpDown className="h-4 w-4 text-muted-foreground" aria-hidden="true" />
                   <Select value={sortOption} onValueChange={(value: SortOption) => setSortOption(value)}>
-                    <SelectTrigger className="w-[180px] border-primary/30">
+                    <SelectTrigger className="w-[180px] border-primary/30" aria-label="Ordina campeggi per">
                       <SelectValue placeholder="Ordina per" />
                     </SelectTrigger>
                     <SelectContent>
@@ -351,7 +368,7 @@ const CampsiteList = () => {
                   </Select>
                 </div>
 
-                <span className="text-sm text-muted-foreground">
+                <span className="text-sm text-muted-foreground" aria-live="polite">
                   {filteredCampsites.length} {filteredCampsites.length === 1 ? "campeggio" : "campeggi"}
                 </span>
               </div>
@@ -362,7 +379,11 @@ const CampsiteList = () => {
                   {filteredCampsites.map((campsite, index) => {
                     const TypeIcon = getTypeIcon(campsite.type);
                     return (
-                      <Link key={index} to={`/campeggi/${campsite.slug}`}>
+                      <Link 
+                        key={index} 
+                        to={`/campeggi/${campsite.slug}`}
+                        aria-label={`Visualizza dettagli ${campsite.name}`}
+                      >
                         <Card className="group hover:shadow-elegant transition-all duration-300 border-0 bg-card/60 backdrop-blur h-full">
                           <div className="aspect-video overflow-hidden rounded-t-lg relative">
                             <img 
@@ -372,14 +393,14 @@ const CampsiteList = () => {
                               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                             />
                             <Badge className="absolute top-3 left-3 bg-background/90 text-foreground">
-                              <TypeIcon className="h-3 w-3 mr-1" />
+                              <TypeIcon className="h-3 w-3 mr-1" aria-hidden="true" />
                               {campsite.type}
                             </Badge>
                           </div>
                           <CardHeader className="pb-3">
                             <div className="flex items-center justify-between mb-2">
                               <div className="flex items-center">
-                                <Star className="h-4 w-4 text-accent fill-accent mr-1" />
+                                <Star className="h-4 w-4 text-accent fill-accent mr-1" aria-hidden="true" />
                                 <span className="text-sm font-medium">{campsite.rating}</span>
                                 <span className="text-xs text-muted-foreground ml-1">
                                   ({campsite.reviewCount})
@@ -393,7 +414,7 @@ const CampsiteList = () => {
                               {campsite.name}
                             </CardTitle>
                             <p className="text-muted-foreground text-sm flex items-center">
-                              <MapPin className="h-4 w-4 mr-1" />
+                              <MapPin className="h-4 w-4 mr-1" aria-hidden="true" />
                               {campsite.region}
                             </p>
                           </CardHeader>
@@ -403,7 +424,7 @@ const CampsiteList = () => {
                                 const Icon = getFeatureIcon(feature);
                                 return (
                                   <div key={idx} className="flex items-center text-xs text-muted-foreground bg-secondary/50 rounded-full px-3 py-1">
-                                    <Icon className="h-3 w-3 mr-1" />
+                                    <Icon className="h-3 w-3 mr-1" aria-hidden="true" />
                                     {feature}
                                   </div>
                                 );

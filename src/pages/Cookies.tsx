@@ -1,18 +1,26 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Cookie } from "lucide-react";
 
 const Cookies = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title="Cookie Policy - Tende da Tetto e Campeggio"
+        description="Scopri come utilizziamo i cookie per migliorare la tua esperienza sul nostro sito. Leggi la nostra cookie policy."
+        canonicalUrl={typeof window !== 'undefined' ? `${window.location.origin}/cookie` : ''}
+        keywords="cookie policy, cookie, tracciamento, privacy"
+        ogType="website"
+      />
       <Header />
-      <main className="py-16">
+      <main className="py-16" id="main-content">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {/* Header */}
             <div className="text-center mb-12">
               <div className="flex items-center justify-center mb-4">
-                <Cookie className="h-10 w-10 text-primary mr-3" />
+                <Cookie className="h-10 w-10 text-primary mr-3" aria-hidden="true" />
                 <h1 className="text-4xl font-bold text-foreground">Cookie Policy</h1>
               </div>
               <p className="text-muted-foreground">Ultimo aggiornamento: Novembre 2025</p>

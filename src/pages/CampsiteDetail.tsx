@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -265,10 +266,17 @@ const CampsiteDetail = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEO 
+        title={`${campsite.name} - Campeggio Tenda da Tetto | Tende da Tetto e Campeggio`}
+        description={`${campsite.name} a ${campsite.region}. Scopri le caratteristiche, i servizi, le tariffe e le recensioni di questo campeggio ideale per le tende da tetto.`}
+        canonicalUrl={typeof window !== 'undefined' ? `${window.location.origin}/campeggi/${slug}` : ''}
+        keywords={`${campsite.name}, campeggio ${campsite.region}, tenda da tetto, tende da tetto ${campsite.region.split(',')[1]?.trim()}, campeggio montagna`}
+        ogType="website"
+      />
       <Header />
-      <main>
+      <main id="main-content">
         {/* Image Gallery */}
-        <div className="relative">
+        <section className="relative" aria-label="Galleria immagini campeggio">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-2 h-[300px] sm:h-[350px] md:h-[400px] lg:h-[500px]">
             <div className="md:col-span-2 overflow-hidden">
               <img 
@@ -294,22 +302,22 @@ const CampsiteDetail = () => {
           <div className="absolute top-4 left-4">
             <Link to="/#mappa">
               <Button variant="secondary" size="sm" className="backdrop-blur">
-                <ArrowLeft className="h-4 w-4 mr-2" />
+                <ArrowLeft className="h-4 w-4 mr-2" aria-hidden="true" />
                 Torna alla Mappa
               </Button>
             </Link>
           </div>
           <div className="absolute top-4 right-4 flex gap-2">
             <Button variant="secondary" size="sm" className="backdrop-blur">
-              <Share2 className="h-4 w-4 mr-2" />
+              <Share2 className="h-4 w-4 mr-2" aria-hidden="true" />
               Condividi
             </Button>
             <Button variant="secondary" size="sm" className="backdrop-blur">
-              <Heart className="h-4 w-4 mr-2" />
+              <Heart className="h-4 w-4 mr-2" aria-hidden="true" />
               Salva
             </Button>
           </div>
-        </div>
+        </section>
 
         {/* Content */}
         <div className="container mx-auto px-4 py-12">
@@ -321,8 +329,8 @@ const CampsiteDetail = () => {
                 <div>
                   <div className="flex items-center gap-3 mb-2">
                     <Badge className="bg-primary">{campsite.price}</Badge>
-                    <div className="flex items-center text-accent">
-                      <Star className="h-5 w-5 fill-accent" />
+                    <div className="flex items-center text-accent" aria-label={`Valutazione ${campsite.rating} stelle su ${campsite.reviewCount} recensioni`}>
+                      <Star className="h-5 w-5 fill-accent" aria-hidden="true" />
                       <span className="font-semibold ml-1">{campsite.rating}</span>
                       <span className="text-muted-foreground ml-1">({campsite.reviewCount} recensioni)</span>
                     </div>
@@ -331,7 +339,7 @@ const CampsiteDetail = () => {
                     {campsite.name}
                   </h1>
                   <p className="flex items-center text-muted-foreground">
-                    <MapPin className="h-5 w-5 mr-2" />
+                    <MapPin className="h-5 w-5 mr-2" aria-hidden="true" />
                     {campsite.region} • {campsite.location}
                   </p>
                 </div>
@@ -368,9 +376,9 @@ const CampsiteDetail = () => {
                         className={`flex items-center gap-2 ${!amenity.available && 'opacity-50'}`}
                       >
                         {amenity.available ? (
-                          <CheckCircle className="h-5 w-5 text-green-500" />
+                          <CheckCircle className="h-5 w-5 text-green-500" aria-hidden="true" />
                         ) : (
-                          <XCircle className="h-5 w-5 text-muted-foreground" />
+                          <XCircle className="h-5 w-5 text-muted-foreground" aria-hidden="true" />
                         )}
                         <span className={amenity.available ? 'text-foreground' : 'text-muted-foreground line-through'}>
                           {amenity.name}
@@ -414,11 +422,12 @@ const CampsiteDetail = () => {
                                 <p className="font-semibold text-foreground">{review.author}</p>
                                 <p className="text-sm text-muted-foreground">{review.date}</p>
                               </div>
-                              <div className="flex items-center">
+                              <div className="flex items-center" aria-label={`Valutazione ${review.rating} stelle`}>
                                 {[...Array(5)].map((_, i) => (
                                   <Star 
                                     key={i} 
-                                    className={`h-4 w-4 ${i < review.rating ? 'text-accent fill-accent' : 'text-muted-foreground'}`} 
+                                    className={`h-4 w-4 ${i < review.rating ? 'text-accent fill-accent' : 'text-muted-foreground'}`}
+                                    aria-hidden="true"
                                   />
                                 ))}
                               </div>
@@ -446,11 +455,11 @@ const CampsiteDetail = () => {
                   
                   <div className="space-y-4 mb-6">
                     <div className="flex items-center gap-3 text-muted-foreground">
-                      <Calendar className="h-5 w-5" />
+                      <Calendar className="h-5 w-5" aria-hidden="true" />
                       <span>Aperto: {campsite.openingPeriod}</span>
                     </div>
                     <div className="flex items-center gap-3 text-muted-foreground">
-                      <Users className="h-5 w-5" />
+                      <Users className="h-5 w-5" aria-hidden="true" />
                       <span>Capacità: {campsite.maxCapacity} piazzole</span>
                     </div>
                   </div>
@@ -459,7 +468,7 @@ const CampsiteDetail = () => {
                     Prenota Ora
                   </Button>
                   <Button variant="outline" className="w-full">
-                    <Navigation className="h-4 w-4 mr-2" />
+                    <Navigation className="h-4 w-4 mr-2" aria-hidden="true" />
                     Indicazioni Stradali
                   </Button>
                 </Card>
@@ -469,15 +478,15 @@ const CampsiteDetail = () => {
                   <h3 className="font-semibold text-foreground mb-4">Contatti</h3>
                   <div className="space-y-3">
                     <a href={`tel:${campsite.contact.phone}`} className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
-                      <Phone className="h-5 w-5" />
+                      <Phone className="h-5 w-5" aria-hidden="true" />
                       {campsite.contact.phone}
                     </a>
                     <a href={`mailto:${campsite.contact.email}`} className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
-                      <Mail className="h-5 w-5" />
+                      <Mail className="h-5 w-5" aria-hidden="true" />
                       {campsite.contact.email}
                     </a>
                     <a href={`https://${campsite.contact.website}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors">
-                      <Globe className="h-5 w-5" />
+                      <Globe className="h-5 w-5" aria-hidden="true" />
                       {campsite.contact.website}
                     </a>
                   </div>

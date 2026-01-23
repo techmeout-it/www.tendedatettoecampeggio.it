@@ -44,7 +44,7 @@ export default async (req: VercelRequest, res: VercelResponse) => {
     await resend.emails.send({
       from: 'Tende da Tetto <noreply@tendedatettoecampeggio.it>',
       to: 'info@tendedatettoecampeggio.it',
-      replyTo: email,
+      reply_to: email,
       subject: `[${subjectLabel}] Nuovo messaggio da ${name}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">

@@ -113,11 +113,12 @@ const PartnerSection = () => {
                     </p>
                   </div>
                   <div className="flex gap-3">
-                    <Button className="flex-1 bg-gradient-to-r from-primary to-primary-glow">
+                    <Button className="flex-1 bg-gradient-to-r from-primary to-primary-glow" aria-label={`Scopri l'offerta di ${partner.name}`}>
                       Scopri Offerta
-                      <ExternalLink className="h-4 w-4 ml-2" />
+                      <ExternalLink className="h-4 w-4 ml-2" aria-hidden="true" />
                     </Button>
-                    <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground" aria-label={`Informazioni su ${partner.name}`}>
+                    <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground" aria-label={`Maggiori informazioni su ${partner.name}`}>
+                      <span className="sr-only">Informazioni su {partner.name}</span>
                       Info
                     </Button>
                   </div>

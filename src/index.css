@@ -63,7 +63,7 @@ All colors MUST be HSL.
 
     /* Muted - Light natural tones */
     --muted: 45 20% 92%;
-    --muted-foreground: 160 10% 45%;
+    --muted-foreground: 160 15% 38%;
 
     /* Accent - Warm orange for highlights */
     --accent: 25 85% 60%;

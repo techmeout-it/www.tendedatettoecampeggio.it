@@ -100,8 +100,12 @@ const MapSection = () => {
                     <div className="aspect-video overflow-hidden rounded-t-lg">
                       <img 
                         src={campsite.image} 
+                        srcSet={campsite.image.includes('unsplash.com') ? `${campsite.image.replace('w=800', 'w=400')} 400w, ${campsite.image.replace('w=800', 'w=600')} 600w, ${campsite.image} 800w` : undefined}
+                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 363px"
                         alt={campsite.name}
                         loading="lazy"
+                        width={800}
+                        height={450}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>

@@ -61,8 +61,12 @@ const GuideSection = () => {
                   <div className="aspect-video overflow-hidden rounded-t-lg">
                     <img 
                       src={guide.image} 
+                      srcSet={guide.image.includes('unsplash.com') ? `${guide.image.replace('w=800', 'w=400')} 400w, ${guide.image.replace('w=800', 'w=600')} 600w, ${guide.image} 800w` : undefined}
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 363px"
                       alt={guide.title}
                       loading="lazy"
+                      width={800}
+                      height={450}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>

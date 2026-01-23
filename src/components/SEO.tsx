@@ -53,9 +53,16 @@ const SEO = ({
       <meta property="og:url" content={fullCanonicalUrl} />
       <meta property="og:site_name" content="Tende da Tetto e Campeggio" />
       <meta property="og:image" content={finalOgImage} />
+      <meta property="og:image:secure_url" content={finalOgImage} />
+      <meta property="og:image:type" content="image/jpeg" />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
+      <meta property="og:image:alt" content={`${title} - Tende da Tetto e Campeggio Community`} />
       <meta property="og:locale" content="it_IT" />
+      
+      {/* WhatsApp specific optimizations */}
+      <meta property="og:determiner" content="the" />
+      <meta property="og:updated_time" content={modifiedTime || new Date().toISOString()} />
       
       {/* Article specific Open Graph tags */}
       {ogType === 'article' && publishedTime && (

@@ -56,7 +56,7 @@
       ]
     },
     {
-      "source": "/(logo_tende.jpg|robots.txt|sitemap.xml)",
+      "source": "/(logo_tende.jpg|og-image.jpg|robots.txt|sitemap.xml)",
       "headers": [
         {
           "key": "Cache-Control",

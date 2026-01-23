@@ -16,9 +16,10 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <SEO 
         title="Tende da Tetto e Campeggio - Community Italiana"
-        description="La community italiana per gli amanti delle tende da tetto e del campeggio. Guide, mappe, configuratore e tutto per le tue avventure outdoor."
+        description="🏕️ La community italiana n°1 per tende da tetto! 40.000+ membri, guide pratiche, mappe campeggi e tutto per le tue avventure outdoor. Unisciti a noi!"
         canonicalUrl={siteUrl}
         ogType="website"
+        ogImage={`${siteUrl}/og-image.jpg`}
       />
       <OrganizationSchema />
       <Header />

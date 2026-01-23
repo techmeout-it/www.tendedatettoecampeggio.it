@@ -117,7 +117,7 @@ const PartnerSection = () => {
                       Scopri Offerta
                       <ExternalLink className="h-4 w-4 ml-2" />
                     </Button>
-                    <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                    <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground" aria-label={`Informazioni su ${partner.name}`}>
                       Info
                     </Button>
                   </div>

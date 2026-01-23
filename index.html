@@ -8,23 +8,11 @@
     <link rel="apple-touch-icon" href="/logo_tende.jpg" />
     <link rel="alternate" type="application/rss+xml" title="Tende da Tetto e Campeggio - Guide e Articoli" href="/api/rss.xml" />
     
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FLNWEDSZ50"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-FLNWEDSZ50');
-    </script>
-    
-    <!-- Microsoft Clarity -->
-    <script type="text/javascript">
-      (function(c,l,a,r,i,t,y){
-          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-      })(window, document, "clarity", "script", "v5nu0uz8cg");
-    </script>
+    <!-- Preconnect to external domains for faster loading -->
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://www.google-analytics.com" />
+    <link rel="preconnect" href="https://www.clarity.ms" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
     
     <!-- Meta tags managed by react-helmet-async -->
   </head>
@@ -33,5 +21,23 @@
     <a href="#main-content" class="skip-link">Salta al contenuto principale</a>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Google Analytics - loaded last to avoid render blocking -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FLNWEDSZ50"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-FLNWEDSZ50');
+    </script>
+    
+    <!-- Microsoft Clarity - loaded last to avoid render blocking -->
+    <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "v5nu0uz8cg");
+    </script>
   </body>
 </html>

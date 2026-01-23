@@ -8,9 +8,23 @@ import Newsletter from "@/components/Newsletter";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { OrganizationSchema } from "@/components/StructuredData";
+import { useEffect } from "react";
 
 const Index = () => {
   const siteUrl = typeof window !== 'undefined' ? window.location.origin : '';
+  
+  // Preload critical images for LCP optimization
+  useEffect(() => {
+    if (typeof document === 'undefined') return;
+    
+    // Preload hero image to improve LCP
+    const link = document.createElement('link');
+    link.rel = 'preload';
+    link.as = 'image';
+    link.href = new URL('/assets/hero-camping.jpg', import.meta.url).href;
+    link.type = 'image/jpeg';
+    document.head.appendChild(link);
+  }, []);
   
   return (
     <div className="min-h-screen bg-background">

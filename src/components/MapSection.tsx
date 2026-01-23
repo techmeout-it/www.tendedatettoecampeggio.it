@@ -134,7 +134,7 @@ const MapSection = () => {
                           );
                         })}
                       </div>
-                      <Button variant="outline" size="sm" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                      <Button variant="outline" size="sm" className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground" aria-label={`Vedi dettagli di ${campsite.name}`}>
                         Vedi Dettagli
                       </Button>
                     </CardContent>

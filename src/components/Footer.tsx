@@ -15,12 +15,10 @@ const Footer = () => {
     ],
     risorse: [
       { name: "Guide & Tutorial", href: "/guide", icon: BookOpen, external: false },
-      { name: "Lista Campeggi", href: "/campeggi", icon: MapPin, external: false },
       { name: "Domande Frequenti", href: "/faq", icon: HelpCircle, external: false },
-      { name: "Community Forum", href: "/coming-soon", icon: Users, external: false },
     ],
     partner: [
-      { name: "Diventa Partner", href: "/coming-soon", icon: Handshake, external: false },
+      { name: "Diventa Partner", href: "/contatti", icon: Handshake, external: false },
       { name: "Offerte Esclusive", href: "/coming-soon", icon: Handshake, external: false },
       { name: "Brand Sponsorizzati", href: "/coming-soon", icon: Handshake, external: false },
     ],

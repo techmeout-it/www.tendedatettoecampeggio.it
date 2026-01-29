@@ -10,15 +10,16 @@ import { lazy, Suspense } from "react";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import GuideList from "./pages/GuideList";
-import CampsiteList from "./pages/CampsiteList";
+// import CampsiteList from "./pages/CampsiteList"; // TODO: Da riattivare in futuro
 import Contact from "./pages/Contact";
 import ComingSoon from "./pages/ComingSoon";
 import NotFound from "./pages/NotFound";
 
 // Non-critical routes - lazy loaded to reduce initial bundle size
 const GuideDetail = lazy(() => import("./pages/GuideDetail"));
-const CampsiteDetail = lazy(() => import("./pages/CampsiteDetail"));
+// const CampsiteDetail = lazy(() => import("./pages/CampsiteDetail")); // TODO: Da riattivare in futuro
 const Events = lazy(() => import("./pages/Events"));
+const RadunoNazionale2026 = lazy(() => import("./pages/RadunoNazionale2026"));
 const FAQ = lazy(() => import("./pages/FAQ"));
 const Privacy = lazy(() => import("./pages/Privacy"));
 const Terms = lazy(() => import("./pages/Terms"));
@@ -45,10 +46,13 @@ const App = () => (
           <Route path="/chi-siamo" element={<About />} />
           <Route path="/guide" element={<GuideList />} />
           <Route path="/guide/:slug" element={<Suspense fallback={<PageLoader />}><GuideDetail /></Suspense>} />
+          {/* TODO: Da riattivare in futuro
           <Route path="/campeggi" element={<CampsiteList />} />
           <Route path="/campeggi/:slug" element={<Suspense fallback={<PageLoader />}><CampsiteDetail /></Suspense>} />
+          */}
           <Route path="/contatti" element={<Contact />} />
           <Route path="/eventi" element={<Suspense fallback={<PageLoader />}><Events /></Suspense>} />
+          <Route path="/raduno-nazionale-2026" element={<Suspense fallback={<PageLoader />}><RadunoNazionale2026 /></Suspense>} />
           <Route path="/faq" element={<Suspense fallback={<PageLoader />}><FAQ /></Suspense>} />
           <Route path="/privacy" element={<Suspense fallback={<PageLoader />}><Privacy /></Suspense>} />
           <Route path="/termini" element={<Suspense fallback={<PageLoader />}><Terms /></Suspense>} />

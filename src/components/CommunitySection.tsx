@@ -11,25 +11,6 @@ const CommunitySection = () => {
     { icon: TrendingUp, value: "28.000", label: "Membri Attivi", trend: "70% del totale" },
   ];
 
-  const communityHighlights = [
-    {
-      title: "📅 Lunedì Tips",
-      description: "Consigli tecnici per montaggio e manutenzione delle tende da tetto",
-    },
-    {
-      title: "🏕️ Mercoledì Esperienze",
-      description: "I membri raccontano le loro avventure più belle",
-    },
-    {
-      title: "🎥 Venerdì Video",
-      description: "Tutorial, recensioni e guide pratiche video",
-    },
-    {
-      title: "📸 Weekend Moments",
-      description: "Condivisione foto delle uscite del weekend",
-    },
-  ];
-
   return (
     <section id="community" className="py-20 bg-gradient-to-b from-background to-secondary/30" aria-label="Sezione community">
       <div className="container mx-auto px-4">
@@ -62,27 +43,9 @@ const CommunitySection = () => {
           </div>
 
           {/* Community Features */}
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
-            {/* Weekly Schedule */}
-            <Card className="p-8 bg-gradient-to-br from-primary/5 to-accent/5 border-primary/20">
-              <h3 className="text-xl font-bold text-foreground mb-6 text-center">
-                🗓️ Programma Settimanale
-              </h3>
-              <div className="space-y-4">
-                {communityHighlights.map((highlight, index) => (
-                  <div key={index} className="flex items-start space-x-3 p-3 rounded-lg bg-background/50">
-                    <div className="text-lg">{highlight.title.split(' ')[0]}</div>
-                    <div>
-                      <div className="font-medium text-foreground">{highlight.title.substring(2)}</div>
-                      <div className="text-sm text-muted-foreground">{highlight.description}</div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </Card>
-
+          <div className="flex justify-center mb-16">
             {/* Join Community */}
-            <Card className="p-8 bg-gradient-to-br from-accent/5 to-primary/5 border-accent/20">
+            <Card className="p-8 bg-gradient-to-br from-accent/5 to-primary/5 border-accent/20 max-w-lg w-full">
               <h3 className="text-xl font-bold text-foreground mb-4 text-center">
                 Unisciti alla Community
               </h3>

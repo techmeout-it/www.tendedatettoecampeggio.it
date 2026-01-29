@@ -24,16 +24,39 @@ import {
   Filter,
   ArrowUpDown
 } from "lucide-react";
-import campeggiFoto from "@/assets/campeggi-italia.jpg";
 
 // Dati delle guide - in futuro verranno da un database
 const allGuides = [
+  {
+    slug: "viaggio-nozze-tenda-tetto-namibia",
+    title: "Viaggio di nozze in tenda da tetto in Namibia",
+    excerpt: "Dove forse tutto è cominciato: la storia di Chiara e Piero, un budget limitato, e un viaggio indimenticabile di 17 giorni e 5.000 km attraverso deserti, oceani e savane.",
+    author: "Piero e Chiara",
+    readTime: "5 min",
+    location: "Namibia",
+    category: "Destinazioni",
+    date: "2026-01-29",
+    dateDisplay: "29 Gen 2026",
+    image: "/img_articles/namibia_viaggio_nozze/DSCN1226.JPG"
+  },
+  {
+    slug: "forte-leone-dachzelt-camp-italia",
+    title: "Forte Leone: da scoperta casuale a DACHZELT CAMP Italia 🇮🇹",
+    excerpt: "A 1.500 metri di quota, immerso nelle montagne venete, il Forte Leone è diventato teatro di un evento epico: il gemellaggio tra la community italiana e quella tedesca dei Dachzeltnomaden.",
+    author: "Lo Staff di Tende da Tetto",
+    readTime: "4 min",
+    location: "Forte Leone, Veneto",
+    category: "Eventi",
+    date: "2026-01-29",
+    dateDisplay: "29 Gen 2026",
+    image: "/img_articles/forte_leone_raduno_articolo/20250704_DACHZELT-CAMP-Italia-2025_Patrick-Becker_Gruppenfoto_Drohne_.jpg"
+  },
   {
     slug: "spagna-del-nord-on-the-road",
     title: "Spagna del Nord on the road: 19 giorni di libertà e natura!",
     excerpt: "Un viaggio indimenticabile attraverso Paesi Baschi, Cantabria, Asturie e Galizia con la tenda da tetto. 19 giorni di strade, oceano e montagne.",
     author: "Sara Sarti",
-    readTime: "4 min",
+    readTime: "3 min",
     location: "Spagna del Nord",
     category: "Destinazioni",
     date: "2026-01-10",
@@ -45,12 +68,12 @@ const allGuides = [
     title: "Tende da Tetto, La Super Ciurma e L'Arte del Tempo Lento",
     excerpt: "Viaggiare con bambini e cani, camperizzazione fai-da-te e l'arte di recuperare il tempo lento: la storia di una famiglia nomade accessibile.",
     author: "Giulia e Brenno",
-    readTime: "15 min",
+    readTime: "5 min",
     location: "Italia",
     category: "Tips",
     date: "2026-01-09",
     dateDisplay: "9 Gen 2026",
-    image: "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=800&q=80"
+    image: "/img_articles/arte_tempo_lento_giulia_brenno/70bcbd07-91d1-4d9a-ab43-d25822677043.jpg"
   },
   {
     slug: "dormire-tenda-freddo-52-gallerie-pasubio",
@@ -74,113 +97,6 @@ const allGuides = [
     date: "2026-01-07",
     dateDisplay: "7 Gen 2026",
     image: "/img_articles/i_nostri_viaggi_in_camper/7-van-camper-boxes.jpg"
-  },  {
-    slug: "guida-completa-tende-da-tetto",
-    title: "Guida Completa alle Tende da Tetto",
-    excerpt: "Tutto quello che devi sapere per scegliere la tenda da tetto perfetta per le tue avventure",
-    author: "Marco Rossi",
-    readTime: "8 min",
-    location: "",
-    category: "Attrezzatura",
-    date: "2024-11-15",
-    dateDisplay: "15 Nov 2024",
-    image: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    slug: "10-campeggi-piu-belli-italia",
-    title: "I 10 Campeggi Più Belli d'Italia",
-    excerpt: "Scopri i campeggi più spettacolari del nostro paese, perfetti per chi viaggia con tenda da tetto",
-    author: "Sara Bianchi",
-    readTime: "12 min",
-    location: "Italia",
-    category: "Destinazioni",
-    date: "2024-11-10",
-    dateDisplay: "10 Nov 2024",
-    image: campeggiFoto
-  },
-  {
-    slug: "checklist-campeggio-perfetto",
-    title: "Check-list per il Campeggio Perfetto",
-    excerpt: "Non dimenticare mai più nulla: la lista completa per organizzare la tua avventura",
-    author: "Luca Verdi",
-    readTime: "5 min",
-    location: "",
-    category: "Tips",
-    date: "2024-11-05",
-    dateDisplay: "5 Nov 2024",
-    image: "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    slug: "manutenzione-tenda-da-tetto",
-    title: "Manutenzione della Tenda da Tetto",
-    excerpt: "Come prenderti cura della tua tenda per farla durare nel tempo: pulizia, impermeabilizzazione e stoccaggio",
-    author: "Marco Rossi",
-    readTime: "6 min",
-    location: "",
-    category: "Attrezzatura",
-    date: "2024-11-01",
-    dateDisplay: "1 Nov 2024",
-    image: "https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    slug: "campeggio-invernale-consigli",
-    title: "Campeggio Invernale: Guida Completa",
-    excerpt: "Tutti i segreti per campeggiare con la tenda da tetto anche in inverno: attrezzatura, isolamento e sicurezza",
-    author: "Giovanni Neri",
-    readTime: "10 min",
-    location: "",
-    category: "Tips",
-    date: "2024-10-28",
-    dateDisplay: "28 Ott 2024",
-    image: "https://images.unsplash.com/photo-1517824806704-9040b037703b?auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    slug: "migliori-accessori-campeggio",
-    title: "I 15 Accessori Indispensabili",
-    excerpt: "Dalla cucina da campo all'illuminazione: gli accessori che non possono mancare nel tuo kit",
-    author: "Sara Bianchi",
-    readTime: "7 min",
-    location: "",
-    category: "Attrezzatura",
-    date: "2024-10-20",
-    dateDisplay: "20 Ott 2024",
-    image: "https://images.unsplash.com/photo-1510672981848-a1c4f1cb5ccf?auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    slug: "viaggiare-con-bambini-tenda-tetto",
-    title: "Viaggiare con Bambini in Tenda da Tetto",
-    excerpt: "Consigli pratici per organizzare avventure family-friendly: sicurezza, comfort e divertimento",
-    author: "Laura Gialli",
-    readTime: "9 min",
-    location: "",
-    category: "Tips",
-    date: "2024-10-15",
-    dateDisplay: "15 Ott 2024",
-    image: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    slug: "sardegna-tenda-tetto-itinerario",
-    title: "Sardegna in Tenda da Tetto: Itinerario 7 Giorni",
-    excerpt: "Un viaggio completo alla scoperta delle spiagge più belle, con tappe e campeggi consigliati",
-    author: "Luca Verdi",
-    readTime: "15 min",
-    location: "Sardegna",
-    category: "Destinazioni",
-    date: "2024-10-10",
-    dateDisplay: "10 Ott 2024",
-    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80"
-  },
-  {
-    slug: "dolomiti-tenda-tetto-itinerario",
-    title: "Dolomiti in Tenda da Tetto: Itinerario 5 Giorni",
-    excerpt: "Tra passi alpini e laghi cristallini: l'itinerario perfetto per gli amanti della montagna",
-    author: "Marco Rossi",
-    readTime: "12 min",
-    location: "Dolomiti",
-    category: "Destinazioni",
-    date: "2024-10-05",
-    dateDisplay: "5 Ott 2024",
-    image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=800&q=80"
   }
 ];
 

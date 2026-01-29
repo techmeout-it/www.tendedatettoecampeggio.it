@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, Mountain, MapPin, BookOpen, Users, Handshake, Info } from "lucide-react";
+import { Menu, Mountain, MapPin, BookOpen, Users, Handshake, Info, Calendar } from "lucide-react";
 import logoTende from "@/assets/logo_tende.jpg";
 
 const Header = () => {
@@ -13,8 +13,9 @@ const Header = () => {
   const navigation = [
     { name: "Home", href: isHomePage ? "#" : "/", icon: Mountain, isRoute: !isHomePage },
     { name: "Blog", href: "/guide", icon: BookOpen, isRoute: true },
-    { name: "Campeggi", href: "/campeggi", icon: MapPin, isRoute: true },
+    // { name: "Campeggi", href: "/campeggi", icon: MapPin, isRoute: true }, // TODO: Da riattivare in futuro
     { name: "Community", href: isHomePage ? "#community" : "/#community", icon: Users, isRoute: false },
+    { name: "Eventi & Raduni", href: "/eventi", icon: Calendar, isRoute: true },
     { name: "Partner", href: isHomePage ? "#partner" : "/#partner", icon: Handshake, isRoute: false },
     { name: "Chi Siamo", href: "/chi-siamo", icon: Info, isRoute: true },
   ];
@@ -27,8 +28,9 @@ const Header = () => {
           <Link to="/" className="flex items-center space-x-3" aria-label="Torna alla homepage">
             <img src={logoTende} alt="Tende da Tetto Community" loading="eager" className="h-14 w-14 sm:h-16 sm:w-16 md:h-20 md:w-20 rounded-full object-cover" />
             <div>
-              <h1 className="text-2xl font-bold text-foreground">Tende da Tetto</h1>
-              <p className="text-sm text-muted-foreground">Community Italia</p>
+              <h1 className="text-2xl font-bold text-foreground leading-tight">Tende da Tetto</h1>
+              <p className="text-base font-semibold text-foreground">e Campeggio</p>
+              <p className="text-xs text-muted-foreground">Community Italiana</p>
             </div>
           </Link>
 

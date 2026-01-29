@@ -8,31 +8,40 @@ import campeggiFoto from "@/assets/campeggi-italia.jpg";
 const GuideSection = () => {
   const guides = [
     {
-      slug: "spagna-del-nord-on-the-road",
-      title: "Spagna del Nord on the road: 19 giorni di libertà e natura!",
-      excerpt: "Un viaggio indimenticabile attraverso Paesi Baschi, Cantabria, Asturie e Galizia con la tenda da tetto. 19 giorni di strade, oceano e montagne.",
-      author: "Sara Sarti",
+      slug: "viaggio-nozze-tenda-tetto-namibia",
+      title: "Viaggio di nozze in Namibia",
+      excerpt: "17 giorni e 5.000 km in Africa con la tenda da tetto.",
+      author: "Piero e Chiara",
+      readTime: "5 min",
+      category: "Destinazioni",
+      image: "/img_articles/namibia_viaggio_nozze/DSCN1226.JPG"
+    },
+    {
+      slug: "forte-leone-dachzelt-camp-italia",
+      title: "DACHZELT CAMP Italia al Forte Leone",
+      excerpt: "Il gemellaggio tra community italiana e tedesca.",
+      author: "Lo Staff",
       readTime: "4 min",
+      category: "Eventi",
+      image: "/img_articles/forte_leone_raduno_articolo/20250704_DACHZELT-CAMP-Italia-2025_Patrick-Becker_Gruppenfoto_Drohne_.jpg"
+    },
+    {
+      slug: "spagna-del-nord-on-the-road",
+      title: "Spagna del Nord on the road",
+      excerpt: "19 giorni tra Paesi Baschi, Cantabria e Galizia.",
+      author: "Sara Sarti",
+      readTime: "3 min",
       category: "Destinazioni",
       image: "https://images.unsplash.com/photo-1543783207-ec64e4d95325?auto=format&fit=crop&w=800&q=80"
     },
     {
       slug: "tende-da-tetto-super-ciurma-tempo-lento",
-      title: "Tende da Tetto, La Super Ciurma e L'Arte del Tempo Lento",
-      excerpt: "Viaggiare con bambini e cani, camperizzazione fai-da-te e l'arte di recuperare il tempo lento: la storia di una famiglia nomade accessibile.",
+      title: "La Super Ciurma e il Tempo Lento",
+      excerpt: "Viaggiare con bambini, cani e tenda da tetto.",
       author: "Giulia e Brenno",
-      readTime: "15 min",
+      readTime: "5 min",
       category: "Tips",
-      image: "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=800&q=80"
-    },
-    {
-      slug: "viaggiare-famiglia-minivan-camperboxes",
-      title: "Viaggiare in famiglia con il nostro minivan: esperienze di libertà e scoperta",
-      excerpt: "La nostra vita in viaggio con un Ford Tourneo allestito fai-da-te: famiglia, cane e avventure tra Val Trebbia, Liguria, Elba e Abruzzo.",
-      author: "Arianna e David di Camperboxes",
-      readTime: "12 min",
-      category: "Destinazioni",
-      image: "/img_articles/i_nostri_viaggi_in_camper/7-van-camper-boxes.jpg"
+      image: "/img_articles/arte_tempo_lento_giulia_brenno/70bcbd07-91d1-4d9a-ab43-d25822677043.jpg"
     }
   ];
 
@@ -54,7 +63,7 @@ const GuideSection = () => {
           </div>
 
           {/* Guide Cards */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
             {guides.map((guide, index) => (
               <Link key={index} to={`/guide/${guide.slug}`} aria-label={`Leggi l'articolo: ${guide.title}`}>
                 <Card className="group hover:shadow-elegant transition-all duration-300 border-0 bg-card/60 backdrop-blur h-full">
@@ -62,7 +71,7 @@ const GuideSection = () => {
                     <img 
                       src={guide.image} 
                       srcSet={guide.image.includes('unsplash.com') ? `${guide.image.replace('w=800', 'w=400')} 400w, ${guide.image.replace('w=800', 'w=600')} 600w, ${guide.image} 800w` : undefined}
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 363px"
+                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 25vw, 280px"
                       alt={guide.title}
                       loading="lazy"
                       width={800}
@@ -70,32 +79,32 @@ const GuideSection = () => {
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>
-                  <CardHeader className="pb-3">
-                    <div className="flex items-center justify-between mb-2">
-                      <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20">
+                  <CardHeader className="pb-2 px-3 pt-3">
+                    <div className="flex items-center justify-between mb-1">
+                      <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20 text-xs">
                         {guide.category}
                       </Badge>
-                      <div className="flex items-center text-sm text-muted-foreground">
-                        <Clock className="h-4 w-4 mr-1" />
+                      <div className="flex items-center text-xs text-muted-foreground">
+                        <Clock className="h-3 w-3 mr-1" />
                         {guide.readTime}
                       </div>
                     </div>
-                    <CardTitle className="text-xl group-hover:text-primary transition-colors">
+                    <CardTitle className="text-base group-hover:text-primary transition-colors line-clamp-2">
                       {guide.title}
                     </CardTitle>
                   </CardHeader>
-                  <CardContent className="pt-0">
-                    <p className="text-muted-foreground mb-4 line-clamp-3">
+                  <CardContent className="pt-0 px-3 pb-3">
+                    <p className="text-muted-foreground text-sm mb-3 line-clamp-2">
                       {guide.excerpt}
                     </p>
                     <div className="flex items-center justify-between">
-                      <div className="flex items-center text-sm text-muted-foreground">
-                        <User className="h-4 w-4 mr-1" />
+                      <div className="flex items-center text-xs text-muted-foreground">
+                        <User className="h-3 w-3 mr-1" />
                         {guide.author}
                       </div>
-                      <span className="group/btn text-primary flex items-center text-sm font-medium">
+                      <span className="group/btn text-primary flex items-center text-xs font-medium">
                         Leggi
-                        <ArrowRight className="h-4 w-4 ml-1 group-hover/btn:translate-x-1 transition-transform" />
+                        <ArrowRight className="h-3 w-3 ml-1 group-hover/btn:translate-x-1 transition-transform" />
                       </span>
                     </div>
                   </CardContent>

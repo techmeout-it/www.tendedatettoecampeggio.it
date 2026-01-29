@@ -3,46 +3,40 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Handshake, ExternalLink, Star, Percent } from "lucide-react";
-import tentproLogo from "@/assets/tentpro-logo.jpg";
-import outdoorgearLogo from "@/assets/outdoorgear-logo.jpg";
 
 const PartnerSection = () => {
   const partners = [
     {
-      name: "TentPro Italia",
+      name: "Autohome",
       category: "Tende da Tetto",
       discount: "15%",
-      description: "Le migliori tende da tetto sul mercato italiano. Qualità premium per ogni avventura.",
-      rating: 4.9,
-      logo: tentproLogo,
-      specialOffer: "Spedizione gratuita per la community"
+      description: "Leader delle tende da tetto made in Italy, una certezza di qualità dal 1958.",
+      logo: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=200&h=200",
+      specialOffer: "Sconto del 15% su tutto il catalogo tende con codice: AUTOHOMEOFFICIAL"
     },
     {
-      name: "OutdoorGear",
-      category: "Attrezzatura Camping",
-      discount: "20%",
-      description: "Tutto l'equipaggiamento per il camping: dai fornelli ai sacchi a pelo di alta qualità.",
-      rating: 4.7,
-      logo: outdoorgearLogo,
-      specialOffer: "Sconto extra su ordini sopra €200"
+      name: "Xalpharooftent",
+      category: "Tende da Tetto",
+      discount: "Dedicato",
+      description: "Tende made in Italy di qualità artigianale. Design italiano e materiali premium per gli avventurieri più esigenti.",
+      logo: "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=200&h=200",
+      specialOffer: "Prezzo speciale dedicato per gli iscritti alla pagina"
     },
     {
-      name: "Adventure4x4",
-      category: "Accessori Auto",
-      discount: "10%",
-      description: "Portapacchi, barre e accessori per preparare la tua auto all'avventura.",
-      rating: 4.8,
-      logo: "https://images.unsplash.com/photo-1552058544-f2b08422138a?auto=format&fit=crop&w=200&h=200",
-      specialOffer: "Installazione gratuita in store"
+      name: "Camperboxes",
+      category: "Allestimenti",
+      discount: "Dedicato",
+      description: "Allestimenti personalizzati per qualsiasi mezzo, dall'auto al van, in legno e alluminio di alta qualità.",
+      logo: "https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?auto=format&fit=crop&w=200&h=200",
+      specialOffer: "Bagno a separazione disponibile in due misure con prezzo dedicato alla community"
     },
     {
-      name: "CampingFood",
-      category: "Alimentari & Bevande",
-      discount: "12%",
-      description: "Cibi liofilizzati, snack energetici e tutto per la cucina da campo.",
-      rating: 4.6,
-      logo: "https://images.unsplash.com/photo-1543007630-9710e4a00a20?auto=format&fit=crop&w=200&h=200",
-      specialOffer: "Kit degustazione gratuito"
+      name: "Swisskings",
+      category: "Tende & Accessori",
+      discount: "Speciale",
+      description: "Tende pieghevoli e rigide di varie misure, tendalini e accessori con un rapporto qualità prezzo imbattibile.",
+      logo: "https://images.unsplash.com/photo-1510312305653-8ed496efae75?auto=format&fit=crop&w=200&h=200",
+      specialOffer: "Rapporto qualità prezzo imbattibile per la community"
     }
   ];
 
@@ -92,10 +86,6 @@ const PartnerSection = () => {
                         <Percent className="h-4 w-4 mr-1" />
                         <span className="font-bold">{partner.discount}</span>
                       </div>
-                      <div className="flex items-center mt-2 text-sm text-muted-foreground">
-                        <Star className="h-4 w-4 text-accent fill-accent mr-1" />
-                        {partner.rating}
-                      </div>
                     </div>
                   </div>
                 </CardHeader>
@@ -103,7 +93,7 @@ const PartnerSection = () => {
                   <p className="text-muted-foreground mb-4">
                     {partner.description}
                   </p>
-                  <div className="bg-gradient-to-r from-accent/10 to-accent/5 border border-accent/20 rounded-lg p-4 mb-4">
+                  <div className="bg-gradient-to-r from-accent/10 to-accent/5 border border-accent/20 rounded-lg p-4">
                     <div className="flex items-center text-accent font-medium">
                       <Star className="h-4 w-4 mr-2" />
                       Offerta Speciale Community
@@ -111,16 +101,6 @@ const PartnerSection = () => {
                     <p className="text-sm text-muted-foreground mt-1">
                       {partner.specialOffer}
                     </p>
-                  </div>
-                  <div className="flex gap-3">
-                    <Button className="flex-1 bg-gradient-to-r from-primary to-primary-glow" aria-label={`Scopri l'offerta di ${partner.name}`}>
-                      Scopri Offerta
-                      <ExternalLink className="h-4 w-4 ml-2" aria-hidden="true" />
-                    </Button>
-                    <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground" aria-label={`Maggiori informazioni su ${partner.name}`}>
-                      <span className="sr-only">Informazioni su {partner.name}</span>
-                      Info
-                    </Button>
                   </div>
                 </CardContent>
               </Card>

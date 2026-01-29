@@ -20,30 +20,35 @@ import {
 
 const About = () => {
   const milestones = [
-    { year: "2021", title: "La Nascita", description: "Fondazione del gruppo Facebook con i primi 100 appassionati" },
-    { year: "2022", title: "Crescita Esplosiva", description: "Raggiunti 10.000 membri e primi eventi organizzati" },
-    { year: "2023", title: "Community Consolidata", description: "25.000 membri, partnership con i principali brand" },
-    { year: "2024", title: "Leader di Settore", description: "40.000+ membri, lancio del sito web ufficiale" },
-  ];
-
-  const team = [
-    {
-      name: "Marco Rossi",
-      role: "Fondatore & Admin",
-      description: "Appassionato di outdoor dal 2015, ha fondato la community per condividere la sua passione",
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=200&h=200"
+    { 
+      year: "2026", 
+      title: "Un Nuovo Capitolo", 
+      description: "Il 2026 si apre come un anno ricco di novità e nuove energie. Il lancio di questo sito segna un passo importante per la community, che ora ha una casa digitale tutta sua dove ritrovarsi, informarsi e condividere esperienze. All'orizzonte ci sono nuove avventure, raduni sempre più coinvolgenti e collaborazioni che porteranno valore a tutti gli iscritti. La voglia di crescere insieme non si ferma e questo sarà l'anno in cui molte idee prenderanno finalmente forma, continuando a rafforzare lo spirito che da sempre contraddistingue la nostra grande famiglia." 
     },
-    {
-      name: "Sara Bianchi",
-      role: "Content Manager",
-      description: "Blogger di viaggi e campeggio, cura le guide e i contenuti della community",
-      avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&h=200"
+    { 
+      year: "2025", 
+      title: "La Festa Continua", 
+      description: "La community è più viva che mai: i canali social sono attivi e rappresentano un punto di riferimento per tanti appassionati. Il confronto in un clima di amicizia rimane il valore centrale, sia online che durante gli eventi. La famiglia degli amministratori si allarga con Fe di Busto e Igor, che portano nuove idee per far crescere ancora di più il mondo delle tende da tetto e del campeggio. Sempre più aziende credono nella forza del gruppo e propongono vantaggi dedicati agli iscritti." 
     },
-    {
-      name: "Luca Verdi",
-      role: "Community Manager",
-      description: "Gestisce le interazioni quotidiane e organizza gli eventi della community",
-      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&h=200"
+    { 
+      year: "2024", 
+      title: "Leader di Settore", 
+      description: "I numeri parlano chiaro: la community è la più grande e attiva, sia online che dal vivo. Per chi vuole avvicinarsi al mondo delle tende da tetto, iscriversi al gruppo e partecipare a un evento diventa quasi un passaggio naturale. Oltre alle discussioni e ai contenuti di ispirazione, arrivano anche i primi vantaggi esclusivi come sconti e promozioni." 
+    },
+    { 
+      year: "2023", 
+      title: "Community Consolidata", 
+      description: "La crescita continua e il gruppo diventa un punto di riferimento per chi possiede una tenda da tetto, per chi sta pensando di acquistarla e anche per chi viaggia con altri mezzi. Si parla di viaggi, camperizzazioni, esperienze e dubbi, trovando nei post e nei commenti risposte utili e concrete. Gli eventi, sempre più numerosi, confermano quanto la forza della community online si trasformi in realtà." 
+    },
+    { 
+      year: "2022", 
+      title: "Crescita Esplosiva", 
+      description: "Il gruppo cresce in modo esponenziale, spinto dal desiderio di sempre più persone di vivere la libertà all'aria aperta. Dai campeggiatori esperti ai neofiti, tantissimi nuovi membri trovano un ambiente positivo, costruttivo e ricco di confronto. Lo stesso spirito si riflette negli eventi, sempre molto partecipati." 
+    },
+    { 
+      year: "2021", 
+      title: "La Nascita", 
+      description: "L'idea prende forma quando Piero, durante la ricerca della sua prima tenda da tetto, decide di creare un gruppo dedicato. Le prime iscrizioni arrivano subito e, dopo qualche mese, Natalia si offre di dare una mano nella gestione. Da lì in poi la storia decolla: il primo raduno supera i 50 mezzi e le prime connessioni, nate online, diventano incontri reali." 
     },
   ];
 
@@ -127,6 +132,41 @@ const About = () => {
           </div>
         </section>
 
+        {/* Team Section */}
+        <section className="py-16 bg-secondary/20" aria-label="Il nostro team">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-12">
+                <Users className="h-8 w-8 text-primary mx-auto mb-4" aria-hidden="true" />
+                <h2 className="text-3xl font-bold text-foreground">Il Team di Tende da Tetto</h2>
+                <p className="text-muted-foreground mt-2">Le persone che rendono possibile questa community</p>
+              </div>
+              <div className="grid md:grid-cols-2 gap-6">
+                <Card className="p-6 bg-card/80 backdrop-blur border-0 hover:shadow-elegant transition-all">
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Piero</h3>
+                  <p className="text-muted-foreground">Campeggiatore da sempre, appassionato e con una profonda conoscenza tecnica del settore.</p>
+                </Card>
+                <Card className="p-6 bg-card/80 backdrop-blur border-0 hover:shadow-elegant transition-all">
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Natalia</h3>
+                  <p className="text-muted-foreground">Campeggiatrice attiva con auto berline, vanta una grande esperienza nell'equipaggiamento outdoor e nella camperizzazione.</p>
+                </Card>
+                <Card className="p-6 bg-card/80 backdrop-blur border-0 hover:shadow-elegant transition-all">
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Andrea</h3>
+                  <p className="text-muted-foreground">Campeggiatore in tenda da tetto e motociclista con tenda a terra, ha all'attivo numerosi viaggi in tutta Europa fino a Capo Nord.</p>
+                </Card>
+                <Card className="p-6 bg-card/80 backdrop-blur border-0 hover:shadow-elegant transition-all">
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Igor</h3>
+                  <p className="text-muted-foreground">Campeggiatore e survivalista, porta con sé un'importante esperienza personale e professionale nel settore commerciale.</p>
+                </Card>
+                <Card className="p-6 bg-card/80 backdrop-blur border-0 hover:shadow-elegant transition-all md:col-span-2">
+                  <h3 className="text-xl font-semibold text-foreground mb-2">Andrea e Luca</h3>
+                  <p className="text-muted-foreground">La community può contare sul lavoro dei webmaster Andrea e Luca, che si occupano della gestione tecnica del sito e dello sviluppo degli strumenti digitali dedicati al gruppo. Oltre alle competenze informatiche, condividono una forte passione per l'outdoor e sono esperti viaggiatori: proprio questa combinazione di esperienza sul campo e abilità tecniche li porta a supportare realtà come Tende da Tetto, contribuendo alla crescita e all'evoluzione della community.</p>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Timeline Section */}
         <section className="py-16 bg-gradient-to-b from-secondary/30 to-background" aria-label="Timeline - La nostra storia">
           <div className="container mx-auto px-4">
@@ -150,36 +190,6 @@ const About = () => {
                       <p className="text-muted-foreground">{milestone.description}</p>
                     </Card>
                   </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Team Section */}
-        <section className="py-16 bg-background" aria-label="Team - Il nostro team">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="text-center mb-12">
-                <Users className="h-8 w-8 text-primary mx-auto mb-4" aria-hidden="true" />
-                <h2 className="text-3xl font-bold text-foreground">Il Nostro Team</h2>
-                <p className="text-muted-foreground mt-2">Le persone dietro TendaTetto Community</p>
-              </div>
-              <div className="grid md:grid-cols-3 gap-8">
-                {team.map((member, index) => (
-                  <Card key={index} className="p-6 text-center bg-card/60 backdrop-blur border-0 hover:shadow-elegant transition-all">
-                    <div className="w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden mx-auto mb-4">
-                      <img 
-                        src={member.avatar} 
-                        alt={member.name}
-                        loading="lazy"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    <h3 className="text-xl font-semibold text-foreground">{member.name}</h3>
-                    <Badge variant="secondary" className="mt-2 mb-3">{member.role}</Badge>
-                    <p className="text-sm text-muted-foreground">{member.description}</p>
-                  </Card>
                 ))}
               </div>
             </div>

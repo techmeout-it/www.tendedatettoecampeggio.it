@@ -18,6 +18,8 @@ const routes = [
 
 // Guide slugs - add new guides here
 const guideSlugs = [
+  'viaggio-nozze-tenda-tetto-namibia',
+  'forte-leone-dachzelt-camp-italia',
   'spagna-del-nord-on-the-road',
   'tende-da-tetto-super-ciurma-tempo-lento',
   'dormire-tenda-freddo-52-gallerie-pasubio',

@@ -1,107 +1,15 @@
-import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { 
   Mail, 
-  MessageSquare, 
-  Send,
   Facebook,
-  Instagram,
-  CheckCircle,
-  Handshake,
-  HelpCircle,
-  Flag
+  Instagram
 } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
-  const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: ""
-  });
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubjectChange = (value: string) => {
-    setFormData({
-      ...formData,
-      subject: value
-    });
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Validation
-    if (!formData.name || !formData.email || !formData.subject || !formData.message) {
-      toast({
-        title: "Errore",
-        description: "Per favore compila tutti i campi obbligatori.",
-        variant: "destructive",
-      });
-      return;
-    }
-
-    setIsSubmitting(true);
-    
-    try {
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-        }),
-      });
-
-      if (!response.ok) {
-        const error = await response.json();
-        throw new Error(error.error || 'Failed to send email');
-      }
-
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      toast({
-        title: "Messaggio inviato!",
-        description: "Ti risponderemo il prima possibile. Controlla la tua email.",
-      });
-    } catch (error) {
-      setIsSubmitting(false);
-      toast({
-        title: "Errore",
-        description: error instanceof Error ? error.message : "Non è stato possibile inviare il messaggio. Riprova più tardi.",
-        variant: "destructive",
-      });
-    }
-  };
-
   const contactOptions = [
     {
       icon: Facebook,
@@ -119,13 +27,6 @@ const Contact = () => {
       buttonText: "Seguici",
       color: "from-[#E4405F] to-[#F56040]"
     }
-  ];
-
-  const subjects = [
-    { value: "info", label: "Informazioni generali", icon: HelpCircle },
-    { value: "partnership", label: "Proposta di partnership", icon: Handshake },
-    { value: "segnalazione", label: "Segnalazione campeggio", icon: Flag },
-    { value: "altro", label: "Altro", icon: MessageSquare },
   ];
 
   return (
@@ -160,6 +61,29 @@ const Contact = () => {
         <section className="py-12">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
+              {/* Email Contact Card */}
+              <Card className="p-8 bg-card/60 backdrop-blur border-0 mb-8">
+                <div className="text-center">
+                  <div className="p-4 rounded-full bg-primary/10 inline-block mb-6">
+                    <Mail className="h-12 w-12 text-primary" aria-hidden="true" />
+                  </div>
+                  <h2 className="text-2xl font-bold text-foreground mb-4">
+                    Scrivici una mail
+                  </h2>
+                  <p className="text-muted-foreground mb-6 max-w-md mx-auto">
+                    Per qualsiasi domanda, proposta di partnership o segnalazione, 
+                    contattaci direttamente via email
+                  </p>
+                  <a href="mailto:info@tendedatettoecampeggio.it">
+                    <Button size="lg" className="bg-gradient-to-r from-primary to-primary-glow hover:shadow-elegant transition-all duration-300">
+                      <Mail className="h-5 w-5 mr-2" />
+                      info@tendedatettoecampeggio.it
+                    </Button>
+                  </a>
+                </div>
+              </Card>
+
+              {/* Social Options */}
               <div className="grid md:grid-cols-2 gap-6 mb-12">
                 {contactOptions.map((option, index) => (
                   <Card key={index} className="p-6 bg-card/60 backdrop-blur border-0 hover:shadow-elegant transition-all">
@@ -185,123 +109,8 @@ const Contact = () => {
                 ))}
               </div>
 
-              {/* Contact Form */}
-              <Card className="p-8 bg-card/60 backdrop-blur border-0">
-                <div className="text-center mb-8">
-                  <MessageSquare className="h-10 w-10 text-primary mx-auto mb-4" aria-hidden="true" />
-                  <h2 className="text-2xl font-bold text-foreground mb-2">
-                    Inviaci un messaggio
-                  </h2>
-                  <p className="text-muted-foreground">
-                    Compila il form e ti risponderemo il prima possibile
-                  </p>
-                </div>
-
-                {!isSubmitted ? (
-                  <form onSubmit={handleSubmit} className="space-y-6 max-w-xl mx-auto" aria-label="Modulo di contatto">
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <Label htmlFor="name">Nome *</Label>
-                        <Input
-                          id="name"
-                          name="name"
-                          placeholder="Il tuo nome"
-                          value={formData.name}
-                          onChange={handleChange}
-                          required
-                          aria-required="true"
-                          className="bg-background/50 border-primary/20 focus:border-primary"
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="email">Email *</Label>
-                        <Input
-                          id="email"
-                          name="email"
-                          type="email"
-                          placeholder="La tua email"
-                          value={formData.email}
-                          onChange={handleChange}
-                          required
-                          aria-required="true"
-                          className="bg-background/50 border-primary/20 focus:border-primary"
-                        />
-                      </div>
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label htmlFor="subject">Argomento *</Label>
-                      <Select value={formData.subject} onValueChange={handleSubjectChange} required>
-                        <SelectTrigger id="subject" className="bg-background/50 border-primary/20 focus:border-primary" aria-required="true">
-                          <SelectValue placeholder="Seleziona un argomento" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          {subjects.map((subject) => (
-                            <SelectItem key={subject.value} value={subject.value}>
-                              <div className="flex items-center gap-2">
-                                <subject.icon className="h-4 w-4" />
-                                {subject.label}
-                              </div>
-                            </SelectItem>
-                          ))}
-                        </SelectContent>
-                      </Select>
-                    </div>
-
-                    <div className="space-y-2">
-                      <Label htmlFor="message">Messaggio *</Label>
-                      <Textarea
-                        id="message"
-                        name="message"
-                        placeholder="Scrivi il tuo messaggio..."
-                        value={formData.message}
-                        onChange={handleChange}
-                        required
-                        aria-required="true"
-                        rows={5}
-                        className="bg-background/50 border-primary/20 focus:border-primary resize-none"
-                      />
-                    </div>
-
-                    <Button 
-                      type="submit" 
-                      className="w-full bg-gradient-to-r from-primary to-primary-glow"
-                      disabled={isSubmitting}
-                    >
-                      {isSubmitting ? (
-                        <>Invio in corso...</>
-                      ) : (
-                        <>
-                          <Send className="h-4 w-4 mr-2" />
-                          Invia Messaggio
-                        </>
-                      )}
-                    </Button>
-                  </form>
-                ) : (
-                  <div className="text-center py-8">
-                    <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
-                    <h3 className="text-xl font-semibold text-foreground mb-2">
-                      Messaggio inviato con successo!
-                    </h3>
-                    <p className="text-muted-foreground mb-6">
-                      Grazie per averci contattato. Ti risponderemo il prima possibile.
-                    </p>
-                    <Button 
-                      variant="outline" 
-                      onClick={() => {
-                        setIsSubmitted(false);
-                        setFormData({ name: "", email: "", subject: "", message: "" });
-                      }}
-                    >
-                      Invia un altro messaggio
-                    </Button>
-                  </div>
-                )}
-              </Card>
-
               {/* FAQ Teaser */}
-              <div className="mt-12 text-center">
+              <div className="text-center">
                 <p className="text-muted-foreground mb-4">
                   Hai una domanda frequente? Probabilmente la risposta è già nel nostro gruppo Facebook!
                 </p>

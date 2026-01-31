@@ -26,7 +26,7 @@ const Header = () => {
         <div className="flex h-24 items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3" aria-label="Torna alla homepage">
-            <img src={logoTende} alt="Tende da Tetto Community" loading="eager" className="h-14 w-14 sm:h-16 sm:w-16 md:h-20 md:w-20 rounded-full object-cover" />
+            <img src={logoTende} alt="Tende da Tetto Community" loading="eager" className="h-14 w-14 sm:h-16 sm:w-16 md:h-20 md:w-20 rounded-full object-contain bg-white p-1" />
             <div>
               <h1 className="text-2xl font-bold text-foreground leading-tight">Tende da Tetto</h1>
               <p className="text-base font-semibold text-foreground">e Campeggio</p>

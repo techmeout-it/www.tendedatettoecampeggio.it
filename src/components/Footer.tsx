@@ -33,7 +33,7 @@ const Footer = () => {
             {/* Brand */}
             <div className="lg:col-span-1">
               <Link to="/" className="flex items-center space-x-3 mb-4">
-                <img src={logoTende} alt="Tende da Tetto Community" loading="lazy" className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 rounded-full object-cover" />
+                <img src={logoTende} alt="Tende da Tetto Community" loading="lazy" className="h-12 w-12 sm:h-14 sm:w-14 md:h-16 md:w-16 rounded-full object-contain bg-white p-1" />
                 <div>
                   <h3 className="text-2xl font-bold text-foreground">Tende da Tetto</h3>
                   <p className="text-sm text-muted-foreground">Community Italia</p>

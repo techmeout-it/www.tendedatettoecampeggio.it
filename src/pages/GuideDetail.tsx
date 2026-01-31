@@ -32,6 +32,109 @@ const guidesData: Record<string, {
   likes: number;
   comments: number;
 }> = {
+  "tende-da-tetto-confronto-morbide-guscio-rigido-ibride": {
+    title: "Tende da tetto a confronto: morbide vs a guscio rigido vs ibride",
+    excerpt: "Guida completa alle tre famiglie di tende da tetto: morbide a libro, guscio rigido a pantografo e ibride. Vantaggi, svantaggi e quale scegliere per il tuo stile di viaggio.",
+    content: [
+      "Nel mondo delle tende da tetto per auto, tre sono le grandi famiglie che dominano il mercato: le **tende da tetto morbide** (o con apertura a libro), le **tende da tetto a guscio rigido** (o con apertura a pantografo e compasso) e le **tende ibride**.",
+      "Tutte permettono di trasformare il veicolo in un vero mini-camper, ma presentano differenze importanti in termini di comodità, rapidità di utilizzo, aerodinamica e versatilità. Vediamole nel dettaglio.",
+      "![Confronto tra i diversi tipi di tende da tetto](/img_articles/gusci_comparazione/tende_gusci.png)",
+      "## 1. Tende da tetto morbide con apertura a libro",
+      "**Esempi:** Swisskings, Yakima, Decathlon, Thule Tepui, ecc.",
+      "### Come funzionano",
+      "Si aprono ribaltando una parte della tenda verso l'esterno, creando una superficie di appoggio che poggia su una scala telescopica. Una metà della tenda rimane sopra il tetto dell'auto, l'altra \"sporge\" nel vuoto.",
+      "### Vantaggi",
+      "**Spazio interno maggiore**\n\nGrazie all'estensione laterale, offrono spesso:\n- Superfici letto più ampie\n- Maggiore altezza interna in alcune zone\n- Possibilità di ospitare comodamente 2–3 persone (talvolta anche 4)\n- Permettono in caso di pioggia di salire all'asciutto in tenda",
+      "**Prezzo più accessibile**\n\nIn media costano meno rispetto ai modelli a pantografo, rendendole ideali per:\n- Chi si avvicina per la prima volta al mondo delle tende da tetto\n- Famiglie o gruppi",
+      "**Versatilità**\n\nMolti modelli permettono:\n- L'aggiunta di verande, tende annesse o stanze inferiori\n- Utilizzo prolungato in campeggio stanziale",
+      "### Svantaggi",
+      "**Tempi di apertura e chiusura più lunghi**\n\nRichiedono:\n- Apertura manuale\n- Posizionamento della scala\n- Maggiore attenzione in fase di chiusura del telo",
+      "**Maggiore ingombro**\n- Più voluminose una volta aperte\n- Più sensibili al vento\n- Meno aerodinamiche durante la guida",
+      "**Gestione più complessa in caso di pioggia o fango**\n\nIl telo può bagnarsi o sporcarsi facilmente, rendendo la chiusura meno pratica.",
+      "## 2. Tende da tetto a guscio rigido o con apertura a pantografo e compasso",
+      "**Esempi:** Maggiolina, Xalpharooftent, James Baroud, Autohome, ecc.",
+      "### Come funzionano",
+      "Sono costituite da un guscio rigido che si solleva verticalmente o maggiormente in un lato, tramite molle a gas o manovella. Il tessuto resta sempre protetto all'interno del guscio quando chiusa.",
+      "![Tenda da tetto a guscio rigido](/img_articles/gusci_comparazione/tende_gusci_2.png)",
+      "### Vantaggi",
+      "**Apertura e chiusura rapidissime**\n\nIn pochi secondi:\n- Si aprono quasi senza sforzo\n- Si chiudono anche con condizioni meteo avverse\n\nIdeali per chi fa itinerari in movimento, con soste frequenti.",
+      "**Aerodinamica e silenziosità**\n- Profilo compatto\n- Minori consumi\n- Meno rumore durante la marcia",
+      "**Maggiore protezione dagli agenti atmosferici**\n\nIl guscio rigido:\n- Protegge il tessuto da pioggia, sole e sporco\n- Aumenta la durata nel tempo\n- Migliora l'isolamento termico e acustico",
+      "### Svantaggi",
+      "**Spazio interno più contenuto**\n- Superficie letto generalmente più ridotta\n- Meno adatte a famiglie numerose",
+      "**Costo più elevato**\n\nEsistono vari materiali di cui è fatta la scocca: vetroresina, ABS, alluminio, carbonio. La qualità dei materiali e la meccanica incidono sul prezzo finale.",
+      "**Minore possibilità di accessori esterni**\n- Veranda o ampliamenti spesso non disponibili e meno spaziosi\n- Meno flessibilità in campeggio stanziale",
+      "## 3. Tende da tetto ibride",
+      "**Esempi:** iKamper Skycamp, Vickywood Hybrid, ecc.",
+      "### Come funzionano",
+      "Sono costituite da un guscio rigido che si solleva lateralmente nel lato lungo per poi avere una struttura che esce e va ad appoggiarsi alla scaletta estendendo molto la superficie.",
+      "### Vantaggi",
+      "**Apertura e chiusura simili ai tempi di una pieghevole**\n\nIn pochi secondi:\n- Si aprono quasi senza sforzo\n- Si chiudono anche con condizioni meteo avverse\n- Sono disponibili estensioni e annex veramente molto spaziosi",
+      "**Aerodinamica e silenziosità**\n- Profilo compatto\n- Minori consumi\n- Meno rumore durante la marcia",
+      "**Maggiore protezione dagli agenti atmosferici**\n\nIl guscio rigido:\n- Protegge il tessuto da pioggia, sole e sporco\n- Aumenta la durata nel tempo\n- Migliora l'isolamento termico e acustico",
+      "### Svantaggi",
+      "**Costo più elevato**\n\nEsistono vari materiali di cui è fatta la scocca: vetroresina, ABS, alluminio, carbonio. La qualità dei materiali e la meccanica incidono sul prezzo finale.",
+      "**Tempi di apertura e chiusura più lunghi**\n\nRichiedono:\n- Apertura manuale\n- Posizionamento della scala\n- Maggiore attenzione in fase di chiusura del telo",
+      "## Quale tenda da tetto scegliere?",
+      "La scelta dipende principalmente da come viaggi e come vivi il campeggio. È importante iniziare a scegliere la propria tenda dalle esigenze, non da un modello:",
+      "| Esigenza | Pieghevole | Guscio rigido | Ibrida |\n|----------|:----------:|:-------------:|:------:|\n| Famiglia o più persone | ✅ | ❌ | ✅ |\n| Viaggi itineranti | ❌ | ✅ | ❌ |\n| Apertura/chiusura rapida | ❌ | ✅ | ❌ |\n| Budget contenuto | ✅ | ❌ | ❌ |\n| Uso in tutte le stagioni | ⚠️ | ⚠️ | ⚠️ |\n| Campeggio stanziale | ✅ | ❌ | ✅ |",
+      "## Conclusione",
+      "Non esiste una tenda da tetto \"migliore in assoluto\", ma la **tenda giusta per il tuo stile di viaggio**.",
+      "Le tende a libro privilegiano spazio e versatilità, mentre le tende a guscio rigido puntano su comfort, rapidità e protezione.",
+      "Sul nostro sito **Tende da tetto e campeggio** trovi convenzioni con produttori e rivenditori di tutti i modelli, con schede tecniche dettagliate e consigli personalizzati per aiutarti a scegliere la soluzione più adatta alle tue avventure."
+    ],
+    author: "Lo Staff di Tende da Tetto",
+    authorAvatar: "",
+    readTime: "10 min",
+    location: "Italia",
+    category: "Attrezzatura",
+    date: "31 Gennaio 2026",
+    image: "/img_articles/gusci_comparazione/tende_gusci.png",
+    likes: 0,
+    comments: 0
+  },
+  "dieci-giorni-liberta-elba-tenda-tetto": {
+    title: "Dieci giorni di libertà: due donne, una tenda da tetto e l'Italia che profuma di sale",
+    excerpt: "Un viaggio di 10 giorni dall'auto camperizzata con tenda da tetto: da Genova all'Isola d'Elba, tra spiagge, biciclette e la Toscana che respira.",
+    content: [
+      "Partire non è mai solo spostarsi. A volte è un atto di fiducia, altre una necessità, altre ancora una dichiarazione d'indipendenza. Per noi è stato tutto questo insieme. Dieci giorni, un'auto camperizzata con tenda da tetto, due biciclette sempre pronte e una rotta che da Genova ci ha portate fino all'Isola d'Elba, attraversando il blu del Tirreno e il verde ruvido della Toscana.",
+      "Non cercavamo una vacanza comoda. Cercavamo spazio, lentezza, strade secondarie e la sensazione di poterci fermare quando volevamo. E così è stato.",
+      "## Da Genova al mare aperto",
+      "Lasciare Genova significa salutare una città verticale, intensa, che ti accompagna fino all'ultimo tornante prima di aprirsi al mare. L'auto è carica ma ordinata: il necessario, niente di più. La tenda da tetto è lì, promessa di notti sospese. Le biciclette sul retro sono una certezza: saranno le nostre vere ali.",
+      "Il viaggio verso Piombino scorre tra autostrada e strade costiere, con il mare che appare e scompare. Arrivare al porto è sempre un piccolo rito: l'attesa del traghetto, il vento, l'odore di salsedine. Quando l'Isola d'Elba emerge all'orizzonte, verde e montuosa, capiamo subito che dieci giorni forse non basteranno.",
+      "![L'arrivo all'Isola d'Elba, panorama mozzafiato sul mare turchese](/img_articles/nat_vale_elba/01_elba.jpg)",
+      "## Capoliveri: il cuore dell'isola",
+      "Sbarcare all'Elba è come entrare in un'altra dimensione. Le distanze si accorciano, il tempo rallenta. Capoliveri diventa il nostro punto di riferimento: un borgo arroccato, vivo, con vicoli che sembrano fatti apposta per perdersi.",
+      "Parcheggiamo l'auto, sistemiamo la nostra \"casa mobile\" e iniziamo a muoverci in bicicletta. Salite impegnative, discese che tolgono il fiato, panorami che ripagano ogni goccia di sudore. Pedalare sull'isola significa sentirla davvero: il profumo della macchia mediterranea, il rumore delle cicale, il silenzio improvviso quando la strada si affaccia sul mare.",
+      "## Spiagge, una diversa dall'altra",
+      "Ogni giorno una spiaggia. A volte due. Sabbia chiara, ciottoli, scogli, calette nascoste. L'Elba non si concede tutta subito, va esplorata. Raggiungiamo alcune spiagge direttamente in bici, altre combinando pedalate e brevi tratti a piedi.",
+      "Ci sono mattine in cui arriviamo presto, quando il mare è liscio come vetro e sembra aspettarti. Altre volte restiamo fino al tramonto, con la pelle salata e la sensazione di aver vissuto qualcosa di semplice e perfetto. Il mare diventa una costante, un compagno di viaggio che cambia colore e umore ma non delude mai.",
+      "![Momenti al tramonto sul mare](/img_articles/nat_vale_elba/02_elba.jpg)",
+      "## Vivere in poco, vivere meglio",
+      "La nostra auto camperizzata è essenziale, ma è tutto ciò che ci serve. Cuciniamo sempre lì: pasta veloce, verdure, piatti semplici che sanno di casa anche a chilometri di distanza. La sera, dopo le giornate in bici, mangiare sedute davanti all'auto, con il cielo che si spegne lentamente, è uno dei momenti più belli.",
+      "Per le notti ci appoggiamo a strutture di campeggio: una scelta che ci permette di essere autonome ma anche di avere un punto sicuro, una doccia calda, un contatto umano. Aprire la tenda da tetto è ormai un gesto automatico. Dormire lì sopra, con i rumori dell'isola intorno, regala un senso di protezione e libertà difficile da spiegare.",
+      "## L'addio all'isola e il ritorno sulla terraferma",
+      "Lasciare l'Elba non è facile. C'è sempre la sensazione di aver saltato qualcosa, una spiaggia in più, una strada non percorsa. Ma il viaggio continua.",
+      "Rientriamo in Toscana e ci dirigiamo verso Baratti e San Vincenzo. Il paesaggio cambia: più ampio, più dolce. Qui la bici assume un altro ritmo. Pedaliamo tra pinete, strade bianche, tratti costieri che sembrano disegnati per essere attraversati lentamente.",
+      "## Baratti e San Vincenzo: la Toscana che respira",
+      "Il Golfo di Baratti è una pausa naturale. Mare calmo, storia etrusca, luce morbida. Ci fermiamo, nuotiamo, osserviamo. San Vincenzo invece è più viva, più movimentata, ma mantiene un equilibrio che ci piace. Anche qui troviamo il nostro ritmo: bici di giorno, cucina serale, notti tranquille.",
+      "La Toscana ci accoglie con la sua bellezza discreta. Non serve cercarla, è ovunque: nei filari, nelle strade che salgono leggere, nei piccoli bar dove una pausa diventa un incontro.",
+      "![Spiaggia all'Isola d'Elba](/img_articles/nat_vale_elba/03_elba.jpg)",
+      "## Tornare a Genova, diverse",
+      "Il rientro verso Genova segna la fine dei dieci giorni. L'auto è più disordinata, le biciclette portano i segni delle strade percorse, noi siamo stanche ma piene. Tornare non significa perdere ciò che abbiamo vissuto, ma portarlo con noi.",
+      "Questo viaggio non è stato solo una vacanza. È stato un modo di abitare il tempo, di dimostrare che la libertà non ha bisogno di grandi mezzi, ma di scelte consapevoli.",
+      "Due donne, una tenda da tetto, qualche chilometro di strada e moltissimi ricordi. L'Italia, vista così, è ancora più bella. E noi sappiamo già che non sarà l'ultimo viaggio."
+    ],
+    author: "Nat e Vale",
+    authorAvatar: "",
+    readTime: "8 min",
+    location: "Isola d'Elba, Toscana",
+    category: "Destinazioni",
+    date: "31 Gennaio 2026",
+    image: "/img_articles/nat_vale_elba/01_elba.jpg",
+    likes: 0,
+    comments: 0
+  },
   "viaggio-nozze-tenda-tetto-namibia": {
     title: "Viaggio di nozze in tenda da tetto in Namibia",
     excerpt: "Dove forse tutto è cominciato: la storia di Chiara e Piero, un budget limitato, e un viaggio indimenticabile di 17 giorni e 5.000 km attraverso deserti, oceani e savane.",
@@ -40,23 +143,23 @@ const guidesData: Record<string, {
       "Siamo nel 2018. La giovane coppia Chiara e Piero si appresta a sposarsi: la voglia di vivere un viaggio unico è tanta, ma ahimè il budget è limitato. Dopo alcune proposte ricevute da diverse agenzie di viaggio, emerge l'idea della Namibia, una destinazione che aveva colpito in modo particolare Piero, senza però immaginare che fosse tra le più costose per quanto riguarda i viaggi organizzati.",
       "Dopo aver sfogliato due album fotografici in agenzia, arriva il momento del preventivo: una cifra che supera abbondantemente il budget disponibile. Sembrava impossibile poter raggiungere la Namibia. Forse proprio per questo, o magari per la forza evocativa di quelle immagini, Chiara — fino a quel momento poco convinta — trova il coraggio e, una volta usciti dall'agenzia, si gira verso Piero e gli dice:",
       "**\"Noi andiamo in Namibia, vero?\"**",
-      "![La nostra tenda da tetto nel cuore della Namibia](/img_articles/namibia_viaggio_nozze/DSCN1226.JPG)",
+      "![Tropico del Capricorno nel cuore della Namibia](/img_articles/namibia_viaggio_nozze/DSCN1226.JPG)",
       "Da quel momento inizia la ricerca della soluzione migliore per visitare questo stupendo Paese, che in breve tempo si rivela essere il noleggio di un'auto con tenda da tetto e tutto l'occorrente per il campeggio. Piero arrivava da una solida esperienza di campeggio, dagli scout all'alpinismo, mentre Chiara, a parte una singola notte in tenda, avrebbe vissuto il suo vero battesimo proprio in Africa.",
       "Decidiamo di organizzare tutto in autonomia: scegliere le destinazioni, pianificare le tappe, trovare le sistemazioni e, soprattutto, l'autonoleggio. Un vero road trip alla scoperta di quello che può essere definito un Paese per pazienti macinatori di chilometri.",
       "## Un Paese nato per la tenda da tetto",
       "La Namibia, oltre a offrire paesaggi spettacolari e una natura incontaminata da esplorare in ogni sua forma, sembra nata apposta per i viaggi in tenda da tetto. Spazi sconfinati, strutture attrezzate in modo eccellente e una grande ospitalità ci hanno fatto innamorare di questa terra, dal deserto all'oceano.",
       "In **17 giorni** percorriamo strade polverose e infinite, macinando oltre **5.000 chilometri**, visitando molte delle mete più famose e fermandoci anche in luoghi meno conosciuti.",
-      "![Le dune del Namib all'alba](/img_articles/namibia_viaggio_nozze/DSCN1956.JPG)",
+      "![Paesaggi sconfinati in Namibia](/img_articles/namibia_viaggio_nozze/DSCN1956.JPG)",
       "## Il nostro itinerario",
       "Partendo dalla capitale Windhoek ci dirigiamo verso sud, attraversando il Kalahari fino ad arrivare al Fish River Canyon, senza lasciarci sfuggire la foresta degli alberi faretra. Proseguiamo poi fino a toccare per la prima volta l'oceano Atlantico a Lüderitz, avvistando fenicotteri nelle lagune e pinguini a Diaz Point, senza perdere la suggestiva città fantasma dei cercatori di diamanti di Kolmanskop.",
       "Dopo aver incrociato i cavalli del deserto, la Namibia ci stupisce ancora con il Namib, il deserto più antico del mondo: dune color pesca da ammirare all'alba, da scalare lentamente e da cui poi correre giù a perdifiato.",
       "Risalendo verso nord, la tappa a Swakopmund e Walvis Bay è d'obbligo: qui avvistiamo otarie, delfini e una ricchissima fauna marina, passeggiamo tra le vie della cittadina e visitiamo i suoi musei, prima di affrontare la misteriosa Skeleton Coast, tra relitti e la più grande colonia di otarie al mondo.",
-      "![Paesaggi sconfinati della Namibia](/img_articles/namibia_viaggio_nozze/DSCN3102.JPG)",
+      "![Incontri ravvicinati con la fauna africana](/img_articles/namibia_viaggio_nozze/DSCN3102.JPG)",
       "## Damaraland ed Etosha",
       "È poi l'entroterra a regalarci paesaggi davvero a perdita d'occhio, permettendoci di campeggiare ai piedi dello Spitzkoppe, in un ritorno alle origini dell'umanità, testimoniato dagli straordinari graffiti rupestri dei nostri antenati. Da qui inizia l'esplorazione del Damaraland, alla ricerca dei leggendari elefanti del deserto, unici nel loro genere, capaci di percorrere anche 100 chilometri al giorno per raggiungere le poche sorgenti d'acqua.",
       "Tra la notte passata nel campeggio più incantevole del viaggio e la visita a siti preistorici e foreste pietrificate questa regione ci ha conquistato, premiandoci dell'avvistamento del nostro primo elefante proprio l'ultimo giorno.",
       "Questo è solo un assaggio di ciò che ci aspetta nei giorni successivi: l'**Etosha National Park**, il parco nazionale più grande della Namibia, dove è possibile avvistare la fauna africana guidando in completa autonomia. Un luogo che merita più giorni di esplorazione, dall'alba al tramonto, osservando animali magnifici: dai coloratissimi uccelli fino ai leoni e ai giganteschi elefanti.",
-      "![Incontri ravvicinati con la fauna africana](/img_articles/namibia_viaggio_nozze/DSCN3839.JPG)",
+      "![La Nostra auto con tenda da tetto](/img_articles/namibia_viaggio_nozze/DSCN3839.JPG)",
       "## Il ritorno e il mal d'Africa",
       "Ormai il viaggio volge al termine, ma la strada di rientro verso la capitale ci riserva ancora alcune sorprese, come il più grande meteorite mai scoperto sulla Terra o il Waterberg Plateau Park, un rigoglioso altopiano ricco di paesaggi e animali.",
       "La Namibia ci ha stregato. La tenda da tetto si è rivelata il modo migliore per esplorarla, anche grazie agli ottimi servizi: dal noleggio di veicoli completamente equipaggiati alle strutture ricettive, dove non sono mai mancati pulizia e comfort.",
@@ -883,18 +986,6 @@ const GuideDetail = () => {
                   </p>
                 );
               })}
-            </div>
-
-            {/* Engagement */}
-            <div className="flex items-center gap-6 mt-12 pt-8 border-t">
-              <Button variant="outline" className="gap-2">
-                <ThumbsUp className="h-4 w-4" />
-                {guide.likes} Mi piace
-              </Button>
-              <Button variant="outline" className="gap-2">
-                <MessageCircle className="h-4 w-4" />
-                {guide.comments} Commenti
-              </Button>
             </div>
 
             {/* Related Guides */}

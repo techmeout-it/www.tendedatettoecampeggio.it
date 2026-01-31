@@ -28,6 +28,30 @@ import {
 // Dati delle guide - in futuro verranno da un database
 const allGuides = [
   {
+    slug: "tende-da-tetto-confronto-morbide-guscio-rigido-ibride",
+    title: "Tende da tetto a confronto: morbide vs a guscio rigido vs ibride",
+    excerpt: "Guida completa alle tre famiglie di tende da tetto: morbide a libro, guscio rigido a pantografo e ibride. Vantaggi, svantaggi e quale scegliere per il tuo stile di viaggio.",
+    author: "Lo Staff di Tende da Tetto",
+    readTime: "10 min",
+    location: "Italia",
+    category: "Attrezzatura",
+    date: "2026-01-31",
+    dateDisplay: "31 Gen 2026",
+    image: "/img_articles/gusci_comparazione/tende_gusci.png"
+  },
+  {
+    slug: "dieci-giorni-liberta-elba-tenda-tetto",
+    title: "Dieci giorni di libertà: due donne, una tenda da tetto e l'Italia che profuma di sale",
+    excerpt: "Un viaggio di 10 giorni dall'auto camperizzata con tenda da tetto: da Genova all'Isola d'Elba, tra spiagge, biciclette e la Toscana che respira.",
+    author: "Nat e Vale",
+    readTime: "8 min",
+    location: "Isola d'Elba, Toscana",
+    category: "Destinazioni",
+    date: "2026-01-31",
+    dateDisplay: "31 Gen 2026",
+    image: "/img_articles/nat_vale_elba/01_elba.jpg"
+  },
+  {
     slug: "viaggio-nozze-tenda-tetto-namibia",
     title: "Viaggio di nozze in tenda da tetto in Namibia",
     excerpt: "Dove forse tutto è cominciato: la storia di Chiara e Piero, un budget limitato, e un viaggio indimenticabile di 17 giorni e 5.000 km attraverso deserti, oceani e savane.",

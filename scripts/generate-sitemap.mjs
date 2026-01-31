@@ -18,6 +18,8 @@ const routes = [
 
 // Guide slugs - add new guides here
 const guideSlugs = [
+  'tende-da-tetto-confronto-morbide-guscio-rigido-ibride',
+  'dieci-giorni-liberta-elba-tenda-tetto',
   'viaggio-nozze-tenda-tetto-namibia',
   'forte-leone-dachzelt-camp-italia',
   'spagna-del-nord-on-the-road',

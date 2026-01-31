@@ -12,7 +12,7 @@ const PartnerSection = () => {
       discount: "15%",
       description: "Leader delle tende da tetto made in Italy, una certezza di qualità dal 1958.",
       logo: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=200&h=200",
-      specialOffer: "Sconto del 15% su tutto il catalogo tende con codice: AUTOHOMEOFFICIAL"
+      specialOffer: "Sconto del 15% su tutto il catalogo tende con codice: AUTOHOME-OFFICIAL"
     },
     {
       name: "Xalpharooftent",

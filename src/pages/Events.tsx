@@ -545,7 +545,6 @@ const pastEventsGalleries: PastEventGallery[] = [
     location: 'Camping Riva del Setta, Rioveggio',
     folder: '/img_raduni/2022.06.04-05_CampingRivaDelSetta-RadunoNazionale',
     photos: [
-      'EZVZ0797.JPG',
       'IMG_3160.JPG',
       'IMG_3174.JPG',
       'IMG_3189.JPG',

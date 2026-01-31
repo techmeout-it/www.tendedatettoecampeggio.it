@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Handshake, ExternalLink, Star, Percent } from "lucide-react";
+import { Handshake, ExternalLink, Star, Percent, Download } from "lucide-react";
 
 const PartnerSection = () => {
   const partners = [
@@ -12,7 +12,8 @@ const PartnerSection = () => {
       discount: "15%",
       description: "Leader delle tende da tetto made in Italy, una certezza di qualità dal 1958.",
       logo: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=200&h=200",
-      specialOffer: "Sconto del 15% su tutto il catalogo tende con codice: AUTOHOME-OFFICIAL"
+      specialOffer: "Sconto del 15% su tutto il catalogo tende con codice: AUTOHOME-OFFICIAL",
+      pdfLink: null
     },
     {
       name: "Xalpharooftent",
@@ -20,7 +21,8 @@ const PartnerSection = () => {
       discount: "Dedicato",
       description: "Tende made in Italy di qualità artigianale. Design italiano e materiali premium per gli avventurieri più esigenti.",
       logo: "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=200&h=200",
-      specialOffer: "Prezzo speciale dedicato per gli iscritti alla pagina"
+      specialOffer: "Prezzo speciale dedicato per gli iscritti alla pagina",
+      pdfLink: null
     },
     {
       name: "Camperboxes",
@@ -28,7 +30,8 @@ const PartnerSection = () => {
       discount: "Dedicato",
       description: "Allestimenti personalizzati per qualsiasi mezzo, dall'auto al van, in legno e alluminio di alta qualità.",
       logo: "https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?auto=format&fit=crop&w=200&h=200",
-      specialOffer: "Bagno a separazione disponibile in due misure con prezzo dedicato alla community"
+      specialOffer: "Bagno a separazione disponibile in due misure con prezzo dedicato alla community",
+      pdfLink: "/doc_articles_partners/ListinoCamperBoxes-2026.pdf"
     },
     {
       name: "Swisskings",
@@ -36,7 +39,8 @@ const PartnerSection = () => {
       discount: "Speciale",
       description: "Tende pieghevoli e rigide di varie misure, tendalini e accessori con un rapporto qualità prezzo imbattibile.",
       logo: "https://images.unsplash.com/photo-1510312305653-8ed496efae75?auto=format&fit=crop&w=200&h=200",
-      specialOffer: "Rapporto qualità prezzo imbattibile per la community"
+      specialOffer: "Rapporto qualità prezzo imbattibile per la community",
+      pdfLink: null
     }
   ];
 
@@ -101,6 +105,18 @@ const PartnerSection = () => {
                     <p className="text-sm text-muted-foreground mt-1">
                       {partner.specialOffer}
                     </p>
+                    {partner.pdfLink && (
+                      <a 
+                        href={partner.pdfLink} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        download
+                        className="inline-flex items-center gap-2 mt-3 px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors text-sm font-medium"
+                      >
+                        <Download className="h-4 w-4" />
+                        Scarica listino prezzi dedicato
+                      </a>
+                    )}
                   </div>
                 </CardContent>
               </Card>

@@ -36,7 +36,7 @@ const HeroSection = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-4xl md:text-6xl font-bold text-foreground leading-tight">
-                La <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">Community Italiana</span> N°1 per le Tende da Tetto
+                La <span className="bg-gradient-to-r from-primary to-primary-glow bg-clip-text text-transparent">Community Italiana</span> N°1 per le Tende da Tetto e Campeggio
               </h1>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
                 Scopri i migliori campeggi, condividi le tue avventure e trova tutto quello che ti serve per viaggiare con la tua tenda da tetto.

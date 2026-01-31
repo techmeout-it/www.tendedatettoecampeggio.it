@@ -84,7 +84,7 @@ const guidesData: Record<string, {
       "Sul nostro sito **Tende da tetto e campeggio** trovi convenzioni con produttori e rivenditori di tutti i modelli, con schede tecniche dettagliate e consigli personalizzati per aiutarti a scegliere la soluzione più adatta alle tue avventure."
     ],
     author: "Lo Staff di Tende da Tetto",
-    authorAvatar: "",
+    authorAvatar: "/logo_tende.jpg",
     readTime: "10 min",
     location: "Italia",
     category: "Attrezzatura",
@@ -226,7 +226,7 @@ const guidesData: Record<string, {
       "E chissà… magari l'anno prossimo, di nuovo qui, con il Forte Leone a farci da sfondo."
     ],
     author: "Lo Staff di Tende da Tetto",
-    authorAvatar: "",
+    authorAvatar: "/logo_tende.jpg",
     readTime: "8 min",
     location: "Forte Leone, Veneto",
     category: "Eventi",
@@ -859,11 +859,11 @@ const GuideDetail = () => {
                       src={guide.authorAvatar} 
                       alt={guide.author}
                       loading="lazy"
-                      className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover"
+                      className="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-contain bg-white p-1"
                     />
                   ) : (
-                    <div className="w-24 h-24 rounded-full bg-primary/20 flex items-center justify-center">
-                      <User className="h-12 w-12 text-primary" />
+                    <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-primary/20 flex items-center justify-center">
+                      <User className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
                     </div>
                   )}
                   <div>
@@ -969,6 +969,53 @@ const GuideDetail = () => {
                       ))}
                     </ul>
                   );
+                }
+                // Supporto per tabelle markdown
+                if (paragraph.startsWith("|") && paragraph.includes("|")) {
+                  const allRows = paragraph.split("\n");
+                  // Filtra la riga separatrice (quella con ---)
+                  const rows = allRows.filter(row => row.trim() && !row.match(/^[\s|:-]+$/));
+                  
+                  if (rows.length >= 2) {
+                    const headers = rows[0].split("|").filter(cell => cell.trim()).map(cell => cell.trim());
+                    const dataRows = rows.slice(1).map(row => 
+                      row.split("|").filter(cell => cell.trim()).map(cell => cell.trim())
+                    );
+                    
+                    const renderCell = (cell: string) => {
+                      if (cell === "✅") return <span className="text-green-500 text-2xl font-bold">✓</span>;
+                      if (cell === "❌") return <span className="text-red-500 text-2xl font-bold">✗</span>;
+                      if (cell === "⚠️") return <span className="text-amber-500 text-2xl font-bold">⚠</span>;
+                      return cell;
+                    };
+                    
+                    return (
+                      <div key={index} className="my-8 overflow-x-auto">
+                        <table className="w-full border-collapse bg-card rounded-lg overflow-hidden shadow-md border border-muted/30">
+                          <thead>
+                            <tr className="bg-muted/50">
+                              {headers.map((header, i) => (
+                                <th key={i} className={`py-4 px-6 text-foreground font-semibold border-b border-muted/30 ${i === 0 ? 'text-left' : 'text-center'}`}>
+                                  {header}
+                                </th>
+                              ))}
+                            </tr>
+                          </thead>
+                          <tbody>
+                            {dataRows.map((row, rowIndex) => (
+                              <tr key={rowIndex} className="border-b border-muted/20 hover:bg-muted/10 transition-colors">
+                                {row.map((cell, cellIndex) => (
+                                  <td key={cellIndex} className={`py-4 px-6 ${cellIndex === 0 ? 'text-left text-foreground font-medium' : 'text-center'}`}>
+                                    {renderCell(cell)}
+                                  </td>
+                                ))}
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    );
+                  }
                 }
                 // Supporto per il testo in grassetto **testo**
                 const renderFormattedText = (text: string) => {

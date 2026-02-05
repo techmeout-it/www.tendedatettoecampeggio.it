@@ -3,8 +3,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Handshake, ExternalLink, Star, Percent, Download } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const PartnerSection = () => {
+  const { t } = useLanguage();
   const partners = [
     {
       name: "Autohome",
@@ -53,11 +55,11 @@ const PartnerSection = () => {
             <div className="flex items-center justify-center mb-4">
               <Handshake className="h-8 w-8 text-primary mr-3" aria-hidden="true" />
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                Partner & Offerte
+                {t('partner.title')}
               </h2>
             </div>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Sconti esclusivi e offerte speciali dai migliori brand del settore outdoor
+              {t('partner.description')}
             </p>
           </div>
 
@@ -100,7 +102,7 @@ const PartnerSection = () => {
                   <div className="bg-gradient-to-r from-accent/10 to-accent/5 border border-accent/20 rounded-lg p-4">
                     <div className="flex items-center text-accent font-medium">
                       <Star className="h-4 w-4 mr-2" />
-                      Offerta Speciale Community
+                      {t('partner.specialOffer')}
                     </div>
                     <p className="text-sm text-muted-foreground mt-1">
                       {partner.specialOffer}
@@ -114,7 +116,7 @@ const PartnerSection = () => {
                         className="inline-flex items-center gap-2 mt-3 px-4 py-2 bg-primary text-primary-foreground rounded-md hover:bg-primary/90 transition-colors text-sm font-medium"
                       >
                         <Download className="h-4 w-4" />
-                        Scarica listino prezzi dedicato
+                        {t('partner.download')}
                       </a>
                     )}
                   </div>
@@ -126,14 +128,14 @@ const PartnerSection = () => {
           {/* CTA */}
           <div className="text-center bg-gradient-to-r from-primary/10 to-accent/10 rounded-xl p-8 border border-primary/20">
             <h3 className="text-2xl font-bold text-foreground mb-4">
-              Vuoi diventare partner?
+              {t('partner.become')}?
             </h3>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Unisciti ai nostri partner e raggiungi oltre 40.000 appassionati di campeggio e outdoor in tutta Italia
+              {t('partner.description')}
             </p>
             <Link to="/contatti">
               <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                Contattaci per Partnership
+                {t('partner.become')}
               </Button>
             </Link>
           </div>

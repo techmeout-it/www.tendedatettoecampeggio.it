@@ -4,20 +4,23 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Mountain, MapPin, BookOpen, Users, Handshake, Info, Calendar } from "lucide-react";
 import logoTende from "@/assets/logo_tende.jpg";
+import LanguageSelector from "@/components/LanguageSelector";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const isHomePage = location.pathname === "/";
+  const { t } = useLanguage();
 
   const navigation = [
-    { name: "Home", href: isHomePage ? "#" : "/", icon: Mountain, isRoute: !isHomePage },
-    { name: "Blog", href: "/guide", icon: BookOpen, isRoute: true },
+    { name: t('nav.home'), href: isHomePage ? "#" : "/", icon: Mountain, isRoute: !isHomePage },
+    { name: t('nav.blog'), href: "/guide", icon: BookOpen, isRoute: true },
     // { name: "Campeggi", href: "/campeggi", icon: MapPin, isRoute: true }, // TODO: Da riattivare in futuro
-    { name: "Community", href: isHomePage ? "#community" : "/#community", icon: Users, isRoute: false },
-    { name: "Eventi & Raduni", href: "/eventi", icon: Calendar, isRoute: true },
-    { name: "Partner", href: isHomePage ? "#partner" : "/#partner", icon: Handshake, isRoute: false },
-    { name: "Chi Siamo", href: "/chi-siamo", icon: Info, isRoute: true },
+    { name: t('nav.community'), href: isHomePage ? "#community" : "/#community", icon: Users, isRoute: false },
+    { name: t('nav.events'), href: "/eventi", icon: Calendar, isRoute: true },
+    { name: t('nav.partner'), href: isHomePage ? "#partner" : "/#partner", icon: Handshake, isRoute: false },
+    { name: t('nav.about'), href: "/chi-siamo", icon: Info, isRoute: true },
   ];
 
   return (
@@ -59,11 +62,12 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden md:flex">
+          {/* CTA Button & Language Selector */}
+          <div className="hidden md:flex items-center space-x-4">
+            <LanguageSelector />
             <a href="https://www.facebook.com/groups/375926353544064" target="_blank" rel="noopener noreferrer">
               <Button className="bg-[#1877F2] hover:bg-[#1877F2]/90">
-                Unisciti alla Community
+                {t('nav.join')}
               </Button>
             </a>
           </div>
@@ -100,10 +104,13 @@ const Header = () => {
                     </a>
                   )
                 ))}
-                <div className="pt-4 px-4">
+                <div className="pt-4 px-4 space-y-4">
+                  <div className="flex justify-center">
+                    <LanguageSelector />
+                  </div>
                   <a href="https://www.facebook.com/groups/375926353544064" target="_blank" rel="noopener noreferrer">
                     <Button className="w-full bg-[#1877F2] hover:bg-[#1877F2]/90">
-                      Unisciti alla Community
+                      {t('nav.join')}
                     </Button>
                   </a>
                 </div>

@@ -4,8 +4,11 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Clock, User, ArrowRight, BookOpen } from "lucide-react";
 import campeggiFoto from "@/assets/campeggi-italia.jpg";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const GuideSection = () => {
+  const { t } = useLanguage();
+  
   const guides = [
     {
       slug: "viaggio-nozze-tenda-tetto-namibia",
@@ -54,11 +57,11 @@ const GuideSection = () => {
             <div className="flex items-center justify-center mb-4">
               <BookOpen className="h-8 w-8 text-primary mr-3" />
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-                Articoli & Guide
+                {t('guides.title')}
               </h2>
             </div>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Scopri i migliori consigli dalla nostra community di esperti campeggiatori
+              {t('guides.description')}
             </p>
           </div>
 
@@ -103,7 +106,7 @@ const GuideSection = () => {
                         {guide.author}
                       </div>
                       <span className="group/btn text-primary flex items-center text-xs font-medium">
-                        Leggi
+                        {t('guides.readMore')}
                         <ArrowRight className="h-3 w-3 ml-1 group-hover/btn:translate-x-1 transition-transform" />
                       </span>
                     </div>
@@ -117,7 +120,7 @@ const GuideSection = () => {
           <div className="text-center">
             <Link to="/guide">
               <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                Vedi Tutti gli Articoli
+                {t('guides.viewAll')}
                 <ArrowRight className="h-5 w-5 ml-2" />
               </Button>
             </Link>

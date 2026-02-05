@@ -27,6 +27,7 @@ import {
   ChevronRight,
   X
 } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface EventItem {
   id: string;
@@ -588,6 +589,7 @@ const pastEventsGalleries: PastEventGallery[] = [
 ];
 
 const Events = () => {
+  const { t } = useLanguage();
   const siteUrl = typeof window !== 'undefined' ? window.location.origin : '';
   const canonicalUrl = `${siteUrl}/eventi`;
   
@@ -627,13 +629,13 @@ const Events = () => {
   const getTypeLabel = (type: string) => {
     switch (type) {
       case 'raduno':
-        return { label: 'Raduno', color: 'bg-red-500/10 text-red-700' };
+        return { label: t('events.raduno'), color: 'bg-red-500/10 text-red-700' };
       case 'workshop':
-        return { label: 'Workshop', color: 'bg-blue-500/10 text-blue-700' };
+        return { label: t('events.workshop'), color: 'bg-blue-500/10 text-blue-700' };
       case 'evento':
-        return { label: 'Evento', color: 'bg-green-500/10 text-green-700' };
+        return { label: t('events.evento'), color: 'bg-green-500/10 text-green-700' };
       default:
-        return { label: 'Evento', color: 'bg-gray-500/10 text-gray-700' };
+        return { label: t('events.evento'), color: 'bg-gray-500/10 text-gray-700' };
     }
   };
 
@@ -674,13 +676,11 @@ const Events = () => {
               <div className="flex items-center justify-center mb-6">
                 <Calendar className="h-12 w-12 text-primary mr-4" aria-hidden="true" />
                 <h1 className="text-4xl md:text-5xl font-bold text-foreground">
-                  Eventi e Raduni
+                  {t('events.title')}
                 </h1>
               </div>
               <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Scopri i prossimi raduni, workshop ed eventi della nostra community. 
-                Momenti di condivisione, apprendimento e avventura con altri appassionati 
-                di tende da tetto e campeggio in tutta Italia.
+                {t('events.description')}
               </p>
             </div>
           </div>
@@ -691,9 +691,9 @@ const Events = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
               <div className="mb-12 text-center">
-                <h2 className="text-3xl font-bold text-foreground mb-4">Prossimi Appuntamenti</h2>
+                <h2 className="text-3xl font-bold text-foreground mb-4">{t('events.upcoming')}</h2>
                 <p className="text-muted-foreground">
-                  {eventsData.length} evento programmato • Partecipazione libera per tutti i membri della community
+                  {eventsData.length} {t('events.scheduled')} • {t('events.freeParticipation')}
                 </p>
               </div>
 
@@ -805,7 +805,7 @@ const Events = () => {
                         {/* CTA Button */}
                         <Link to="/raduno-nazionale-2026">
                           <Button className="w-full bg-primary hover:bg-primary/90">
-                            Scopri di più
+                            {t('events.moreInfo')}
                             <ArrowRight className="h-4 w-4 ml-2" aria-hidden="true" />
                           </Button>
                         </Link>
@@ -824,10 +824,10 @@ const Events = () => {
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
                 <h2 className="text-3xl font-bold text-foreground mb-4">
-                  📅 Appuntamenti Passati
+                  📅 {t('events.past')}
                 </h2>
                 <p className="text-muted-foreground">
-                  La nostra storia di raduni e incontri dal 2021 ad oggi
+                  {t('events.timelineDesc')}
                 </p>
               </div>
 
@@ -852,7 +852,7 @@ const Events = () => {
                       <div className="flex items-start gap-3 pr-8">
                         <Tent className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                         <div>
-                          <p className="font-semibold text-foreground">Raduno Nazionale</p>
+                          <p className="font-semibold text-foreground">{t('events.radunoNazionale')}</p>
                           <p className="text-sm text-muted-foreground">16-17-18 maggio • Grazie di Curtatone</p>
                         </div>
                       </div>
@@ -868,7 +868,7 @@ const Events = () => {
                       <div className="flex items-start gap-3 pr-8">
                         <Mountain className="h-5 w-5 text-amber-500 mt-1 flex-shrink-0" />
                         <div>
-                          <p className="font-semibold text-foreground">Raduno Off Road</p>
+                          <p className="font-semibold text-foreground">{t('events.radunoOffRoad')}</p>
                           <p className="text-sm text-muted-foreground">6-7-8 giugno • Velo Veronese</p>
                         </div>
                       </div>
@@ -884,7 +884,7 @@ const Events = () => {
                       <div className="flex items-start gap-3 pr-8">
                         <Users className="h-5 w-5 text-blue-500 mt-1 flex-shrink-0" />
                         <div>
-                          <p className="font-semibold text-foreground">Gemellaggio Dachzeltnomaden</p>
+                          <p className="font-semibold text-foreground">{t('events.gemellaggio')}</p>
                           <p className="text-sm text-muted-foreground">3-6 luglio • Forte Leone</p>
                         </div>
                       </div>
@@ -900,7 +900,7 @@ const Events = () => {
                       <div className="flex items-start gap-3 pr-8">
                         <Tent className="h-5 w-5 text-green-500 mt-1 flex-shrink-0" />
                         <div>
-                          <p className="font-semibold text-foreground">Game Camp</p>
+                          <p className="font-semibold text-foreground">{t('events.gameCamp')}</p>
                           <p className="text-sm text-muted-foreground">19-20-21 settembre • Roncoscaglia</p>
                         </div>
                       </div>
@@ -928,7 +928,7 @@ const Events = () => {
                       <div className="flex items-start gap-3 pr-8">
                         <Tent className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                         <div>
-                          <p className="font-semibold text-foreground">Raduno Primaverile</p>
+                          <p className="font-semibold text-foreground">{t('events.radunoPrimaverile')}</p>
                           <p className="text-sm text-muted-foreground">13-14 aprile • Villa di Cartigliano</p>
                         </div>
                       </div>
@@ -944,7 +944,7 @@ const Events = () => {
                       <div className="flex items-start gap-3 pr-8">
                         <Tent className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                         <div>
-                          <p className="font-semibold text-foreground">Raduno Nazionale</p>
+                          <p className="font-semibold text-foreground">{t('events.radunoNazionale')}</p>
                           <p className="text-sm text-muted-foreground">24-25-26 maggio • Lago di Bolsena</p>
                         </div>
                       </div>
@@ -960,7 +960,7 @@ const Events = () => {
                       <div className="flex items-start gap-3 pr-8">
                         <MapPin className="h-5 w-5 text-blue-400 mt-1 flex-shrink-0" />
                         <div>
-                          <p className="font-semibold text-foreground">Raduno Autunnale</p>
+                          <p className="font-semibold text-foreground">{t('events.radunoAutunnale')}</p>
                           <p className="text-sm text-muted-foreground">14-15 settembre • Lago di Caldonazzo</p>
                         </div>
                       </div>
@@ -988,7 +988,7 @@ const Events = () => {
                       <div className="flex items-start gap-3 pr-8">
                         <Tent className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                         <div>
-                          <p className="font-semibold text-foreground">Raduno Nazionale</p>
+                          <p className="font-semibold text-foreground">{t('events.radunoNazionale')}</p>
                           <p className="text-sm text-muted-foreground">27-28 maggio • Gambulaga</p>
                         </div>
                       </div>
@@ -1004,7 +1004,7 @@ const Events = () => {
                       <div className="flex items-start gap-3 pr-8">
                         <Mountain className="h-5 w-5 text-amber-500 mt-1 flex-shrink-0" />
                         <div>
-                          <p className="font-semibold text-foreground">Raduno Itinerante</p>
+                          <p className="font-semibold text-foreground">{t('events.radunoItinerante')}</p>
                           <p className="text-sm text-muted-foreground">8-9 luglio • Cartigliano - Passo Cereda</p>
                         </div>
                       </div>
@@ -1020,7 +1020,7 @@ const Events = () => {
                       <div className="flex items-start gap-3 pr-8">
                         <Tent className="h-5 w-5 text-purple-500 mt-1 flex-shrink-0" />
                         <div>
-                          <p className="font-semibold text-foreground">Raduno Enogastronomico</p>
+                          <p className="font-semibold text-foreground">{t('events.radunoEnogastronomico')}</p>
                           <p className="text-sm text-muted-foreground">26-27 agosto • Vinchio</p>
                         </div>
                       </div>
@@ -1036,7 +1036,7 @@ const Events = () => {
                       <div className="flex items-start gap-3 pr-8">
                         <Mountain className="h-5 w-5 text-green-500 mt-1 flex-shrink-0" />
                         <div>
-                          <p className="font-semibold text-foreground">Raduno Autunnale</p>
+                          <p className="font-semibold text-foreground">{t('events.radunoAutunnale')}</p>
                           <p className="text-sm text-muted-foreground">7-8 ottobre • Maso Molino, Valli del Pasubio</p>
                         </div>
                       </div>
@@ -1064,7 +1064,7 @@ const Events = () => {
                       <div className="flex items-start gap-3 pr-8">
                         <Tent className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                         <div>
-                          <p className="font-semibold text-foreground">Raduno Nazionale</p>
+                          <p className="font-semibold text-foreground">{t('events.radunoNazionale')}</p>
                           <p className="text-sm text-muted-foreground">4-5 giugno • Rioveggio</p>
                         </div>
                       </div>
@@ -1080,7 +1080,7 @@ const Events = () => {
                       <div className="flex items-start gap-3 pr-8">
                         <Mountain className="h-5 w-5 text-green-500 mt-1 flex-shrink-0" />
                         <div>
-                          <p className="font-semibold text-foreground">Raduno Estivo</p>
+                          <p className="font-semibold text-foreground">{t('events.radunoEstivo')}</p>
                           <p className="text-sm text-muted-foreground">25-26 giugno • Val Malene</p>
                         </div>
                       </div>
@@ -1089,9 +1089,9 @@ const Events = () => {
                       <div className="flex items-start gap-3">
                         <AlertCircle className="h-5 w-5 text-red-400 mt-1 flex-shrink-0" />
                         <div>
-                          <p className="font-semibold text-foreground">Raduno Autunnale</p>
+                          <p className="font-semibold text-foreground">{t('events.radunoAutunnale')}</p>
                           <p className="text-sm text-muted-foreground">24-25 settembre • Pontremoli</p>
-                          <Badge variant="outline" className="mt-1 text-red-500 border-red-300 text-xs">Annullato per maltempo</Badge>
+                          <Badge variant="outline" className="mt-1 text-red-500 border-red-300 text-xs">{t('events.cancelledBadWeather')}</Badge>
                         </div>
                       </div>
                     </Card>
@@ -1118,9 +1118,9 @@ const Events = () => {
                       <div className="flex items-start gap-3 pr-8">
                         <Tent className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                         <div className="flex-1">
-                          <p className="font-semibold text-foreground">Raduno Nazionale</p>
+                          <p className="font-semibold text-foreground">{t('events.radunoNazionale')}</p>
                           <p className="text-sm text-muted-foreground">26-27 giugno • Picchio Verde, Licciana Nardi</p>
-                          <Badge variant="secondary" className="text-xs mt-1">🎉 Il primo raduno!</Badge>
+                          <Badge variant="secondary" className="text-xs mt-1">{t('events.firstMeetup')}</Badge>
                         </div>
                       </div>
                     </Card>
@@ -1222,37 +1222,37 @@ const Events = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold text-foreground mb-12 text-center">
-                Come Partecipare
+                {t('events.howToParticipate')}
               </h2>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <Card className="p-6 bg-background/80 backdrop-blur">
                   <div className="flex items-center gap-3 mb-4">
                     <Users className="h-6 w-6 text-primary" aria-hidden="true" />
-                    <h3 className="font-semibold text-foreground">Iscriviti alla Community</h3>
+                    <h3 className="font-semibold text-foreground">{t('events.joinCommunity')}</h3>
                   </div>
                   <p className="text-muted-foreground text-sm">
-                    Unisciti al nostro gruppo Facebook per restare aggiornato su tutti gli eventi e le novità della community.
+                    {t('events.joinCommunityDesc')}
                   </p>
                 </Card>
 
                 <Card className="p-6 bg-background/80 backdrop-blur">
                   <div className="flex items-center gap-3 mb-4">
                     <Clock className="h-6 w-6 text-primary" aria-hidden="true" />
-                    <h3 className="font-semibold text-foreground">Segui gli Annunci</h3>
+                    <h3 className="font-semibold text-foreground">{t('events.followAnnouncements')}</h3>
                   </div>
                   <p className="text-muted-foreground text-sm">
-                    Iscriviti alla nostra newsletter per ricevere gli inviti ufficiali e i dettagli degli eventi direttamente via email.
+                    {t('events.followAnnouncementsDesc')}
                   </p>
                 </Card>
 
                 <Card className="p-6 bg-background/80 backdrop-blur">
                   <div className="flex items-center gap-3 mb-4">
                     <AlertCircle className="h-6 w-6 text-primary" aria-hidden="true" />
-                    <h3 className="font-semibold text-foreground">Condividi Esperienze</h3>
+                    <h3 className="font-semibold text-foreground">{t('events.shareExperiences')}</h3>
                   </div>
                   <p className="text-muted-foreground text-sm">
-                    Dopo l'evento, condividi le tue foto e esperienze nel nostro gruppo per ispirare altri appassionati.
+                    {t('events.shareExperiencesDesc')}
                   </p>
                 </Card>
               </div>
@@ -1265,14 +1265,14 @@ const Events = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-2xl mx-auto text-center">
               <h2 className="text-3xl font-bold text-foreground mb-4">
-                Non vedi un evento nella tua zona?
+                {t('events.noEventInArea')}
               </h2>
               <p className="text-muted-foreground mb-8">
-                Proponi un raduno o un evento! Contattaci per organizzare un gathering comunitario nella tua regione.
+                {t('events.noEventInAreaDesc')}
               </p>
               <Link to="/contatti">
                 <Button size="lg" className="bg-primary hover:bg-primary/90">
-                  Proponi un Evento
+                  {t('events.proposeEvent')}
                   <ArrowRight className="h-4 w-4 ml-2" aria-hidden="true" />
                 </Button>
               </Link>

@@ -28,24 +28,16 @@ jobs:
       - name: Build
         run: npm run build
 
-      # (opzionale ma utile) scrive un file versione con SHA
       - name: Write build info
         run: |
           echo "Deployed commit: $GITHUB_SHA" > dist/deploy.txt
 
-      - name: Upload dist via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ secrets.ARUBA_FTP_SERVER }}
-          username: ${{ secrets.ARUBA_FTP_USER }}
-          password: ${{ secrets.ARUBA_FTP_PASS }}
-          protocol: ftp
-          port: 21
-          local-dir: dist/
-          server-dir: /
-          dangerous-clean-slate: false
-          timeout: 60000
-          exclude: |
-            **/.git*
-            **/.github/**
+      - name: Install lftp
+        run: sudo apt-get update && sudo apt-get install -y lftp
+
+      - name: Deploy via FTP
+        run: |
+          lftp -u "${{ secrets.ARUBA_FTP_USER }},${{ secrets.ARUBA_FTP_PASS }}" \
+            -e "set ftp:passive-mode yes; set ssl:verify-certificate no; set ftp:ssl-allow no; mirror -R --verbose dist/ /; quit" \
+            ftp://${{ secrets.ARUBA_FTP_SERVER }}
             **/node_modules/**

@@ -16,7 +16,7 @@ This application is designed to be deployed on any platform without code changes
 npm run build
 ```
 
-The default URL is `https://devtendedatettoecampeggioit.vercel.app`
+The default URL is `https://www.tendedatettoecampeggio.it`
 
 ### Custom Domain
 

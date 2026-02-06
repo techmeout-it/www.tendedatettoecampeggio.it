@@ -105,10 +105,10 @@ const Header = () => {
                   )
                 ))}
                 <div className="pt-4 px-4 space-y-4">
-                  <div className="flex justify-center">
+                  <div className="flex justify-center pb-2">
                     <LanguageSelector />
                   </div>
-                  <a href="https://www.facebook.com/groups/375926353544064" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.facebook.com/groups/375926353544064" target="_blank" rel="noopener noreferrer" className="block">
                     <Button className="w-full bg-[#1877F2] hover:bg-[#1877F2]/90">
                       {t('nav.join')}
                     </Button>

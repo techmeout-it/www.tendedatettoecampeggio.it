@@ -1,0 +1,39 @@
+[extend]
+# Use the default gitleaks config as base
+useDefault = true
+
+[allowlist]
+description = "Allowlist for false positives"
+
+# Paths to ignore
+paths = [
+  '''\.lock$''',
+  '''\.lockb$''',
+  '''package-lock\.json$''',
+  '''bun\.lockb$''',
+  '''\.example$''',
+  '''\.sample$''',
+  '''test/''',
+  '''__tests__/''',
+  '''\.test\.(ts|tsx|js|jsx)$''',
+  '''\.spec\.(ts|tsx|js|jsx)$''',
+]
+
+# Commits to ignore (add specific commit SHAs if needed)
+commits = []
+
+# Regex patterns to ignore
+regexes = [
+  '''example\.com''',
+  '''localhost''',
+  '''127\.0\.0\.1''',
+]
+
+# Stop words - strings that if found will cause the finding to be ignored
+stopwords = [
+  "example",
+  "sample",
+  "placeholder",
+  "CHANGEME",
+  "YOUR_",
+]

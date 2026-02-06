@@ -10,8 +10,22 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  gitleaks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Run Gitleaks
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
   deploy:
     runs-on: ubuntu-latest
+    needs: gitleaks
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -40,4 +54,3 @@ jobs:
           lftp -u "${{ secrets.ARUBA_FTP_USER }},${{ secrets.ARUBA_FTP_PASS }}" \
             -e "set ftp:passive-mode yes; set ssl:verify-certificate no; set ftp:ssl-allow no; mirror -R --verbose dist/ /; quit" \
             ftp://${{ secrets.ARUBA_FTP_SERVER }}
-            **/node_modules/**

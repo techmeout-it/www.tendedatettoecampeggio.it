@@ -15,7 +15,8 @@ const PartnerSection = () => {
       description: "Leader delle tende da tetto made in Italy, una certezza di qualità dal 1958.",
       logo: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=200&h=200",
       specialOffer: "Sconto del 15% su tutto il catalogo tende con codice: AUTOHOME-OFFICIAL",
-      pdfLink: null
+      pdfLink: null,
+      externalLink: null
     },
     {
       name: "Xalpharooftent",
@@ -24,7 +25,8 @@ const PartnerSection = () => {
       description: "Tende made in Italy di qualità artigianale. Design italiano e materiali premium per gli avventurieri più esigenti.",
       logo: "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=200&h=200",
       specialOffer: "Prezzo speciale dedicato per gli iscritti alla pagina",
-      pdfLink: null
+      pdfLink: null,
+      externalLink: null
     },
     {
       name: "Camperboxes",
@@ -33,7 +35,8 @@ const PartnerSection = () => {
       description: "Allestimenti personalizzati per qualsiasi mezzo, dall'auto al van, in legno e alluminio di alta qualità.",
       logo: "https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?auto=format&fit=crop&w=200&h=200",
       specialOffer: "Bagno a separazione disponibile in due misure con prezzo dedicato alla community",
-      pdfLink: "/doc_articles_partners/ListinoCamperBoxes-2026.pdf"
+      pdfLink: "/doc_articles_partners/ListinoCamperBoxes-2026.pdf",
+      externalLink: null
     },
     {
       name: "Swisskings",
@@ -42,7 +45,18 @@ const PartnerSection = () => {
       description: "Tende pieghevoli e rigide di varie misure, tendalini e accessori con un rapporto qualità prezzo imbattibile.",
       logo: "https://images.unsplash.com/photo-1510312305653-8ed496efae75?auto=format&fit=crop&w=200&h=200",
       specialOffer: "Rapporto qualità prezzo imbattibile per la community",
-      pdfLink: null
+      pdfLink: null,
+      externalLink: null
+    },
+    {
+      name: "Roofcamp.it",
+      category: "Tende da Tetto",
+      discount: "5%",
+      description: "Shop online specializzato in tende da tetto Wildland, Vickywood e accessori per l'outdoor.",
+      logo: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=200&h=200",
+      specialOffer: "Sconto 5% su tutto il catalogo online tende da tetto Wildland, Vickywood e accessori con codice: Tendedatettoecampeggio26",
+      pdfLink: null,
+      externalLink: "https://roofcamp.it/shop/?Codice%20sconto%20personale=Tendedatettoecampeggio26"
     }
   ];
 
@@ -117,6 +131,17 @@ const PartnerSection = () => {
                       >
                         <Download className="h-4 w-4" />
                         {t('partner.download')}
+                      </a>
+                    )}
+                    {partner.externalLink && (
+                      <a 
+                        href={partner.externalLink} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 mt-3 px-4 py-2 bg-accent text-accent-foreground rounded-md hover:bg-accent/90 transition-colors text-sm font-medium"
+                      >
+                        <ExternalLink className="h-4 w-4" />
+                        {t('partner.goToShop')}
                       </a>
                     )}
                   </div>

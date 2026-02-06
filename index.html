@@ -8,7 +8,7 @@
     <!-- Security Headers via meta tags -->
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta http-equiv="X-Frame-Options" content="DENY" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.clarity.ms https://scripts.clarity.ms; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://dc.services.visualstudio.com https://b.clarity.ms; frame-ancestors 'none'; base-uri 'self'; form-action 'self'" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.clarity.ms https://scripts.clarity.ms https://embeds.iubenda.com https://cdn.iubenda.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://dc.services.visualstudio.com https://b.clarity.ms https://cdn.iubenda.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
     
     <link rel="icon" type="image/jpeg" href="/logo_tende.jpg" />
@@ -54,6 +54,23 @@
           t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
           y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
       })(window, document, "clarity", "script", "v5nu0uz8cg");
+    </script>
+    
+    <!-- iubenda Cookie Solution -->
+    <script type="text/javascript" src="https://embeds.iubenda.com/widgets/0b398020-baa9-48ac-9706-31096bf5ec38.js"></script>
+    
+    <!-- iubenda Policy Links -->
+    <script type="text/javascript">
+      (function (w,d) {
+        var loader = function () {
+          var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0];
+          s.src="https://cdn.iubenda.com/iubenda.js";
+          tag.parentNode.insertBefore(s,tag);
+        };
+        if(w.addEventListener){w.addEventListener("load", loader, false);}
+        else if(w.attachEvent){w.attachEvent("onload", loader);}
+        else{w.onload = loader;}
+      })(window, document);
     </script>
   </body>
 </html>

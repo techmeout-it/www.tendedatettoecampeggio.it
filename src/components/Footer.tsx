@@ -118,11 +118,11 @@ const Footer = () => {
               
               {/* Legal Links */}
               <div className="flex flex-wrap justify-center gap-4 text-sm">
-                <Link to="/privacy" className="text-muted-foreground hover:text-primary transition-colors">{t('footer.privacy')}</Link>
+                <a href="https://www.iubenda.com/privacy-policy/42273347" className="iubenda-white iubenda-noiframe iubenda-embed text-muted-foreground hover:text-primary transition-colors" title="Privacy Policy">{t('footer.privacy')}</a>
                 <span className="text-muted-foreground/50">•</span>
                 <Link to="/termini" className="text-muted-foreground hover:text-primary transition-colors">Terms</Link>
                 <span className="text-muted-foreground/50">•</span>
-                <Link to="/cookie" className="text-muted-foreground hover:text-primary transition-colors">{t('footer.cookies')}</Link>
+                <a href="https://www.iubenda.com/privacy-policy/42273347/cookie-policy" className="iubenda-white iubenda-noiframe iubenda-embed text-muted-foreground hover:text-primary transition-colors" title="Cookie Policy">{t('footer.cookies')}</a>
               </div>
               
               {/* Credits */}

@@ -33,17 +33,18 @@ jobs:
         run: |
           echo "Deployed commit: $GITHUB_SHA" > dist/deploy.txt
 
-      - name: Upload dist via FTPS
+      - name: Upload dist via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.ARUBA_FTP_SERVER }}
           username: ${{ secrets.ARUBA_FTP_USER }}
           password: ${{ secrets.ARUBA_FTP_PASS }}
-          protocol: ftps
+          protocol: ftp
           port: 21
           local-dir: dist/
           server-dir: /
           dangerous-clean-slate: false
+          timeout: 60000
           exclude: |
             **/.git*
             **/.github/**

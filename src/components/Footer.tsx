@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Mail, MapPin, Users, BookOpen, Handshake, Info, Rss, Calendar, HelpCircle } from "lucide-react";
+import { Facebook, Instagram, Mail, MapPin, Users, BookOpen, Handshake, Info, Calendar, HelpCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import logoTende from "@/assets/logo_tende.jpg";
@@ -12,7 +12,6 @@ const Footer = () => {
       { name: t('footer.joinFacebook'), href: "https://www.facebook.com/groups/375926353544064", icon: Facebook, external: true },
       { name: t('footer.followInstagram'), href: "https://www.instagram.com/tende_da_tetto_e_campeggio/", icon: Instagram, external: true },
       { name: t('footer.newsletter'), href: "/coming-soon", icon: Mail, external: false },
-      { name: t('footer.rssFeed'), href: "/api/rss.xml", icon: Rss, external: true },
       { name: t('footer.eventsLink'), href: "/eventi", icon: Calendar, external: false },
       { name: t('footer.aboutUs'), href: "/chi-siamo", icon: Info, external: false },
     ],
@@ -22,8 +21,8 @@ const Footer = () => {
     ],
     partner: [
       { name: t('footer.becomePartner'), href: "/contatti", icon: Handshake, external: false },
-      { name: t('footer.exclusiveOffers'), href: "/coming-soon", icon: Handshake, external: false },
-      { name: t('footer.sponsoredBrands'), href: "/coming-soon", icon: Handshake, external: false },
+      { name: t('footer.exclusiveOffers'), href: "/#partner", icon: Handshake, external: false },
+      { name: t('footer.sponsoredBrands'), href: "/#partner", icon: Handshake, external: false },
     ],
   };
 
@@ -84,14 +83,26 @@ const Footer = () => {
                           <link.icon className="h-4 w-4 mr-2" aria-hidden="true" />
                           {link.name}
                         </a>
-                      ) : link.href.startsWith('#') ? (
-                        <a
-                          href={link.href}
+                      ) : link.href.includes('#') ? (
+                        <Link
+                          to={link.href}
                           className="flex items-center text-muted-foreground hover:text-primary transition-colors"
+                          onClick={() => {
+                            const hash = link.href.split('#')[1];
+                            if (hash) {
+                              // Se l'elemento esiste nella pagina corrente, scrolla direttamente
+                              const element = document.getElementById(hash);
+                              if (element) {
+                                setTimeout(() => {
+                                  element.scrollIntoView({ behavior: 'smooth' });
+                                }, 100);
+                              }
+                            }
+                          }}
                         >
                           <link.icon className="h-4 w-4 mr-2" aria-hidden="true" />
                           {link.name}
-                        </a>
+                        </Link>
                       ) : (
                         <Link
                           to={link.href}

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Handshake, ExternalLink, Star, Percent, Download } from "lucide-react";
+import { Handshake, ExternalLink, Star, Percent, Download, MessageCircle } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const PartnerSection = () => {
@@ -21,7 +21,7 @@ const PartnerSection = () => {
     {
       name: "Xalpharooftent",
       category: "Tende da Tetto",
-      discount: "Dedicato",
+      discount: "",
       description: "Tende made in Italy di qualità artigianale. Design italiano e materiali premium per gli avventurieri più esigenti.",
       logo: "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=200&h=200",
       specialOffer: "Prezzo speciale dedicato per gli iscritti alla pagina",
@@ -31,7 +31,7 @@ const PartnerSection = () => {
     {
       name: "Camperboxes",
       category: "Allestimenti",
-      discount: "Dedicato",
+      discount: "10%",
       description: "Allestimenti personalizzati per qualsiasi mezzo, dall'auto al van, in legno e alluminio di alta qualità.",
       logo: "https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?auto=format&fit=crop&w=200&h=200",
       specialOffer: "Bagno a separazione disponibile in due misure con prezzo dedicato alla community",
@@ -41,7 +41,7 @@ const PartnerSection = () => {
     {
       name: "Swisskings",
       category: "Tende & Accessori",
-      discount: "Speciale",
+      discount: "",
       description: "Tende pieghevoli e rigide di varie misure, tendalini e accessori con un rapporto qualità prezzo imbattibile.",
       logo: "https://images.unsplash.com/photo-1510312305653-8ed496efae75?auto=format&fit=crop&w=200&h=200",
       specialOffer: "Rapporto qualità prezzo imbattibile per la community",
@@ -102,10 +102,12 @@ const PartnerSection = () => {
                       </div>
                     </div>
                     <div className="text-right">
-                      <div className="flex items-center bg-accent/10 text-accent px-3 py-1 rounded-full">
-                        <Percent className="h-4 w-4 mr-1" />
-                        <span className="font-bold">{partner.discount}</span>
-                      </div>
+                      {partner.discount && (
+                        <div className="flex items-center bg-accent/10 text-accent px-3 py-1 rounded-full">
+                          <Percent className="h-4 w-4 mr-1" />
+                          <span className="font-bold">{partner.discount}</span>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </CardHeader>
@@ -148,6 +150,24 @@ const PartnerSection = () => {
                 </CardContent>
               </Card>
             ))}
+
+            {/* Placeholder Card */}
+            <Card className="group bg-card/50 backdrop-blur-sm border-dashed border-2 border-primary/30 hover:border-primary/60 hover:shadow-lg transition-all duration-300 flex flex-col items-center justify-center min-h-[280px]">
+              <CardContent className="text-center py-8">
+                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
+                  <MessageCircle className="h-8 w-8 text-primary" />
+                </div>
+                <h3 className="text-xl font-bold text-foreground mb-2">E tu? Vuoi essere qui?</h3>
+                <p className="text-muted-foreground mb-4">
+                  Se hai un'attività nel mondo outdoor e vuoi collaborare con la nostra community, scrivici!
+                </p>
+                <Link to="/contatti">
+                  <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                    Contattaci
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
           </div>
 
           {/* CTA */}

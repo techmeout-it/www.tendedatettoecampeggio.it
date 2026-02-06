@@ -17,9 +17,9 @@ const Header = () => {
     { name: t('nav.home'), href: isHomePage ? "#" : "/", icon: Mountain, isRoute: !isHomePage },
     { name: t('nav.blog'), href: "/guide", icon: BookOpen, isRoute: true },
     // { name: "Campeggi", href: "/campeggi", icon: MapPin, isRoute: true }, // TODO: Da riattivare in futuro
-    { name: t('nav.community'), href: isHomePage ? "#community" : "/#community", icon: Users, isRoute: false },
+    { name: t('nav.community'), href: isHomePage ? "#community" : "/#community", icon: Users, isRoute: !isHomePage },
     { name: t('nav.events'), href: "/eventi", icon: Calendar, isRoute: true },
-    { name: t('nav.partner'), href: isHomePage ? "#partner" : "/#partner", icon: Handshake, isRoute: false },
+    { name: t('nav.partner'), href: isHomePage ? "#partner" : "/#partner", icon: Handshake, isRoute: !isHomePage },
     { name: t('nav.about'), href: "/chi-siamo", icon: Info, isRoute: true },
   ];
 

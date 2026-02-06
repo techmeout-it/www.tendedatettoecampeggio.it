@@ -7,13 +7,24 @@ import { HelmetProvider } from "react-helmet-async";
 import { lazy, Suspense, useEffect } from "react";
 import { LanguageProvider } from "@/contexts/LanguageContext";
 
-// Componente per scrollare in alto ad ogni cambio pagina
+// Componente per scrollare in alto ad ogni cambio pagina o all'ancora se presente
 const ScrollToTop = () => {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
   
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+    if (hash) {
+      // Se c'è un hash, scrollare all'elemento corrispondente
+      const element = document.getElementById(hash.replace('#', ''));
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    } else {
+      // Altrimenti scrollare in cima
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, hash]);
   
   return null;
 };

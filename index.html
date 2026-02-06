@@ -17,6 +17,16 @@
   </head>
 
   <body>
+    <!-- GitHub Pages SPA redirect handler -->
+    <script>
+      (function(){
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
     <a href="#main-content" class="skip-link">Salta al contenuto principale</a>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>

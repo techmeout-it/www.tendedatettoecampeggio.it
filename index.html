@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#10b981" />
+    
+    <!-- Security Headers via meta tags -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.clarity.ms https://scripts.clarity.ms; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://dc.services.visualstudio.com https://b.clarity.ms; frame-ancestors 'none'; base-uri 'self'; form-action 'self'" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    
     <link rel="icon" type="image/jpeg" href="/logo_tende.jpg" />
     <link rel="apple-touch-icon" href="/logo_tende.jpg" />
     <link rel="alternate" type="application/rss+xml" title="Tende da Tetto e Campeggio - Guide e Articoli" href="/api/rss.xml" />

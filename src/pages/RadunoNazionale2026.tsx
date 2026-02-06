@@ -5,6 +5,7 @@ import { BreadcrumbSchema } from "@/components/StructuredData";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { 
   Calendar, 
   MapPin, 
@@ -26,14 +27,15 @@ import {
 import { Link } from "react-router-dom";
 
 const RadunoNazionale2026 = () => {
+  const { t } = useLanguage();
   const siteUrl = typeof window !== 'undefined' ? window.location.origin : '';
   const canonicalUrl = `${siteUrl}/raduno-nazionale-2026`;
 
   return (
     <div className="min-h-screen bg-background">
       <SEO 
-        title="Raduno Nazionale Tende da Tetto 2026 - Lago di Pietrafitta"
-        description="Raduno Nazionale Tende da Tetto 2026: 1-2-3 maggio al Lago di Pietrafitta, Umbria. Tre giorni di avventura, condivisione e divertimento con la community."
+        title={t('raduno2026.title')}
+        description={t('raduno2026.description')}
         canonicalUrl={canonicalUrl}
         keywords="raduno nazionale tende da tetto 2026, lago di pietrafitta, raduno campeggio, tende da tetto italia, piegaro umbria"
         ogType="website"
@@ -41,8 +43,8 @@ const RadunoNazionale2026 = () => {
       <BreadcrumbSchema 
         items={[
           { name: 'Home', url: siteUrl },
-          { name: 'Eventi', url: `${siteUrl}/eventi` },
-          { name: 'Raduno Nazionale 2026', url: canonicalUrl }
+          { name: t('nav.events'), url: `${siteUrl}/eventi` },
+          { name: t('raduno2026.mainTitle'), url: canonicalUrl }
         ]}
       />
       <Header />
@@ -54,7 +56,7 @@ const RadunoNazionale2026 = () => {
             {/* Back Button */}
             <Link to="/eventi" className="inline-flex items-center text-primary hover:text-primary/80 mb-6 transition-colors">
               <ArrowLeft className="h-4 w-4 mr-2" />
-              Torna agli Eventi
+              {t('raduno2026.backToEvents')}
             </Link>
             
             <div className="max-w-4xl mx-auto">
@@ -62,7 +64,7 @@ const RadunoNazionale2026 = () => {
               <div className="max-w-2xl mx-auto rounded-2xl overflow-hidden shadow-2xl mb-8">
                 <img 
                   src="/img_raduni/2026.05.01-03_LagoDiPietrafitta-RadunoNazionale/Raduno_Locandina2026.jpg"
-                  alt="Locandina Raduno Nazionale Tende da Tetto 2026"
+                  alt={t('raduno2026.mainTitle')}
                   className="w-full h-auto"
                 />
               </div>
@@ -71,13 +73,13 @@ const RadunoNazionale2026 = () => {
               <div className="text-center mb-8">
                 <Badge className="bg-primary/10 text-primary border-primary/20 mb-4 text-lg px-4 py-2">
                   <Tent className="h-5 w-5 mr-2" />
-                  Raduno Nazionale
+                  {t('raduno2026.nationalMeetup')}
                 </Badge>
                 <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-                  Raduno Nazionale Tende da Tetto 2026
+                  {t('raduno2026.mainTitle')}
                 </h1>
                 <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                  Tre giorni di avventura, condivisione e divertimento sulle sponde del Lago di Pietrafitta
+                  {t('raduno2026.subtitle')}
                 </p>
               </div>
 
@@ -87,8 +89,8 @@ const RadunoNazionale2026 = () => {
                   <div className="flex items-center gap-3">
                     <Calendar className="h-6 w-6 text-primary flex-shrink-0" />
                     <div>
-                      <p className="font-semibold text-foreground">1 - 2 - 3 Maggio 2026</p>
-                      <p className="text-sm text-muted-foreground">Venerdì, Sabato, Domenica</p>
+                      <p className="font-semibold text-foreground">{t('raduno2026.dates')}</p>
+                      <p className="text-sm text-muted-foreground">{t('raduno2026.daysOfWeek')}</p>
                     </div>
                   </div>
                 </Card>
@@ -96,8 +98,8 @@ const RadunoNazionale2026 = () => {
                   <div className="flex items-center gap-3">
                     <MapPin className="h-6 w-6 text-accent flex-shrink-0" />
                     <div>
-                      <p className="font-semibold text-foreground">Lago di Pietrafitta</p>
-                      <p className="text-sm text-muted-foreground">Frazione di Piegaro (PG), Umbria</p>
+                      <p className="font-semibold text-foreground">{t('raduno2026.location')}</p>
+                      <p className="text-sm text-muted-foreground">{t('raduno2026.locationDetail')}</p>
                     </div>
                   </div>
                 </Card>
@@ -112,10 +114,10 @@ const RadunoNazionale2026 = () => {
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                  Programma del Raduno
+                  {t('raduno2026.programTitle')}
                 </h2>
                 <p className="text-muted-foreground">
-                  Tre giorni ricchi di attività per grandi e piccini
+                  {t('raduno2026.programSubtitle')}
                 </p>
               </div>
 
@@ -123,9 +125,9 @@ const RadunoNazionale2026 = () => {
               <div className="mb-12">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="bg-primary text-primary-foreground rounded-full px-4 py-2 font-bold">
-                    GIORNO 1
+                    {t('raduno2026.day1')}
                   </div>
-                  <h3 className="text-2xl font-bold text-foreground">Venerdì 1 Maggio</h3>
+                  <h3 className="text-2xl font-bold text-foreground">{t('raduno2026.friday')}</h3>
                 </div>
                 
                 <div className="space-y-4 ml-4 border-l-2 border-primary/30 pl-6">
@@ -136,11 +138,28 @@ const RadunoNazionale2026 = () => {
                       </div>
                       <div>
                         <div className="flex items-center gap-2 mb-1">
-                          <Badge variant="outline" className="text-xs">dalle 12:00</Badge>
+                          <Badge variant="outline" className="text-xs">{t('raduno2026.from')} 12:00</Badge>
                         </div>
-                        <h4 className="font-semibold text-foreground mb-1">Arrivo Equipaggi</h4>
+                        <h4 className="font-semibold text-foreground mb-1">{t('raduno2026.crewArrival')}</h4>
                         <p className="text-muted-foreground text-sm">
-                          Accoglienza e consegna gadget di benvenuto a tutti i partecipanti.
+                          {t('raduno2026.crewArrivalDesc')}
+                        </p>
+                      </div>
+                    </div>
+                  </Card>
+
+                  <Card className="p-4 bg-background/80 backdrop-blur hover:shadow-md transition-shadow">
+                    <div className="flex items-start gap-4">
+                      <div className="bg-primary/10 rounded-full p-2 flex-shrink-0">
+                        <ShoppingBag className="h-5 w-5 text-primary" />
+                      </div>
+                      <div>
+                        <div className="flex items-center gap-2 mb-1">
+                          <Badge variant="outline" className="text-xs">13:30</Badge>
+                        </div>
+                        <h4 className="font-semibold text-foreground mb-1">{t('raduno2026.outdoorDealers')}</h4>
+                        <p className="text-muted-foreground text-sm">
+                          {t('raduno2026.outdoorDealersDesc')}
                         </p>
                       </div>
                     </div>
@@ -155,9 +174,9 @@ const RadunoNazionale2026 = () => {
                         <div className="flex items-center gap-2 mb-1">
                           <Badge variant="outline" className="text-xs">15:30</Badge>
                         </div>
-                        <h4 className="font-semibold text-foreground mb-1">Apertura Raduno</h4>
+                        <h4 className="font-semibold text-foreground mb-1">{t('raduno2026.openingTitle')}</h4>
                         <p className="text-muted-foreground text-sm">
-                          Inizio ufficiale del Raduno Nazionale 2026!
+                          {t('raduno2026.openingDesc')}
                         </p>
                       </div>
                     </div>
@@ -169,9 +188,9 @@ const RadunoNazionale2026 = () => {
               <div className="mb-12">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="bg-accent text-accent-foreground rounded-full px-4 py-2 font-bold">
-                    GIORNO 2
+                    {t('raduno2026.day2')}
                   </div>
-                  <h3 className="text-2xl font-bold text-foreground">Sabato 2 Maggio</h3>
+                  <h3 className="text-2xl font-bold text-foreground">{t('raduno2026.saturday')}</h3>
                 </div>
                 
                 <div className="space-y-4 ml-4 border-l-2 border-accent/30 pl-6">
@@ -184,12 +203,12 @@ const RadunoNazionale2026 = () => {
                         <div className="flex items-center gap-2 mb-1">
                           <Badge variant="outline" className="text-xs">9:30</Badge>
                         </div>
-                        <h4 className="font-semibold text-foreground mb-1">Risveglio Muscolare con Francesca</h4>
+                        <h4 className="font-semibold text-foreground mb-1">{t('raduno2026.wakeUp')}</h4>
                         <p className="text-muted-foreground text-sm">
-                          Attività aperta a tutti, grandi e piccini! Un po' di ginnastica prima di iniziare la giornata.
+                          {t('raduno2026.wakeUpDesc')}
                         </p>
                         <div className="mt-2 bg-secondary/50 rounded-lg p-2 text-xs text-muted-foreground">
-                          <strong>Da portare:</strong> tappetino/asciugamano
+                          <strong>{t('raduno2026.wakeUpBring')}</strong> {t('raduno2026.wakeUpItems')}
                         </div>
                       </div>
                     </div>
@@ -202,11 +221,11 @@ const RadunoNazionale2026 = () => {
                       </div>
                       <div>
                         <div className="flex items-center gap-2 mb-1">
-                          <Badge variant="outline" className="text-xs">dalle 10:00</Badge>
+                          <Badge variant="outline" className="text-xs">{t('raduno2026.from')} 10:00</Badge>
                         </div>
-                        <h4 className="font-semibold text-foreground mb-1">Area Rivenditori Outdoor</h4>
+                        <h4 className="font-semibold text-foreground mb-1">{t('raduno2026.outdoorDealers')}</h4>
                         <p className="text-muted-foreground text-sm">
-                          Per tutta la durata dell'evento sarà disponibile l'area dedicata ai rivenditori del settore outdoor.
+                          {t('raduno2026.outdoorDealersDesc')}
                         </p>
                       </div>
                     </div>
@@ -220,13 +239,11 @@ const RadunoNazionale2026 = () => {
                       <div>
                         <div className="flex items-center gap-2 mb-1">
                           <Badge variant="outline" className="text-xs">14:30</Badge>
-                          <Badge className="bg-amber-500/10 text-amber-700 text-xs">Attività Speciale</Badge>
+                          <Badge className="bg-amber-500/10 text-amber-700 text-xs">{t('raduno2026.specialActivity')}</Badge>
                         </div>
-                        <h4 className="font-semibold text-foreground mb-1">Lasciamo il Segno!</h4>
+                        <h4 className="font-semibold text-foreground mb-1">{t('raduno2026.leaveYourMark')}</h4>
                         <p className="text-muted-foreground text-sm">
-                          Ognuno di voi lascerà la propria impronta! Sarete chiamati a scegliere il colore dell'avventura! 
-                          Per adulti e bambini sarà un momento di condivisione e ricordi "indelebili"... tranquilli, 
-                          non sarà un tatuaggio ma qualcosa di più!
+                          {t('raduno2026.leaveYourMarkDesc')}
                         </p>
                       </div>
                     </div>
@@ -240,17 +257,16 @@ const RadunoNazionale2026 = () => {
                       <div>
                         <div className="flex items-center gap-2 mb-1">
                           <Badge variant="outline" className="text-xs">16:30</Badge>
-                          <Badge className="bg-green-500/10 text-green-700 text-xs">Prenotazione Richiesta</Badge>
+                          <Badge className="bg-green-500/10 text-green-700 text-xs">{t('raduno2026.reservationRequired')}</Badge>
                         </div>
-                        <h4 className="font-semibold text-foreground mb-1">Apericampeggio - Masterclass di Cucina</h4>
+                        <h4 className="font-semibold text-foreground mb-1">{t('raduno2026.cookingMasterclass')}</h4>
                         <p className="text-muted-foreground text-sm">
-                          Cuciniamo e mangiamo tutti insieme! Masterclass di cucina veloce e gustosa da fare durante 
-                          le avventure in tenda: portate fornelli e fantasia! Sarà un momento dove adulti e bambini uniscono le forze!
+                          {t('raduno2026.cookingMasterclassDesc')}
                         </p>
                         <div className="mt-2 bg-secondary/50 rounded-lg p-3 text-xs text-muted-foreground space-y-1">
-                          <p><strong>Da portare:</strong> salumi/formaggi/verdure a scelta, 60gr di olio d'oliva o 70gr di burro, sale, padella antiaderente (24/26cm), mattarello</p>
-                          <p><strong>In loco troverete:</strong> una mistery box di tutto rispetto!</p>
-                          <p className="text-primary"><strong>Per intolleranze alimentari:</strong> contattare gli amministratori</p>
+                          <p><strong>{t('raduno2026.toBring')}</strong> {t('raduno2026.cookingBringItems')}</p>
+                          <p><strong>{t('raduno2026.onSite')}</strong> {t('raduno2026.mysteryBox')}</p>
+                          <p className="text-primary"><strong>{t('raduno2026.allergies')}</strong> {t('raduno2026.contactAdmins')}</p>
                         </div>
                       </div>
                     </div>
@@ -265,13 +281,12 @@ const RadunoNazionale2026 = () => {
                         <div className="flex items-center gap-2 mb-1">
                           <Badge variant="outline" className="text-xs">20:30</Badge>
                         </div>
-                        <h4 className="font-semibold text-foreground mb-1">Cena Comunitaria</h4>
+                        <h4 className="font-semibold text-foreground mb-1">{t('raduno2026.communityDinner')}</h4>
                         <p className="text-muted-foreground text-sm">
-                          Se l'aperitivo non basta, è arrivata l'ora della cena tutti insieme! Uniamo i tavoli per 
-                          concludere insieme la giornata sotto il cielo stellato attorno ad un fuoco.
+                          {t('raduno2026.communityDinnerDesc')}
                         </p>
                         <div className="mt-2 bg-secondary/50 rounded-lg p-2 text-xs text-muted-foreground">
-                          <strong>Per la cena:</strong> ogni equipaggio dovrà provvedere al proprio pasto. Vige la regola: <em>condividiamo!</em>
+                          <strong>{t('raduno2026.dinnerNote')}</strong> {t('raduno2026.dinnerNoteText')} <em>{t('raduno2026.shareRule')}</em>
                         </div>
                       </div>
                     </div>
@@ -283,9 +298,9 @@ const RadunoNazionale2026 = () => {
               <div className="mb-12">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="bg-green-600 text-white rounded-full px-4 py-2 font-bold">
-                    GIORNO 3
+                    {t('raduno2026.day3')}
                   </div>
-                  <h3 className="text-2xl font-bold text-foreground">Domenica 3 Maggio</h3>
+                  <h3 className="text-2xl font-bold text-foreground">{t('raduno2026.sunday')}</h3>
                 </div>
                 
                 <div className="space-y-4 ml-4 border-l-2 border-green-600/30 pl-6">
@@ -298,9 +313,9 @@ const RadunoNazionale2026 = () => {
                         <div className="flex items-center gap-2 mb-1">
                           <Badge variant="outline" className="text-xs">9:30</Badge>
                         </div>
-                        <h4 className="font-semibold text-foreground mb-1">Risveglio Muscolare con Francesca</h4>
+                        <h4 className="font-semibold text-foreground mb-1">{t('raduno2026.wakeUp')}</h4>
                         <p className="text-muted-foreground text-sm">
-                          Le calorie della sera precedente vanno smaltite!
+                          {t('raduno2026.wakeUpSundayDesc')}
                         </p>
                       </div>
                     </div>
@@ -315,9 +330,9 @@ const RadunoNazionale2026 = () => {
                         <div className="flex items-center gap-2 mb-1">
                           <Badge variant="outline" className="text-xs">12:00</Badge>
                         </div>
-                        <h4 className="font-semibold text-foreground mb-1">Saluti e Ringraziamenti</h4>
+                        <h4 className="font-semibold text-foreground mb-1">{t('raduno2026.farewells')}</h4>
                         <p className="text-muted-foreground text-sm">
-                          Chiusura del raduno e saluti da parte dello staff.
+                          {t('raduno2026.farewellsDesc')}
                         </p>
                       </div>
                     </div>
@@ -329,52 +344,52 @@ const RadunoNazionale2026 = () => {
               <Card className="p-6 md:p-8 bg-gradient-to-br from-primary/5 to-accent/5 border-2 border-primary/20 mb-12">
                 <div className="text-center mb-6">
                   <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
-                    💰 Costi di Partecipazione
+                    {t('raduno2026.costsTitle')}
                   </h2>
-                  <p className="text-muted-foreground">Prezzi per notte ad equipaggio</p>
+                  <p className="text-muted-foreground">{t('raduno2026.costsSubtitle')}</p>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                   {/* Prezzo 1 */}
                   <div className="bg-background/80 rounded-xl p-4 border border-primary/20 text-center">
                     <div className="text-3xl font-bold text-primary mb-2">45€</div>
-                    <div className="text-foreground font-semibold">2 Adulti + Minori</div>
-                    <div className="text-xs text-muted-foreground mt-1">a notte per equipaggio</div>
+                    <div className="text-foreground font-semibold">{t('raduno2026.2adults+minors')}</div>
+                    <div className="text-xs text-muted-foreground mt-1">{t('raduno2026.perNight')}</div>
                   </div>
 
                   {/* Prezzo 2 */}
                   <div className="bg-background/80 rounded-xl p-4 border border-primary/20 text-center">
                     <div className="text-3xl font-bold text-primary mb-2">40€</div>
-                    <div className="text-foreground font-semibold">2 Adulti</div>
-                    <div className="text-xs text-muted-foreground mt-1">a notte per equipaggio</div>
+                    <div className="text-foreground font-semibold">{t('raduno2026.2adults')}</div>
+                    <div className="text-xs text-muted-foreground mt-1">{t('raduno2026.perNight')}</div>
                   </div>
 
                   {/* Prezzo 3 */}
                   <div className="bg-background/80 rounded-xl p-4 border border-primary/20 text-center">
                     <div className="text-3xl font-bold text-primary mb-2">30€</div>
-                    <div className="text-foreground font-semibold">1 Adulto + Minori</div>
-                    <div className="text-xs text-muted-foreground mt-1">a notte per equipaggio</div>
+                    <div className="text-foreground font-semibold">{t('raduno2026.1adult+minors')}</div>
+                    <div className="text-xs text-muted-foreground mt-1">{t('raduno2026.perNight')}</div>
                   </div>
 
                   {/* Prezzo 4 */}
                   <div className="bg-background/80 rounded-xl p-4 border border-primary/20 text-center">
                     <div className="text-3xl font-bold text-primary mb-2">20€</div>
-                    <div className="text-foreground font-semibold">1 Adulto</div>
-                    <div className="text-xs text-muted-foreground mt-1">a notte per equipaggio</div>
+                    <div className="text-foreground font-semibold">{t('raduno2026.1adult')}</div>
+                    <div className="text-xs text-muted-foreground mt-1">{t('raduno2026.perNight')}</div>
                   </div>
                 </div>
 
                 {/* Servizi Inclusi */}
                 <div className="bg-green-500/10 border border-green-500/20 rounded-xl p-4 mb-6">
                   <h3 className="font-bold text-green-700 dark:text-green-400 mb-3 flex items-center gap-2">
-                    ✅ Servizi Inclusi nel prezzo
+                    {t('raduno2026.includedServices')}
                   </h3>
                   <ul className="space-y-2 text-sm text-muted-foreground">
                     <li className="flex items-center gap-2">
-                      <span className="text-green-600">•</span> Servizi igienici e docce calde
+                      <span className="text-green-600">•</span> {t('raduno2026.toiletsShowers')}
                     </li>
                     <li className="flex items-center gap-2">
-                      <span className="text-green-600">•</span> Corrente per ricarica device (cellulari, power bank, power station, tablet, luci, cam, droni...)
+                      <span className="text-green-600">•</span> {t('raduno2026.power')}
                     </li>
                   </ul>
                 </div>
@@ -382,16 +397,16 @@ const RadunoNazionale2026 = () => {
                 {/* Pagamenti Extra */}
                 <div className="bg-amber-500/10 border border-amber-500/20 rounded-xl p-4 mb-6">
                   <h3 className="font-bold text-amber-700 dark:text-amber-400 mb-3 flex items-center gap-2">
-                    ℹ️ Pagamenti Extra (facoltativi)
+                    {t('raduno2026.extraPayments')}
                   </h3>
                   <div className="space-y-3 text-sm">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 pb-2 border-b border-amber-500/10">
-                      <span className="font-medium text-foreground">🦕 Museo Paleontologico</span>
-                      <span className="text-muted-foreground">Intero 4€ • Ridotto 2€ • Gratuito under 18</span>
+                      <span className="font-medium text-foreground">{t('raduno2026.paleoMuseum')}</span>
+                      <span className="text-muted-foreground">{t('raduno2026.paleoMuseumPrices')}</span>
                     </div>
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
-                      <span className="font-medium text-foreground">🏺 Museo del Vetro di Piegaro</span>
-                      <span className="text-muted-foreground">Intero 4€ • 7-17 anni 2,50€ • Gratuito under 7</span>
+                      <span className="font-medium text-foreground">{t('raduno2026.glassMuseum')}</span>
+                      <span className="text-muted-foreground">{t('raduno2026.glassMuseumPrices')}</span>
                     </div>
                   </div>
                 </div>
@@ -399,26 +414,22 @@ const RadunoNazionale2026 = () => {
                 {/* Modulo Iscrizione */}
                 <div className="bg-primary/10 border-2 border-primary/30 rounded-xl p-6 text-center">
                   <h3 className="font-bold text-foreground text-lg mb-3 flex items-center justify-center gap-2">
-                    📋 Modulo di Iscrizione
+                    {t('raduno2026.registrationForm')}
                   </h3>
-                  <p className="text-muted-foreground text-sm mb-4">
-                    <strong className="text-foreground">OBBLIGATORIO:</strong> Per partecipare al raduno è necessario compilare e accettare in tutte le sue parti il modulo di iscrizione.
-                  </p>
-                  <p className="text-muted-foreground text-sm mb-6">
-                    Una volta compilato, il modulo dovrà essere inviato via email a: <br />
-                    <a href="mailto:info@tendedatettoecampeggio.it" className="text-primary font-semibold hover:underline">
-                      info@tendedatettoecampeggio.it
-                    </a>
+                  <p className="text-sm mb-6 font-bold text-red-600 text-center">
+                    {t('raduno2026.registrationRequired')}<br />
+                    {t('raduno2026.registrationText')}
                   </p>
                   <a 
-                    href="/img_raduni/2026.05.01-03_LagoDiPietrafitta-RadunoNazionale/ModuloIscrizioneRaduno2026.pdf"
-                    download="ModuloIscrizioneRaduno2026.pdf"
+                    href="https://forms.gle/vnDQT7RLEBdpUy4c7"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
                   >
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
-                    Scarica Modulo di Iscrizione (PDF)
+                    {t('raduno2026.fillForm')}
                   </a>
                 </div>
               </Card>
@@ -429,13 +440,13 @@ const RadunoNazionale2026 = () => {
                 <Card className="p-6 bg-primary/5 border-primary/20">
                   <div className="flex items-center gap-3 mb-4">
                     <Tent className="h-6 w-6 text-primary" />
-                    <h3 className="font-bold text-foreground text-lg">Durante le 3 Giornate</h3>
+                    <h3 className="font-bold text-foreground text-lg">{t('raduno2026.during3Days')}</h3>
                   </div>
                   <p className="text-muted-foreground text-sm">
-                    Sarà possibile toccare con "mano" e valutare tende, camperizzazioni e accessori.
+                    {t('raduno2026.during3DaysDesc')}
                   </p>
                   <p className="text-muted-foreground text-sm mt-2">
-                    <strong>L'evento sarà aperto anche a visitatori giornalieri.</strong>
+                    <strong>{t('raduno2026.visitorsWelcome')}</strong>
                   </p>
                 </Card>
 
@@ -443,12 +454,12 @@ const RadunoNazionale2026 = () => {
                 <Card className="p-6 bg-accent/5 border-accent/20">
                   <div className="flex items-center gap-3 mb-4">
                     <Calendar className="h-6 w-6 text-accent" />
-                    <h3 className="font-bold text-foreground text-lg">Attività su Prenotazione</h3>
+                    <h3 className="font-bold text-foreground text-lg">{t('raduno2026.reservationActivities')}</h3>
                   </div>
                   <ul className="text-muted-foreground text-sm space-y-2">
                     <li className="flex items-start gap-2">
                       <UtensilsCrossed className="h-4 w-4 text-accent mt-0.5 flex-shrink-0" />
-                      <span><strong>Apericampeggio</strong> - Sabato 2 Maggio h 16:30</span>
+                      <span><strong>{t('raduno2026.cookingReservation')}</strong> - {t('raduno2026.cookingReservationTime')}</span>
                     </li>
                   </ul>
                 </Card>
@@ -458,21 +469,21 @@ const RadunoNazionale2026 = () => {
               <Card className="p-6 bg-background/80 backdrop-blur mb-12">
                 <div className="flex items-center gap-3 mb-6">
                   <Landmark className="h-6 w-6 text-primary" />
-                  <h3 className="font-bold text-foreground text-xl">Altre Attività nei Dintorni</h3>
+                  <h3 className="font-bold text-foreground text-xl">{t('raduno2026.otherActivities')}</h3>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <div className="bg-secondary/30 rounded-lg p-4">
-                    <h4 className="font-semibold text-foreground mb-2">🦕 Museo Paleontologico</h4>
-                    <p className="text-sm text-muted-foreground">Distanza: 1500m a piedi</p>
+                    <h4 className="font-semibold text-foreground mb-2">{t('raduno2026.paleoMuseum')}</h4>
+                    <p className="text-sm text-muted-foreground">{t('raduno2026.paleoMuseumDistance')}</p>
                   </div>
                   <div className="bg-secondary/30 rounded-lg p-4">
-                    <h4 className="font-semibold text-foreground mb-2">🥗 Sagra dell'Asparago</h4>
-                    <p className="text-sm text-muted-foreground">Stand gastronomici, giochi per bambini, mercatini</p>
-                    <p className="text-xs text-muted-foreground mt-1">Distanza: 2000m</p>
+                    <h4 className="font-semibold text-foreground mb-2">{t('raduno2026.asparagusFestival')}</h4>
+                    <p className="text-sm text-muted-foreground">{t('raduno2026.asparagusFestivalDesc')}</p>
+                    <p className="text-xs text-muted-foreground mt-1">{t('raduno2026.asparagusFestivalDistance')}</p>
                   </div>
                   <div className="bg-secondary/30 rounded-lg p-4">
-                    <h4 className="font-semibold text-foreground mb-2">🏺 Museo del Vetro di Piegaro</h4>
-                    <p className="text-sm text-muted-foreground">Distanza: circa 15-20 minuti in auto</p>
+                    <h4 className="font-semibold text-foreground mb-2">{t('raduno2026.glassMuseum')}</h4>
+                    <p className="text-sm text-muted-foreground">{t('raduno2026.glassMuseumDistance')}</p>
                   </div>
                 </div>
               </Card>
@@ -480,11 +491,10 @@ const RadunoNazionale2026 = () => {
               {/* CTA */}
               <div className="text-center bg-gradient-to-r from-primary/10 to-accent/10 rounded-xl p-8 border border-primary/20">
                 <h3 className="text-2xl font-bold text-foreground mb-4">
-                  Ci vediamo al Lago di Pietrafitta!
+                  {t('raduno2026.seeYouThere')}
                 </h3>
                 <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                  Per informazioni e prenotazioni delle attività, contatta gli amministratori 
-                  tramite il gruppo Facebook della community.
+                  {t('raduno2026.infoContact')}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a 
@@ -493,14 +503,14 @@ const RadunoNazionale2026 = () => {
                     rel="noopener noreferrer"
                   >
                     <Button size="lg" className="bg-[#1877F2] hover:bg-[#1877F2]/90">
-                      Gruppo Facebook
+                      {t('raduno2026.facebookGroup')}
                       <ExternalLink className="h-4 w-4 ml-2" />
                     </Button>
                   </a>
                   <Link to="/eventi">
                     <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
                       <ArrowLeft className="h-4 w-4 mr-2" />
-                      Torna agli Eventi
+                      {t('raduno2026.backToEvents')}
                     </Button>
                   </Link>
                 </div>

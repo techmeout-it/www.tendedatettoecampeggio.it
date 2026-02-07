@@ -830,18 +830,18 @@ const GuideDetail = () => {
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
-          <div className="absolute bottom-0 left-0 right-0 p-8">
+          <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-8 pt-28 sm:pt-32">
             <div className="container mx-auto">
               <div className="max-w-4xl">
-                <Link to="/#guide" className="inline-flex items-center text-primary hover:underline mb-4">
+                <Link to="/#guide" className="inline-flex items-center text-primary hover:underline mb-2 sm:mb-4">
                   <ArrowLeft className="h-4 w-4 mr-2" />
                   Torna alle Guide
                 </Link>
-                <Badge className="mb-4 bg-primary/90">{guide.category}</Badge>
-                <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
+                <Badge className="mb-2 sm:mb-4 bg-primary/90">{guide.category}</Badge>
+                <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-foreground mb-2 sm:mb-4 line-clamp-3 sm:line-clamp-none">
                   {guide.title}
                 </h1>
-                <p className="text-xl text-muted-foreground">{guide.excerpt}</p>
+                <p className="text-base sm:text-xl text-muted-foreground line-clamp-3 sm:line-clamp-none">{guide.excerpt}</p>
               </div>
             </div>
           </div>
@@ -990,12 +990,12 @@ const GuideDetail = () => {
                     };
                     
                     return (
-                      <div key={index} className="my-8 overflow-x-auto">
-                        <table className="w-full border-collapse bg-card rounded-lg overflow-hidden shadow-md border border-muted/30">
+                      <div key={index} className="my-8 -mx-4 sm:mx-0 overflow-x-auto">
+                        <table className="min-w-full border-collapse bg-card rounded-lg overflow-hidden shadow-md border border-muted/30 text-xs sm:text-sm md:text-base">
                           <thead>
                             <tr className="bg-muted/50">
                               {headers.map((header, i) => (
-                                <th key={i} className={`py-4 px-6 text-foreground font-semibold border-b border-muted/30 ${i === 0 ? 'text-left' : 'text-center'}`}>
+                                <th key={i} className={`py-1.5 px-1 sm:py-3 sm:px-3 md:px-5 text-foreground font-semibold border-b border-muted/30 whitespace-nowrap ${i === 0 ? 'text-left' : 'text-center'}`}>
                                   {header}
                                 </th>
                               ))}
@@ -1005,7 +1005,7 @@ const GuideDetail = () => {
                             {dataRows.map((row, rowIndex) => (
                               <tr key={rowIndex} className="border-b border-muted/20 hover:bg-muted/10 transition-colors">
                                 {row.map((cell, cellIndex) => (
-                                  <td key={cellIndex} className={`py-4 px-6 ${cellIndex === 0 ? 'text-left text-foreground font-medium' : 'text-center'}`}>
+                                  <td key={cellIndex} className={`py-1.5 px-1 sm:py-3 sm:px-3 md:px-5 ${cellIndex === 0 ? 'text-left text-foreground font-medium whitespace-nowrap' : 'text-center'}`}>
                                     {renderCell(cell)}
                                   </td>
                                 ))}

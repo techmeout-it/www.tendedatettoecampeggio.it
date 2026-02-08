@@ -133,10 +133,28 @@ interface EventSchemaProps {
   description: string;
   startDate: string;
   endDate: string;
-  location: string;
+  location: {
+    name: string;
+    addressLocality?: string;
+    addressRegion?: string;
+    addressCountry?: string;
+    streetAddress?: string;
+  };
   image?: string;
   url?: string;
   organizer?: string;
+  organizerUrl?: string;
+  eventStatus?: 'EventScheduled' | 'EventCancelled' | 'EventPostponed' | 'EventRescheduled';
+  eventAttendanceMode?: 'OfflineEventAttendanceMode' | 'OnlineEventAttendanceMode' | 'MixedEventAttendanceMode';
+  offers?: {
+    price: string;
+    priceCurrency?: string;
+    availability?: 'InStock' | 'SoldOut' | 'PreOrder';
+    url?: string;
+    validFrom?: string;
+  };
+  isAccessibleForFree?: boolean;
+  inLanguage?: string;
 }
 
 export const EventSchema = ({
@@ -147,30 +165,64 @@ export const EventSchema = ({
   location,
   image,
   url,
-  organizer = "Tende da Tetto e Campeggio"
+  organizer = "Tende da Tetto e Campeggio",
+  organizerUrl,
+  eventStatus = 'EventScheduled',
+  eventAttendanceMode = 'OfflineEventAttendanceMode',
+  offers,
+  isAccessibleForFree,
+  inLanguage = 'it'
 }: EventSchemaProps) => {
-  const siteUrl = typeof window !== 'undefined' ? window.location.origin : '';
+  const siteUrl = typeof window !== 'undefined' ? window.location.origin : 'https://www.tendedatettoecampeggio.it';
   const eventUrl = url || siteUrl;
-  const eventImage = image || `${siteUrl}/hero-camping.jpg`;
+  const eventImage = image ? (image.startsWith('http') ? image : `${siteUrl}${image}`) : `${siteUrl}/hero-camping.jpg`;
 
-  const schema = {
+  const schema: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Event",
     "name": name,
     "description": description,
     "startDate": startDate,
     "endDate": endDate,
+    "eventStatus": `https://schema.org/${eventStatus}`,
+    "eventAttendanceMode": `https://schema.org/${eventAttendanceMode}`,
     "location": {
       "@type": "Place",
-      "name": location
+      "name": location.name,
+      "address": {
+        "@type": "PostalAddress",
+        ...(location.streetAddress && { "streetAddress": location.streetAddress }),
+        ...(location.addressLocality && { "addressLocality": location.addressLocality }),
+        ...(location.addressRegion && { "addressRegion": location.addressRegion }),
+        "addressCountry": location.addressCountry || "IT"
+      }
     },
-    "image": eventImage,
+    "image": [eventImage],
     "url": eventUrl,
     "organizer": {
       "@type": "Organization",
-      "name": organizer
-    }
+      "name": organizer,
+      "url": organizerUrl || siteUrl
+    },
+    "inLanguage": inLanguage
   };
+
+  // Add offers if present
+  if (offers) {
+    schema.offers = {
+      "@type": "Offer",
+      "url": offers.url || eventUrl,
+      "price": offers.price,
+      "priceCurrency": offers.priceCurrency || "EUR",
+      "availability": `https://schema.org/${offers.availability || 'InStock'}`,
+      ...(offers.validFrom && { "validFrom": offers.validFrom })
+    };
+  }
+
+  // Add isAccessibleForFree if defined
+  if (typeof isAccessibleForFree === 'boolean') {
+    schema.isAccessibleForFree = isAccessibleForFree;
+  }
 
   return (
     <Helmet>

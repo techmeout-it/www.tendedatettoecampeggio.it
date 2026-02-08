@@ -1,7 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import { BreadcrumbSchema } from "@/components/StructuredData";
+import { BreadcrumbSchema, EventSchema } from "@/components/StructuredData";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -46,6 +46,32 @@ const RadunoNazionale2026 = () => {
           { name: t('nav.events'), url: `${siteUrl}/eventi` },
           { name: t('raduno2026.mainTitle'), url: canonicalUrl }
         ]}
+      />
+      <EventSchema 
+        name="Raduno Nazionale Tende da Tetto 2026"
+        description="Il grande raduno annuale della community italiana per appassionati di tende da tetto e campeggio. Tre giorni di avventura, condivisione e divertimento sulle sponde del Lago di Pietrafitta in Umbria."
+        startDate="2026-05-01T10:00:00+02:00"
+        endDate="2026-05-03T18:00:00+02:00"
+        location={{
+          name: 'Lago di Pietrafitta',
+          addressLocality: 'Piegaro',
+          addressRegion: 'PG',
+          addressCountry: 'IT'
+        }}
+        image="/img_raduni/2026.05.01-03_LagoDiPietrafitta-RadunoNazionale/Raduno_Locandina2026.jpg"
+        url={canonicalUrl}
+        organizer="Tende da Tetto e Campeggio Community"
+        organizerUrl={siteUrl}
+        eventStatus="EventScheduled"
+        eventAttendanceMode="OfflineEventAttendanceMode"
+        isAccessibleForFree={false}
+        offers={{
+          price: '30.00',
+          priceCurrency: 'EUR',
+          availability: 'InStock',
+          url: canonicalUrl
+        }}
+        inLanguage="it"
       />
       <Header />
       

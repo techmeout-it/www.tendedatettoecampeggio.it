@@ -5,19 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#10b981" />
     
-    <!-- Security Headers via meta tags -->
+    <!-- Security Headers via meta tags (X-Frame-Options must be set via HTTP header, not meta) -->
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
-    <meta http-equiv="X-Frame-Options" content="DENY" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <!-- CSP: Allow necessary resources for site, analytics, and cookie consent -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.clarity.ms https://scripts.clarity.ms https://embeds.iubenda.com https://cdn.iubenda.com; style-src 'self' 'unsafe-inline' https://cdn.iubenda.com; img-src 'self' data: https: blob:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://dc.services.visualstudio.com https://b.clarity.ms https://cdn.iubenda.com; frame-src https://cdn.iubenda.com; base-uri 'self'; form-action 'self'" />
     
-    <link rel="icon" type="image/jpeg" href="/logo_tende.jpg" />
-    <link rel="apple-touch-icon" href="/logo_tende.jpg" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="alternate" type="application/rss+xml" title="Tende da Tetto e Campeggio - Guide e Articoli" href="/api/rss.xml" />
+    
+    <!-- Preload LCP image for faster rendering -->
+    <link rel="preload" as="image" href="/assets/hero-camping.jpg" fetchpriority="high" />
     
     <!-- Preconnect to external domains for faster loading -->
     <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin="anonymous" />
     <link rel="dns-prefetch" href="https://www.clarity.ms" />
     <link rel="dns-prefetch" href="https://images.unsplash.com" />
+    
+    <!-- Fallback Open Graph tags for WhatsApp/Social (overridden by react-helmet-async on client) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Tende da Tetto e Campeggio - Community Italiana" />
+    <meta property="og:description" content="🏕️ La community italiana n°1 per tende da tetto! 40.000+ membri, guide pratiche, mappe campeggi e tutto per le tue avventure outdoor. Unisciti a noi!" />
+    <meta property="og:url" content="https://www.tendedatettoecampeggio.it/" />
+    <meta property="og:site_name" content="Tende da Tetto e Campeggio" />
+    <meta property="og:image" content="https://www.tendedatettoecampeggio.it/og-image.jpg" />
+    <meta property="og:image:secure_url" content="https://www.tendedatettoecampeggio.it/og-image.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Tende da Tetto e Campeggio - Community Italiana per l'Outdoor" />
+    <meta property="og:locale" content="it_IT" />
+    
+    <!-- Twitter Card fallback -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tende da Tetto e Campeggio - Community Italiana" />
+    <meta name="twitter:description" content="🏕️ La community italiana n°1 per tende da tetto! 40.000+ membri, guide pratiche, mappe campeggi." />
+    <meta name="twitter:image" content="https://www.tendedatettoecampeggio.it/og-image.jpg" />
     
     <!-- Meta tags managed by react-helmet-async -->
   </head>
@@ -37,28 +63,10 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
     
-    <!-- Google Analytics - loaded last to avoid render blocking -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FLNWEDSZ50"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-FLNWEDSZ50');
-    </script>
+    <!-- iubenda Cookie Solution - loaded early for GDPR compliance -->
+    <script type="text/javascript" src="https://embeds.iubenda.com/widgets/0b398020-baa9-48ac-9706-31096bf5ec38.js" async></script>
     
-    <!-- Microsoft Clarity - loaded last to avoid render blocking -->
-    <script type="text/javascript">
-      (function(c,l,a,r,i,t,y){
-          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-      })(window, document, "clarity", "script", "v5nu0uz8cg");
-    </script>
-    
-    <!-- iubenda Cookie Solution -->
-    <script type="text/javascript" src="https://embeds.iubenda.com/widgets/0b398020-baa9-48ac-9706-31096bf5ec38.js"></script>
-    
-    <!-- iubenda Policy Links -->
+    <!-- iubenda Policy Links - deferred to onload -->
     <script type="text/javascript">
       (function (w,d) {
         var loader = function () {
@@ -70,6 +78,38 @@
         else if(w.attachEvent){w.attachEvent("onload", loader);}
         else{w.onload = loader;}
       })(window, document);
+    </script>
+    
+    <!-- Analytics - deferred until after page is interactive (requestIdleCallback) -->
+    <script>
+      // Defer non-critical analytics scripts
+      function loadDeferredScripts() {
+        // Google Analytics
+        var gaScript = document.createElement('script');
+        gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-FLNWEDSZ50';
+        gaScript.async = true;
+        document.head.appendChild(gaScript);
+        
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', 'G-FLNWEDSZ50');
+        
+        // Microsoft Clarity
+        (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "v5nu0uz8cg");
+      }
+      
+      // Use requestIdleCallback if available, otherwise setTimeout
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(loadDeferredScripts, { timeout: 3000 });
+      } else {
+        setTimeout(loadDeferredScripts, 2000);
+      }
     </script>
   </body>
 </html>

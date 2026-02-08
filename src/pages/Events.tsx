@@ -35,7 +35,14 @@ interface EventItem {
   description: string;
   startDate: string;
   endDate: string;
-  location: string;
+  location: {
+    name: string;
+    addressLocality?: string;
+    addressRegion?: string;
+    addressCountry?: string;
+    streetAddress?: string;
+  };
+  displayLocation: string; // Human-readable location for UI
   region: string;
   type: 'raduno' | 'evento' | 'workshop';
   attendees?: number;
@@ -45,6 +52,8 @@ interface EventItem {
   organizer: string;
   contact?: string;
   website?: string;
+  isAccessibleForFree?: boolean;
+  price?: string;
 }
 
 const eventsData: EventItem[] = [
@@ -52,9 +61,15 @@ const eventsData: EventItem[] = [
     id: 'raduno-nazionale-2026',
     name: 'Raduno Nazionale Tende da Tetto 2026',
     description: 'Il grande raduno annuale della community italiana per appassionati di tende da tetto e campeggio. Tre giorni di avventura, condivisione e divertimento sulle sponde del Lago di Pietrafitta.',
-    startDate: '2026-05-01',
-    endDate: '2026-05-03',
-    location: 'Lago di Pietrafitta, frazione di Piegaro (PG), Umbria',
+    startDate: '2026-05-01T10:00:00+02:00',
+    endDate: '2026-05-03T18:00:00+02:00',
+    location: {
+      name: 'Lago di Pietrafitta',
+      addressLocality: 'Piegaro',
+      addressRegion: 'PG',
+      addressCountry: 'IT'
+    },
+    displayLocation: 'Lago di Pietrafitta, frazione di Piegaro (PG), Umbria',
     region: 'Umbria',
     type: 'raduno',
     image: '/img_raduni/2026.05.01-03_LagoDiPietrafitta-RadunoNazionale/Raduno_Locandina2026.jpg',
@@ -67,7 +82,9 @@ const eventsData: EventItem[] = [
       'Atmosfera rilassata sulle sponde del lago'
     ],
     organizer: 'Tende da Tetto e Campeggio Community',
-    contact: 'info@tendedatettoecampeggio.it'
+    contact: 'info@tendedatettoecampeggio.it',
+    isAccessibleForFree: false,
+    price: '30.00'
   }
 ];
 
@@ -761,7 +778,7 @@ const Events = () => {
                           <div className="flex items-start gap-3">
                             <MapPin className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" aria-hidden="true" />
                             <div className="flex-1">
-                              <p className="font-semibold text-foreground">{event.location}</p>
+                              <p className="font-semibold text-foreground">{event.displayLocation}</p>
                               <p className="text-sm text-muted-foreground">{event.region}</p>
                             </div>
                           </div>
@@ -1292,6 +1309,17 @@ const Events = () => {
             image={event.image}
             url={`${siteUrl}/eventi/${event.id}`}
             organizer={event.organizer}
+            organizerUrl={siteUrl}
+            eventStatus="EventScheduled"
+            eventAttendanceMode="OfflineEventAttendanceMode"
+            isAccessibleForFree={event.isAccessibleForFree}
+            offers={event.price ? {
+              price: event.price,
+              priceCurrency: 'EUR',
+              availability: 'InStock',
+              url: `${siteUrl}/eventi/${event.id}`
+            } : undefined}
+            inLanguage="it"
           />
         ))}
       </main>

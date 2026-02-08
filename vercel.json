@@ -8,6 +8,18 @@
       "destination": "/api/$1"
     },
     {
+      "source": "/sitemap.xml",
+      "destination": "/sitemap.xml"
+    },
+    {
+      "source": "/robots.txt",
+      "destination": "/robots.txt"
+    },
+    {
+      "source": "/rss.xml",
+      "destination": "/rss.xml"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
@@ -39,10 +51,6 @@
         {
           "key": "Cross-Origin-Opener-Policy",
           "value": "same-origin-allow-popups"
-        },
-        {
-          "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.clarity.ms https://scripts.clarity.ms; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://dc.services.visualstudio.com https://b.clarity.ms; frame-ancestors 'none'; base-uri 'self'; form-action 'self'"
         }
       ]
     },

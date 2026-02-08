@@ -1,5 +1,5 @@
 # Tende da Tetto e Campeggio - Robots.txt
-# Generated: 2026-02-06
+# Generated: 2026-02-08
 
 User-agent: *
 Allow: /

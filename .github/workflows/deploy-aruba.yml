@@ -39,5 +39,5 @@ jobs:
       - name: Deploy via FTP
         run: |
           lftp -u "${{ secrets.ARUBA_FTP_USER }},${{ secrets.ARUBA_FTP_PASS }}" \
-            -e "set ftp:passive-mode yes; set ssl:verify-certificate no; set ftp:ssl-allow no; mirror -R --verbose --delete dist/ /; quit" \
+            -e "set ftp:passive-mode yes; set ssl:verify-certificate no; set ftp:ssl-allow no; mirror -R --verbose --delete dist/ /httpdocs/; quit" \
             ftp://${{ secrets.ARUBA_FTP_SERVER }}

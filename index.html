@@ -11,6 +11,9 @@
     <!-- CSP: Allow necessary resources for site, analytics, and cookie consent -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.clarity.ms https://scripts.clarity.ms https://embeds.iubenda.com https://cdn.iubenda.com; style-src 'self' 'unsafe-inline' https://cdn.iubenda.com; img-src 'self' data: https: blob:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://dc.services.visualstudio.com https://b.clarity.ms https://cdn.iubenda.com; frame-src https://cdn.iubenda.com; base-uri 'self'; form-action 'self'" />
     
+    <title>Tende da Tetto e Campeggio - Community Italiana</title>
+    <meta name="description" content="La community italiana n°1 per tende da tetto e campeggio! 40.000+ membri, guide pratiche, mappe campeggi e tutto per le tue avventure outdoor. Unisciti a noi! 🏕️" />
+    
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
@@ -60,7 +63,71 @@
       })();
     </script>
     <a href="#main-content" class="skip-link">Salta al contenuto principale</a>
-    <div id="root"></div>
+    <div id="root">
+      <!-- Static fallback content for crawlers, replaced when React hydrates -->
+      <main id="main-content">
+        <h1>La Community Italiana N°1 per le Tende da Tetto e Campeggio</h1>
+        <p>Scopri i migliori campeggi, condividi le tue avventure e trova tutto quello che ti serve per viaggiare con la tua tenda da tetto.</p>
+        <ul>
+          <li>40.000+ Membri Totali</li>
+          <li>150+ Post Mensili</li>
+          <li>28.000+ Membri Attivi</li>
+        </ul>
+
+        <section>
+          <h2>La Nostra Community</h2>
+          <p>Fondata nel 2021, siamo diventati rapidamente il principale punto di riferimento italiano per gli appassionati di tende da tetto, campeggio e vanlife con oltre 40.000 membri attivi.</p>
+          <p>Fai parte della più grande community italiana di appassionati di tende da tetto e campeggio.</p>
+          <h3>Cosa troverai</h3>
+          <ul>
+            <li>Guide e consigli pratici</li>
+            <li>Recensioni di prodotti</li>
+            <li>Organizzazione eventi e raduni</li>
+            <li>Supporto e aiuto dalla community</li>
+            <li>Offerte esclusive dai partner</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Guide e Articoli</h2>
+          <p>Articoli, confronti e consigli pratici per scegliere la tenda da tetto perfetta e vivere al meglio le tue avventure all'aria aperta.</p>
+          <a href="/guide">Scopri tutte le guide</a>
+        </section>
+
+        <section>
+          <h2>Eventi e Raduni</h2>
+          <p>Partecipa ai raduni e agli eventi organizzati dalla community Tende da Tetto e Campeggio in tutta Italia.</p>
+          <a href="/eventi">Scopri tutti gli eventi</a>
+          <a href="/raduno-nazionale-2026">Raduno Nazionale 2026 - 1-3 Maggio, Lago di Pietrafitta</a>
+        </section>
+
+        <section>
+          <h2>Partner e Offerte</h2>
+          <p>Sconti esclusivi e offerte speciali dai migliori brand del settore outdoor, riservati ai membri della community.</p>
+        </section>
+
+        <section>
+          <h2>Chi Siamo</h2>
+          <p>Tende da Tetto e Campeggio è la community italiana di riferimento per chi ama viaggiare e dormire all'avventura con la propria tenda da tetto.</p>
+          <a href="/chi-siamo">Scopri di più su di noi</a>
+        </section>
+      </main>
+    </div>
+    <!-- Static navigation for crawlers (hidden once React hydrates via #root ~ nav) -->
+    <nav aria-label="Navigazione principale" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/chi-siamo">Chi Siamo</a></li>
+        <li><a href="/guide">Guide</a></li>
+        <li><a href="/eventi">Eventi</a></li>
+        <li><a href="/raduno-nazionale-2026">Raduno Nazionale 2026</a></li>
+        <li><a href="/contatti">Contatti</a></li>
+        <li><a href="/faq">FAQ</a></li>
+        <li><a href="/privacy">Privacy Policy</a></li>
+        <li><a href="/termini">Termini e Condizioni</a></li>
+        <li><a href="/cookie">Cookie Policy</a></li>
+      </ul>
+    </nav>
     <script type="module" src="/src/main.tsx"></script>
     
     <!-- iubenda Cookie Solution - loaded early for GDPR compliance -->

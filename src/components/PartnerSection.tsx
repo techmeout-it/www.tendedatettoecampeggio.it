@@ -109,9 +109,9 @@ const PartnerSection = () => {
           {/* Partner Cards */}
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {partners.map((partner, index) => (
-              <Card key={index} className="group hover:shadow-elegant transition-all duration-300 border-0 bg-card/60 backdrop-blur">
+              <Card key={index} className="group hover:shadow-elegant transition-all duration-300 border-0 bg-card/60 backdrop-blur overflow-hidden">
                 <CardHeader className="pb-4">
-                  <div className="flex items-start justify-between">
+                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
                     <div className="flex items-center space-x-4">
                       <div className={`${partner.wideLogo ? 'w-28 h-14' : 'w-16 h-16'} rounded-lg overflow-hidden bg-secondary/50`}>
                         <img 
@@ -133,7 +133,7 @@ const PartnerSection = () => {
                         </Badge>
                       </div>
                     </div>
-                    <div className="text-right flex flex-col items-end gap-2">
+                    <div className="flex flex-row sm:flex-col items-center sm:items-end gap-2">
                       {partner.discount && (
                         <div className="flex items-center bg-accent/10 text-accent px-3 py-1 rounded-full">
                           <span className="font-bold">{partner.discount}</span>
@@ -144,7 +144,7 @@ const PartnerSection = () => {
                           href={partner.website}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 text-xs font-medium bg-blue-500/15 text-blue-600 dark:text-blue-400 px-4 py-1 rounded-md hover:bg-blue-500/25 transition-colors whitespace-nowrap"
+                          className="inline-flex items-center gap-1 text-xs font-medium bg-blue-500/15 text-blue-600 dark:text-blue-400 px-4 py-1 rounded-md hover:bg-blue-500/25 transition-colors whitespace-nowrap shrink-0"
                         >
                           <ExternalLink className="h-4 w-4" />
                           Visita {partner.shortName || partner.name}

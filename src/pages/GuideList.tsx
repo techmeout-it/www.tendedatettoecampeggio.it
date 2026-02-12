@@ -109,7 +109,7 @@ const allGuides = [
     category: "Tips",
     date: "2026-01-08",
     dateDisplay: "8 Gen 2026",
-    image: "/img_articles/dormire_freddo/WhatsApp%20Image%202026-01-10%20at%2017.06.43%20(2).jpeg"
+    image: "/img_articles/dormire_freddo/WhatsApp%20Image%202026-01-10%20at%2017.06.43%20%282%29.jpeg"
   },  {
     slug: "viaggiare-famiglia-minivan-camperboxes",
     title: "Viaggiare in famiglia con il nostro minivan: esperienze di libertà e scoperta",

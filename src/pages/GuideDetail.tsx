@@ -982,7 +982,7 @@ const GuideDetail = () => {
                   );
                 }
                 if (paragraph.startsWith("![")) {
-                  const match = paragraph.match(/!\[(.*?)\]\((.*?)\)/);
+                  const match = paragraph.match(/!\[(.*?)\]\((.*)\)/);
                   if (match) {
                     return (
                       <figure key={index} className="my-6 sm:my-8 flex flex-col items-center">

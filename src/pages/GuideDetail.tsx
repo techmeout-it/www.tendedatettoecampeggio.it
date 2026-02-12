@@ -741,6 +741,47 @@ const guidesData: Record<string, {
     image: "https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1200&q=80",
     likes: 623,
     comments: 94
+  },
+  "campeggio-libero-tenda-tetto-monte-grappa": {
+    title: "Campeggio libero in tenda da tetto: due giorni di solitudine sul Monte Grappa",
+    excerpt: "Due giorni in solitaria sul Monte Grappa con la Jeep Renegade 4x4 e la tenda da tetto Yakima: silenzio, natura e campeggio libero responsabile.",
+    content: [
+      "## Ci sono luoghi che non hanno bisogno di essere condivisi",
+      "Ci sono luoghi che non hanno bisogno di essere condivisi con nessuno, se non con sé stessi.",
+      "Per me, il campeggio libero in tenda da tetto è proprio questo: una scelta consapevole di solitudine, silenzio e immersione totale nella montagna.",
+      "La mia \"zona libera\" è spesso il Monte Grappa. Un luogo che conosco bene e che, cosa non da poco, posso raggiungere in meno di un'ora da casa. Questa vicinanza mi permette di partire anche all'ultimo momento, seguendo il meteo, l'istinto o semplicemente il bisogno di staccare.",
+      "## La libertà di scegliere lo spot giusto",
+      "Quando si viaggia con una tenda da tetto Yakima montata sulla Jeep Renegade 4x4, il concetto di \"posto dove dormire\" cambia completamente.",
+      "Non si cercano campeggi o aree attrezzate, ma punti isolati, costoni di montagna, strade boschive poco battute, radure affacciate sul vuoto.",
+      "Grazie alla trazione integrale, posso raggiungere spot che con un'auto normale sarebbero difficili — se non impossibili — da affrontare. Non parlo di off-road estremo, ma di quelle strade di montagna che richiedono grip, altezza da terra e sicurezza. Questo apre possibilità enormi per chi ama il campeggio libero in modo responsabile.",
+      "Arrivati allo spot, bastano pochi minuti: parcheggio, apertura della tenda, e il campo è pronto. Nessun picchetto, nessun terreno da livellare. Solo la montagna tutto intorno.",
+      "![Jeep Renegade sul costone del Monte Grappa](/img_articles/campeggio__libero_Monte_grappa/Immagine1.jpg)",
+      "*La libertà ha bisogno di spazio. Quando il silenzio diventa casa. La Jeep Renegade con tenda da tetto Yakima, sola su un costone del Monte Grappa, raggiunto in meno di un'ora ma lontanissimo da tutto. Qui il campeggio libero è scelta consapevole: fermarsi, restare, ascoltare la montagna e vivere il tempo senza distrazioni.*",
+      "## Andare in libera da soli",
+      "Andare in campeggio libero da soli è un'esperienza che divide: c'è chi non lo farebbe mai e chi, dopo averlo provato, non riesce più a farne a meno.",
+      "Restare isolati per un paio di giorni, senza rumori artificiali, senza orari, senza connessione, cambia il modo in cui si percepisce il tempo.",
+      "Il bosco non è più uno sfondo, ma diventa protagonista: il vento tra gli alberi, i rumori notturni, la luce che cambia durante il giorno.",
+      "La solitudine non pesa, anzi. È voluta, cercata. Ed è proprio questa scelta che permette di apprezzare davvero la montagna, senza distrazioni.",
+      "## Vivere lentamente, anche solo per due giorni",
+      "Sul Monte Grappa, soprattutto in certi spot isolati, il ritmo rallenta naturalmente.",
+      "Si cucina qualcosa di semplice, si osserva il panorama, si legge, si cammina nei dintorni. La sera arriva presto e il cielo, lontano dalle luci, regala stelle che in città ci si dimentica perfino esistano.",
+      "Dormire in tenda da tetto, sospesi sopra l'auto, dà una sensazione di protezione ma anche di apertura totale verso l'ambiente. Al mattino, basta aprire la tenda per avere davanti bosco e montagne, senza filtri.",
+      "![Strada boschiva, tenda aperta nel cuore del bosco](/img_articles/campeggio__libero_Monte_grappa/Immagine2.jpg)",
+      "*La strada finisce, l'esperienza comincia. Dove arrivano solo le ruote giuste. Una strada boschiva, il profumo degli alberi e la possibilità di fermarsi per giorni in totale solitudine. Grazie al 4x4 della Renegade e alla tenda da tetto, anche gli spot più isolati diventano casa, sempre nel rispetto del bosco e della montagna.*",
+      "## Tenda da tetto e rispetto per l'ambiente",
+      "Il campeggio libero, soprattutto in montagna, richiede rispetto e consapevolezza.",
+      "Scegliere spot già battuti, non lasciare tracce, non disturbare la fauna e ripartire lasciando tutto esattamente com'era — o meglio.",
+      "La tenda da tetto aiuta anche in questo: minimo impatto, nessun segno sul terreno, nessuna modifica dell'ambiente."
+    ],
+    author: "Igor Ferrazzi",
+    authorAvatar: "",
+    readTime: "4 min",
+    location: "Monte Grappa, Italia",
+    category: "Destinazioni",
+    date: "12 Febbraio 2026",
+    image: "/img_articles/campeggio__libero_Monte_grappa/Immagine1.jpg",
+    likes: 0,
+    comments: 0
   }
 };
 

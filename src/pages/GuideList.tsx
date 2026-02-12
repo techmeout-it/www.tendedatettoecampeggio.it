@@ -121,6 +121,18 @@ const allGuides = [
     date: "2026-01-07",
     dateDisplay: "7 Gen 2026",
     image: "/img_articles/i_nostri_viaggi_in_camper/7-van-camper-boxes.jpg"
+  },
+  {
+    slug: "campeggio-libero-tenda-tetto-monte-grappa",
+    title: "Campeggio libero in tenda da tetto: due giorni di solitudine sul Monte Grappa",
+    excerpt: "Due giorni in solitaria sul Monte Grappa con la Jeep Renegade 4x4 e la tenda da tetto Yakima: silenzio, natura e campeggio libero responsabile.",
+    author: "Igor Ferrazzi",
+    readTime: "4 min",
+    location: "Monte Grappa, Italia",
+    category: "Destinazioni",
+    date: "2026-02-12",
+    dateDisplay: "12 Feb 2026",
+    image: "/img_articles/campeggio__libero_Monte_grappa/Immagine1.jpg"
   }
 ];
 

@@ -11,6 +11,15 @@ const GuideSection = () => {
   
   const guides = [
     {
+      slug: "campeggio-libero-tenda-tetto-monte-grappa",
+      title: "Due giorni di solitudine sul Monte Grappa",
+      excerpt: "Campeggio libero in tenda da tetto con la Jeep Renegade 4x4.",
+      author: "Igor Ferrazzi",
+      readTime: "4 min",
+      category: "Destinazioni",
+      image: "/img_articles/campeggio__libero_Monte_grappa/Immagine1.jpg"
+    },
+    {
       slug: "viaggio-nozze-tenda-tetto-namibia",
       title: "Viaggio di nozze in Namibia",
       excerpt: "17 giorni e 5.000 km in Africa con la tenda da tetto.",

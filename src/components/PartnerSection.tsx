@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Handshake, ExternalLink, Star, Percent, Download, MessageCircle } from "lucide-react";
+import { Handshake, ExternalLink, Star, Download, MessageCircle } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 const PartnerSection = () => {
@@ -13,8 +13,9 @@ const PartnerSection = () => {
       category: "Tende da Tetto",
       discount: "15%",
       description: "Leader delle tende da tetto made in Italy, una certezza di qualità dal 1958.",
-      logo: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=200&h=200",
+      logo: "/img_partners/Loghi/autohome.jpg",
       specialOffer: "Sconto del 15% su tutto il catalogo tende con codice: AUTOHOME-OFFICIAL",
+      website: "https://shop.autohome-official.com",
       pdfLink: null,
       externalLink: null
     },
@@ -23,8 +24,10 @@ const PartnerSection = () => {
       category: "Tende da Tetto",
       discount: "",
       description: "Tende made in Italy di qualità artigianale. Design italiano e materiali premium per gli avventurieri più esigenti.",
-      logo: "https://images.unsplash.com/photo-1478131143081-80f7f84ca84d?auto=format&fit=crop&w=200&h=200",
+      logo: "/img_partners/Loghi/xalpha.jpg",
+      wideLogo: true,
       specialOffer: "Prezzo speciale dedicato per gli iscritti alla pagina",
+      website: "https://www.xalpharooftent.com/",
       pdfLink: null,
       externalLink: null
     },
@@ -33,8 +36,9 @@ const PartnerSection = () => {
       category: "Allestimenti",
       discount: "10%",
       description: "Allestimenti personalizzati per qualsiasi mezzo, dall'auto al van, in legno e alluminio di alta qualità.",
-      logo: "https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?auto=format&fit=crop&w=200&h=200",
+      logo: "/img_partners/Loghi/camperboxes.jpg",
       specialOffer: "Bagno a separazione disponibile in due misure con prezzo dedicato alla community",
+      website: "https://camperboxes.it/",
       pdfLink: "/doc_articles_partners/ListinoCamperBoxes-2026.pdf",
       externalLink: null
     },
@@ -43,8 +47,9 @@ const PartnerSection = () => {
       category: "Tende & Accessori",
       discount: "",
       description: "Tende pieghevoli e rigide di varie misure, tendalini e accessori con un rapporto qualità prezzo imbattibile.",
-      logo: "https://images.unsplash.com/photo-1510312305653-8ed496efae75?auto=format&fit=crop&w=200&h=200",
+      logo: "/img_partners/Loghi/swisskings.jpg",
       specialOffer: "Rapporto qualità prezzo imbattibile per la community",
+      website: "https://www.accessoires4x4.ch/it/",
       pdfLink: null,
       externalLink: null
     },
@@ -53,10 +58,34 @@ const PartnerSection = () => {
       category: "Tende da Tetto",
       discount: "5%",
       description: "Shop online specializzato in tende da tetto Wildland, Vickywood e accessori per l'outdoor.",
-      logo: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?auto=format&fit=crop&w=200&h=200",
+      logo: "/img_partners/Loghi/roofcamp.jpg",
       specialOffer: "Sconto 5% su tutto il catalogo online tende da tetto Wildland, Vickywood e accessori con codice: Tendedatettoecampeggio26",
+      website: "https://roofcamp.it/",
       pdfLink: null,
       externalLink: "https://roofcamp.it/shop/?Codice%20sconto%20personale=Tendedatettoecampeggio26"
+    },
+    {
+      name: "Dino Design Park",
+      category: "Allestimenti",
+      discount: "10%",
+      description: "Moduli di camperizzazione adattabili a qualsiasi veicolo completi di tutti gli accessori pronti all'uso.",
+      logo: "/img_partners/Loghi/dino.jpg",
+      specialOffer: "10% sconto dedicato alla community nell'acquisto del box STOCK e altri prodotti",
+      website: "https://www.dinodesignpark.com/",
+      pdfLink: null,
+      externalLink: null
+    },
+    {
+      name: "Camperizzati Allestimenti Guglielmino",
+      shortName: "Camperizzati",
+      category: "Tende & Allestimenti",
+      discount: "10%",
+      description: "Tende da tetto pieghevoli a guscio rigido e ibride ideate in Italia e moduli di camperizzazione.",
+      logo: "/img_partners/Loghi/camperizzati2.jpg",
+      specialOffer: "10% sul prezzo di listino",
+      website: "https://www.camperizzati.com/",
+      pdfLink: null,
+      externalLink: null
     }
   ];
 
@@ -84,29 +113,42 @@ const PartnerSection = () => {
                 <CardHeader className="pb-4">
                   <div className="flex items-start justify-between">
                     <div className="flex items-center space-x-4">
-                      <div className="w-16 h-16 rounded-lg overflow-hidden bg-secondary/50">
+                      <div className={`${partner.wideLogo ? 'w-28 h-14' : 'w-16 h-16'} rounded-lg overflow-hidden bg-secondary/50`}>
                         <img 
                           src={partner.logo} 
                           alt={`Logo ${partner.name}`}
                           loading="lazy"
-                          className="w-full h-full object-cover"
+                          className={`w-full h-full ${partner.wideLogo ? 'object-contain' : 'object-cover'}`}
                         />
                       </div>
                       <div>
-                        <CardTitle className="text-xl group-hover:text-primary transition-colors">
+                        <CardTitle className={`${partner.name.length > 25 ? 'text-lg' : 'text-xl'} group-hover:text-primary transition-colors`}>
                           {partner.name}
                         </CardTitle>
+                        {partner.subtitle && (
+                          <span className="text-sm text-muted-foreground">{partner.subtitle}</span>
+                        )}
                         <Badge variant="secondary" className="bg-primary/10 text-primary border-primary/20 mt-1">
                           {partner.category}
                         </Badge>
                       </div>
                     </div>
-                    <div className="text-right">
+                    <div className="text-right flex flex-col items-end gap-2">
                       {partner.discount && (
                         <div className="flex items-center bg-accent/10 text-accent px-3 py-1 rounded-full">
-                          <Percent className="h-4 w-4 mr-1" />
                           <span className="font-bold">{partner.discount}</span>
                         </div>
+                      )}
+                      {partner.website && (
+                        <a
+                          href={partner.website}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1 text-xs font-medium bg-blue-500/15 text-blue-600 dark:text-blue-400 px-4 py-1 rounded-md hover:bg-blue-500/25 transition-colors whitespace-nowrap"
+                        >
+                          <ExternalLink className="h-4 w-4" />
+                          Visita {partner.shortName || partner.name}
+                        </a>
                       )}
                     </div>
                   </div>

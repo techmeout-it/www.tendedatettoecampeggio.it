@@ -8,8 +8,8 @@
     <!-- Security Headers via meta tags (X-Frame-Options must be set via HTTP header, not meta) -->
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
     <meta name="referrer" content="strict-origin-when-cross-origin" />
-    <!-- CSP: Allow necessary resources for site, analytics, and cookie consent -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://www.clarity.ms https://scripts.clarity.ms https://embeds.iubenda.com https://cdn.iubenda.com; style-src 'self' 'unsafe-inline' https://cdn.iubenda.com; img-src 'self' data: https: blob:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://dc.services.visualstudio.com https://b.clarity.ms https://cdn.iubenda.com; frame-src https://cdn.iubenda.com; base-uri 'self'; form-action 'self'" />
+    <!-- CSP is enforced via HTTP headers in production (see public/_headers) -->
+    <!-- Meta CSP removed to avoid blocking Vite dev server WebSocket/HMR -->
     
     <title>Tende da Tetto e Campeggio - Community Italiana</title>
     <meta name="description" content="La community italiana n°1 per tende da tetto e campeggio! 40.000+ membri, guide pratiche, mappe campeggi e tutto per le tue avventure outdoor. Unisciti a noi! 🏕️" />

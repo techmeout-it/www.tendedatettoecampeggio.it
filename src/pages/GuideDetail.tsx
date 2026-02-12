@@ -256,7 +256,6 @@ const guidesData: Record<string, {
       "Il percorso, lungo circa 6,5 km solo in salita, si snoda tra pareti rocciose e panorami mozzafiato sul massiccio del Pasubio. Ogni galleria ha una sua particolarità: alcune sono dritte e brevi, altre tortuose, scavate a spirale nella montagna o aperte su vertiginosi scorci.",
       "![](/img_articles/dormire_freddo/WhatsApp%20Image%202026-01-10%20at%2017.06.42.jpeg)",
       "Con un dislivello di circa 900 metri, è un'escursione che unisce storia, avventura e natura — un'esperienza che lascia davvero il segno.",
-      "![](/img_articles/dormire_freddo/WhatsApp%20Image%202026-01-10%20at%2017.06.43.jpeg)",
       "## L'escursione",
       "L'indomani ci siamo svegliati con un cielo non proprio limpido e aria frizzante. Mettiamo gli zaini in spalla e indossiamo le pile da testa: è così che ha inizio la salita lungo il percorso delle 52 Gallerie.",
       "![](/img_articles/dormire_freddo/WhatsApp%20Image%202026-01-10%20at%2017.06.43%20%281%29.jpeg)",

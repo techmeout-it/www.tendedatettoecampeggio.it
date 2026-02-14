@@ -829,8 +829,8 @@ const guidesData: Record<string, {
       "**Incaricato Tecnico CARCAMP® F.lli Menabò S.r.l.**\nDiego Meloni",
       "**Incaricato Tecnico F.lli Menabò S.r.l.**\nLuca Menabò"
     ],
-    author: "Lo staff di Tende da Tetto",
-    authorAvatar: "",
+    author: "Lo Staff di Tende da Tetto",
+    authorAvatar: "/logo_tende.jpg",
     readTime: "8 min",
     location: "Italia",
     category: "Attrezzatura",

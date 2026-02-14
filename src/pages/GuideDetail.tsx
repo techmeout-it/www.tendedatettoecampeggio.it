@@ -1023,7 +1023,7 @@ const GuideDetail = () => {
             </div>
 
             {/* Content */}
-            <div className="prose prose-lg max-w-none">
+            <div className="prose prose-lg max-w-none text-justify">
               {guide.content.map((paragraph, index) => {
                 if (paragraph.startsWith("## ")) {
                   return (
@@ -1127,7 +1127,7 @@ const GuideDetail = () => {
                   });
                 };
                 return (
-                  <p key={index} className="text-muted-foreground leading-relaxed mb-4">
+                  <p key={index} className="text-muted-foreground leading-relaxed mb-4 text-justify">
                     {renderFormattedText(paragraph)}
                   </p>
                 );

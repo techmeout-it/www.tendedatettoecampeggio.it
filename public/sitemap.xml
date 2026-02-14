@@ -6,140 +6,146 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
         xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
   <url>
-    <loc>https://www.tendedatettoecampeggio.it/</loc>
-    <lastmod>2026-02-08</lastmod>
+    <loc>http://localhost:5173/</loc>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.tendedatettoecampeggio.it/chi-siamo</loc>
-    <lastmod>2026-02-08</lastmod>
+    <loc>http://localhost:5173/chi-siamo</loc>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.tendedatettoecampeggio.it/guide</loc>
-    <lastmod>2026-02-08</lastmod>
+    <loc>http://localhost:5173/guide</loc>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.tendedatettoecampeggio.it/campeggi</loc>
-    <lastmod>2026-02-08</lastmod>
+    <loc>http://localhost:5173/campeggi</loc>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.tendedatettoecampeggio.it/contatti</loc>
-    <lastmod>2026-02-08</lastmod>
+    <loc>http://localhost:5173/contatti</loc>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.tendedatettoecampeggio.it/privacy</loc>
-    <lastmod>2026-02-08</lastmod>
+    <loc>http://localhost:5173/privacy</loc>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://www.tendedatettoecampeggio.it/termini</loc>
-    <lastmod>2026-02-08</lastmod>
+    <loc>http://localhost:5173/termini</loc>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://www.tendedatettoecampeggio.it/cookie</loc>
-    <lastmod>2026-02-08</lastmod>
+    <loc>http://localhost:5173/cookie</loc>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://www.tendedatettoecampeggio.it/guide/tende-da-tetto-confronto-morbide-guscio-rigido-ibride</loc>
-    <lastmod>2026-02-08</lastmod>
+    <loc>http://localhost:5173/guide/tende-da-tetto-confronto-morbide-guscio-rigido-ibride</loc>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.tendedatettoecampeggio.it/guide/dieci-giorni-liberta-elba-tenda-tetto</loc>
-    <lastmod>2026-02-08</lastmod>
+    <loc>http://localhost:5173/guide/dieci-giorni-liberta-elba-tenda-tetto</loc>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.tendedatettoecampeggio.it/guide/viaggio-nozze-tenda-tetto-namibia</loc>
-    <lastmod>2026-02-08</lastmod>
+    <loc>http://localhost:5173/guide/viaggio-nozze-tenda-tetto-namibia</loc>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.tendedatettoecampeggio.it/guide/forte-leone-dachzelt-camp-italia</loc>
-    <lastmod>2026-02-08</lastmod>
+    <loc>http://localhost:5173/guide/forte-leone-dachzelt-camp-italia</loc>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.tendedatettoecampeggio.it/guide/spagna-del-nord-on-the-road</loc>
-    <lastmod>2026-02-08</lastmod>
+    <loc>http://localhost:5173/guide/spagna-del-nord-on-the-road</loc>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.tendedatettoecampeggio.it/guide/tende-da-tetto-super-ciurma-tempo-lento</loc>
-    <lastmod>2026-02-08</lastmod>
+    <loc>http://localhost:5173/guide/tende-da-tetto-super-ciurma-tempo-lento</loc>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.tendedatettoecampeggio.it/guide/dormire-tenda-freddo-52-gallerie-pasubio</loc>
-    <lastmod>2026-02-08</lastmod>
+    <loc>http://localhost:5173/guide/dormire-tenda-freddo-52-gallerie-pasubio</loc>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.tendedatettoecampeggio.it/guide/viaggiare-famiglia-minivan-camperboxes</loc>
-    <lastmod>2026-02-08</lastmod>
+    <loc>http://localhost:5173/guide/viaggiare-famiglia-minivan-camperboxes</loc>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.tendedatettoecampeggio.it/guide/guida-completa-tende-da-tetto</loc>
-    <lastmod>2026-02-08</lastmod>
+    <loc>http://localhost:5173/guide/campeggio-libero-tenda-tetto-monte-grappa</loc>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.tendedatettoecampeggio.it/guide/10-campeggi-piu-belli-italia</loc>
-    <lastmod>2026-02-08</lastmod>
+    <loc>http://localhost:5173/guide/intervista-esperti-carcamp-menabo</loc>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.tendedatettoecampeggio.it/guide/checklist-campeggio-perfetto</loc>
-    <lastmod>2026-02-08</lastmod>
+    <loc>http://localhost:5173/guide/guida-completa-tende-da-tetto</loc>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.tendedatettoecampeggio.it/guide/manutenzione-tenda-tetto</loc>
-    <lastmod>2026-02-08</lastmod>
+    <loc>http://localhost:5173/guide/checklist-campeggio-perfetto</loc>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.tendedatettoecampeggio.it/guide/viaggiare-con-bambini-tenda-tetto</loc>
-    <lastmod>2026-02-08</lastmod>
+    <loc>http://localhost:5173/guide/manutenzione-tenda-da-tetto</loc>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.tendedatettoecampeggio.it/guide/sardegna-tenda-tetto-itinerario</loc>
-    <lastmod>2026-02-08</lastmod>
+    <loc>http://localhost:5173/guide/viaggiare-con-bambini-tenda-tetto</loc>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.tendedatettoecampeggio.it/guide/dolomiti-tenda-tetto-itinerario</loc>
-    <lastmod>2026-02-08</lastmod>
+    <loc>http://localhost:5173/guide/sardegna-tenda-tetto-itinerario</loc>
+    <lastmod>2026-02-14</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>http://localhost:5173/guide/dolomiti-tenda-tetto-itinerario</loc>
+    <lastmod>2026-02-14</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

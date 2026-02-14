@@ -1,5 +1,5 @@
 # Tende da Tetto e Campeggio - Robots.txt
-# Generated: 2026-02-08
+# Generated: 2026-02-14
 
 User-agent: *
 Allow: /
@@ -9,7 +9,7 @@ Disallow: /api/
 Disallow: /*.json$
 
 # Sitemaps
-Sitemap: https://www.tendedatettoecampeggio.it/sitemap.xml
+Sitemap: http://localhost:5173/sitemap.xml
 
 # Crawl-delay for polite crawling
 Crawl-delay: 0

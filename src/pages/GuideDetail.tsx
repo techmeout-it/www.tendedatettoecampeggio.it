@@ -835,7 +835,7 @@ const guidesData: Record<string, {
     location: "Italia",
     category: "Attrezzatura",
     date: "14 Febbraio 2026",
-    image: "/img_articles/barre_menabo/carcamp_menabo.png",
+    image: "/img_articles/barre_menabo/carcamp_menabo_cover.png",
     likes: 0,
     comments: 0
   }

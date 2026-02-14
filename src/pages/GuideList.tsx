@@ -144,7 +144,7 @@ const allGuides = [
     category: "Attrezzatura",
     date: "2026-02-14",
     dateDisplay: "14 Feb 2026",
-    image: "/img_articles/barre_menabo/carcamp_menabo.png"
+    image: "/img_articles/barre_menabo/carcamp_menabo_cover.png"
   }
 ];
 

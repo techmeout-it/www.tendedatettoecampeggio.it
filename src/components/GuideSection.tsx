@@ -20,13 +20,13 @@ const GuideSection = () => {
       image: "/img_articles/campeggio__libero_Monte_grappa/Immagine1.jpg"
     },
     {
-      slug: "viaggio-nozze-tenda-tetto-namibia",
-      title: "Viaggio di nozze in Namibia",
-      excerpt: "17 giorni e 5.000 km in Africa con la tenda da tetto.",
-      author: "Piero e Chiara",
-      readTime: "5 min",
-      category: "Destinazioni",
-      image: "/img_articles/namibia_viaggio_nozze/DSCN1226.JPG"
+      slug: "intervista-esperti-carcamp-menabo",
+      title: "Intervista con gli esperti di Carcamp e Menabò",
+      excerpt: "Dettagli tecnici sulle barre portatutto per tende da tetto.",
+      author: "Lo Staff",
+      readTime: "8 min",
+      category: "Attrezzatura",
+      image: "/img_articles/barre_menabo/carcamp_menabo_cover.png"
     },
     {
       slug: "forte-leone-dachzelt-camp-italia",

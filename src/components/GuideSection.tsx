@@ -45,15 +45,6 @@ const GuideSection = () => {
       readTime: "3 min",
       category: "Destinazioni",
       image: "https://images.unsplash.com/photo-1543783207-ec64e4d95325?auto=format&fit=crop&w=800&q=80"
-    },
-    {
-      slug: "tende-da-tetto-super-ciurma-tempo-lento",
-      title: "La Super Ciurma e il Tempo Lento",
-      excerpt: "Viaggiare con bambini, cani e tenda da tetto.",
-      author: "Giulia e Brenno",
-      readTime: "5 min",
-      category: "Tips",
-      image: "/img_articles/arte_tempo_lento_giulia_brenno/70bcbd07-91d1-4d9a-ab43-d25822677043.jpg"
     }
   ];
 

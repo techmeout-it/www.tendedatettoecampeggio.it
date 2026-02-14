@@ -26,6 +26,8 @@ const guideSlugs = [
   'tende-da-tetto-super-ciurma-tempo-lento',
   'dormire-tenda-freddo-52-gallerie-pasubio',
   'viaggiare-famiglia-minivan-camperboxes',
+  'campeggio-libero-tenda-tetto-monte-grappa',
+  'intervista-esperti-carcamp-menabo',
   'guida-completa-tende-da-tetto',
   '10-campeggi-piu-belli-italia',
   'checklist-campeggio-perfetto',

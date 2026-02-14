@@ -926,15 +926,17 @@ const GuideDetail = () => {
             loading="eager"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/30" />
           <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-8 pt-28 sm:pt-32">
             <div className="container mx-auto">
               <div className="max-w-4xl">
-                <Link to="/#guide" className="inline-flex items-center text-primary hover:underline mb-2 sm:mb-4">
+                <Link to="/#guide" className="inline-flex items-center text-primary font-semibold hover:underline mb-3 sm:mb-5 drop-shadow-sm">
                   <ArrowLeft className="h-4 w-4 mr-2" />
                   Torna alle Guide
                 </Link>
-                <Badge className="mb-2 sm:mb-4 bg-primary/90">{guide.category}</Badge>
+                <div className="mb-3 sm:mb-5">
+                  <Badge className="bg-primary text-white shadow-sm">{guide.category}</Badge>
+                </div>
                 <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-foreground mb-2 sm:mb-4 line-clamp-3 sm:line-clamp-none">
                   {guide.title}
                 </h1>

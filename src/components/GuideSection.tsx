@@ -3,50 +3,16 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Clock, User, ArrowRight, BookOpen } from "lucide-react";
-import campeggiFoto from "@/assets/campeggi-italia.jpg";
 import { useLanguage } from "@/contexts/LanguageContext";
+import allGuidesData from "@/data/guidesData";
 
 const GuideSection = () => {
   const { t } = useLanguage();
   
-  const guides = [
-    {
-      slug: "campeggio-libero-tenda-tetto-monte-grappa",
-      title: "Due giorni di solitudine sul Monte Grappa",
-      excerpt: "Campeggio libero in tenda da tetto con la Jeep Renegade 4x4.",
-      author: "Igor Ferrazzi",
-      readTime: "4 min",
-      category: "Destinazioni",
-      image: "/img_articles/campeggio__libero_Monte_grappa/Immagine1.jpg"
-    },
-    {
-      slug: "intervista-esperti-carcamp-menabo",
-      title: "Intervista con gli esperti di Carcamp e Menabò",
-      excerpt: "Dettagli tecnici sulle barre portatutto per tende da tetto.",
-      author: "Lo Staff",
-      readTime: "8 min",
-      category: "Attrezzatura",
-      image: "/img_articles/barre_menabo/carcamp_menabo_cover.png"
-    },
-    {
-      slug: "forte-leone-dachzelt-camp-italia",
-      title: "DACHZELT CAMP Italia al Forte Leone",
-      excerpt: "Il gemellaggio tra community italiana e tedesca.",
-      author: "Lo Staff",
-      readTime: "4 min",
-      category: "Eventi",
-      image: "/img_articles/forte_leone_raduno_articolo/20250704_DACHZELT-CAMP-Italia-2025_Patrick-Becker_Gruppenfoto_Drohne_.jpg"
-    },
-    {
-      slug: "spagna-del-nord-on-the-road",
-      title: "Spagna del Nord on the road",
-      excerpt: "19 giorni tra Paesi Baschi, Cantabria e Galizia.",
-      author: "Sara Sarti",
-      readTime: "3 min",
-      category: "Destinazioni",
-      image: "https://images.unsplash.com/photo-1543783207-ec64e4d95325?auto=format&fit=crop&w=800&q=80"
-    }
-  ];
+  // Prende automaticamente i 4 articoli più recenti per data
+  const guides = [...allGuidesData]
+    .sort((a, b) => b.date.localeCompare(a.date))
+    .slice(0, 4);
 
   return (
     <section id="guide" className="py-20 bg-gradient-to-b from-secondary/30 to-background" aria-label="Articoli e guide sul campeggio">

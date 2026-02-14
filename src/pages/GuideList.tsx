@@ -133,6 +133,18 @@ const allGuides = [
     date: "2026-02-12",
     dateDisplay: "12 Feb 2026",
     image: "/img_articles/campeggio__libero_Monte_grappa/Immagine1.jpg"
+  },
+  {
+    slug: "intervista-esperti-carcamp-menabo",
+    title: "Intervista con gli esperti di Carcamp e Menabò",
+    excerpt: "Per tutta la community l'intervista fatta con gli esperti di settore Carcamp e Menabò per la conoscenza dei dettagli tecnici delle barre portatutto.",
+    author: "Lo staff di Tende da Tetto",
+    readTime: "8 min",
+    location: "Italia",
+    category: "Attrezzatura",
+    date: "2026-02-14",
+    dateDisplay: "14 Feb 2026",
+    image: "/img_articles/barre_menabo/carcamp_menabo.png"
   }
 ];
 

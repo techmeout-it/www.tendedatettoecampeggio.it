@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import { SITE_URL } from '@/lib/site';
 
 interface SEOProps {
   title: string;
@@ -27,7 +28,7 @@ const SEO = ({
   articleSection,
   noindex = false
 }: SEOProps) => {
-  const siteUrl = typeof window !== 'undefined' ? window.location.origin : '';
+  const siteUrl = SITE_URL;
   const defaultOgImage = `${siteUrl}/og-image.jpg`;
   const finalOgImage = ogImage || defaultOgImage;
   const fullCanonicalUrl = canonicalUrl || siteUrl;

@@ -2,14 +2,16 @@ import fs from 'fs';
 import path from 'path';
 
 // Use environment variable or default for local development
-const DOMAIN = process.env.VITE_SITE_URL || 'http://localhost:5173';
+const DOMAIN = (process.env.VITE_SITE_URL || 'https://www.tendedatettoecampeggio.it').replace(/\/$/, '');
 const CURRENT_DATE = new Date().toISOString().split('T')[0];
 
 const routes = [
   { path: '/', priority: '1.0', changefreq: 'daily' },
   { path: '/chi-siamo', priority: '0.8', changefreq: 'monthly' },
   { path: '/guide', priority: '0.9', changefreq: 'daily' },
-  { path: '/campeggi', priority: '0.9', changefreq: 'weekly' },
+  { path: '/eventi', priority: '0.9', changefreq: 'weekly' },
+  { path: '/raduno-nazionale-2026', priority: '0.9', changefreq: 'weekly' },
+  { path: '/faq', priority: '0.7', changefreq: 'monthly' },
   { path: '/contatti', priority: '0.7', changefreq: 'monthly' },
   { path: '/privacy', priority: '0.3', changefreq: 'yearly' },
   { path: '/termini', priority: '0.3', changefreq: 'yearly' },

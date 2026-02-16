@@ -8,11 +8,12 @@ import PartnerSection from "@/components/PartnerSection";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { OrganizationSchema } from "@/components/StructuredData";
+import { SITE_URL } from "@/lib/site";
 import { Link } from "react-router-dom";
 import { CalendarDays, MapPin, ArrowRight } from "lucide-react";
 
 const Index = () => {
-  const siteUrl = typeof window !== 'undefined' ? window.location.origin : '';
+  const siteUrl = SITE_URL;
   
   return (
     <div className="min-h-screen bg-background">
@@ -49,6 +50,7 @@ const Index = () => {
       </div>
 
       <main id="main-content">
+        <h1 className="sr-only">Tende da Tetto e Campeggio - Community Italiana</h1>
         <HeroSection />
 
         <GuideSection />

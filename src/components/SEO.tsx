@@ -90,6 +90,7 @@ const SEO = ({
       {/* Additional SEO */}
       <meta httpEquiv="x-ua-compatible" content="ie=edge" />
       <meta name="format-detection" content="telephone=no" />
+      <link rel="alternate" type="application/rss+xml" title="Tende da Tetto e Campeggio - Guide e Articoli" href="/api/rss.xml" />
     </Helmet>
   );
 };

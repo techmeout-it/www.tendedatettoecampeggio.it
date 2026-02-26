@@ -3,7 +3,8 @@
  * Outputs to dist/api/rss.xml so it works on both Vercel and GitHub Pages.
  */
 import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'fs';
-import { resolve, dirname, fileURLToPath } from 'path';
+import { resolve, dirname } from 'path';
+import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const rootDir = resolve(__dirname, '..');

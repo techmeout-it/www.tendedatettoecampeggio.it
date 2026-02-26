@@ -6,7 +6,6 @@ Allow: /
 
 # Disallow admin/internal paths (if any)
 Disallow: /api/
-Disallow: /*.json$
 
 # Sitemaps
 Sitemap: https://www.tendedatettoecampeggio.it/sitemap.xml

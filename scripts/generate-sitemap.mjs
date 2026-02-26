@@ -18,46 +18,43 @@ const routes = [
   { path: '/cookie', priority: '0.3', changefreq: 'yearly' },
 ];
 
-// Guide slugs - add new guides here
-const guideSlugs = [
-  'tende-da-tetto-confronto-morbide-guscio-rigido-ibride',
-  'dieci-giorni-liberta-elba-tenda-tetto',
-  'viaggio-nozze-tenda-tetto-namibia',
-  'forte-leone-dachzelt-camp-italia',
-  'spagna-del-nord-on-the-road',
-  'tende-da-tetto-super-ciurma-tempo-lento',
-  'dormire-tenda-freddo-52-gallerie-pasubio',
-  'viaggiare-famiglia-minivan-camperboxes',
-  'campeggio-libero-tenda-tetto-monte-grappa',
-  'intervista-esperti-carcamp-menabo',
-  'guida-completa-tende-da-tetto',
-  'checklist-campeggio-perfetto',
-  'manutenzione-tenda-da-tetto',
-  'viaggiare-con-bambini-tenda-tetto',
-  'sardegna-tenda-tetto-itinerario',
-  'dolomiti-tenda-tetto-itinerario',
+// Guide slugs with their publication dates for accurate lastmod
+const guideSlugsWithDates = [
+  { slug: 'tende-da-tetto-confronto-morbide-guscio-rigido-ibride', date: '2026-01-31' },
+  { slug: 'dieci-giorni-liberta-elba-tenda-tetto', date: '2026-01-31' },
+  { slug: 'viaggio-nozze-tenda-tetto-namibia', date: '2026-01-29' },
+  { slug: 'forte-leone-dachzelt-camp-italia', date: '2026-01-29' },
+  { slug: 'spagna-del-nord-on-the-road', date: '2026-01-10' },
+  { slug: 'tende-da-tetto-super-ciurma-tempo-lento', date: '2026-01-09' },
+  { slug: 'dormire-tenda-freddo-52-gallerie-pasubio', date: '2026-01-08' },
+  { slug: 'viaggiare-famiglia-minivan-camperboxes', date: '2026-01-07' },
+  { slug: 'campeggio-libero-tenda-tetto-monte-grappa', date: '2026-02-12' },
+  { slug: 'intervista-esperti-carcamp-menabo', date: '2026-02-14' },
+  { slug: 'guida-completa-tende-da-tetto', date: '2026-01-01' },
+  { slug: 'checklist-campeggio-perfetto', date: '2026-01-01' },
+  { slug: 'manutenzione-tenda-da-tetto', date: '2026-01-01' },
+  { slug: 'viaggiare-con-bambini-tenda-tetto', date: '2026-01-01' },
+  { slug: 'sardegna-tenda-tetto-itinerario', date: '2026-01-01' },
+  { slug: 'dolomiti-tenda-tetto-itinerario', date: '2026-01-01' },
 ];
 
-// Add guide pages
-guideSlugs.forEach(slug => {
+// Add guide pages with per-article lastmod dates
+guideSlugsWithDates.forEach(({ slug, date }) => {
   routes.push({
     path: `/guide/${slug}`,
     priority: '0.8',
-    changefreq: 'weekly'
+    changefreq: 'weekly',
+    lastmod: date,
   });
 });
 
 function generateSitemap() {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml"
-        xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 ${routes.map(route => `  <url>
     <loc>${DOMAIN}${route.path}</loc>
-    <lastmod>${CURRENT_DATE}</lastmod>
+    <lastmod>${route.lastmod || CURRENT_DATE}</lastmod>
     <changefreq>${route.changefreq}</changefreq>
     <priority>${route.priority}</priority>
   </url>`).join('\n')}
@@ -69,7 +66,7 @@ ${routes.map(route => `  <url>
   }
 
   fs.writeFileSync(path.join(publicDir, 'sitemap.xml'), sitemap);
-  console.log('✅ Sitemap.xml generated successfully!');
+  console.log(`✅ Sitemap.xml generated with ${routes.length} URLs`);
 }
 
 function generateRobotsTxt() {
@@ -81,7 +78,6 @@ Allow: /
 
 # Disallow admin/internal paths (if any)
 Disallow: /api/
-Disallow: /*.json$
 
 # Sitemaps
 Sitemap: ${DOMAIN}/sitemap.xml

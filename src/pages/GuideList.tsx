@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import { BreadcrumbSchema } from "@/components/StructuredData";
+import { BreadcrumbSchema, ItemListSchema } from "@/components/StructuredData";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -62,6 +62,14 @@ const GuideList = () => {
           { name: 'Home', url: siteUrl },
           { name: 'Guide', url: `${siteUrl}/guide` }
         ]}
+      />
+      <ItemListSchema
+        items={filteredGuides.map(guide => ({
+          name: guide.title,
+          url: `${siteUrl}/guide/${guide.slug}`,
+          image: guide.image.startsWith('http') ? guide.image : `${siteUrl}${guide.image}`,
+          description: guide.excerpt,
+        }))}
       />
       <Header />
       <main>

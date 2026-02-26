@@ -1134,12 +1134,19 @@ const GuideDetail = () => {
               })}
             </div>
 
-            {/* Related Guides */}
+            {/* Related Guides — prioritize same category for better internal linking */}
             <div className="mt-16">
               <h3 className="text-2xl font-bold text-foreground mb-8">Altre Guide</h3>
               <div className="grid md:grid-cols-2 gap-6">
                 {Object.entries(guidesData)
                   .filter(([key]) => key !== slug)
+                  .sort(([, a], [, b]) => {
+                    // Same category first, then by date
+                    const sameA = a.category === guide.category ? 0 : 1;
+                    const sameB = b.category === guide.category ? 0 : 1;
+                    if (sameA !== sameB) return sameA - sameB;
+                    return b.date > a.date ? 1 : -1;
+                  })
                   .slice(0, 2)
                   .map(([key, g]) => (
                     <Link key={key} to={`/guide/${key}`}>

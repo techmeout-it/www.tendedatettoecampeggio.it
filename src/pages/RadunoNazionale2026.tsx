@@ -91,6 +91,9 @@ const RadunoNazionale2026 = () => {
                 <img 
                   src="/img_raduni/2026.05.01-03_LagoDiPietrafitta-RadunoNazionale/Raduno_Locandina2026.jpg"
                   alt={t('raduno2026.mainTitle')}
+                  loading="eager"
+                  width={800}
+                  height={1131}
                   className="w-full h-auto"
                 />
               </div>

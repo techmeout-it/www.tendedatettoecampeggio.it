@@ -157,6 +157,8 @@ const GuideList = () => {
                             src={guide.image} 
                             alt={guide.title}
                             loading="lazy"
+                            width={800}
+                            height={450}
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                           />
                         </div>
@@ -194,7 +196,7 @@ const GuideList = () => {
                             <User className="h-4 w-4 mr-1" />
                             {guide.author}
                           </div>
-                          <span className="text-sm text-muted-foreground">{guide.dateDisplay}</span>
+                          <time dateTime={guide.date} className="text-sm text-muted-foreground">{guide.dateDisplay}</time>
                           </div>
                         </CardContent>
                       </Card>

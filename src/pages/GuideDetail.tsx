@@ -946,6 +946,17 @@ const GuideDetail = () => {
           </div>
         </div>
 
+        {/* Breadcrumb Navigation */}
+        <nav aria-label="Breadcrumb" className="container mx-auto px-4 pt-4">
+          <ol className="flex items-center gap-2 text-sm text-muted-foreground">
+            <li><Link to="/" className="hover:text-primary transition-colors">Home</Link></li>
+            <li>/</li>
+            <li><Link to="/guide" className="hover:text-primary transition-colors">Guide</Link></li>
+            <li>/</li>
+            <li className="text-foreground font-medium truncate max-w-[200px] sm:max-w-none">{guide.title}</li>
+          </ol>
+        </nav>
+
         {/* Article Content */}
         <article className="container mx-auto px-4 py-12">
           <div className="max-w-4xl mx-auto">
@@ -970,7 +981,7 @@ const GuideDetail = () => {
                     <div className="flex items-center gap-4 text-sm text-muted-foreground">
                       <div className="flex items-center">
                         <Calendar className="h-4 w-4 mr-1" />
-                        {guide.date}
+                        <time dateTime={getISODate(guide.date)}>{guide.date}</time>
                       </div>
                       <div className="flex items-center">
                         <Clock className="h-4 w-4 mr-1" />
@@ -993,7 +1004,7 @@ const GuideDetail = () => {
                 <div className="flex items-center gap-4 text-sm text-muted-foreground">
                   <div className="flex items-center">
                     <Calendar className="h-4 w-4 mr-1" />
-                    {guide.date}
+                    <time dateTime={getISODate(guide.date)}>{guide.date}</time>
                   </div>
                   <div className="flex items-center">
                     <Clock className="h-4 w-4 mr-1" />

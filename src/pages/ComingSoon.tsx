@@ -1,12 +1,18 @@
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import SEO from "@/components/SEO";
 import { Button } from "@/components/ui/button";
 import { Construction, Home, Facebook } from "lucide-react";
 
 const ComingSoon = () => {
   return (
     <div className="min-h-screen bg-background">
+      <SEO
+        title="Coming Soon - Tende da Tetto e Campeggio"
+        description="Questa sezione è in arrivo. Resta sintonizzato!"
+        noindex={true}
+      />
       <Header />
       <main className="py-20">
         <div className="container mx-auto px-4">

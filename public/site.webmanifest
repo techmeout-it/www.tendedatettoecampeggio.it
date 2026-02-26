@@ -1,0 +1,27 @@
+{
+  "name": "Tende da Tetto e Campeggio",
+  "short_name": "Tende da Tetto",
+  "description": "La community italiana n°1 per tende da tetto e campeggio. Guide, eventi e 40.000+ membri.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#10b981",
+  "lang": "it",
+  "icons": [
+    {
+      "src": "/favicon-16.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}

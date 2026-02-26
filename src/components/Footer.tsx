@@ -140,7 +140,7 @@ const Footer = () => {
               {/* Credits */}
               <p className="text-xs text-muted-foreground/70 pt-2">
                 Realizzato con il ❤️ per la Community Italiana da{' '}
-                <span className="font-medium">🔥R-Fyah DEV</span>
+                <a href="https://www.techmeout.it/" target="_blank" rel="noopener noreferrer" className="font-medium hover:text-primary transition-colors">TechMeOut</a>
               </p>
 
               {/* Network */}

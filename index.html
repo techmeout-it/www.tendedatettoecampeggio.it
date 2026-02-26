@@ -14,6 +14,7 @@
     <title>Tende da Tetto e Campeggio - Community Italiana</title>
     <meta name="description" content="La community italiana n°1 per tende da tetto e campeggio! 40.000+ membri, guide pratiche, mappe campeggi e tutto per le tue avventure outdoor. Unisciti a noi! 🏕️" />
     <link rel="canonical" href="https://www.tendedatettoecampeggio.it/" />
+    <meta name="google" content="nositelinkssearchbox" />
     
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
@@ -50,6 +51,88 @@
     <meta name="twitter:image" content="https://www.tendedatettoecampeggio.it/og-image.jpg" />
     
     <!-- Meta tags managed by react-helmet-async -->
+    
+    <!-- Static JSON-LD structured data for crawlers (supplements React Helmet) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.tendedatettoecampeggio.it/#organization",
+          "name": "Tende da Tetto e Campeggio",
+          "url": "https://www.tendedatettoecampeggio.it",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.tendedatettoecampeggio.it/logo_tende.jpg"
+          },
+          "description": "La community italiana n°1 per tende da tetto e campeggio con oltre 40.000 membri.",
+          "foundingDate": "2021",
+          "sameAs": [
+            "https://www.facebook.com/tendedatettoecampeggio",
+            "https://www.instagram.com/tendedatettoecampeggio"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.tendedatettoecampeggio.it/#website",
+          "url": "https://www.tendedatettoecampeggio.it",
+          "name": "Tende da Tetto e Campeggio",
+          "publisher": { "@id": "https://www.tendedatettoecampeggio.it/#organization" },
+          "inLanguage": "it-IT"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.tendedatettoecampeggio.it/#webpage",
+          "url": "https://www.tendedatettoecampeggio.it/",
+          "name": "Tende da Tetto e Campeggio - Community Italiana",
+          "isPartOf": { "@id": "https://www.tendedatettoecampeggio.it/#website" },
+          "about": { "@id": "https://www.tendedatettoecampeggio.it/#organization" },
+          "description": "La community italiana n°1 per tende da tetto e campeggio! 40.000+ membri, guide pratiche, mappe campeggi e tutto per le tue avventure outdoor.",
+          "inLanguage": "it-IT"
+        },
+        {
+          "@type": "Event",
+          "name": "Raduno Nazionale 2026 - Tende da Tetto e Campeggio",
+          "description": "Il raduno nazionale annuale della community Tende da Tetto e Campeggio. 3 giorni di avventura al Lago di Pietrafitta.",
+          "startDate": "2026-05-01",
+          "endDate": "2026-05-03",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "location": {
+            "@type": "Place",
+            "name": "Lago di Pietrafitta",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Pietrafitta",
+              "addressRegion": "PG",
+              "addressCountry": "IT"
+            }
+          },
+          "organizer": { "@id": "https://www.tendedatettoecampeggio.it/#organization" },
+          "url": "https://www.tendedatettoecampeggio.it/raduno-nazionale-2026",
+          "image": "https://www.tendedatettoecampeggio.it/og-image.jpg",
+          "offers": [
+            {
+              "@type": "Offer",
+              "name": "Membro Community",
+              "price": "80",
+              "priceCurrency": "EUR",
+              "availability": "https://schema.org/InStock"
+            },
+            {
+              "@type": "Offer",
+              "name": "Standard",
+              "price": "150",
+              "priceCurrency": "EUR",
+              "availability": "https://schema.org/InStock"
+            }
+          ],
+          "inLanguage": "it"
+        }
+      ]
+    }
+    </script>
   </head>
 
   <body>

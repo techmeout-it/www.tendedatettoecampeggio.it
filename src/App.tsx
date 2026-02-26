@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { lazy, Suspense, useEffect } from "react";
 import { LanguageProvider } from "@/contexts/LanguageContext";
@@ -83,6 +83,10 @@ const App = () => (
           <Route path="/termini" element={<Suspense fallback={<PageLoader />}><Terms /></Suspense>} />
           <Route path="/cookie" element={<Suspense fallback={<PageLoader />}><Cookies /></Suspense>} />
           <Route path="/coming-soon" element={<ComingSoon />} />
+          {/* SEO redirects — fix 404s reported by Google Search Console */}
+          <Route path="/cookie-policy" element={<Navigate to="/cookie" replace />} />
+          <Route path="/en" element={<Navigate to="/" replace />} />
+          <Route path="/en/*" element={<Navigate to="/" replace />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -918,13 +918,16 @@ const GuideDetail = () => {
         ]}
       />
       <Header />
-      <main>
+      <main id="main-content">
         {/* Hero Image */}
         <div className="relative h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden">
           <img 
             src={guide.image} 
             alt={guide.title}
             loading="eager"
+            fetchPriority="high"
+            width={1200}
+            height={630}
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/70 to-background/30" />

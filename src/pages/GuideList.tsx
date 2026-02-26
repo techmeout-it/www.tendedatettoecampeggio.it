@@ -73,7 +73,7 @@ const GuideList = () => {
         }))}
       />
       <Header />
-      <main>
+      <main id="main-content">
         {/* Hero Section */}
         <section className="py-16 bg-gradient-to-b from-primary/10 to-background">
           <div className="container mx-auto px-4">

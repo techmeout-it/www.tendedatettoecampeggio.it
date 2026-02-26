@@ -14,7 +14,7 @@ const ComingSoon = () => {
         noindex={true}
       />
       <Header />
-      <main className="py-20">
+      <main className="py-20" id="main-content">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto text-center">
             {/* Icon */}

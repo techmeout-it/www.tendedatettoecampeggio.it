@@ -21,6 +21,7 @@ const NotFound = () => {
         canonicalUrl={typeof window !== 'undefined' ? `${window.location.origin}${location.pathname}` : ''}
         keywords="404, pagina non trovata, errore"
         ogType="website"
+        noindex={true}
       />
       <Header />
       <main className="flex-1 flex items-center justify-center py-20" id="main-content">

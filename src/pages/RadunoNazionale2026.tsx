@@ -2,6 +2,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { BreadcrumbSchema, EventSchema } from "@/components/StructuredData";
+import { SITE_URL } from "@/lib/site";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -28,7 +29,7 @@ import { Link } from "react-router-dom";
 
 const RadunoNazionale2026 = () => {
   const { t } = useLanguage();
-  const siteUrl = typeof window !== 'undefined' ? window.location.origin : '';
+  const siteUrl = SITE_URL;
   const canonicalUrl = `${siteUrl}/raduno-nazionale-2026`;
 
   return (

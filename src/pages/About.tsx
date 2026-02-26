@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
-import { OrganizationSchema } from "@/components/StructuredData";
+import { OrganizationSchema, BreadcrumbSchema } from "@/components/StructuredData";
+import { SITE_URL } from "@/lib/site";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -66,11 +67,15 @@ const About = () => {
       <SEO 
         title="Chi Siamo - Community Italiana Tende da Tetto e Campeggio"
         description="Scopri la community più grande in Italia dedicata alle tende da tetto e al campeggio. Dal 2021 uniamo appassionati di tutta Italia per condividere esperienze, consigli e avventure indimenticabili."
-        canonicalUrl={typeof window !== 'undefined' ? `${window.location.origin}/chi-siamo` : ''}
+        canonicalUrl={`${SITE_URL}/chi-siamo`}
         keywords="community tende da tetto, community campeggio, campeggio italia, roof tent community, chi siamo"
         ogType="website"
       />
       <OrganizationSchema />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: SITE_URL },
+        { name: 'Chi Siamo', url: `${SITE_URL}/chi-siamo` }
+      ]} />
       <Header />
       <main id="main-content">
         {/* Hero Section */}

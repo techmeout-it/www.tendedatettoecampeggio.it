@@ -27,6 +27,7 @@ const Footer = () => {
   };
 
   return (
+    <>
     <footer className="bg-primary/10 border-t border-primary/20">
       <div className="container mx-auto px-4 py-10">
         <div className="max-w-6xl mx-auto">
@@ -146,7 +147,41 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  );
+
+    {/* Luca Berton Network */}
+    <div className="bg-muted/30 border-t border-border/50 py-3">
+      <div className="container mx-auto px-4">
+        <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs text-muted-foreground/60">
+          {[
+            { name: 'Luca Berton', href: 'https://lucaberton.com/', title: 'AI & Cloud Advisor' },
+            { name: 'Ansible Pilot', href: 'https://www.ansiblepilot.com/', title: '772+ Ansible Tutorials' },
+            { name: 'Ansible by Example', href: 'https://www.ansiblebyexample.com/', title: 'Ansible Books & Resources' },
+            { name: 'Open Empower', href: 'https://www.openempower.com/', title: 'AI Platform Engineering Consultancy' },
+            { name: 'K8s Recipes', href: 'https://kubernetes.recipes/', title: 'Kubernetes Recipe Book' },
+            { name: 'Terraform Pilot', href: 'https://www.terraformpilot.com/', title: 'Terraform Automation Mastery' },
+            { name: 'CopyPasteLearn', href: 'https://www.copypastelearn.com/', title: 'Learn IT by Doing' },
+            { name: 'ProteinLens', href: 'https://www.proteinlens.com/', title: 'AI Macro Nutrition Tracker' },
+            { name: 'TechMeOut', href: 'https://www.techmeout.it/', title: 'TechMeOut — Sviluppo Web Professionale' },
+          ].map((site, i, arr) => (
+            <span key={site.name} className="inline-flex items-center">
+              <a
+                href={site.href}
+                title={site.title}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`hover:text-primary transition-colors ${
+                  site.href === 'https://www.techmeout.it/' ? 'text-primary font-medium' : ''
+                }`}
+              >
+                {site.name}
+              </a>
+              {i < arr.length - 1 && <span className="ml-4 text-muted-foreground/30">·</span>}
+            </span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </>;
 };
 
 export default Footer;

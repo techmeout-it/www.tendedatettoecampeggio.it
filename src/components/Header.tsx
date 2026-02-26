@@ -24,6 +24,10 @@ const Header = () => {
   ];
 
   return (
+    <>
+    <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:bg-primary focus:text-primary-foreground focus:px-4 focus:py-2 focus:rounded-md">
+      Vai al contenuto principale
+    </a>
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto px-4">
         <div className="flex h-24 items-center justify-between">
@@ -120,6 +124,7 @@ const Header = () => {
         </div>
       </div>
     </header>
+    </>
   );
 };
 

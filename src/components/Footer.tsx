@@ -141,6 +141,31 @@ const Footer = () => {
                 Realizzato con il ❤️ per la Community Italiana da{' '}
                 <span className="font-medium">🔥R-Fyah DEV</span>
               </p>
+
+              {/* Network */}
+              <div className="pt-3 pb-1">
+                <div className="flex flex-wrap justify-center gap-x-1.5 gap-y-1 max-w-[720px] mx-auto">
+                  {[
+                    { href: "https://lucaberton.com/", label: "Luca Berton" },
+                    { href: "https://www.ansiblepilot.com/", label: "Ansible Pilot" },
+                    { href: "https://www.ansiblebyexample.com/", label: "Ansible by Example" },
+                    { href: "https://www.openempower.com/", label: "Open Empower" },
+                    { href: "https://kubernetes.recipes/", label: "K8s Recipes" },
+                    { href: "https://www.terraformpilot.com/", label: "Terraform Pilot" },
+                    { href: "https://www.copypastelearn.com/", label: "CopyPasteLearn" },
+                    { href: "https://www.proteinlens.com/", label: "ProteinLens" },
+                    { href: "https://www.techmeout.it/", label: "TechMeOut" },
+                    { href: "https://www.tendedatettoecampeggio.it/", label: "Tende da Tetto", active: true },
+                  ].map(({ href, label, active }, i) => (
+                    <span key={href} className="inline-flex items-center">
+                      {i > 0 && <span className="text-[10px] opacity-25 mr-1.5">·</span>}
+                      <a href={href} title={label} className={`text-[10px] text-muted-foreground no-underline transition-opacity duration-200 ${active ? 'opacity-70' : 'opacity-40 hover:opacity-70'}`}>
+                        {label}
+                      </a>
+                    </span>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>

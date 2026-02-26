@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { Card, CardContent } from "@/components/ui/card";
+import { SITE_URL } from "@/lib/site";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { 
@@ -269,7 +270,7 @@ const CampsiteDetail = () => {
       <SEO 
         title={`${campsite.name} - Campeggio Tenda da Tetto | Tende da Tetto e Campeggio`}
         description={`${campsite.name} a ${campsite.region}. Scopri le caratteristiche, i servizi, le tariffe e le recensioni di questo campeggio ideale per le tende da tetto.`}
-        canonicalUrl={typeof window !== 'undefined' ? `${window.location.origin}/campeggi/${slug}` : ''}
+        canonicalUrl={`${SITE_URL}/campeggi/${slug}`}
         keywords={`${campsite.name}, campeggio ${campsite.region}, tenda da tetto, tende da tetto ${campsite.region.split(',')[1]?.trim()}, campeggio montagna`}
         ogType="website"
       />

@@ -1,6 +1,8 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import { BreadcrumbSchema } from "@/components/StructuredData";
+import { SITE_URL } from "@/lib/site";
 import { Shield } from "lucide-react";
 
 const Privacy = () => {
@@ -9,10 +11,14 @@ const Privacy = () => {
       <SEO 
         title="Privacy Policy - Tende da Tetto e Campeggio"
         description="Leggi la nostra privacy policy per comprendere come raccogliamo, utilizziamo e proteggiamo i tuoi dati personali."
-        canonicalUrl={typeof window !== 'undefined' ? `${window.location.origin}/privacy` : ''}
+        canonicalUrl={`${SITE_URL}/privacy`}
         keywords="privacy policy, protezione dati, privacy, campeggio"
         ogType="website"
       />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: SITE_URL },
+        { name: 'Privacy Policy', url: `${SITE_URL}/privacy` }
+      ]} />
       <Header />
       <main className="py-16" id="main-content">
         <div className="container mx-auto px-4">

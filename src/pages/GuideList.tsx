@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { BreadcrumbSchema, ItemListSchema } from "@/components/StructuredData";
+import { SITE_URL } from "@/lib/site";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -31,7 +32,7 @@ const categories = ["Tutte", "Attrezzatura", "Destinazioni", "Tips"];
 type SortOrder = "newest" | "oldest";
 
 const GuideList = () => {
-  const siteUrl = typeof window !== 'undefined' ? window.location.origin : '';
+  const siteUrl = SITE_URL;
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("Tutte");
   const [sortOrder, setSortOrder] = useState<SortOrder>("newest");

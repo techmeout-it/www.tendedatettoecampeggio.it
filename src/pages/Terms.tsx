@@ -1,6 +1,8 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import { BreadcrumbSchema } from "@/components/StructuredData";
+import { SITE_URL } from "@/lib/site";
 import { FileText } from "lucide-react";
 
 const Terms = () => {
@@ -9,10 +11,14 @@ const Terms = () => {
       <SEO 
         title="Termini di Servizio - Tende da Tetto e Campeggio"
         description="Leggi i nostri termini di servizio per comprendere i diritti e i doveri degli utenti del nostro sito."
-        canonicalUrl={typeof window !== 'undefined' ? `${window.location.origin}/termini` : ''}
+        canonicalUrl={`${SITE_URL}/termini`}
         keywords="termini di servizio, condizioni d'uso, termini, campeggio"
         ogType="website"
       />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: SITE_URL },
+        { name: 'Termini di Servizio', url: `${SITE_URL}/termini` }
+      ]} />
       <Header />
       <main className="py-16" id="main-content">
         <div className="container mx-auto px-4">

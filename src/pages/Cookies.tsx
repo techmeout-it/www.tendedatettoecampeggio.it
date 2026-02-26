@@ -1,6 +1,8 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import { BreadcrumbSchema } from "@/components/StructuredData";
+import { SITE_URL } from "@/lib/site";
 import { Cookie } from "lucide-react";
 
 const Cookies = () => {
@@ -9,10 +11,14 @@ const Cookies = () => {
       <SEO 
         title="Cookie Policy - Tende da Tetto e Campeggio"
         description="Scopri come utilizziamo i cookie per migliorare la tua esperienza sul nostro sito. Leggi la nostra cookie policy."
-        canonicalUrl={typeof window !== 'undefined' ? `${window.location.origin}/cookie` : ''}
+        canonicalUrl={`${SITE_URL}/cookie`}
         keywords="cookie policy, cookie, tracciamento, privacy"
         ogType="website"
       />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: SITE_URL },
+        { name: 'Cookie Policy', url: `${SITE_URL}/cookie` }
+      ]} />
       <Header />
       <main className="py-16" id="main-content">
         <div className="container mx-auto px-4">

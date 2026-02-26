@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { FAQPageSchema, BreadcrumbSchema } from "@/components/StructuredData";
+import { SITE_URL } from "@/lib/site";
 import { Card, CardContent } from "@/components/ui/card";
 import { 
   ChevronDown, 
@@ -131,7 +132,7 @@ const faqData: FAQItem[] = [
 ];
 
 const FAQ = () => {
-  const siteUrl = typeof window !== 'undefined' ? window.location.origin : '';
+  const siteUrl = SITE_URL;
   const canonicalUrl = `${siteUrl}/faq`;
   const [expandedItems, setExpandedItems] = useState<Set<number>>(new Set());
 

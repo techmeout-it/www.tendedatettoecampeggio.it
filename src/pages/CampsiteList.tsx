@@ -4,6 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
 import { BreadcrumbSchema } from "@/components/StructuredData";
+import { SITE_URL } from "@/lib/site";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -275,14 +276,14 @@ const CampsiteList = () => {
       <SEO 
         title="Campeggi in Italia - Mappa e Lista Selezionata"
         description="Scopri i migliori campeggi d'Italia testati e recensiti dalla community. Trova il campeggio perfetto per le tue avventure con tenda da tetto. Filtra per regione, tipo e valutazione."
-        canonicalUrl={typeof window !== 'undefined' ? `${window.location.origin}/campeggi` : ''}
+        canonicalUrl={`${SITE_URL}/campeggi`}
         keywords="campeggi italia, campeggi tenda da tetto, campeggi montagna, campeggi mare, campeggi lago, campeggi recensioni"
         ogType="website"
       />
       <BreadcrumbSchema 
         items={[
-          { name: 'Home', url: typeof window !== 'undefined' ? window.location.origin : '' },
-          { name: 'Campeggi', url: typeof window !== 'undefined' ? `${window.location.origin}/campeggi` : '' }
+          { name: 'Home', url: SITE_URL },
+          { name: 'Campeggi', url: `${SITE_URL}/campeggi` }
         ]}
       />
       <Header />

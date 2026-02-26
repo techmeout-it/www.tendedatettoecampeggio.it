@@ -1,6 +1,8 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import { BreadcrumbSchema } from "@/components/StructuredData";
+import { SITE_URL } from "@/lib/site";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { 
@@ -34,9 +36,13 @@ const Contact = () => {
       <SEO 
         title="Contatti - Tende da Tetto e Campeggio"
         description="Contattaci per domande, suggerimenti o proposte di partnership. Rispondiamo rapidamente a tutti i messaggi."
-        canonicalUrl={typeof window !== 'undefined' ? `${window.location.origin}/contatti` : ''}
+        canonicalUrl={`${SITE_URL}/contatti`}
         keywords="contatti, email, partnership, assistenza"
       />
+      <BreadcrumbSchema items={[
+        { name: 'Home', url: SITE_URL },
+        { name: 'Contatti', url: `${SITE_URL}/contatti` }
+      ]} />
       <Header />
       <main id="main-content">
         {/* Hero Section */}

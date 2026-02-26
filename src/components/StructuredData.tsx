@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import { SITE_URL } from '@/lib/site';
 
 interface ArticleSchemaProps {
   headline: string;
@@ -36,7 +37,7 @@ export const ArticleSchema = ({
       "name": "Tende da Tetto e Campeggio",
       "logo": {
         "@type": "ImageObject",
-        "url": `${typeof window !== 'undefined' ? window.location.origin : ''}/logo.png`
+        "url": `${SITE_URL}/logo.png`
       }
     },
     "mainEntityOfPage": {
@@ -69,7 +70,7 @@ export const OrganizationSchema = ({
   description = "La community italiana per gli amanti delle tende da tetto e del campeggio",
   contactEmail = "info@tendedatettoecampeggio.it"
 }: OrganizationSchemaProps = {}) => {
-  const siteUrl = typeof window !== 'undefined' ? window.location.origin : '';
+  const siteUrl = SITE_URL;
   const finalUrl = url || siteUrl;
   const finalLogo = logo || `${siteUrl}/logo.png`;
   
@@ -173,7 +174,7 @@ export const EventSchema = ({
   isAccessibleForFree,
   inLanguage = 'it'
 }: EventSchemaProps) => {
-  const siteUrl = typeof window !== 'undefined' ? window.location.origin : 'https://www.tendedatettoecampeggio.it';
+  const siteUrl = SITE_URL;
   const eventUrl = url || siteUrl;
   const eventImage = image ? (image.startsWith('http') ? image : `${siteUrl}${image}`) : `${siteUrl}/hero-camping.jpg`;
 
@@ -256,7 +257,7 @@ export const ProductSchema = ({
   rating,
   reviewCount
 }: ProductSchemaProps) => {
-  const siteUrl = typeof window !== 'undefined' ? window.location.origin : '';
+  const siteUrl = SITE_URL;
   const productUrl = url || siteUrl;
 
   const schema = {
@@ -307,7 +308,7 @@ interface FAQPageSchemaProps {
 }
 
 export const FAQPageSchema = ({ items, url }: FAQPageSchemaProps) => {
-  const siteUrl = typeof window !== 'undefined' ? window.location.origin : '';
+  const siteUrl = SITE_URL;
   const pageUrl = url || siteUrl;
 
   const schema = {

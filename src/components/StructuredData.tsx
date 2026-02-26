@@ -331,3 +331,35 @@ export const FAQPageSchema = ({ items, url }: FAQPageSchemaProps) => {
     </Helmet>
   );
 };
+
+interface ItemListSchemaProps {
+  items: Array<{
+    name: string;
+    url: string;
+    image?: string;
+    description?: string;
+  }>;
+}
+
+export const ItemListSchema = ({ items }: ItemListSchemaProps) => {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": items.map((item, index) => ({
+      "@type": "ListItem",
+      "position": index + 1,
+      "name": item.name,
+      "url": item.url,
+      ...(item.image && { "image": item.image }),
+      ...(item.description && { "description": item.description }),
+    }))
+  };
+
+  return (
+    <Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify(schema)}
+      </script>
+    </Helmet>
+  );
+};

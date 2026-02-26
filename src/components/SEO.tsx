@@ -42,6 +42,8 @@ const SEO = ({
       <meta name="keywords" content={keywords} />
       <meta name="author" content={author} />
       <link rel="canonical" href={fullCanonicalUrl} />
+      <link rel="alternate" hrefLang="it" href={fullCanonicalUrl} />
+      <link rel="alternate" hrefLang="x-default" href={fullCanonicalUrl} />
       
       {/* Robots */}
       {noindex && <meta name="robots" content="noindex, nofollow" />}

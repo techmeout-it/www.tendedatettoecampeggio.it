@@ -30,12 +30,6 @@ const guideSlugsWithDates = [
   { slug: 'viaggiare-famiglia-minivan-camperboxes', date: '2026-01-07' },
   { slug: 'campeggio-libero-tenda-tetto-monte-grappa', date: '2026-02-12' },
   { slug: 'intervista-esperti-carcamp-menabo', date: '2026-02-14' },
-  { slug: 'guida-completa-tende-da-tetto', date: '2026-01-01' },
-  { slug: 'checklist-campeggio-perfetto', date: '2026-01-01' },
-  { slug: 'manutenzione-tenda-da-tetto', date: '2026-01-01' },
-  { slug: 'viaggiare-con-bambini-tenda-tetto', date: '2026-01-01' },
-  { slug: 'sardegna-tenda-tetto-itinerario', date: '2026-01-01' },
-  { slug: 'dolomiti-tenda-tetto-itinerario', date: '2026-01-01' },
 ];
 
 // Add guide pages with per-article lastmod dates
@@ -52,12 +46,16 @@ function generateSitemap() {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-${routes.map(route => `  <url>
-    <loc>${DOMAIN}${route.path}</loc>
+${routes.map(route => {
+    // Add trailing slash for GitHub Pages compatibility (except root)
+    const loc = route.path === '/' ? `${DOMAIN}/` : `${DOMAIN}${route.path}/`;
+    return `  <url>
+    <loc>${loc}</loc>
     <lastmod>${route.lastmod || CURRENT_DATE}</lastmod>
     <changefreq>${route.changefreq}</changefreq>
     <priority>${route.priority}</priority>
-  </url>`).join('\n')}
+  </url>`;
+  }).join('\n')}
 </urlset>`;
 
   const publicDir = path.join(process.cwd(), 'public');

@@ -158,7 +158,7 @@ const staticPages = [
     description: "Scopri i prossimi raduni, workshop ed eventi della community italiana di tende da tetto e campeggio. Partecipa ai ritrovi e conosci altri appassionati!",
     image: "/og-image.jpg",
     ogType: "website",
-    staticContent: `<main id="main-content"><h1>Eventi e Raduni</h1><p>La community Tende da Tetto e Campeggio organizza raduni, workshop e incontri in tutta Italia per gli appassionati di campeggio con tenda da tetto. I nostri eventi sono pensati per famiglie, coppie e avventurieri solitari che vogliono condividere esperienze, imparare nuove tecniche e scoprire destinazioni fuori dai circuiti tradizionali.</p><h2>Prossimi eventi</h2><p><a href="/raduno-nazionale-2026/">Raduno Nazionale 2026</a> — 1-3 Maggio al Lago di Pietrafitta, Umbria. Tre giorni di fuoristrada, gravel bike, kayak e workshop. 100 piazzole disponibili.</p><h2>Perché partecipare</h2><p>I raduni sono il cuore della nostra community. Potrai confrontare diversi modelli di tende da tetto, ricevere consigli dagli esperti, provare attrezzature e stringere amicizie con persone che condividono la tua passione per il viaggio all'aria aperta.</p><nav><a href="/">Home</a> &gt; Eventi</nav></main>`
+    staticContent: `<main id="main-content"><h1>Eventi e Raduni</h1><p>La community Tende da Tetto e Campeggio organizza raduni, workshop e incontri in tutta Italia per gli appassionati di campeggio con tenda da tetto. I nostri eventi sono pensati per famiglie, coppie e avventurieri solitari che vogliono condividere esperienze, imparare nuove tecniche e scoprire destinazioni fuori dai circuiti tradizionali.</p><h2>Prossimi eventi</h2><p><a href="/raduno-nazionale-2026/">Raduno Nazionale 2026</a> — 1-3 Maggio al Lago di Pietrafitta, Umbria. Tre giorni di fuoristrada, gravel bike, kayak e workshop. 100 piazzole disponibili.</p><h2>Perché partecipare</h2><p>I raduni sono il cuore della nostra community. Potrai confrontare diversi modelli di tende da tetto, ricevere consigli dagli esperti, provare attrezzature e stringere amicizie con persone che condividono la tua passione per il viaggio all'aria aperta.</p><h2>Resta aggiornato</h2><p>Iscriviti alla nostra newsletter e seguici sui social per non perdere nessun evento. Pubblichiamo regolarmente aggiornamenti su date, location e programmi dei prossimi raduni e incontri della community.</p><nav><a href="/">Home</a> &gt; Eventi</nav></main>`
   },
   {
     path: "guide",
@@ -174,7 +174,7 @@ const staticPages = [
     description: "Scopri la community più grande in Italia dedicata alle tende da tetto e al campeggio. Dal 2021 uniamo appassionati di tutta Italia.",
     image: "/og-image.jpg",
     ogType: "website",
-    staticContent: `<main id="main-content"><h1>Chi Siamo</h1><p>Tende da Tetto e Campeggio è la community italiana di riferimento per chi ama viaggiare e dormire all'avventura con la propria tenda da tetto. Fondata nel 2021, oggi contiamo oltre 40.000 membri attivi su Facebook, Instagram e il nostro sito web.</p><h2>La nostra missione</h2><p>Crediamo che viaggiare con una tenda da tetto sia il modo più autentico per esplorare l'Italia e il mondo. Offriamo guide pratiche, recensioni di attrezzature, itinerari testati dalla community e una rete di appassionati sempre pronti a condividere consigli e esperienze. Organizziamo raduni annuali, workshop di formazione e meetup regionali per rafforzare i legami tra i membri.</p><h2>Unisciti a noi</h2><p>Che tu sia un principiante curioso o un campeggiatore esperto, nella nostra community troverai risposte, ispirazione e nuovi compagni di viaggio. Seguici sui social, iscriviti alla newsletter e partecipa ai nostri <a href="/eventi/">eventi</a>.</p><nav><a href="/">Home</a> &gt; Chi Siamo</nav></main>`
+    staticContent: `<main id="main-content"><h1>Chi Siamo</h1><p>Tende da Tetto e Campeggio è la community italiana di riferimento per chi ama viaggiare e dormire all'avventura con la propria tenda da tetto. Fondata nel 2021, oggi contiamo oltre 40.000 membri attivi su Facebook, Instagram e il nostro sito web.</p><h2>La nostra missione</h2><p>Crediamo che viaggiare con una tenda da tetto sia il modo più autentico per esplorare l'Italia e il mondo. Offriamo guide pratiche, recensioni di attrezzature, itinerari testati dalla community e una rete di appassionati sempre pronti a condividere consigli e esperienze. Organizziamo raduni annuali, workshop di formazione e meetup regionali per rafforzare i legami tra i membri.</p><h2>Unisciti a noi</h2><p>Che tu sia un principiante curioso o un campeggiatore esperto, nella nostra community troverai risposte, ispirazione e nuovi compagni di viaggio. Seguici sui social, iscriviti alla newsletter e partecipa ai nostri <a href="/eventi/">eventi</a>.</p><h2>I nostri numeri</h2><p>Oltre 40.000 membri attivi, 10 guide approfondite, raduni annuali in tutta Italia e una rete di partner che include i principali brand del settore outdoor e campeggio.</p><nav><a href="/">Home</a> &gt; Chi Siamo</nav></main>`
   },
   {
     path: "faq",
@@ -200,7 +200,7 @@ const staticPages = [
     description: "Contatta la community Tende da Tetto e Campeggio. Scrivici per informazioni, collaborazioni, proposte di eventi o partnership con il tuo brand outdoor.",
     image: "/og-image.jpg",
     ogType: "website",
-    staticContent: `<main id="main-content"><h1>Contatti</h1><p>Hai domande, suggerimenti o vuoi collaborare con la community Tende da Tetto e Campeggio? Siamo sempre felici di ricevere messaggi dalla nostra community di oltre 40.000 appassionati di campeggio e tende da tetto in Italia.</p><h2>Come contattarci</h2><p>Puoi scriverci all'indirizzo email info@tendedatettoecampeggio.it per qualsiasi richiesta: informazioni generali, proposte di collaborazione, segnalazione di campeggi e aree sosta, suggerimenti per nuovi articoli o per diventare partner della community.</p><h2>Collaborazioni e partnership</h2><p>Sei un brand del settore outdoor, un produttore di tende da tetto o un gestore di campeggi? Contattaci per scoprire le nostre opportunità di partnership, sponsorizzazione eventi e contenuti dedicati. Lavoriamo con aziende che condividono la nostra passione per il viaggio all'aria aperta.</p><nav><a href="/">Home</a> &gt; Contatti</nav></main>`
+    staticContent: `<main id="main-content"><h1>Contatti</h1><p>Hai domande, suggerimenti o vuoi collaborare con la community Tende da Tetto e Campeggio? Siamo sempre felici di ricevere messaggi dalla nostra community di oltre 40.000 appassionati di campeggio e tende da tetto in Italia.</p><h2>Come contattarci</h2><p>Puoi scriverci all'indirizzo email info@tendedatettoecampeggio.it per qualsiasi richiesta: informazioni generali, proposte di collaborazione, segnalazione di campeggi e aree sosta, suggerimenti per nuovi articoli o per diventare partner della community.</p><h2>Collaborazioni e partnership</h2><p>Sei un brand del settore outdoor, un produttore di tende da tetto o un gestore di campeggi? Contattaci per scoprire le nostre opportunità di partnership, sponsorizzazione eventi e contenuti dedicati. Lavoriamo con aziende che condividono la nostra passione per il viaggio all'aria aperta.</p><h2>Tempi di risposta</h2><p>Rispondiamo generalmente entro 48 ore lavorative. Per richieste urgenti relative agli eventi e ai raduni, ti consigliamo di contattarci con almeno due settimane di anticipo. Seguici anche sui nostri canali social per aggiornamenti in tempo reale.</p><nav><a href="/">Home</a> &gt; Contatti</nav></main>`
   },
   {
     path: "privacy",
@@ -208,7 +208,7 @@ const staticPages = [
     description: "Informativa sulla privacy del sito tendedatettoecampeggio.it ai sensi del GDPR. Scopri come raccogliamo, utilizziamo e proteggiamo i tuoi dati personali.",
     image: "/og-image.jpg",
     ogType: "website",
-    staticContent: `<main id="main-content"><h1>Privacy Policy</h1><p>Informativa sulla privacy ai sensi del Regolamento UE 2016/679 (GDPR) per il sito web tendedatettoecampeggio.it, gestito da Tende da Tetto e Campeggio.</p><h2>Titolare del trattamento</h2><p>Il titolare del trattamento dei dati personali è Tende da Tetto e Campeggio, con sede in Italia. Per qualsiasi richiesta relativa ai tuoi dati personali puoi contattarci all'indirizzo info@tendedatettoecampeggio.it.</p><h2>Dati raccolti</h2><p>Raccogliamo dati di navigazione tramite cookie tecnici e analitici, dati forniti volontariamente tramite i moduli di contatto e newsletter, e dati di utilizzo del sito per migliorare l'esperienza utente. Non vendiamo né condividiamo i tuoi dati con terze parti per scopi di marketing.</p><h2>I tuoi diritti</h2><p>Hai il diritto di accedere, rettificare, cancellare i tuoi dati personali e opporti al loro trattamento. Per esercitare questi diritti, contattaci via email.</p><nav><a href="/">Home</a> &gt; Privacy Policy</nav></main>`
+    staticContent: `<main id="main-content"><h1>Privacy Policy</h1><p>Informativa sulla privacy ai sensi del Regolamento UE 2016/679 (GDPR) per il sito web tendedatettoecampeggio.it, gestito da Tende da Tetto e Campeggio.</p><h2>Titolare del trattamento</h2><p>Il titolare del trattamento dei dati personali è Tende da Tetto e Campeggio, con sede in Italia. Per qualsiasi richiesta relativa ai tuoi dati personali puoi contattarci all'indirizzo info@tendedatettoecampeggio.it.</p><h2>Dati raccolti</h2><p>Raccogliamo dati di navigazione tramite cookie tecnici e analitici, dati forniti volontariamente tramite i moduli di contatto e newsletter, e dati di utilizzo del sito per migliorare l'esperienza utente. Non vendiamo né condividiamo i tuoi dati con terze parti per scopi di marketing.</p><h2>I tuoi diritti</h2><p>Hai il diritto di accedere, rettificare, cancellare i tuoi dati personali e opporti al loro trattamento. Per esercitare questi diritti, contattaci via email all\'indirizzo info@tendedatettoecampeggio.it.</p><h2>Aggiornamenti della policy</h2><p>Questa informativa può essere aggiornata periodicamente. Ti invitiamo a consultare questa pagina regolarmente per eventuali modifiche. L\'ultima revisione è stata effettuata nel 2026.</p><nav><a href="/">Home</a> &gt; Privacy Policy</nav></main>`
   },
   {
     path: "termini",
@@ -216,7 +216,7 @@ const staticPages = [
     description: "Termini e condizioni d'uso del sito tendedatettoecampeggio.it. Regole di partecipazione alla community, utilizzo dei contenuti e responsabilità degli utenti.",
     image: "/og-image.jpg",
     ogType: "website",
-    staticContent: `<main id="main-content"><h1>Termini e Condizioni</h1><p>I presenti Termini e Condizioni regolano l'utilizzo del sito web tendedatettoecampeggio.it e dei servizi offerti dalla community Tende da Tetto e Campeggio.</p><h2>Utilizzo del sito</h2><p>Il sito è destinato a fornire informazioni, guide e risorse relative alle tende da tetto e al campeggio. I contenuti pubblicati sono a scopo informativo e basati sulle esperienze della community. L'utilizzo delle informazioni è sotto la responsabilità dell'utente.</p><h2>Proprietà intellettuale</h2><p>Tutti i contenuti del sito, inclusi testi, immagini, loghi e grafica, sono protetti dal diritto d'autore e sono di proprietà di Tende da Tetto e Campeggio o dei rispettivi autori. È vietata la riproduzione non autorizzata.</p><h2>Limitazione di responsabilità</h2><p>Le informazioni pubblicate su questo sito sono fornite senza garanzia di completezza o accuratezza. Tende da Tetto e Campeggio non è responsabile per eventuali danni derivanti dall'utilizzo delle informazioni contenute nel sito.</p><nav><a href="/">Home</a> &gt; Termini e Condizioni</nav></main>`
+    staticContent: `<main id="main-content"><h1>Termini e Condizioni</h1><p>I presenti Termini e Condizioni regolano l'utilizzo del sito web tendedatettoecampeggio.it e dei servizi offerti dalla community Tende da Tetto e Campeggio.</p><h2>Utilizzo del sito</h2><p>Il sito è destinato a fornire informazioni, guide e risorse relative alle tende da tetto e al campeggio. I contenuti pubblicati sono a scopo informativo e basati sulle esperienze della community. L'utilizzo delle informazioni è sotto la responsabilità dell'utente.</p><h2>Proprietà intellettuale</h2><p>Tutti i contenuti del sito, inclusi testi, immagini, loghi e grafica, sono protetti dal diritto d'autore e sono di proprietà di Tende da Tetto e Campeggio o dei rispettivi autori. È vietata la riproduzione non autorizzata.</p><h2>Limitazione di responsabilità</h2><p>Le informazioni pubblicate su questo sito sono fornite senza garanzia di completezza o accuratezza. Tende da Tetto e Campeggio non è responsabile per eventuali danni derivanti dall'utilizzo delle informazioni contenute nel sito.</p><h2>Modifiche ai termini</h2><p>Ci riserviamo il diritto di modificare questi termini in qualsiasi momento. Le modifiche saranno pubblicate su questa pagina con la data di ultimo aggiornamento.</p><nav><a href="/">Home</a> &gt; Termini e Condizioni</nav></main>`
   },
   {
     path: "cookie",
@@ -224,7 +224,7 @@ const staticPages = [
     description: "Informativa sull'uso dei cookie sul sito tendedatettoecampeggio.it. Scopri quali cookie utilizziamo, le finalità e come gestire le tue preferenze.",
     image: "/og-image.jpg",
     ogType: "website",
-    staticContent: `<main id="main-content"><h1>Cookie Policy</h1><p>Questa Cookie Policy descrive l'uso dei cookie e delle tecnologie simili sul sito web tendedatettoecampeggio.it, in conformità con la normativa europea sulla protezione dei dati personali e la Direttiva ePrivacy.</p><h2>Cosa sono i cookie</h2><p>I cookie sono piccoli file di testo che vengono salvati sul tuo dispositivo quando visiti un sito web. Servono a migliorare la tua esperienza di navigazione, ricordare le tue preferenze e fornire statistiche aggregate sull'utilizzo del sito.</p><h2>Cookie utilizzati</h2><p>Utilizziamo cookie tecnici necessari al funzionamento del sito, cookie analitici per comprendere come i visitatori interagiscono con le nostre pagine, e cookie di terze parti per i servizi di social media integrati. Non utilizziamo cookie di profilazione per scopi pubblicitari.</p><h2>Gestione dei cookie</h2><p>Puoi gestire le tue preferenze sui cookie attraverso le impostazioni del tuo browser. La disattivazione di alcuni cookie potrebbe influire sulla funzionalità del sito. Per maggiori informazioni, consulta la nostra <a href="/privacy/">Privacy Policy</a>.</p><nav><a href="/">Home</a> &gt; Cookie Policy</nav></main>`
+    staticContent: `<main id="main-content"><h1>Cookie Policy</h1><p>Questa Cookie Policy descrive l'uso dei cookie e delle tecnologie simili sul sito web tendedatettoecampeggio.it, in conformità con la normativa europea sulla protezione dei dati personali e la Direttiva ePrivacy.</p><h2>Cosa sono i cookie</h2><p>I cookie sono piccoli file di testo che vengono salvati sul tuo dispositivo quando visiti un sito web. Servono a migliorare la tua esperienza di navigazione, ricordare le tue preferenze e fornire statistiche aggregate sull'utilizzo del sito.</p><h2>Cookie utilizzati</h2><p>Utilizziamo cookie tecnici necessari al funzionamento del sito, cookie analitici per comprendere come i visitatori interagiscono con le nostre pagine, e cookie di terze parti per i servizi di social media integrati. Non utilizziamo cookie di profilazione per scopi pubblicitari.</p><h2>Gestione dei cookie</h2><p>Puoi gestire le tue preferenze sui cookie attraverso le impostazioni del tuo browser. La disattivazione di alcuni cookie potrebbe influire sulla funzionalità del sito. Per maggiori informazioni sulla gestione dei tuoi dati personali, consulta la nostra <a href="/privacy/">Privacy Policy</a> completa. Per domande specifiche sui cookie, contattaci via email.</p><nav><a href="/">Home</a> &gt; Cookie Policy</nav></main>`
   }
 ];
 
@@ -298,23 +298,22 @@ function generateOgPages() {
     const SUFFIX_SHORT = ' | TDTC';
     const baseTitle = guide.seoTitle || guide.title;
     const title = baseTitle.includes('Tende da Tetto')
-      ? guide.title
-      : (guide.title.length + SUFFIX_LONG.length <= 60)
-        ? `${guide.title}${SUFFIX_LONG}`
-        : (guide.title.length + SUFFIX_SHORT.length <= 60)
-          ? `${guide.title}${SUFFIX_SHORT}`
-          : guide.title;
+      ? baseTitle
+      : (baseTitle.length + SUFFIX_LONG.length <= 60)
+        ? `${baseTitle}${SUFFIX_LONG}`
+        : (baseTitle.length + SUFFIX_SHORT.length <= 60)
+          ? `${baseTitle}${SUFFIX_SHORT}`
+          : baseTitle;
 
     let html = replaceOgMeta(baseHtml, { pageUrl, title, description: guide.description, imageUrl, ogType: 'article', canonical: pageUrl });
 
     // Build related guides: 1 same-category + 2 different-category for diversity
-    const sameCategory = guides.filter(g => g.slug !== guide.slug && g.category === guide.category);
-    const diffCategory = guides.filter(g => g.slug !== guide.slug && g.category !== guide.category);
-    const relatedGuides = [
-      ...sameCategory.slice(0, 1),
-      ...diffCategory.slice(0, 2),
-      ...sameCategory.slice(1, 3), // fill remaining slots
-    ].slice(0, 3);
+    // Round-robin: each guide links to next 4 guides (wrapping), ensuring even distribution
+    const guideIdx = guides.indexOf(guide);
+    const relatedGuides = [];
+    for (let i = 1; i <= 4 && relatedGuides.length < 4; i++) {
+      relatedGuides.push(guides[(guideIdx + i) % guides.length]);
+    }
     const relatedHtml = relatedGuides.length > 0
       ? `<section><h2>Guide Correlate</h2><ul>${relatedGuides.map(g => `<li><a href="/guide/${g.slug}/">${escapeHtml(g.title)}</a></li>`).join('')}</ul></section>`
       : '';

@@ -10,7 +10,9 @@ const guides = [
   {
     slug: "tende-da-tetto-confronto-morbide-guscio-rigido-ibride",
     title: "Tende da tetto a confronto: morbide vs a guscio rigido vs ibride",
+    seoTitle: "Tende da tetto: morbide vs guscio rigido vs ibride",
     description: "Guida alle tre famiglie di tende da tetto: morbide a libro, guscio rigido a pantografo e ibride. Vantaggi, svantaggi e quale scegliere per il tuo viaggio.",
+    expandedContent: `<h2>Le tre famiglie di tende da tetto</h2><p>Le tende da tetto si dividono in tre categorie principali: morbide (a libro), a guscio rigido (pantografo) e ibride. Ciascuna tipologia presenta caratteristiche uniche in termini di peso, velocità di apertura, isolamento termico e prezzo. Le tende morbide sono le più economiche e leggere, ideali per chi cerca versatilità. Le tende a guscio rigido offrono maggiore comodità e rapidità di montaggio, perfette per soste frequenti. Le ibride combinano i vantaggi di entrambe, rappresentando un compromesso interessante per molti campeggiatori.</p><h2>Come scegliere la tenda giusta</h2><p>La scelta dipende dal tuo stile di viaggio, dal budget disponibile, dal tipo di veicolo e dalla frequenza di utilizzo. In questa guida analizziamo pro e contro di ogni tipologia per aiutarti a fare la scelta migliore.</p>`,
     image: "/img_articles/gusci_comparazione/tende_gusci.png",
     author: "Lo Staff di Tende da Tetto",
     category: "Attrezzatura",
@@ -19,7 +21,9 @@ const guides = [
   {
     slug: "dieci-giorni-liberta-elba-tenda-tetto",
     title: "Dieci giorni di libertà: due donne, una tenda da tetto e l'Italia che profuma di sale",
+    seoTitle: "10 giorni in tenda da tetto: Genova, Elba e Toscana",
     description: "Un viaggio di 10 giorni dall'auto camperizzata con tenda da tetto: da Genova all'Isola d'Elba, tra spiagge, biciclette e la Toscana che respira.",
+    expandedContent: `<h2>L'itinerario: da Genova all'Isola d'Elba</h2><p>Nat e Vale raccontano il loro viaggio di 10 giorni con l'auto camperizzata e la tenda da tetto, partendo da Genova e attraversando la costa ligure fino all'Isola d'Elba. Tra spiagge deserte, strade panoramiche, pedalate in bicicletta e tramonti sulla Toscana, un'avventura che dimostra come la tenda da tetto sia la compagna ideale per esplorare l'Italia con lentezza.</p><h2>Consigli pratici</h2><p>Dove sostare con la tenda da tetto lungo la costa toscana, come organizzare i bagagli per un viaggio di coppia e quali campeggi scegliere per la vista mare migliore. Un racconto autentico e ricco di spunti per chi vuole replicare l'esperienza.</p>`,
     image: "/img_articles/nat_vale_elba/01_elba.jpg",
     author: "Nat e Vale",
     category: "Destinazioni",
@@ -29,6 +33,7 @@ const guides = [
     slug: "viaggio-nozze-tenda-tetto-namibia",
     title: "Viaggio di nozze in tenda da tetto in Namibia",
     description: "La storia di Chiara e Piero: un budget limitato e un viaggio indimenticabile di 17 giorni e 5.000 km in Namibia tra deserti, oceani e savane.",
+    expandedContent: `<h2>17 giorni attraverso la Namibia</h2><p>Chiara e Piero hanno scelto un viaggio di nozze alternativo: 17 giorni e 5.000 km attraverso la Namibia con una tenda da tetto noleggiata in loco. Dal deserto del Namib all'Etosha National Park, dal Fish River Canyon alla Skeleton Coast, un'avventura indimenticabile con un budget contenuto.</p><h2>Perché la Namibia in tenda da tetto</h2><p>La Namibia è una delle destinazioni più amate dai campeggiatori con tenda da tetto: strade sterrate sicure, campsite attrezzati nel bush, paesaggi mozzafiato e fauna selvatica incredibile. Scopri come organizzare il tuo viaggio in Namibia e quali campeggi prenotare.</p>`,
     image: "/img_articles/namibia_viaggio_nozze/DSCN1226.JPG",
     author: "Piero e Chiara",
     category: "Destinazioni",
@@ -38,6 +43,7 @@ const guides = [
     slug: "forte-leone-dachzelt-camp-italia",
     title: "Forte Leone: da scoperta casuale a DACHZELT CAMP Italia",
     description: "A 1.500 metri di quota nelle montagne venete, il Forte Leone ospita il gemellaggio tra la community italiana e quella tedesca dei Dachzeltnomaden.",
+    expandedContent: `<h2>Il gemellaggio italo-tedesco</h2><p>A 1.500 metri di quota, immerso nelle montagne del Veneto, il Forte Leone è diventato il teatro di un evento storico per la community delle tende da tetto: il primo gemellaggio ufficiale tra la community italiana Tende da Tetto e Campeggio e quella tedesca dei Dachzeltnomaden.</p><h2>L'evento al Forte Leone</h2><p>Il Dachzelt Camp Italia ha visto la partecipazione di decine di equipaggi provenienti da tutta Italia e dalla Germania. Tre giorni di campeggio in quota, escursioni nei sentieri alpini, workshop sulle tende da tetto, grigliate comuni e scambio di esperienze tra due community che condividono la stessa passione per il viaggio all'aria aperta.</p>`,
     image: "/img_articles/forte_leone_raduno_articolo/20250704_DACHZELT-CAMP-Italia-2025_Patrick-Becker_Gruppenfoto_Drohne_.jpg",
     author: "Lo Staff di Tende da Tetto",
     category: "Eventi",
@@ -47,6 +53,7 @@ const guides = [
     slug: "spagna-del-nord-on-the-road",
     title: "Spagna del Nord on the road: 19 giorni di libertà e natura!",
     description: "Un viaggio indimenticabile attraverso Paesi Baschi, Cantabria, Asturie e Galizia con la tenda da tetto. 19 giorni di strade, oceano e montagne.",
+    expandedContent: `<h2>19 giorni nel nord della Spagna</h2><p>Un viaggio on the road di 19 giorni attraverso il nord della Spagna con la tenda da tetto: dai Pirenei alla costa atlantica, passando per i Picos de Europa, la Galizia verde e i paesini baschi. Un itinerario che combina natura selvaggia, gastronomia eccezionale e campeggio libero responsabile.</p><h2>Consigli per il campeggio in Spagna</h2><p>La Spagna del Nord offre numerose opportunità per il campeggio con tenda da tetto: aree sosta gratuite, campeggi economici con vista oceano e una cultura dell'outdoor molto sviluppata. In questa guida troverai indicazioni pratiche su dove dormire, cosa mangiare e quali strade percorrere.</p>`,
     image: "/img_articles/spagna_del_nord_sara_guido/IMG_20250817_152218.jpg",
     author: "Sara Sarti",
     category: "Destinazioni",
@@ -56,6 +63,7 @@ const guides = [
     slug: "tende-da-tetto-super-ciurma-tempo-lento",
     title: "Tende da Tetto, La Super Ciurma e L'Arte del Tempo Lento",
     description: "Viaggiare con bambini e cani, camperizzazione fai-da-te e l'arte di recuperare il tempo lento: la storia di una famiglia nomade accessibile.",
+    expandedContent: `<h2>Viaggiare con i bambini in tenda da tetto</h2><p>La Super Ciurma è una famiglia che ha fatto del tempo lento la propria filosofia di viaggio. Con i bambini a bordo e la tenda da tetto sul veicolo, esplorano l'Italia e l'Europa senza fretta, fermandosi dove la curiosità li porta e trasformando ogni sosta in un'avventura educativa.</p><h2>L'arte del tempo lento</h2><p>In un'epoca di viaggi frenetici e liste di cose da vedere, la Super Ciurma ci insegna che il vero lusso è avere tempo. Tempo per giocare all'aperto, per cucinare insieme, per osservare le stelle dalla tenda da tetto e per scoprire angoli nascosti che solo chi viaggia lentamente può trovare.</p>`,
     image: "/img_articles/arte_tempo_lento_giulia_brenno/70bcbd07-91d1-4d9a-ab43-d25822677043.jpg",
     author: "Giulia e Brenno",
     category: "Tips",
@@ -65,6 +73,7 @@ const guides = [
     slug: "dormire-tenda-freddo-52-gallerie-pasubio",
     title: "Dormire in tenda da tetto anche col freddo? Sì, si può!",
     description: "La nostra esperienza alle 52 Gallerie del Pasubio: come affrontare il freddo autunnale in tenda da tetto con l'attrezzatura giusta.",
+    expandedContent: `<h2>Campeggio invernale con tenda da tetto</h2><p>Dormire in tenda da tetto anche quando le temperature scendono sotto zero è possibile, con la giusta preparazione. Questa guida racconta l'esperienza di una notte alle 52 Gallerie del Pasubio, nel cuore delle Prealpi Vicentine, con temperature rigide e panorami mozzafiato.</p><h2>Come prepararsi al freddo</h2><p>Dall'isolamento termico del materasso alla scelta del sacco a pelo invernale, dalla gestione della condensa all'abbigliamento a strati: tutti i consigli pratici per affrontare il campeggio invernale in tenda da tetto senza rinunciare al comfort. Un'esperienza che dimostra come la stagione fredda possa essere la più affascinante per dormire sotto le stelle.</p>`,
     image: "/img_articles/dormire_freddo/WhatsApp%20Image%202026-01-10%20at%2017.06.43%20(2).jpeg",
     author: "Sara Sarti",
     category: "Tips",
@@ -73,7 +82,9 @@ const guides = [
   {
     slug: "viaggiare-famiglia-minivan-camperboxes",
     title: "Viaggiare in famiglia con il nostro minivan: esperienze di libertà e scoperta",
+    seoTitle: "Viaggiare in famiglia col minivan: libertà e scoperta",
     description: "La nostra vita in viaggio con un Ford Tourneo allestito fai-da-te: famiglia, cane e avventure tra Val Trebbia, Liguria, Elba e Abruzzo.",
+    expandedContent: `<h2>La vita in viaggio con il minivan</h2><p>Arianna e David hanno trasformato il loro Ford Tourneo in una casa mobile grazie a un allestimento fai-da-te con Camperboxes e tenda da tetto. Insieme alla famiglia e al cane, esplorano l'Italia dalla Val Trebbia alla Liguria, dall'Isola d'Elba all'Abruzzo, dimostrando che non serve un camper per vivere grandi avventure.</p><h2>Allestimento e organizzazione</h2><p>Come organizzare lo spazio in un minivan per viaggiare con bambini e animali domestici: sistema modulare Camperboxes, cucina portatile, tenda da tetto per la notte e consigli pratici per massimizzare il comfort in poco spazio. Un modello di viaggio accessibile a tutti.</p>`,
     image: "/img_articles/i_nostri_viaggi_in_camper/7-van-camper-boxes.jpg",
     author: "Arianna e David di Camperboxes",
     category: "Destinazioni",
@@ -82,7 +93,9 @@ const guides = [
   {
     slug: "campeggio-libero-tenda-tetto-monte-grappa",
     title: "Campeggio libero in tenda da tetto: due giorni di solitudine sul Monte Grappa",
+    seoTitle: "Campeggio libero in tenda da tetto sul Monte Grappa",
     description: "Due giorni in solitaria sul Monte Grappa con la Jeep Renegade 4x4 e la tenda da tetto Yakima: silenzio, natura e campeggio libero responsabile.",
+    expandedContent: `<h2>Due giorni di solitudine in montagna</h2><p>Igor racconta la sua esperienza di campeggio libero responsabile sul Monte Grappa con la Jeep Renegade 4x4 e la tenda da tetto Yakima. Due giorni di silenzio assoluto, immerso nella natura delle Prealpi Venete, tra sentieri panoramici, albe mozzafiato e la libertà totale di dormire dove il cuore lo porta.</p><h2>Campeggio libero responsabile</h2><p>Il campeggio libero in Italia richiede rispetto per l'ambiente e conoscenza delle normative locali. In questa guida troverai consigli su come praticare il campeggio libero in modo responsabile: non lasciare tracce, rispettare la flora e la fauna, scegliere i posti giusti e contribuire alla preservazione dei luoghi che amiamo esplorare.</p>`,
     image: "/img_articles/campeggio__libero_Monte_grappa/Immagine1.jpg",
     author: "Igor Ferrazzi",
     category: "Destinazioni",
@@ -92,6 +105,7 @@ const guides = [
     slug: "intervista-esperti-carcamp-menabo",
     title: "Intervista con gli esperti di Carcamp e Menabò",
     description: "Per tutta la community l'intervista fatta con gli esperti di settore Carcamp e Menabò per la conoscenza dei dettagli tecnici delle barre portatutto.",
+    expandedContent: `<h2>Carcamp e Menabò: chi sono</h2><p>Carcamp e Menabò sono due realtà italiane di riferimento nel mondo delle tende da tetto e degli accessori per il campeggio su veicolo. In questa intervista esclusiva, i fondatori condividono la loro esperienza, i consigli per scegliere la tenda da tetto giusta e le tendenze del mercato italiano.</p><h2>Consigli degli esperti</h2><p>Dalla scelta del portapacchi alla compatibilità con diversi veicoli, dalla manutenzione stagionale alle novità del settore: un'intervista ricca di spunti pratici per chi vuole acquistare la sua prima tenda da tetto o migliorare il proprio setup. Scopri quali modelli consigliano gli esperti e quali errori evitare nell'allestimento del tuo veicolo.</p>`,
     image: "/img_articles/barre_menabo/carcamp_menabo_cover.png",
     author: "Lo Staff di Tende da Tetto",
     category: "Attrezzatura",
@@ -121,7 +135,7 @@ const staticPages = [
     description: "Raduno Nazionale Tende da Tetto 2026: 1-2-3 maggio al Lago di Pietrafitta, Umbria. Tre giorni di avventura, condivisione e divertimento con la community.",
     image: "/img_raduni/2026.05.01-03_LagoDiPietrafitta-RadunoNazionale/Raduno_Locandina2026.jpg",
     ogType: "event",
-    staticContent: `<main id="main-content"><h1>Raduno Nazionale Tende da Tetto 2026</h1><p>1-3 Maggio 2026 — Lago di Pietrafitta, Umbria</p><p>Tre giorni di avventura con la community italiana. Tour fuoristrada, bici gravel, kayak, cene tipiche, workshop tende e attività per bambini.</p><p>Prezzo: 80€ membri community / 150€ standard. 100 piazzole disponibili.</p><nav><a href="/">Home</a> &gt; <a href="/eventi">Eventi</a> &gt; Raduno Nazionale 2026</nav></main>`,
+    staticContent: `<main id="main-content"><h1>Raduno Nazionale Tende da Tetto 2026</h1><p>Il Raduno Nazionale Tende da Tetto 2026 si terrà dall'1 al 3 Maggio 2026 presso il Lago di Pietrafitta, nel cuore verde dell'Umbria. Tre giorni di pura avventura, condivisione e natura con la community italiana più grande dedicata alle tende da tetto e al campeggio.</p><h2>Programma dell'evento</h2><p>Il raduno prevede tour fuoristrada guidati tra le colline umbre, escursioni in bici gravel lungo percorsi panoramici, sessioni di kayak sul lago, cene tipiche con prodotti del territorio, workshop pratici sulla manutenzione e installazione delle tende da tetto, e tante attività per bambini e famiglie. Un'occasione unica per conoscere altri appassionati e scoprire nuovi modelli di tende.</p><h2>Prezzi e disponibilità</h2><p>Il costo di partecipazione è di 80€ per i membri della community e 150€ per i non iscritti. Sono disponibili 100 piazzole, ciascuna con spazio sufficiente per il veicolo e la tenda da tetto. La prenotazione anticipata è consigliata per garantire il proprio posto.</p><nav><a href="/">Home</a> &gt; <a href="/eventi/">Eventi</a> &gt; Raduno Nazionale 2026</nav></main>`,
     jsonLd: {
       "@context": "https://schema.org",
       "@type": "Event",
@@ -144,7 +158,7 @@ const staticPages = [
     description: "Scopri i prossimi raduni, workshop ed eventi della community italiana di tende da tetto e campeggio. Partecipa ai ritrovi e conosci altri appassionati!",
     image: "/og-image.jpg",
     ogType: "website",
-    staticContent: `<main id="main-content"><h1>Eventi e Raduni</h1><p>Partecipa ai raduni e agli eventi organizzati dalla community Tende da Tetto e Campeggio in tutta Italia.</p><a href="/raduno-nazionale-2026">Raduno Nazionale 2026 — 1-3 Maggio, Lago di Pietrafitta</a><nav><a href="/">Home</a> &gt; Eventi</nav></main>`
+    staticContent: `<main id="main-content"><h1>Eventi e Raduni</h1><p>La community Tende da Tetto e Campeggio organizza raduni, workshop e incontri in tutta Italia per gli appassionati di campeggio con tenda da tetto. I nostri eventi sono pensati per famiglie, coppie e avventurieri solitari che vogliono condividere esperienze, imparare nuove tecniche e scoprire destinazioni fuori dai circuiti tradizionali.</p><h2>Prossimi eventi</h2><p><a href="/raduno-nazionale-2026/">Raduno Nazionale 2026</a> — 1-3 Maggio al Lago di Pietrafitta, Umbria. Tre giorni di fuoristrada, gravel bike, kayak e workshop. 100 piazzole disponibili.</p><h2>Perché partecipare</h2><p>I raduni sono il cuore della nostra community. Potrai confrontare diversi modelli di tende da tetto, ricevere consigli dagli esperti, provare attrezzature e stringere amicizie con persone che condividono la tua passione per il viaggio all'aria aperta.</p><nav><a href="/">Home</a> &gt; Eventi</nav></main>`
   },
   {
     path: "guide",
@@ -160,7 +174,7 @@ const staticPages = [
     description: "Scopri la community più grande in Italia dedicata alle tende da tetto e al campeggio. Dal 2021 uniamo appassionati di tutta Italia.",
     image: "/og-image.jpg",
     ogType: "website",
-    staticContent: `<main id="main-content"><h1>Chi Siamo</h1><p>Tende da Tetto e Campeggio è la community italiana di riferimento per chi ama viaggiare e dormire all'avventura con la propria tenda da tetto. Fondata nel 2021, contiamo oltre 40.000 membri attivi.</p><nav><a href="/">Home</a> &gt; Chi Siamo</nav></main>`
+    staticContent: `<main id="main-content"><h1>Chi Siamo</h1><p>Tende da Tetto e Campeggio è la community italiana di riferimento per chi ama viaggiare e dormire all'avventura con la propria tenda da tetto. Fondata nel 2021, oggi contiamo oltre 40.000 membri attivi su Facebook, Instagram e il nostro sito web.</p><h2>La nostra missione</h2><p>Crediamo che viaggiare con una tenda da tetto sia il modo più autentico per esplorare l'Italia e il mondo. Offriamo guide pratiche, recensioni di attrezzature, itinerari testati dalla community e una rete di appassionati sempre pronti a condividere consigli e esperienze. Organizziamo raduni annuali, workshop di formazione e meetup regionali per rafforzare i legami tra i membri.</p><h2>Unisciti a noi</h2><p>Che tu sia un principiante curioso o un campeggiatore esperto, nella nostra community troverai risposte, ispirazione e nuovi compagni di viaggio. Seguici sui social, iscriviti alla newsletter e partecipa ai nostri <a href="/eventi/">eventi</a>.</p><nav><a href="/">Home</a> &gt; Chi Siamo</nav></main>`
   },
   {
     path: "faq",
@@ -186,7 +200,7 @@ const staticPages = [
     description: "Contatta la community Tende da Tetto e Campeggio. Scrivici per informazioni, collaborazioni, proposte di eventi o partnership con il tuo brand outdoor.",
     image: "/og-image.jpg",
     ogType: "website",
-    staticContent: `<main id="main-content"><h1>Contatti</h1><p>Hai domande o vuoi collaborare con la community? Contattaci!</p><p>Email: info@tendedatettoecampeggio.it</p><nav><a href="/">Home</a> &gt; Contatti</nav></main>`
+    staticContent: `<main id="main-content"><h1>Contatti</h1><p>Hai domande, suggerimenti o vuoi collaborare con la community Tende da Tetto e Campeggio? Siamo sempre felici di ricevere messaggi dalla nostra community di oltre 40.000 appassionati di campeggio e tende da tetto in Italia.</p><h2>Come contattarci</h2><p>Puoi scriverci all'indirizzo email info@tendedatettoecampeggio.it per qualsiasi richiesta: informazioni generali, proposte di collaborazione, segnalazione di campeggi e aree sosta, suggerimenti per nuovi articoli o per diventare partner della community.</p><h2>Collaborazioni e partnership</h2><p>Sei un brand del settore outdoor, un produttore di tende da tetto o un gestore di campeggi? Contattaci per scoprire le nostre opportunità di partnership, sponsorizzazione eventi e contenuti dedicati. Lavoriamo con aziende che condividono la nostra passione per il viaggio all'aria aperta.</p><nav><a href="/">Home</a> &gt; Contatti</nav></main>`
   },
   {
     path: "privacy",
@@ -194,7 +208,7 @@ const staticPages = [
     description: "Informativa sulla privacy del sito tendedatettoecampeggio.it ai sensi del GDPR. Scopri come raccogliamo, utilizziamo e proteggiamo i tuoi dati personali.",
     image: "/og-image.jpg",
     ogType: "website",
-    staticContent: `<main id="main-content"><h1>Privacy Policy</h1><p>Informativa sulla privacy ai sensi del Regolamento UE 2016/679 (GDPR).</p><nav><a href="/">Home</a> &gt; Privacy Policy</nav></main>`
+    staticContent: `<main id="main-content"><h1>Privacy Policy</h1><p>Informativa sulla privacy ai sensi del Regolamento UE 2016/679 (GDPR) per il sito web tendedatettoecampeggio.it, gestito da Tende da Tetto e Campeggio.</p><h2>Titolare del trattamento</h2><p>Il titolare del trattamento dei dati personali è Tende da Tetto e Campeggio, con sede in Italia. Per qualsiasi richiesta relativa ai tuoi dati personali puoi contattarci all'indirizzo info@tendedatettoecampeggio.it.</p><h2>Dati raccolti</h2><p>Raccogliamo dati di navigazione tramite cookie tecnici e analitici, dati forniti volontariamente tramite i moduli di contatto e newsletter, e dati di utilizzo del sito per migliorare l'esperienza utente. Non vendiamo né condividiamo i tuoi dati con terze parti per scopi di marketing.</p><h2>I tuoi diritti</h2><p>Hai il diritto di accedere, rettificare, cancellare i tuoi dati personali e opporti al loro trattamento. Per esercitare questi diritti, contattaci via email.</p><nav><a href="/">Home</a> &gt; Privacy Policy</nav></main>`
   },
   {
     path: "termini",
@@ -202,7 +216,7 @@ const staticPages = [
     description: "Termini e condizioni d'uso del sito tendedatettoecampeggio.it. Regole di partecipazione alla community, utilizzo dei contenuti e responsabilità degli utenti.",
     image: "/og-image.jpg",
     ogType: "website",
-    staticContent: `<main id="main-content"><h1>Termini e Condizioni</h1><p>Termini e condizioni d'uso del sito web Tende da Tetto e Campeggio.</p><nav><a href="/">Home</a> &gt; Termini e Condizioni</nav></main>`
+    staticContent: `<main id="main-content"><h1>Termini e Condizioni</h1><p>I presenti Termini e Condizioni regolano l'utilizzo del sito web tendedatettoecampeggio.it e dei servizi offerti dalla community Tende da Tetto e Campeggio.</p><h2>Utilizzo del sito</h2><p>Il sito è destinato a fornire informazioni, guide e risorse relative alle tende da tetto e al campeggio. I contenuti pubblicati sono a scopo informativo e basati sulle esperienze della community. L'utilizzo delle informazioni è sotto la responsabilità dell'utente.</p><h2>Proprietà intellettuale</h2><p>Tutti i contenuti del sito, inclusi testi, immagini, loghi e grafica, sono protetti dal diritto d'autore e sono di proprietà di Tende da Tetto e Campeggio o dei rispettivi autori. È vietata la riproduzione non autorizzata.</p><h2>Limitazione di responsabilità</h2><p>Le informazioni pubblicate su questo sito sono fornite senza garanzia di completezza o accuratezza. Tende da Tetto e Campeggio non è responsabile per eventuali danni derivanti dall'utilizzo delle informazioni contenute nel sito.</p><nav><a href="/">Home</a> &gt; Termini e Condizioni</nav></main>`
   },
   {
     path: "cookie",
@@ -210,7 +224,7 @@ const staticPages = [
     description: "Informativa sull'uso dei cookie sul sito tendedatettoecampeggio.it. Scopri quali cookie utilizziamo, le finalità e come gestire le tue preferenze.",
     image: "/og-image.jpg",
     ogType: "website",
-    staticContent: `<main id="main-content"><h1>Cookie Policy</h1><p>Informativa sull'uso dei cookie ai sensi della normativa europea.</p><nav><a href="/">Home</a> &gt; Cookie Policy</nav></main>`
+    staticContent: `<main id="main-content"><h1>Cookie Policy</h1><p>Questa Cookie Policy descrive l'uso dei cookie e delle tecnologie simili sul sito web tendedatettoecampeggio.it, in conformità con la normativa europea sulla protezione dei dati personali e la Direttiva ePrivacy.</p><h2>Cosa sono i cookie</h2><p>I cookie sono piccoli file di testo che vengono salvati sul tuo dispositivo quando visiti un sito web. Servono a migliorare la tua esperienza di navigazione, ricordare le tue preferenze e fornire statistiche aggregate sull'utilizzo del sito.</p><h2>Cookie utilizzati</h2><p>Utilizziamo cookie tecnici necessari al funzionamento del sito, cookie analitici per comprendere come i visitatori interagiscono con le nostre pagine, e cookie di terze parti per i servizi di social media integrati. Non utilizziamo cookie di profilazione per scopi pubblicitari.</p><h2>Gestione dei cookie</h2><p>Puoi gestire le tue preferenze sui cookie attraverso le impostazioni del tuo browser. La disattivazione di alcuni cookie potrebbe influire sulla funzionalità del sito. Per maggiori informazioni, consulta la nostra <a href="/privacy/">Privacy Policy</a>.</p><nav><a href="/">Home</a> &gt; Cookie Policy</nav></main>`
   }
 ];
 
@@ -282,7 +296,8 @@ function generateOgPages() {
     // Keep titles under 60 chars for SEO
     const SUFFIX_LONG = ' | Tende da Tetto e Campeggio';
     const SUFFIX_SHORT = ' | TDTC';
-    const title = guide.title.includes('Tende da Tetto')
+    const baseTitle = guide.seoTitle || guide.title;
+    const title = baseTitle.includes('Tende da Tetto')
       ? guide.title
       : (guide.title.length + SUFFIX_LONG.length <= 60)
         ? `${guide.title}${SUFFIX_LONG}`
@@ -292,17 +307,21 @@ function generateOgPages() {
 
     let html = replaceOgMeta(baseHtml, { pageUrl, title, description: guide.description, imageUrl, ogType: 'article', canonical: pageUrl });
 
-    // Build related guides links (same category first, then others)
-    const relatedGuides = guides
-      .filter(g => g.slug !== guide.slug)
-      .sort((a, b) => (a.category === guide.category ? -1 : 1) - (b.category === guide.category ? -1 : 1))
-      .slice(0, 3);
+    // Build related guides: 1 same-category + 2 different-category for diversity
+    const sameCategory = guides.filter(g => g.slug !== guide.slug && g.category === guide.category);
+    const diffCategory = guides.filter(g => g.slug !== guide.slug && g.category !== guide.category);
+    const relatedGuides = [
+      ...sameCategory.slice(0, 1),
+      ...diffCategory.slice(0, 2),
+      ...sameCategory.slice(1, 3), // fill remaining slots
+    ].slice(0, 3);
     const relatedHtml = relatedGuides.length > 0
       ? `<section><h2>Guide Correlate</h2><ul>${relatedGuides.map(g => `<li><a href="/guide/${g.slug}/">${escapeHtml(g.title)}</a></li>`).join('')}</ul></section>`
       : '';
 
     // Inject article-specific static content for crawlers
-    const articleStatic = `<main id="main-content"><article><h1>${escapeHtml(guide.title)}</h1><p>${escapeHtml(guide.description)}</p><p>Autore: ${escapeHtml(guide.author)} | Categoria: ${escapeHtml(guide.category)}</p>${relatedHtml}<nav><a href="/">Home</a> &gt; <a href="/guide/">Guide</a> &gt; ${escapeHtml(guide.title)}</nav></article></main>`;
+    const expandedHtml = guide.expandedContent || '';
+    const articleStatic = `<main id="main-content"><article><h1>${escapeHtml(guide.title)}</h1><p>${escapeHtml(guide.description)}</p>${expandedHtml}<p>Autore: ${escapeHtml(guide.author)} | Categoria: ${escapeHtml(guide.category)}</p>${relatedHtml}<nav><a href="/">Home</a> &gt; <a href="/guide/">Guide</a> &gt; ${escapeHtml(guide.title)}</nav></article></main>`;
     html = injectStaticContent(html, articleStatic);
 
     // Inject Article JSON-LD

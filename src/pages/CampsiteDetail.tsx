@@ -284,6 +284,8 @@ const CampsiteDetail = () => {
                 src={campsite.images[0]} 
                 alt={campsite.name}
                 loading="eager"
+                width={800}
+                height={500}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -294,6 +296,8 @@ const CampsiteDetail = () => {
                     src={img} 
                     alt={`${campsite.name} ${index + 2}`}
                     loading="lazy"
+                    width={400}
+                    height={300}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -415,6 +419,8 @@ const CampsiteDetail = () => {
                             src={review.avatar} 
                             alt={review.author}
                             loading="lazy"
+                            width={48}
+                            height={48}
                             className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover"
                           />
                           <div className="flex-1">

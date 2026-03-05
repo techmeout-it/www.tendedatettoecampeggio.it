@@ -118,6 +118,8 @@ const PartnerSection = () => {
                           src={partner.logo} 
                           alt={`Logo ${partner.name}`}
                           loading="lazy"
+                          width={400}
+                          height={300}
                           className={`w-full h-full ${partner.wideLogo ? 'object-contain' : 'object-cover'}`}
                         />
                       </div>

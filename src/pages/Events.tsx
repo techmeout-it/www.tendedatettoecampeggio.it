@@ -731,6 +731,8 @@ const Events = () => {
                           src={event.image} 
                           alt={event.name}
                           loading="lazy"
+                          width={600}
+                          height={192}
                           className="w-full h-full object-cover"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
@@ -1171,6 +1173,7 @@ const Events = () => {
                   <img
                     src={`${selectedGallery.folder}/${encodeURIComponent(selectedGallery.photos[currentPhotoIndex])}`}
                     alt={`Foto ${currentPhotoIndex + 1} di ${selectedGallery.photos.length}`}
+                    loading="lazy"
                     className="max-w-full max-h-[60vh] object-contain select-none pointer-events-none"
                     onContextMenu={(e) => e.preventDefault()}
                     onDragStart={(e) => e.preventDefault()}
@@ -1221,6 +1224,7 @@ const Events = () => {
                         <img
                           src={`${selectedGallery.folder}/${encodeURIComponent(photo)}`}
                           alt={`Miniatura ${index + 1}`}
+                          loading="lazy"
                           className="w-full h-full object-cover select-none"
                           onContextMenu={(e) => e.preventDefault()}
                           onDragStart={(e) => e.preventDefault()}

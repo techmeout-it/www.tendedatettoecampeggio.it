@@ -973,6 +973,8 @@ const GuideDetail = () => {
                       src={guide.authorAvatar} 
                       alt={guide.author}
                       loading="lazy"
+                      width={40}
+                      height={40}
                       className="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-contain bg-white p-1"
                     />
                   ) : (
@@ -1171,6 +1173,8 @@ const GuideDetail = () => {
                             src={g.image} 
                             alt={g.title}
                             loading="lazy"
+                            width={600}
+                            height={400}
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                           />
                         </div>

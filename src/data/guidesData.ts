@@ -17,7 +17,7 @@ const allGuides: GuideItem[] = [
   {
     slug: "tende-da-tetto-confronto-morbide-guscio-rigido-ibride",
     title: "Tende da tetto a confronto: morbide vs a guscio rigido vs ibride",
-    excerpt: "Guida completa alle tre famiglie di tende da tetto: morbide a libro, guscio rigido a pantografo e ibride. Vantaggi, svantaggi e quale scegliere per il tuo stile di viaggio.",
+    excerpt: "Guida alle tre famiglie di tende da tetto: morbide a libro, guscio rigido a pantografo e ibride. Vantaggi, svantaggi e quale scegliere per il tuo viaggio.",
     author: "Lo Staff di Tende da Tetto",
     readTime: "5 min",
     location: "Italia",
@@ -41,7 +41,7 @@ const allGuides: GuideItem[] = [
   {
     slug: "viaggio-nozze-tenda-tetto-namibia",
     title: "Viaggio di nozze in tenda da tetto in Namibia",
-    excerpt: "Dove forse tutto è cominciato: la storia di Chiara e Piero, un budget limitato, e un viaggio indimenticabile di 17 giorni e 5.000 km attraverso deserti, oceani e savane.",
+    excerpt: "La storia di Chiara e Piero: un budget limitato e un viaggio indimenticabile di 17 giorni e 5.000 km in Namibia tra deserti, oceani e savane.",
     author: "Piero e Chiara",
     readTime: "5 min",
     location: "Namibia",
@@ -53,7 +53,7 @@ const allGuides: GuideItem[] = [
   {
     slug: "forte-leone-dachzelt-camp-italia",
     title: "Forte Leone: da scoperta casuale a DACHZELT CAMP Italia 🇮🇹",
-    excerpt: "A 1.500 metri di quota, immerso nelle montagne venete, il Forte Leone è diventato teatro di un evento epico: il gemellaggio tra la community italiana e quella tedesca dei Dachzeltnomaden.",
+    excerpt: "A 1.500 metri di quota nelle montagne venete, il Forte Leone ospita il gemellaggio tra la community italiana e quella tedesca dei Dachzeltnomaden.",
     author: "Lo Staff di Tende da Tetto",
     readTime: "4 min",
     location: "Forte Leone, Veneto",

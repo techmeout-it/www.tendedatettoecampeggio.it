@@ -32,7 +32,16 @@ const SEO = ({
   const defaultOgImage = `${siteUrl}/og-image.jpg`;
   const finalOgImage = ogImage || defaultOgImage;
   const fullCanonicalUrl = canonicalUrl || siteUrl;
-  const fullTitle = title.includes('Tende da Tetto') ? title : `${title} | Tende da Tetto e Campeggio`;
+  // Keep titles under 60 chars for SEO. Use short suffix or none if title is already long.
+  const SUFFIX_LONG = ' | Tende da Tetto e Campeggio';
+  const SUFFIX_SHORT = ' | TDTC';
+  const fullTitle = title.includes('Tende da Tetto')
+    ? title
+    : (title.length + SUFFIX_LONG.length <= 60)
+      ? `${title}${SUFFIX_LONG}`
+      : (title.length + SUFFIX_SHORT.length <= 60)
+        ? `${title}${SUFFIX_SHORT}`
+        : title;
 
   return (
     <Helmet>

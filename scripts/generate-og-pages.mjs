@@ -10,7 +10,7 @@ const guides = [
   {
     slug: "tende-da-tetto-confronto-morbide-guscio-rigido-ibride",
     title: "Tende da tetto a confronto: morbide vs a guscio rigido vs ibride",
-    description: "Guida completa alle tre famiglie di tende da tetto: morbide a libro, guscio rigido a pantografo e ibride. Vantaggi, svantaggi e quale scegliere per il tuo stile di viaggio.",
+    description: "Guida alle tre famiglie di tende da tetto: morbide a libro, guscio rigido a pantografo e ibride. Vantaggi, svantaggi e quale scegliere per il tuo viaggio.",
     image: "/img_articles/gusci_comparazione/tende_gusci.png",
     author: "Lo Staff di Tende da Tetto",
     category: "Attrezzatura",
@@ -28,7 +28,7 @@ const guides = [
   {
     slug: "viaggio-nozze-tenda-tetto-namibia",
     title: "Viaggio di nozze in tenda da tetto in Namibia",
-    description: "Dove forse tutto è cominciato: la storia di Chiara e Piero, un budget limitato, e un viaggio indimenticabile di 17 giorni e 5.000 km attraverso deserti, oceani e savane.",
+    description: "La storia di Chiara e Piero: un budget limitato e un viaggio indimenticabile di 17 giorni e 5.000 km in Namibia tra deserti, oceani e savane.",
     image: "/img_articles/namibia_viaggio_nozze/DSCN1226.JPG",
     author: "Piero e Chiara",
     category: "Destinazioni",
@@ -37,7 +37,7 @@ const guides = [
   {
     slug: "forte-leone-dachzelt-camp-italia",
     title: "Forte Leone: da scoperta casuale a DACHZELT CAMP Italia",
-    description: "A 1.500 metri di quota, immerso nelle montagne venete, il Forte Leone è diventato teatro di un evento epico: il gemellaggio tra la community italiana e quella tedesca dei Dachzeltnomaden.",
+    description: "A 1.500 metri di quota nelle montagne venete, il Forte Leone ospita il gemellaggio tra la community italiana e quella tedesca dei Dachzeltnomaden.",
     image: "/img_articles/forte_leone_raduno_articolo/20250704_DACHZELT-CAMP-Italia-2025_Patrick-Becker_Gruppenfoto_Drohne_.jpg",
     author: "Lo Staff di Tende da Tetto",
     category: "Eventi",
@@ -141,7 +141,7 @@ const staticPages = [
   {
     path: "eventi",
     title: "Eventi e Raduni - Tende da Tetto e Campeggio Community",
-    description: "Scopri i prossimi raduni, workshop ed eventi della community italiana di tende da tetto e campeggio.",
+    description: "Scopri i prossimi raduni, workshop ed eventi della community italiana di tende da tetto e campeggio. Partecipa ai ritrovi e conosci altri appassionati!",
     image: "/og-image.jpg",
     ogType: "website",
     staticContent: `<main id="main-content"><h1>Eventi e Raduni</h1><p>Partecipa ai raduni e agli eventi organizzati dalla community Tende da Tetto e Campeggio in tutta Italia.</p><a href="/raduno-nazionale-2026">Raduno Nazionale 2026 — 1-3 Maggio, Lago di Pietrafitta</a><nav><a href="/">Home</a> &gt; Eventi</nav></main>`
@@ -183,7 +183,7 @@ const staticPages = [
   {
     path: "contatti",
     title: "Contatti - Tende da Tetto e Campeggio",
-    description: "Contatta la community Tende da Tetto e Campeggio. Scrivici per informazioni, collaborazioni o proposte di eventi.",
+    description: "Contatta la community Tende da Tetto e Campeggio. Scrivici per informazioni, collaborazioni, proposte di eventi o partnership con il tuo brand outdoor.",
     image: "/og-image.jpg",
     ogType: "website",
     staticContent: `<main id="main-content"><h1>Contatti</h1><p>Hai domande o vuoi collaborare con la community? Contattaci!</p><p>Email: info@tendedatettoecampeggio.it</p><nav><a href="/">Home</a> &gt; Contatti</nav></main>`
@@ -191,7 +191,7 @@ const staticPages = [
   {
     path: "privacy",
     title: "Privacy Policy - Tende da Tetto e Campeggio",
-    description: "Informativa sulla privacy del sito tendedatettoecampeggio.it ai sensi del GDPR.",
+    description: "Informativa sulla privacy del sito tendedatettoecampeggio.it ai sensi del GDPR. Scopri come raccogliamo, utilizziamo e proteggiamo i tuoi dati personali.",
     image: "/og-image.jpg",
     ogType: "website",
     staticContent: `<main id="main-content"><h1>Privacy Policy</h1><p>Informativa sulla privacy ai sensi del Regolamento UE 2016/679 (GDPR).</p><nav><a href="/">Home</a> &gt; Privacy Policy</nav></main>`
@@ -199,7 +199,7 @@ const staticPages = [
   {
     path: "termini",
     title: "Termini e Condizioni - Tende da Tetto e Campeggio",
-    description: "Termini e condizioni d'uso del sito tendedatettoecampeggio.it.",
+    description: "Termini e condizioni d'uso del sito tendedatettoecampeggio.it. Regole di partecipazione alla community, utilizzo dei contenuti e responsabilità degli utenti.",
     image: "/og-image.jpg",
     ogType: "website",
     staticContent: `<main id="main-content"><h1>Termini e Condizioni</h1><p>Termini e condizioni d'uso del sito web Tende da Tetto e Campeggio.</p><nav><a href="/">Home</a> &gt; Termini e Condizioni</nav></main>`
@@ -207,7 +207,7 @@ const staticPages = [
   {
     path: "cookie",
     title: "Cookie Policy - Tende da Tetto e Campeggio",
-    description: "Informativa sull'uso dei cookie sul sito tendedatettoecampeggio.it.",
+    description: "Informativa sull'uso dei cookie sul sito tendedatettoecampeggio.it. Scopri quali cookie utilizziamo, le finalità e come gestire le tue preferenze.",
     image: "/og-image.jpg",
     ogType: "website",
     staticContent: `<main id="main-content"><h1>Cookie Policy</h1><p>Informativa sull'uso dei cookie ai sensi della normativa europea.</p><nav><a href="/">Home</a> &gt; Cookie Policy</nav></main>`
@@ -279,12 +279,30 @@ function generateOgPages() {
   for (const guide of guides) {
     const pageUrl = `${SITE_URL}/guide/${guide.slug}`;
     const imageUrl = guide.image.startsWith('http') ? guide.image : `${SITE_URL}${guide.image}`;
-    const title = `${guide.title} | Tende da Tetto e Campeggio`;
+    // Keep titles under 60 chars for SEO
+    const SUFFIX_LONG = ' | Tende da Tetto e Campeggio';
+    const SUFFIX_SHORT = ' | TDTC';
+    const title = guide.title.includes('Tende da Tetto')
+      ? guide.title
+      : (guide.title.length + SUFFIX_LONG.length <= 60)
+        ? `${guide.title}${SUFFIX_LONG}`
+        : (guide.title.length + SUFFIX_SHORT.length <= 60)
+          ? `${guide.title}${SUFFIX_SHORT}`
+          : guide.title;
 
     let html = replaceOgMeta(baseHtml, { pageUrl, title, description: guide.description, imageUrl, ogType: 'article', canonical: pageUrl });
 
+    // Build related guides links (same category first, then others)
+    const relatedGuides = guides
+      .filter(g => g.slug !== guide.slug)
+      .sort((a, b) => (a.category === guide.category ? -1 : 1) - (b.category === guide.category ? -1 : 1))
+      .slice(0, 3);
+    const relatedHtml = relatedGuides.length > 0
+      ? `<section><h2>Guide Correlate</h2><ul>${relatedGuides.map(g => `<li><a href="/guide/${g.slug}/">${escapeHtml(g.title)}</a></li>`).join('')}</ul></section>`
+      : '';
+
     // Inject article-specific static content for crawlers
-    const articleStatic = `<main id="main-content"><article><h1>${escapeHtml(guide.title)}</h1><p>${escapeHtml(guide.description)}</p><p>Autore: ${escapeHtml(guide.author)} | Categoria: ${escapeHtml(guide.category)}</p><nav><a href="/">Home</a> &gt; <a href="/guide">Guide</a> &gt; ${escapeHtml(guide.title)}</nav></article></main>`;
+    const articleStatic = `<main id="main-content"><article><h1>${escapeHtml(guide.title)}</h1><p>${escapeHtml(guide.description)}</p><p>Autore: ${escapeHtml(guide.author)} | Categoria: ${escapeHtml(guide.category)}</p>${relatedHtml}<nav><a href="/">Home</a> &gt; <a href="/guide/">Guide</a> &gt; ${escapeHtml(guide.title)}</nav></article></main>`;
     html = injectStaticContent(html, articleStatic);
 
     // Inject Article JSON-LD

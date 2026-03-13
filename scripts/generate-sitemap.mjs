@@ -42,6 +42,28 @@ guideSlugsWithDates.forEach(({ slug, date }) => {
   });
 });
 
+// Campsite slugs
+const campsiteSlugs = [
+  'camping-lake-garda',
+  'camping-dolomiti',
+  'camping-costa-smeralda',
+  'camping-cinque-terre',
+  'camping-lago-como',
+  'camping-gran-paradiso',
+  'camping-maremma',
+  'camping-gargano',
+  'camping-etna',
+  'camping-alpe-siusi',
+  'camping-amalfi',
+  'camping-umbria-green',
+];
+
+// Add campsite listing and detail pages
+routes.push({ path: '/campeggi', priority: '0.8', changefreq: 'weekly' });
+campsiteSlugs.forEach(slug => {
+  routes.push({ path: `/campeggi/${slug}`, priority: '0.7', changefreq: 'monthly' });
+});
+
 function generateSitemap() {
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
@@ -76,6 +98,7 @@ Allow: /
 
 # Disallow admin/internal paths (if any)
 Disallow: /api/
+Disallow: /coming-soon
 
 # Sitemaps
 Sitemap: ${DOMAIN}/sitemap.xml

@@ -369,7 +369,74 @@ function generateOgPages() {
     count++;
   }
 
-  console.log(`✅ Pre-rendered ${count} pages (${guides.length} guides + ${staticPages.length} static pages)`);
+  // Pre-render campsite pages
+  const campsites = [
+    { slug: 'camping-lake-garda', name: 'Camping Lake Garda', location: 'Lazise', region: 'Lago di Garda, Veneto', type: 'Lago', price: '€25/notte' },
+    { slug: 'camping-dolomiti', name: 'Camping Dolomiti', location: 'Canazei', region: 'Val di Fassa, Trentino', type: 'Montagna', price: '€30/notte' },
+    { slug: 'camping-costa-smeralda', name: 'Camping Costa Smeralda', location: 'Arzachena', region: 'Gallura, Sardegna', type: 'Mare', price: '€35/notte' },
+    { slug: 'camping-cinque-terre', name: 'Camping Cinque Terre', location: 'Levanto', region: 'Riviera, Liguria', type: 'Mare', price: '€28/notte' },
+    { slug: 'camping-lago-como', name: 'Camping Lago di Como', location: 'Menaggio', region: 'Lago di Como, Lombardia', type: 'Lago', price: '€32/notte' },
+    { slug: 'camping-gran-paradiso', name: 'Camping Gran Paradiso', location: 'Cogne', region: "Parco Gran Paradiso, Valle d'Aosta", type: 'Montagna', price: '€22/notte' },
+    { slug: 'camping-maremma', name: 'Camping Maremma Wild', location: 'Grosseto', region: 'Maremma, Toscana', type: 'Natura', price: '€20/notte' },
+    { slug: 'camping-gargano', name: 'Camping Gargano Bay', location: 'Vieste', region: 'Gargano, Puglia', type: 'Mare', price: '€22/notte' },
+    { slug: 'camping-etna', name: 'Camping Etna View', location: 'Nicolosi', region: 'Etna, Sicilia', type: 'Montagna', price: '€18/notte' },
+    { slug: 'camping-alpe-siusi', name: 'Camping Alpe di Siusi', location: 'Castelrotto', region: 'Alto Adige', type: 'Montagna', price: '€35/notte' },
+    { slug: 'camping-amalfi', name: 'Camping Costiera Amalfitana', location: 'Amalfi', region: 'Costiera, Campania', type: 'Mare', price: '€30/notte' },
+    { slug: 'camping-umbria-green', name: 'Camping Umbria Green', location: 'Spoleto', region: 'Valle Umbra, Umbria', type: 'Natura', price: '€18/notte' },
+  ];
+
+  // Pre-render campsite listing page
+  const campsiteListUrl = `${SITE_URL}/campeggi`;
+  const campsiteListTitle = 'Campeggi per Tende da Tetto in Italia | TDTC';
+  const campsiteListDesc = 'Scopri i migliori campeggi in Italia per tende da tetto. Mare, montagna, lago e natura: trova il camping perfetto per la tua prossima avventura con la community.';
+  let campsiteListHtml = replaceOgMeta(baseHtml, { pageUrl: campsiteListUrl, title: campsiteListTitle, description: campsiteListDesc, imageUrl: `${SITE_URL}/og-image.jpg`, ogType: 'website', canonical: campsiteListUrl });
+  const campsiteLinks = campsites.map(c => `<li><a href="/campeggi/${c.slug}/">${escapeHtml(c.name)}</a> — ${escapeHtml(c.location)}, ${escapeHtml(c.region)} (${escapeHtml(c.type)}, ${escapeHtml(c.price)})</li>`).join('');
+  const campsiteListStatic = `<main id="main-content"><h1>Campeggi per Tende da Tetto in Italia</h1><p>La nostra selezione dei migliori campeggi in Italia che accolgono tende da tetto. Abbiamo selezionato strutture in tutta la penisola, dal mare alla montagna, dai laghi alla campagna, per aiutarti a trovare il posto perfetto per la tua prossima avventura all'aria aperta.</p><h2>Tutti i campeggi</h2><ul>${campsiteLinks}</ul><p>Ogni campeggio è stato selezionato dalla community per la qualità dei servizi, la posizione e l'accoglienza riservata ai campeggiatori con tenda da tetto. Consulta le schede dettagliate per prezzi, servizi e recensioni.</p><nav><a href="/">Home</a> &gt; Campeggi</nav></main>`;
+  campsiteListHtml = injectStaticContent(campsiteListHtml, campsiteListStatic);
+  const campsiteListDir = path.join(distDir, 'campeggi');
+  fs.mkdirSync(campsiteListDir, { recursive: true });
+  fs.writeFileSync(path.join(campsiteListDir, 'index.html'), campsiteListHtml, 'utf-8');
+  count++;
+
+  // Pre-render individual campsite pages
+  for (const campsite of campsites) {
+    const pageUrl = `${SITE_URL}/campeggi/${campsite.slug}`;
+    const title = `${campsite.name} — Campeggio ${campsite.type} | TDTC`;
+    const description = `${campsite.name} a ${campsite.location}, ${campsite.region}. Campeggio ${campsite.type.toLowerCase()} ideale per tende da tetto. Prezzi da ${campsite.price}. Scopri servizi, posizione e recensioni.`;
+
+    let html = replaceOgMeta(baseHtml, { pageUrl, title, description, imageUrl: `${SITE_URL}/og-image.jpg`, ogType: 'website', canonical: pageUrl });
+
+    // Find 3 nearby campsites for cross-linking
+    const campIdx = campsites.indexOf(campsite);
+    const relatedCampsites = [1, 2, 3].map(i => campsites[(campIdx + i) % campsites.length]);
+    const relatedLinks = relatedCampsites.map(c => `<li><a href="/campeggi/${c.slug}/">${escapeHtml(c.name)}</a> — ${escapeHtml(c.location)}</li>`).join('');
+
+    const staticContent = `<main id="main-content"><article><h1>${escapeHtml(campsite.name)}</h1><p>${escapeHtml(description)}</p><h2>Informazioni</h2><p>Posizione: ${escapeHtml(campsite.location)}, ${escapeHtml(campsite.region)}. Tipologia: campeggio ${escapeHtml(campsite.type.toLowerCase())}. Prezzo indicativo: ${escapeHtml(campsite.price)}. Il campeggio offre piazzole adatte alle tende da tetto con spazio sufficiente per il veicolo e l'apertura della tenda. Contatta direttamente la struttura per verificare disponibilità e prenotare.</p><h2>Perché scegliere questo campeggio</h2><p>${escapeHtml(campsite.name)} si trova in una posizione privilegiata per gli amanti del campeggio con tenda da tetto. La zona offre numerose opportunità per escursioni, attività all'aria aperta e scoperta del territorio. Un punto di partenza ideale per esplorare ${escapeHtml(campsite.region)} con la tua tenda da tetto.</p><h2>Altri campeggi nella zona</h2><ul>${relatedLinks}</ul><nav><a href="/">Home</a> &gt; <a href="/campeggi/">Campeggi</a> &gt; ${escapeHtml(campsite.name)}</nav></article></main>`;
+    html = injectStaticContent(html, staticContent);
+
+    // Inject LocalBusiness JSON-LD
+    const localBusinessJsonLd = {
+      "@context": "https://schema.org",
+      "@type": "Campground",
+      "name": campsite.name,
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": campsite.location,
+        "addressRegion": campsite.region.split(', ').pop(),
+        "addressCountry": "IT"
+      },
+      "url": pageUrl
+    };
+    const jsonLdScript = `<script type="application/ld+json">${JSON.stringify(localBusinessJsonLd)}</script>`;
+    html = html.replace('</head>', `${jsonLdScript}\n</head>`);
+
+    const pageDir = path.join(distDir, 'campeggi', campsite.slug);
+    fs.mkdirSync(pageDir, { recursive: true });
+    fs.writeFileSync(path.join(pageDir, 'index.html'), html, 'utf-8');
+    count++;
+  }
+
+  console.log(`✅ Pre-rendered ${count} pages (${guides.length} guides + ${staticPages.length} static + ${campsites.length + 1} campsites)`);
 }
 
 generateOgPages();

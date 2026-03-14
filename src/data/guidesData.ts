@@ -133,6 +133,18 @@ const allGuides: GuideItem[] = [
     date: "2026-02-14",
     dateDisplay: "14 Feb 2026",
     image: "/img_articles/barre_menabo/carcamp_menabo_cover.png"
+  },
+  {
+    slug: "basilicata-coast-to-coast-tenda-da-tetto",
+    title: "Basilicata coast to coast in tenda da tetto",
+    excerpt: "Dalla costa tirrenica di Maratea a quella jonica di Metaponto, attraversando l'entroterra fino a Matera: 13 giorni e 2630 km in tenda da tetto tra borghi, calanchi e tradizioni lucane.",
+    author: "Sara Sarti",
+    readTime: "4 min",
+    location: "Basilicata, Italia",
+    category: "Destinazioni",
+    date: "2026-03-14",
+    dateDisplay: "14 Mar 2026",
+    image: "/img_articles/basilicata_coast/copertina.jpg"
   }
 ];
 

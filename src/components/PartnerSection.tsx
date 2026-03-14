@@ -86,6 +86,17 @@ const PartnerSection = () => {
       website: "https://www.camperizzati.com/",
       pdfLink: null,
       externalLink: null
+    },
+    {
+      name: "Camping Puntalago",
+      category: "Campeggi",
+      discount: "10%",
+      description: "Camping sul lago di Caldonazzo in Trentino, posizione splendida e ottimi servizi per adulti e bambini. Accoglienza super per chi viaggia in tenda da tetto, un posto magnifico dove rilassarsi e staccare la spina per un weekend o per più giorni.",
+      logo: "/img_partners/Loghi/logo_puntalago.jpg",
+      specialOffer: "10% di sconto su tutte le piazzole, dal 13 maggio al 13 luglio e dal 31 agosto al 20 settembre. Codice sconto da inserire in fase di prenotazione \"TENDEDATETTO\"",
+      website: "https://www.campingpuntalago.com/",
+      pdfLink: null,
+      externalLink: null
     }
   ];
 
